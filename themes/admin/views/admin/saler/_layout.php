@@ -9,22 +9,14 @@
             <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
                 <?php if($this->manager->isManager):?>
                 <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'create'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/create')?>">Thêm tư vấn Phong thủy</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/pt/create')?>">Thêm danh ba</a></li>
                 <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'index'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/')?>">Danh sách tư vấn Phong thủy</a></li>
-                <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'createTopic'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/createTopic')?>">Thêm chủ đề</a></li>
-                <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'indexTopic'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/indexTopic')?>">Danh sách chủ đề</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/pt/')?>">Danh ba</a></li>
                 <?php endif?>
                 
                 <?php if($this->menu_sub_selected == 'update'):?> 
                 <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
-                    <a href="<?php echo $this->createUrl('/admin/pt/update')?>">Cập nhật tư vấn phong thủy</a></li>
-                <?php endif?>
-                <?php if($this->menu_sub_selected == 'updateTopic'):?>
-                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
-                        <a href="<?php echo $this->createUrl('/admin/pt/updateTopic')?>">Cập nhật chủ đề</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/pt/update')?>">Cập nhật danh ba</a></li>
                 <?php endif?>
             </ul>
         
