@@ -1,0 +1,87 @@
+-Steps to install phpseclib (modifying the library, not recommended now)-
+
+(written on 2/Oct/2012, using Yii version 1.1.12. and phpseclib 0.3.0)
+
+1) download phpseclib from: http://phpseclib.sourceforge.net
+
+2) uncompress the downloaded archive, rename the folder to "phpseclib", and put it into your /vendors project directory.
+
+3) rename all the files under /vendors/phpseclib/Crypt like this:
+
+AES.php -> Crypt_AES.php
+
+DES.php -> Crypt_DES.php
+
+etc... (just prepend "Crypt_" in the file name)
+
+4) search for "require_once" commands in those files and change them so they point to the new file names.
+
+For example, in Crypt_AES.php change:
+
+if (!class_exists('Crypt_Rijndael')) {
+    require_once 'Rijndael.php';
+}
+
+to:
+
+if (!class_exists('Crypt_Rijndael')) {
+    require_once 'Crypt_Rijndael.php';
+}
+
+5) in config/main include phplib:
+
+'import'=>array(
+        ...
+                'application.vendors.phpseclib.Crypt.*',
+               ),
+
+6) now you can use phplib in your project. For example within a model you can use:
+
+public function encrypt($text){
+  $cipher = new Crypt_AES();
+  $cipher->setPassword('anypassword');
+  return bin2hex($cipher->encrypt($text));
+}
+
+(see phplib documentation for more details)
+
+
+<?php
+
+    class TestController extends Controller
+    {
+        private $privatekey = '-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQCd8lOml6DZ9G1xMdd/jYSrda5J1S/cCWqpOOppcnm63/ZG3nZ72zm9nDg1aKMf
+opuFCvZjnmqxjSAVdUXnH2ewt1Ba5y9oA2ySmoWFvagdTAUdm6v0aIJAZGDc8OWVnIXFANAhFzpt
+1wImAw6qvHgRE8VG24lUuTInZWIJwk44ZwIDAQABAoGAEe98lERPnbBl5R61y+Q0FoxMeFHfF2ty
+UzkFVWgMbq4T90Q3zCS+z8s3jskNDQCYDGmMRQ+uKe9On2EryO0GBxtFdBKQZ2SEvOPKoL61eywO
+DH2TQay+n042zsJZfVe9VesteUApDd0aiZepq0lDMt5xNqMKRcgiefwLPWwBzgECQQDeAq0tuaT+
+58o3QyRwAD7HTk5eF0Q+6PDUvh5+i2IuE722ApUrVeq3GfyCfjM7m2NCGpovgGr5H2339I+5oAqB
+AkEAtiDGj2hY95R9PcfUxThZwLu+iQ/Leb041CfEZHJKgWkYrjzqvRlZSiKvlYEpLaru2JzPEAlv
+aYP2gLfMNJm+5wJAF5dJN7amZb/TqROlZ5FfGmajxTPLuLOgA7tAGkpNYIAQhKq5lyVGD7bfMi6e
+2xKj9X5GLA4FT/ua/+Io85yiAQJAKL46TTiVtoUUY27BzYDmqzQU0sqixVAsV2GyEJp0ynB9YfUk
+ujrie7A4wWRMlvfHSNQDil3h+6PW0ELNvvKp/wJBAIHHTBd6x1qlV6ZjZG8FylMP/+gKg+kT2V1W
+6DvNGGLR0QpExW5BID4yc70S27uXz1ZwOMD4RvdPkQvXpJKOUh8=
+-----END RSA PRIVATE KEY-----';
+
+        public function actionIndex(){
+            $rsa = new Crypt_RSA();
+//            extract($rsa->createKey());
+//            echo '<pre>';print_r($privatekey);echo '</pre>';
+//            echo '<pre>';print_r($publickey);echo '</pre>';
+            
+            $rsa->loadKey($this->privatekey);
+            
+            $rsa->setPublicKey();
+            $publickey1 = $rsa->getPublicKey();
+            
+            $rsa = new Crypt_RSA();
+            $rsa->loadKey($publickey1);
+            $publickey2 = $rsa->getPublicKey();
+            
+
+            echo '<pre>';print_r($this->privatekey);echo '</pre>';
+            echo '<pre>';print_r($publickey1);echo '</pre>';
+            echo '<pre>';print_r($publickey2);echo '</pre>';
+        }
+    }

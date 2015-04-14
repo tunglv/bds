@@ -1,0 +1,11 @@
+﻿Started: 4/5/2013 3:49 PM
+
+theme_temp\style.less - Transferring
+theme_temp\style.less - error occurred
+
+File activity incomplete. 1 file(s) or folder(s) were not completed.
+
+Files with errors: 1
+theme_temp\style.less
+
+Finished: 4/5/2013 3:49 PM

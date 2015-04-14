@@ -1,0 +1,23 @@
+.pagination{
+    text-align: right;
+}
+.pagination a, .pagination a:hover{
+    text-decoration: none;
+}
+.pagination .selected a {
+    color: #999999;
+    cursor: default;
+}
+.pagination a:hover, .pagination .selected a {
+    background-color: #eee;
+}
+.pagination li.hidden {
+    visibility: visible;
+    border: none;
+    font-size: 1em;
+}
+.pagination .hidden a, .pagination .hidden a:hover {
+    background-color: transparent;
+    color: #999999;
+    cursor: default;
+}

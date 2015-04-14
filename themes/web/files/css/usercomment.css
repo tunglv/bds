@@ -1,0 +1,26 @@
+﻿.popup-comment {
+    width:57px;
+    height: 65px;
+    background-repeat: no-repeat;
+    right:0px;
+}
+.gopy {
+    background-image: url("/Modules/UserComment/resource/gopy.gif");
+    width: 57px;
+    display:block;
+}
+.gopy-mo {
+    background-image: url("/Modules/UserComment/resource/gopy-mo.png");
+    width: 51px;
+    /*opacity: 0.4;
+    -moz-opacity: 0.5; */
+}
+#wrap-comment {
+    right:0px;
+    width: 57px;
+    display: block;
+    position: fixed;
+    top:45%;
+    z-index: 11;
+    height: 65px;
+}

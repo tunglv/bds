@@ -1,0 +1,11 @@
+body {
+  font-family: Arial;
+}
+
+form {
+  clear: both;
+}
+
+#first-select {
+  width: 150px;
+}

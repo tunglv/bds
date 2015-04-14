@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="google-site-verification" content="DHz4kg_uhBzFTmMZSrMTtF9lqPofgrUucAmZrsakViI" />
+<meta name="keywords" content="SSH,SFTP,RSA,PHP,AES,Rijndael,3DES,RC4,SSH2,SSH1,X.509,X509" />
+<meta name="description" content="phpseclib can decode, verify and sign X.509 certificates" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19770173-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<title>phpseclib: X.509 Examples</title>
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/text.css" />
+<link rel="stylesheet" href="../css/960.css" />
+<link rel="stylesheet" href="../css/prettify.css"/>
+<link rel="stylesheet" href="../css/jquery.qtip.min.css"/>
+<link rel="stylesheet" href="../css/jquery.treeview.css" />
+
+<script src="../js/prettify.js"></script>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/jquery.qtip.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/jquery.treeview.js"></script>
+
+<script>
+var certFlag = false;
+
+var manageSelects = function() {
+  options = $('select option');
+  for (var i = 0; i < options.length; i++) {
+   $('.' + options[i].value).hide();
+  }
+
+  options = $('select option:selected');
+  for (var i = 0; i < options.length; i++) {
+   $('.' + options[i].value).show();
+  }
+};
+
+var highlight = function() {
+  if ($('.' + this.value).closest('#notes').length == 0) {
+    $('.' + this.value).css('background-color', '#ffa');
+  }
+};
+
+var unhighlight = function() {
+  if ($('.' + this.value).closest('#notes').length == 0) {
+    $('.' + this.value).css('background-color', '#f5f4ee');
+  }
+};
+
+var toggleButton = function() {
+  buttons = $('button[value="' + this.value + '"]');
+  buttons.eq(0).toggle();
+  buttons.eq(1).toggle();
+  $('.' + this.value).toggle();
+};
+
+var permLink = function() {
+  attrs = '';
+  selected = $('select option:selected,.disableCode:visible');
+  for (i = 0; i < selected.length; i++) {
+    attrs+= selected[i].value + ',';
+  }
+  hashPos = window.location.href.indexOf('#');
+  newURL = hashPos == -1 ? window.location.href : window.location.href.substring(0, hashPos);
+  window.location.href = newURL + '#' + attrs;
+};
+
+var handleCert = function(event) {
+  e = event.relatedTarget || event.toElement;
+  if (e.id != 'cert2') {
+    $('#cert2').hide();
+  }
+}
+
+var showPath = function() {
+  path = '';
+  parents = $(this).parents('li:visible');
+  for (var i = parents.length - 1; i >= 0; i--) {
+    name = $('.name', parents[i])[0].textContent;
+    delimiter = isNaN(name) ? '\'' : '';
+    path+= '[' + delimiter + name + delimiter + ']';
+  }
+  $('#path').html('<code id="path">$cert' + path + '</code>:');
+};
+
+var showPathCSR = function() {
+  path = '';
+  parents = $(this).parents('li:visible');
+  for (var i = parents.length - 1; i >= 0; i--) {
+    name = $('.name', parents[i])[0].textContent;
+    delimiter = isNaN(name) ? '\'' : '';
+    path+= '[' + delimiter + name + delimiter + ']';
+  }
+  $('#pathcsr').html('<code id="pathcsr">$csr' + path + '</code>:');
+};
+
+$(document).ready(function() {
+  //$('pre span[id]').hide();
+  //$('#notes div[id]').hide();
+
+  $('.printr').treeview({
+    persist: "location",
+    collapsed: true,
+    unique: true
+  });
+
+  buttons = $('button:visible');
+  for (var i = 0; i < buttons.length; i++) {
+   $('.' + buttons[i].value).hide();
+  }
+
+  options = window.location.href.split('#');
+  options = options.length > 1 ? options[1].split(',') : new Array();
+  for (var i = 0; i < options.length; i++) {
+    options[i] = options[i].replace(/%20/g, ' ');
+    $('select option[value="' + options[i] +'"]').prop('selected', true);
+    button = $('button[value="' + options[i] +'"]');
+    if (button.length) {
+      toggleButton.apply(button[0]);
+    }
+  }
+
+  manageSelects();
+
+  $('.loadx509 .name,.hitarea').click(showPath);
+  $('.csrload .name,.hitarea').click(showPathCSR);
+
+  $('select').change(manageSelects);
+  //$('select').change(highlight);
+  $('select').keyup(manageSelects);
+  //$('select').focus(highlight);
+  //$('select').blur(unhighlight);
+  $('button').click(toggleButton);
+  $('#permlink span').click(permLink);
+});
+</script>
+
+<style media="screen">
+h1 { text-align: left; margin-bottom: 0 }.red { color: #e11 }
+.prettyprint, .pre { background: #f5f4ee; max-height: 350px; overflow: scroll }
+h2 { font-size: 15px }
+code { background: #ffa }
+#permlink { text-align: right }
+#permlink span { font-size: 10px; color: blue; text-decoration: underline; cursor: pointer }
+.buttonOff { display: none }
+ul { margin-bottom: 0 }
+#pgup { font-size: 10px; margin-bottom: 2em }
+#cert:hover { cursor: hand }
+</style></head>
+<body onload="prettyPrint()">
+<div class="container_12">
+  <div class="grid_12">
+    <h1>php<span class="red">sec</span>lib: X.509 Examples</h1>
+    <div id="pgup">(return to <a href="intro.html">phpseclib: X.509 Feature List</a>)</div>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_3">
+    <p>
+      Action:<br />
+      <select>
+        <option value="reading">Read certificate</option>
+        <option value="validate">Validate certificate</option>
+        <option value="selfsigned">Create self signed cert</option>
+        <option value="casigned">Create CA signed cert</option>
+        <option value="csr">Create CSR</option>
+        <option value="readcsr">Read CSR</option>
+        <option value="readcrl">Read CRL</option>
+      </select>
+    </p>
+    <p class="reading">
+      Method:<br />
+      <select>
+        <option value="loadx509">loadX509()</option>
+        <option value="getdnprop">getDNProp()</option>
+        <option value="getdn">getDN()</option>
+        <option value="getdnstr">getDN() as string</option>
+        <option value="getissuerdnprop">getIssuerDNProp()</option>
+        <option value="getissuerdn">getIssuerDN()</option>
+        <option value="getissuerdnstr">getIssuerDN() as string</option>
+        <option value="getpublickey">getPublicKey()</option>
+      </select>
+    </p>
+    <p class="validate">
+      Method:<br />
+      <select>
+        <option value="sig">validateSignature()</option>
+        <option value="signoself">validateSignature() (no self signed)</option>
+        <option value="url">validateURL()</option>
+        <option value="date">validateDate() (current date)</option>
+        <option value="customdate">validateDate() (arbitrary date)</option>
+      </select>
+    </p>
+    <p class="selfsigned">
+      Create Distinguished Name from:<br />
+      <select>
+        <option value="selfsetdnprop">setDNProp() / removeDNProp()</option>
+        <option value="selfsetdn1">setDN (rdnSequence array)</option>
+        <option value="selfsetdn2">setDN (array)</option>
+        <option value="selfsetdn3">setDN() (string)</option>
+        <option value="selfloadcsr">loadCSR()</option>
+        <option value="selfloadx509">loadX509()</option>
+      </select>
+    </p>
+    <p class="selfsigned">
+      <button value="selfkeyid" class="buttonOn">Set Key Identifier</button>
+      <button value="selfkeyid" class="buttonOff disableCode">Disable Key Identifier</button>
+    </p>
+    <p class="selfsigned">
+      <button value="selfdomain" class="buttonOn">Set Domain Name</button>
+      <button value="selfdomain" class="buttonOff disableCode">Disable Domain Name</button>
+    </p>
+    <p class="selfsigned">
+      <button value="selfserial" class="buttonOn">Set Serial Number</button>
+      <button value="selfserial" class="buttonOff disableCode">Disable Serial Number</button>
+    </p>
+    <p class="selfsigned">
+      <button value="selfca" class="buttonOn">Make CA</button>
+      <button value="selfca" class="buttonOff disableCode">Don't make CA</button>
+    </p>
+    <p class="readcsr">
+      Method:<br />
+      <select>
+        <option value="csrload">loadCSR()</option>
+        <option value="csrgetdnprop">getDNProp()</option>
+        <option value="csrgetdn">getDN()</option>
+        <option value="csrgetdnstr">getDN() as string</option>
+        <option value="csrgetpublickey">getPublicKey()</option>
+      </select>
+    </p>
+    <p class="readcrl">
+      Method:<br />
+      <select>
+        <option value="crlload">loadCRL()</option>
+      </select>
+    </p>
+
+
+    <div class="casigned">
+
+      <div style="border: 1px solid" class="casigned">
+      <p style="background: #ffa; border-bottom: 1px solid; padding: 2px; margin-bottom: 0" class="casigned"><b>Issuer</b></p>
+      <p>
+      Create Distinguished Name from:<br />
+      <select>
+        <option value="issuersetdnprop">setDNProp() / removeDNProp()</option>
+        <option value="issuersetdn1">setDN (rdnSequence array)</option>
+        <option value="issuersetdn2">setDN (array)</option>
+        <option value="issuersetdn3">setDN() (string)</option>
+        <option value="issuerloadcsr">loadCSR()</option>
+        <option value="issuerloadx509">loadX509()</option>
+      </select>
+      </p>
+      <p>
+        <button value="issuerserial" class="buttonOn">Set Serial Number</button>
+        <button value="issuerserial" class="buttonOff disableCode">Disable Serial Number</button>
+      </p>
+      <p style="margin-bottom: 0">
+        <button value="issuerkeyid" class="buttonOn">Set Key Identifier</button>
+        <button value="issuerkeyid" class="buttonOff disableCode">Disable Key Identifier</button>
+      </p>
+      </div>
+
+      <div style="border: 1px solid; margin: 20px 0 20px 0" class="casigned">
+      <p style="background: #ffa; border-bottom: 1px solid; padding: 2px; margin-bottom: 0" class="casigned"><b>Subject</b></p>
+      <p>
+      Create Distinguished Name from:<br />
+      <select>
+        <option value="subjsetdnprop">setDNProp() / removeDNProp()</option>
+        <option value="subjsetdn1">setDN (rdnSequence array)</option>
+        <option value="subjsetdn2">setDN (array)</option>
+        <option value="subjsetdn3">setDN() (string)</option>
+        <option value="subjloadcsr">loadCSR()</option>
+        <option value="subjloadx509">loadX509()</option>
+      </select>
+      </p>
+      <p>
+        <button value="subjca" class="buttonOn">Make CA</button>
+        <button value="subjca" class="buttonOff disableCode">Don't make CA</button>
+      </p>
+      <p>
+        <button value="subjserial" class="buttonOn">Set Serial Number</button>
+        <button value="subjserial" class="buttonOff disableCode">Disable Serial Number</button>
+      </p>
+      <p>
+        <button value="subjkeyid" class="buttonOn">Set Key Identifier</button>
+        <button value="subjkeyid" class="buttonOff disableCode">Disable Key Identifier</button>
+      </p>
+      <p style="margin-bottom: 0">
+        <button value="subjdomain" class="buttonOn">Set Domain Name</button>
+        <button value="subjdomain" class="buttonOff disableCode">Disable Domain Name</button>
+      </p>
+      </div>
+    </div>
+  </div>
+  <!-- end .grid_3 -->
+  <div class="grid_9">
+    <div>
+<pre class="prettyprint" style="margin-bottom: 0">&lt;?php
+<span class="reading">include('File/X509.php');
+
+$x509 = new File_X509();
+$cert = $x509->loadX509('...'); // see <a href="google.txt">google.crt</a>
+<span class="loadx509">
+print_r($cert);</span><span class="getdnprop">
+print_r($x509->getDNProp('CN'));</span><span class="getdn">
+print_r($x509->getDN());</span><span class="getissuerdnprop">
+print_r($x509->getIssuerDNProp('CN'));</span><span class="getpublickey">
+echo $x509->getPublicKey()->getPublicKey();</span><span class="getdnstr">
+echo $x509->getDN(true);</span><span class="getissuerdnstr">
+echo $x509->getIssuerDN(true);</span><span class="getissuerdn">
+print_r($x509->getIssuerDN());</span>
+</span><span class="validate">include('File/X509.php');
+
+$x509 = new File_X509();
+<span class="signoself">$x509->loadCA('...'); // see <a href="signer.txt">signer.crt</a>
+</span>$cert = $x509->loadX509('...'); <span class="signoself url date customdate">// see <a href="google.txt">google.crt</a></span><span class="sig">// see <a href="selfsigned.txt">selfsigned.crt</a></span>
+<span class="sig">echo $x509->validateSignature() ? 'valid' : 'invalid';
+</span><span class="signoself">echo $x509->validateSignature(FILE_X509_VALIDATE_SIGNATURE_BY_CA) ?
+    'valid' :
+    'invalid';
+</span><span class="url">// try it with "http://www.bing.com/search?q=phpseclib" too
+echo $x509->validateURL('https://www.google.com/#q=phpseclib') ?
+    'valid' :
+    'invalid';
+</span><span class="date">echo $x509->validateDate() ? 'valid' : 'invalid';
+</span><span class="customdate">echo $x509->validateDate(strtotime('January 1, 2001')) ?
+    'valid' :
+    'invalid';
+</span></span><span class="selfsigned">include('File/X509.php');
+include('Crypt/RSA.php');
+
+// create private key / x.509 cert for stunnel / website
+$privKey = new Crypt_RSA();
+extract($privKey->createKey());
+$privKey->loadKey($privatekey);
+
+$pubKey = new Crypt_RSA();
+$pubKey->loadKey($publickey);
+$pubKey->setPublicKey();
+
+$subject = new File_X509();
+<span class="selfloadx509">// omit the setPublicKey() call and the cert will be re-signed with most extensions preserved
+$subject->loadX509('...'); // see <a href="phpseclib.txt">phpseclib.crt</a></span><span style="display: none">
+</span><span class="selfsetdnprop">$subject->setDNProp('id-at-organizationName', 'phpseclib demo cert');
+//$subject->removeDNProp('id-at-organizationName');</span><span style="display: none">
+</span><span class="selfsetdn1">$subject->setDN(
+    array(
+        'rdnSequence' => array(
+            array(
+                array(
+                    'type' => 'id-at-organizationName',
+                    'value'=> 'phpseclib demo cert'
+                )
+            )
+        )
+    )
+);
+</span><span class="selfsetdn2">$subject->setDN(array(
+    'O' => 'phpseclib demo cert'
+));</span><span class="selfsetdn3">$subject->setDN('/O=phpseclib demo cert');</span><span class="selfloadcsr">$subject->loadCSR('...'); // see <a href="csr.txt">csr.pem</a></span><span class="selfsetdnprop seltsetdn1 selfsetdn2 selfsetdn3 selfloadx509">
+$subject->setPublicKey($pubKey);</span><span class="selfloadcsr">
+// calling setPublicKey() is unnecessary when loadCSR() is called</span><span class="selfkeyid">
+$subject->setKeyIdentifier('...');</span><span class="selfdomain">
+$subject->setDomain('www.whatever.com');
+// multiple domain names: $subject->setDomain('www.google.com', 'www.yahoo.com');</span>
+
+$issuer = new File_X509();
+$issuer->setPrivateKey($privKey);
+$issuer->setDN($subject->getDN());<span class="selfkeyid">
+$issuer->setKeyIdentifier('...');</span>
+
+$x509 = new File_X509();
+//$x509->setStartDate('-1 month'); // default: now
+//$x509->setEndDate('+1 year'); // default: +1 year<span class="selfserial">
+$x509->setSerialNumber("\0");</span><span class="selfca">
+$x509->makeCA();</span>
+
+$result = $x509->sign($issuer, $subject);
+echo "the stunnel.pem contents are as follows:\r\n\r\n";
+echo $privKey->getPrivateKey();
+echo "\r\n";
+echo $x509->saveX509($result);
+echo "\r\n";
+</span><span class="csr">include('File/X509.php');
+include('Crypt/RSA.php');
+
+$privKey = new Crypt_RSA();
+extract($privKey->createKey());
+$privKey->loadKey($privatekey);
+
+$x509 = new File_X509();
+$x509->setPrivateKey($privKey);
+$x509->setDNProp('id-at-organizationName', 'phpseclib demo cert');
+
+$csr = $x509->signCSR();
+
+echo $x509->saveCSR($csr);
+</span><span class="casigned">include('File/X509.php');
+include('Crypt/RSA.php');
+
+// create private key for CA cert
+$CAPrivKey = new Crypt_RSA();
+extract($CAPrivKey->createKey());
+$CAPrivKey->loadKey($privatekey);
+
+$pubKey = new Crypt_RSA();
+$pubKey->loadKey($publickey);
+$pubKey->setPublicKey();
+
+echo "the private key for the CA cert (can be discarded):\r\n\r\n";
+echo $privatekey;
+echo "\r\n\r\n";
+
+
+
+
+
+
+
+// create a self-signed cert that'll serve as the CA
+$subject = new File_X509();
+<span class="issuerloadx509">// omit the setPublicKey() call and the cert will be resigned with most extensions preserved
+$subject->loadX509('...'); // see <a href="phpseclib.txt">phpseclib.crt</a>
+</span><span class="issuersetdnprop">$subject->setDNProp('id-at-organizationName', 'phpseclib demo CA');
+//$subject->removeDNProp('id-at-organizationName');
+</span><span class="issuersetdn1">$subject->setDN(
+    array(
+        'rdnSequence' => array(
+            array(
+                array(
+                    'type' => 'id-at-organizationName',
+                    'value'=> 'phpseclib demo CA'
+                )
+            )
+        )
+    )
+);
+</span><span class="issuersetdn2">$subject->setDN(array(
+    'O' => 'phpseclib demo CA'
+));</span><span class="issuersetdn3">
+$subject->setDN('/O=phpseclib demo CA');
+</span><span class="issuerloadcsr">
+$subject->loadCSR('...'); // see <a href="csr.txt">csr.pem</a>
+</span>$subject->setPublicKey($pubKey);
+
+$issuer = new File_X509();
+$issuer->setPrivateKey($CAPrivKey);
+$issuer->setDN($CASubject = $subject->getDN());<span class="issuerkeyid">
+$subject->setKeyIdentifier('...');
+$issuer->setKeyIdentifier('...');</span>
+
+$x509 = new File_X509();
+$x509->setStartDate('-1 month');
+$x509->setEndDate('+1 year');<span class="issuerserial">
+$x509->setSerialNumber("\0");</span>
+$x509->makeCA();
+
+$result = $x509->sign($issuer, $subject);
+echo "the CA cert to be imported into the browser is as follows:\r\n\r\n";
+echo $x509->saveX509($result);
+echo "\r\n\r\n";
+
+
+
+
+
+
+
+
+// create private key / x.509 cert for stunnel / website
+$privKey = new Crypt_RSA();
+extract($privKey->createKey());
+$privKey->loadKey($privatekey);
+
+$pubKey = new Crypt_RSA();
+$pubKey->loadKey($publickey);
+$pubKey->setPublicKey();
+
+$subject = new File_X509();
+<span class="subjloadx509">// omit the setPublicKey() call and the cert will be re-signed with most extensions preserved
+$subject->loadX509('...'); // see <a href="phpseclib.txt">phpseclib.crt</a>
+</span><span class="subjsetdnprop">$subject->setDNProp('id-at-organizationName', 'phpseclib demo cert');
+//$subject->removeDNProp('id-at-organizationName');
+</span><span class="subjsetdn1">$subject->setDN(
+    array(
+        'rdnSequence' => array(
+            array(
+                array(
+                    'type' => 'id-at-organizationName',
+                    'value'=> 'phpseclib demo cert'
+                )
+            )
+        )
+    )
+);
+</span><span class="subjsetdn2">$subject->setDN(array(
+    'O' => 'phpseclib demo cert'
+));</span><span class="subjsetdn3">
+$subject->setDN('/O=phpseclib demo cert');
+</span><span class="subjloadcsr">
+$subject->loadCSR('...'); // see <a href="csr.txt">csr.pem</a>
+// calling setPublicKey() is unnecessary when loadCSR() is called
+</span>
+$subject->setPublicKey($pubKey);<span class="subjdomain">
+$subject->setDomain('www.whatever.com');
+// multiple domain names: $subject->setDomain('www.google.com', 'www.yahoo.com');</span>
+
+$issuer = new File_X509();
+$issuer->setPrivateKey($CAPrivKey);
+$issuer->setDN($CASubject);
+
+<span class="issuerkeyid">$issuer->setKeyIdentifier('...');
+</span><span class="subjkeyid">$subject->setKeyIdentifier('...');
+</span><span class="issuerkeyid">
+</span>$x509 = new File_X509();
+$x509->setStartDate('-1 month');
+$x509->setEndDate('+1 year');<span class="subjserial">
+$x509->setSerialNumber(chr(1));</span><span class="subjca">
+$x509->makeCA();</span>
+
+$result = $x509->sign($issuer, $subject);
+echo "the stunnel.pem contents are as follows:\r\n\r\n";
+echo $privKey->getPrivateKey();
+echo "\r\n";
+echo $x509->saveX509($result);
+echo "\r\n";
+</span><span class="readcsr">include('File/X509.php');
+
+$x509 = new File_X509();
+$csr = $x509->loadCSR('...'); // see <a href="csr.txt">csr.csr</a>
+<span class="csrload">
+print_r($csr);
+//echo $x509->validateSignature() ? 'valid' : 'invalid';</span><span class="csrgetdnprop">
+print_r($x509->getDNProp('O'));</span><span class="csrgetdn">
+print_r($x509->getDN());</span><span class="csrgetdnstr">
+echo $x509->getDN(true);</span><span class="csrgetpublickey">
+echo $x509->getPublicKey()->getPublicKey();</span>
+</span><span class="readcrl">include('File/X509.php');
+
+$x509 = new File_X509();
+$crl = $x509->loadCRL('...'); // see <a href="csr.txt">ev2009a.crl</a>
+<span class="crlload">
+print_r($crl);
+//echo $x509->validateSignature() ? 'valid' : 'invalid';</span>
+</span>?&gt;</pre>
+    </div>
+    <div id="permlink"><span>permanent link</span></div>
+    <div id="notes">
+    <div class="reading">
+    <h2>Output:</h2>
+      <div class="loadx509">
+        <p style="font-size: 10px; color: gray">(see <a href="decoder.php" style="color: lightblue">phpseclib: X.509: Decoder</a> to try phpseclib's X.509 decoder with your own certificates)</p>
+<code id="path">$cert</code>:
+<ul class="printr"><li><span class="name">tbsCertificate</span><ul><li><span class="name">version</span><ul><li>v3</li></ul></li><li><span class="name">serialNumber</span><ul><li>105827261859531100510423749949966875981</li></ul></li><li><span class="name">signature</span><ul><li><span class="name">algorithm</span><ul><li>sha1WithRSAEncryption</li></ul></li><li><span class="name">parameters</span><ul><li><span class="name">null</span><ul><li></li></ul></li></ul></li></ul></li><li><span class="name">issuer</span><ul><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-countryName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>ZA</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>Thawte Consulting (Pty) Ltd.</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-commonName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>Thawte SGC CA</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">validity</span><ul><li><span class="name">notBefore</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 26 Oct 11 00:00:00 +0000</li></ul></li></ul></li><li><span class="name">notAfter</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 30 Sep 13 23:59:59 +0000</li></ul></li></ul></li></ul></li><li><span class="name">subject</span><ul><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-countryName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>US</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-stateOrProvinceName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>California</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-localityName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>Mountain View</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">3</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>Google Inc</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">4</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-commonName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>www.google.com</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">subjectPublicKeyInfo</span><ul><li><span class="name">algorithm</span><ul><li><span class="name">algorithm</span><ul><li>rsaEncryption</li></ul></li><li><span class="name">parameters</span><ul><li><span class="name">null</span><ul><li></li></ul></li></ul></li></ul></li><li><span class="name">subjectPublicKey</span><ul><li><pre>-----BEGIN PUBLIC KEY-----
+MIGJAoGBAN63JkOmmYXNOKcVCbnPD8nDVYyI7oyNKCckSypeoNgW+mEYS89tYIDTNUAycsCPEtjl
+To+5svbZFV5ahjGjuoaqa8jZcYzMzScTHp1CXTj2p6zv+mLzGIHUJEZ/AXd8xiqJFJm7mDkdqBn7
+OQBEfRuUangtaa3Aeiz60NogEpjTAgMBAAE=
+-----END PUBLIC KEY-----</pre></li></ul></li></ul></li><li><span class="name">extensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-basicConstraints</li></ul></li><li><span class="name">critical</span><ul><li>1</li></ul></li><li><span class="name">extnValue</span><ul></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLDistributionPoints</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li><span class="name">0</span><ul><li><span class="name">distributionPoint</span><ul><li><span class="name">fullName</span><ul><li><span class="name">0</span><ul><li><span class="name">uniformResourceIdentifier</span><ul><li>http://crl.thawte.com/ThawteSGCCA.crl</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">extnId</span><ul><li>id-ce-extKeyUsage</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li><span class="name">0</span><ul><li>id-kp-serverAuth</li></ul></li><li><span class="name">1</span><ul><li>id-kp-clientAuth</li></ul></li><li><span class="name">2</span><ul><li>2.16.840.1.113730.4.1</li></ul></li></ul></li></ul></li><li><span class="name">3</span><ul><li><span class="name">extnId</span><ul><li>id-pe-authorityInfoAccess</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li><span class="name">0</span><ul><li><span class="name">accessMethod</span><ul><li>id-ad-ocsp</li></ul></li><li><span class="name">accessLocation</span><ul><li><span class="name">uniformResourceIdentifier</span><ul><li>http://ocsp.thawte.com</li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">accessMethod</span><ul><li>id-ad-caIssuers</li></ul></li><li><span class="name">accessLocation</span><ul><li><span class="name">uniformResourceIdentifier</span><ul><li>http://www.thawte.com/repository/Thawte_SGC_CA.crt</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">signatureAlgorithm</span><ul><li><span class="name">algorithm</span><ul><li>sha1WithRSAEncryption</li></ul></li><li><span class="name">parameters</span><ul><li><span class="name">null</span><ul><li></li></ul></li></ul></li></ul></li><li><span class="name">signature</span><ul><li><div style="overflow: auto; word-wrap: break-word">ACGs1a7KNIlawqtS0rI0Zp16q+7mfNV+wlwou3QAyRAfQhP8aYoeJKACAOm6W8oZBLLTrwGyfl8U26bbUrma8xJ/fKKcO2+ZfepQDXYjEv/3ZnMpt5UKrdiLst4g6QpwZBEIyFrxfZ7saaWl1YLXJx6eVs3SdtV5K/clQxxp8Lj5</div></li></ul></li></ul>
+    </div>
+    <div class="getdnprop">
+<code>$prop</code>:<ul class="printr"><li><span class="name">0</span><ul><li>www.google.com</li></ul></li></ul>
+    </div>
+    <div class="getdn">
+<code>$dn</code>:<ul class="printr"><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-countryName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>US</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-stateOrProvinceName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>California</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-localityName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>Mountain View</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">3</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>Google Inc</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">4</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-commonName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">teletexString</span><ul><li>www.google.com</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul>
+    </div>
+    <div class="getdnstr">
+        C=US, ST=California, L=Mountain View, O=Google Inc, CN=www.google.com
+    </div>
+    <div class="getissuerdnstr">
+        C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte SGC CA
+    </div>
+    <div class="getpublickey">
+        <pre>-----BEGIN PUBLIC KEY-----
+MIGJAoGBAN63JkOmmYXNOKcVCbnPD8nDVYyI7oyNKCckSypeoNgW+mEYS89tYIDTNUAycsCPEtjl
+To+5svbZFV5ahjGjuoaqa8jZcYzMzScTHp1CXTj2p6zv+mLzGIHUJEZ/AXd8xiqJFJm7mDkdqBn7
+OQBEfRuUangtaa3Aeiz60NogEpjTAgMBAAE=
+-----END PUBLIC KEY-----</pre>
+    </div>
+    <div class="getissuerdnprop">
+      <code>$prop</code>:<ul class="printr"><li><span class="name">0</span><ul><li><pre>Thawte SGC CA</pre></li></ul></li></ul>
+    </div>
+    <div class="getissuerdn">
+      <code>$dn</code>:<ul class="printr"><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-countryName</li></ul></li><li><span class="name">value</span><ul><li>ZA</li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li>Thawte Consulting (Pty) Ltd.</li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-commonName</li></ul></li><li><span class="name">value</span><ul><li>Thawte SGC CA</li></ul></li></ul></li></ul></li></ul></li></ul>
+    </div>
+    <div class="getdnprop getissuerdnprop">
+      <p><h2>Notes:</h2>
+      An array is returned because each distinguished name property can (in theory) have multiple values</p>
+      <p>Valid property names are enumerated upon at <a href="dnprops.html">Distinguished Property Names</a></p>.
+    </div>
+  </div>
+  </div>
+  <div class="selfsigned">
+    <h2>Output:</h2>
+    <pre>the stunnel.pem contents are as follows:
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDR1VHopvujQwg7aZe6uvACg5ZLKYD1heP9hXlmJNGKkTvmV//uQ5PlWPTp99AW
+FgU9QRM5cKkxw/0hC8+JTyc1CoqtdVAI/8l826+muJfiUaUALkAHSrw8537Xj2agJQRmaVNhUztA
+G3y6yweav3dYLYJG3MDlcD4l2U9t6QDBGQIDAQABAoGAaMy+KBCeRaBJEENgwKZ1EQxfmBKWkgnZ
+INn1FAr3jNmUrSrubDXcPAP97o0SpLVC0KEb1Ohr2KsmVcbsVIvv7CoK5h+fNTOZpm51Wev5VlHA
+OO/FQtq4kTL9JpG/5vVbk5JFA1r7kC/W01Pwp8zpf8teM3NWKuciLUXy7RjCirECQQD0gmM8jWbS
+wUmSYLEUOaqZnpzpqm+dTLov8ubf0Dsla6OgnCg5N0noVMPm5oFSJBhQOjmQnrXmXLJu8Soo0VUv
+AkEA27HBjUe99ztdnP7uX6xhHX3XfUkk7TKZvulP1IvYnZggv3Nyyj+wqMsGavcOHwKfxoWo/Nim
+YLO1vMUKkLrMNwJARFSn/QUbRizELccd1aQj/Bhqi5aY6KHHqpy8TrH3xYZmTP029H5yBh6iPMYQ
+P+9caBdNfRANj5o6N2zoNk4B+wJAcnD/TTQw/ce79RtLWyU1laJHDWl7xd/U/QEWZ7bNiRKFBJYE
+Ftzkjpjr5+54OakpR8W6iLPmv3r90a6m2UulMwJAINcNFkJHojkf+Vc/e2U7ll19UIh+TDI0UrYT
+ZxJA2S/nhIz+A6cNTX+E+yHlTbJr5xu6jxexQ7HfU1hTWYNmUg==
+-----END RSA PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+MIIB1TCCAUCgAwIBAgIAMAsGCSqGSIb3DQEBBTAeMRwwGgYDVQQKDBNwaHBzZWNsaWIgZGVtbyBj
+ZXJ0MCIYDzIwMTIwODA3MDUxNTU5WhgPMjAxMzA4MDcwNTE1NTlaMB4xHDAaBgNVBAoME3BocHNl
+Y2xpYiBkZW1vIGNlcnQwgZ0wCwYJKoZIhvcNAQEBA4GNADCBiQKBgQDR1VHopvujQwg7aZe6uvAC
+g5ZLKYD1heP9hXlmJNGKkTvmV//uQ5PlWPTp99AWFgU9QRM5cKkxw/0hC8+JTyc1CoqtdVAI/8l8
+26+muJfiUaUALkAHSrw8537Xj2agJQRmaVNhUztAG3y6yweav3dYLYJG3MDlcD4l2U9t6QDBGQID
+AQABoyYwJDARBgNVHSMBAQAEBzAFgAMuLi4wDwYDVR0OAQEABAUEAy4uLjALBgkqhkiG9w0BAQUD
+gYEAjj/JuN/zrogYs7n51/aILDNfSk9AZmwSgK3Q0oo1VmO2to+8/X7Zxul0Xaz9NtejdHuodKze
+wzh5GB5B7rAxwT2gEGrVys4vNBI+FcDKBWp8uGr3V94tkXlFFG6G5Ab2Q7TiRcv70b810+hbcMB8
+8KfbVnlPPbEa2o9lWyd6v9Q=
+-----END CERTIFICATE-----</pre>
+  </div>
+  <div class="csr">
+    <h2>Output:</h2>
+    <pre>-----BEGIN CERTIFICATE REQUEST-----
+MIIBVjCBwgIAMB4xHDAaBgNVBAoME3BocHNlY2xpYiBkZW1vIGNlcnQwgZ0wCwYJKoZIhvcNAQEB
+A4GNADCBiQKBgQDF+1/N2DwvdkhoHsLq8LnH99AEGVOGpooSpbPCewbuZeqr/Djb9ySPar2PLySo
+Y+kB2QAbxUgpO/57IpWIabQ9jDFIznqLCcLzXKiKOWnMv4KMf55yJ6pwlqoTbUPgyQ67CRAfjcaD
+W9VQ/TzdKahdxLFPBAEIEpEX23YpLhTLNQIDAQABMAsGCSqGSIb3DQEBBQOBgQALjJE4OygjvLm0
+rzFyMPvAo7Ux6z5qTOi//HQzzmjNun7MV09GTfZgcYeWvuLosJXcn7CPALF5FqHWePs98WioTA7K
+WsvdZzm+yJ5UcmzdJ/Jq9X8o1KTsMELN0SQwiNk502a1wbiXotF4OgCsjSdno96PCV9VSF4w69HM
+1eXfvg==
+-----END CERTIFICATE REQUEST-----</pre>
+  </div>
+  <div class="casigned">
+    <h2>Output:</h2>
+    <pre>the private key for the CA cert (can be discarded):
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQCeSAGfM4nHdIaBwThHYGW3MABTvrSMrawnGN/Mx5ttyLQF4YcUJFSpGAJ8y2hV
+iak3irbLtc6nlpJFOHtMB4VsuG7S+MySYKBm5l7eApfWynHMLKVml3URXCMVMXju4SxiI+D10nNO
+aq+eSEIFlPOY+7LgSdIAka6/9+z2hgoITQIDAQABAoGADS1RdT+FKOW6jPLZDJgp36ZPYKlvvoZ2
+3opjl1jGx8z9r7+mzzZ3Fdy52EnW1cgwHj+eGDd6jNksNDcPjLTTlqfwoKMZhf1gpYBKA5PtnqFU
+rxM5eW3SzLWkPOZoS/i8fxze0uvoh0zcm6u1nictcjkj0Hqql4hbTrDRENxTfgECQQC9qYFWsH8q
+r/ztbl6WBxW1NT9JgthvteiINpAjeN9tmuP9BgTGPk4j3MhTVsPp5ogzdn3MLch2YJ9cJuEeHon1
+AkEA1aSiiZwGH9tCI8EFJrDqbCqDgeOmlkgMp5YQ8TqBg6/nkM4wWz9cXSmFPO3L9BQhvXE8RlGJ
+DChCksbBcjnV+QJBALXZ7w+lz2iosYUejEahqGjFE1dyw//olXr1hiLc5K39E5kpyi4i012Ddfii
+etqsle9yL5A0Xb9TSblb9gGhGnkCQDyj8Gay3KIqMAnJ/dZPnRp6rr0titlZNg5TcBeojZ59TXMy
+s1MTFvpykJkMvjlXhYQqIfurpQTIYK0csUfk1rECQBPVqVAG45VBn6yV1cDaqvg/0aQ6yZc7nQTr
+7aLuUCTaf/xP4wSWiQpGiRFdTLt3pkkI3XdngV6j8RCcpgED6qU=
+-----END RSA PRIVATE KEY-----
+
+the CA cert to be imported into the browser is as follows:
+
+-----BEGIN CERTIFICATE-----
+MIIBzzCCATqgAwIBAgIBATALBgkqhkiG9w0BAQUwHDEaMBgGA1UECgwRcGhwc2VjbGliIGRlbW8g
+Q0EwIhgPMjAxMjA1MDQwMzQxNDhaGA8yMDEzMDYwNDAzNDE0OFowHDEaMBgGA1UECgwRcGhwc2Vj
+bGliIGRlbW8gQ0EwgZ0wCwYJKoZIhvcNAQEBA4GNADCBiQKBgQCeSAGfM4nHdIaBwThHYGW3MABT
+vrSMrawnGN/Mx5ttyLQF4YcUJFSpGAJ8y2hViak3irbLtc6nlpJFOHtMB4VsuG7S+MySYKBm5l7e
+ApfWynHMLKVml3URXCMVMXju4SxiI+D10nNOaq+eSEIFlPOY+7LgSdIAka6/9+z2hgoITQIDAQAB
+oyMwITAOBgNVHQ8BAQAEBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zALBgkqhkiG9w0BAQUDgYEAc31s
+EL3tWfwFIHYK+96wzvAS7F/4FCMcZOdrW9LZ1IniXUSf601MIOVy0pAc17Xf6QjlVOhziA3cLMi3
+3CWwEDgnhXU8s6YRAa6WD8eeHwmJKE3vIU0+klscIdOO+14BrC+mRUoPaZ1hmixMvrK/pVhXAkef
+XTSk5kq9f2Bfm+M=
+-----END CERTIFICATE-----
+
+the stunnel.pem contents are as follows:
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQCBsisUty8OFR2gz3sweCoIfyzFWcvaTA55noaI6LXZMebI3iB7u5dJjsbI2yRh
+IgDaHBDVyu6R9W/NA9QFkKGoHmnnvHsEo8Jc9Ca3nVIfjVBUj+kGMnadUtHoxZaRXLdwV9nX+LCa
+rfEz9VDS21BOJJ6OzUmvvkM0AUkGQlmcnwIDAQABAoGAN2+c63dbNRVAe0aEHNUX/lbBn79Am5fL
+zh882RNC+0nRoAUV9F1cDpRpElxdAemjXJcHeSKK87dpaMOcoh5Ogi2rXXgB++igxNdx19+z4Ku1
+A1JG0O08Z/n7DQQb5g+V4Z9oIorpfufh7lIj4HgDLoznCj2lWq6SpzWobmtYnC0CQQDJDjYDRJRR
+ujepI6yz+9ckD6Jr2AwjSrdQKUPMzeexlTQgDqW/Jec5k3dS1zcvM+FctzNfnp9LyK/CABFYLb6r
+AkEApSOpwpzAsL1rDUqdV3iBEPPBmLLeTef4+pyggGGYFeu+TR3hNrHZPphXi6F/c+kmt7kDWgq1
+K3QZPQkadXgJ3QJAF5Bb0jw6ae26Uk+FET8l8usGLT+QBJ7gJzv+30UOr6h+CHfPAz0tAXmAFax1
+okmhUx2BnuZXYyltN/6MCdqqqwJAVqU5owTADXu1OYoWuBhgD9b1kvr2rQWzmzqm8/VA6O+CL9An
+pJz4EWG5PWgFCXoheHA4k/veRuhpfZ7TJSNQeQJAFVH1RQYAYOTVyyXYbUJnXEbVnEYeTVUKLJmx
+VSmAwFxx6s/EHVmiDH/WPgV4NkZt7gW7epkqoz3gfTDWYfx8Qg==
+-----END RSA PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+MIIBxTCCATCgAwIBAgIBATALBgkqhkiG9w0BAQUwHDEaMBgGA1UECgwRcGhwc2VjbGliIGRlbW8g
+Q0EwIhgPMjAxMjA1MDQwMzQxNDhaGA8yMDEzMDYwNDAzNDE0OFowNzEcMBoGA1UECgwTcGhwc2Vj
+bGliIGRlbW8gY2VydDEXMBUGA1UEAwwOd3d3Lmdvb2dsZS5jb20wgZ0wCwYJKoZIhvcNAQEBA4GN
+ADCBiQKBgQCBsisUty8OFR2gz3sweCoIfyzFWcvaTA55noaI6LXZMebI3iB7u5dJjsbI2yRhIgDa
+HBDVyu6R9W/NA9QFkKGoHmnnvHsEo8Jc9Ca3nVIfjVBUj+kGMnadUtHoxZaRXLdwV9nX+LCarfEz
+9VDS21BOJJ6OzUmvvkM0AUkGQlmcnwIDAQABMAsGCSqGSIb3DQEBBQOBgQBzWpz47IfG6vWf5WlN
+R+iTEBwr8kKJOop38otzxwGBvYk7YBHI2DZW0tivpceN7JjkhpkBUNd+vg/qQSp0UVp38MrVR0cw
+ZP0iAJmLHTq/Jpymrqpz3Cn0bvKFvmYvzHgy9bjS5dy8AuFZY16qieNJovrV2c4dnCh4xo2c+MbK
+Ig==
+-----END CERTIFICATE-----</pre>
+  </div>
+  <div class="readcsr">
+  <h2>Output:</h2>
+  <div class="csrload">
+  <code id="pathcsr">$csr:</code>
+<ul class="printr"><li><span class="name">certificationRequestInfo</span><ul><li><span class="name">version</span><ul><li>v1</li></ul></li><li><span class="name">subject</span><ul><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">utf8String</span><ul><li>phpseclib demo cert</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">subjectPKInfo</span><ul><li><span class="name">algorithm</span><ul><li><span class="name">algorithm</span><ul><li>rsaEncryption</li></ul></li></ul></li><li><span class="name">subjectPublicKey</span><ul><li><pre>-----BEGIN PUBLIC KEY-----
+MIGJAoGBAKUAZcMKDkb0malJqS+aaAAy1rEQceebS7N2KvGX25EqPJx3rWz5zrpCD/zZcZ95/zBj
+r7F0GvTS4rC0OlJsi8iV11VvBZ+qQkCKZ8oIzW6HILOro+O1BFw8DMJXyyj2fNDO4ZjKYWWeFG/y
+AXtEuSje+2MWLxShinzDVymVsdf/AgMBAAE=
+-----END PUBLIC KEY-----</pre></li></ul></li></ul></li></ul></li><li><span class="name">signatureAlgorithm</span><ul><li><span class="name">algorithm</span><ul><li>sha1WithRSAEncryption</li></ul></li></ul></li><li><span class="name">signature</span><ul><li><div style="overflow: auto; word-wrap: break-word">ACEVzXM3m2ub2cu+AHQ2yJqs73xsH/BPxW+S2YXpvzTODypG5pO8haK5wR8nNmWs2puiDrz0zcbrRrJ4ZiwbFMpRr7E9AaiSMTd291qjOpABqxLonJ6p0q2j1y633XlavuTAi63UmsFszc27BFhaX04XgYST/2+DDyK816fNBcio</div></li></ul></li></ul>
+  </div>
+  <div class="csrgetdnprop">
+<code>$prop</code>:<ul class="printr"><li><span class="name">0</span><ul><li><pre>phpseclib demo cert</pre></li></ul></li></ul>
+  </div>
+  <div class="csrgetdn">
+  <code>$prop:</code>
+<ul class="printr"><ul><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li>phpseclib demo cert</li></ul></li></ul></li></ul></li></ul></li></ul></li>
+  </div>
+  <div class="csrgetdnstr">
+  O=phpseclib demo cert
+  </div>
+  <div class="csrgetpublickey">
+<pre>-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClAGXDCg5G9JmpSakvmmgAMtaxEHHnm0uzdirx
+l9uRKjycd61s+c66Qg/82XGfef8wY6+xdBr00uKwtDpSbIvIlddVbwWfqkJAimfKCM1uhyCzq6Pj
+tQRcPAzCV8so9nzQzuGYymFlnhRv8gF7RLko3vtjFi8UoYp8w1cplbHX/wIDAQAB
+-----END PUBLIC KEY-----</pre>
+  </div>
+  </div>
+
+  <div class="readcrl">
+  <h2>Output:</h2>
+  <div class="crlload">
+  <code id="pathcsr">$crl:</code>
+<ul class="printr"><li><span class="name">tbsCertList</span><ul><li><span class="name">version</span><ul><li>v2</li></ul></li><li><span class="name">signature</span><ul><li><span class="name">algorithm</span><ul><li>sha1WithRSAEncryption</li></ul></li><li><span class="name">parameters</span><ul><li><span class="name">null</span><ul><li></li></ul></li></ul></li></ul></li><li><span class="name">issuer</span><ul><li><span class="name">rdnSequence</span><ul><li><span class="name">0</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-countryName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>US</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>DigiCert Inc</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-organizationalUnitName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>www.digicert.com</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">3</span><ul><li><span class="name">0</span><ul><li><span class="name">type</span><ul><li>id-at-commonName</li></ul></li><li><span class="name">value</span><ul><li><span class="name">printableString</span><ul><li>DigiCert High Assurance EV CA-1</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">thisUpdate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 08 Nov 12 17:00:51 +0000</li></ul></li></ul></li><li><span class="name">nextUpdate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 15 Nov 12 17:00:00 +0000</li></ul></li></ul></li><li><span class="name">revokedCertificates</span><ul><li><span class="name">0</span><ul><li><span class="name">userCertificate</span><ul><li>1896340804446443191581573972274376588</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 12 Nov 10 14:39:51 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">userCertificate</span><ul><li>3070878746722245918663569368773689441</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 27 Jan 11 19:05:01 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">2</span><ul><li><span class="name">userCertificate</span><ul><li>4264886842921432244720754082045654970</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 29 Jan 11 08:57:53 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">3</span><ul><li><span class="name">userCertificate</span><ul><li>15010621606132240696101502088677469075</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 29 Jan 11 11:33:11 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">4</span><ul><li><span class="name">userCertificate</span><ul><li>7582676908446657835356226492149097162</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 04 Mar 11 17:02:38 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">5</span><ul><li><span class="name">userCertificate</span><ul><li>14283655577370294982833658394379597056</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 07 May 11 00:56:32 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">6</span><ul><li><span class="name">userCertificate</span><ul><li>7025432242271914077410028621137285723</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 04 Jun 11 07:19:14 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">7</span><ul><li><span class="name">userCertificate</span><ul><li>11432507911400442777973975308466240444</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 16 Jun 11 14:55:08 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">8</span><ul><li><span class="name">userCertificate</span><ul><li>20330197051464367846096579178936391889</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 17 Jun 11 05:07:07 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">9</span><ul><li><span class="name">userCertificate</span><ul><li>16680987116210580911048750025133669960</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 21 Jun 11 05:48:44 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">10</span><ul><li><span class="name">userCertificate</span><ul><li>20466023700883303821257062866359277303</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 21 Jun 11 05:48:44 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">11</span><ul><li><span class="name">userCertificate</span><ul><li>10756487690572487823748256118640798071</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 24 Jun 11 08:48:18 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">12</span><ul><li><span class="name">userCertificate</span><ul><li>8292145653257002218980220083989767394</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 25 Jun 11 08:59:31 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">13</span><ul><li><span class="name">userCertificate</span><ul><li>10951424688851687115589962735976462777</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 25 Jun 11 08:59:31 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">14</span><ul><li><span class="name">userCertificate</span><ul><li>14877831153190058894953444007653661737</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 25 Jun 11 08:59:31 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">15</span><ul><li><span class="name">userCertificate</span><ul><li>8106872826991528186591703477283133854</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 27 Jun 11 04:40:23 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">16</span><ul><li><span class="name">userCertificate</span><ul><li>11447088191391849656865534388393824229</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 29 Jun 11 16:58:19 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">17</span><ul><li><span class="name">userCertificate</span><ul><li>12971785950040293558857465038124943423</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:18:56 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">18</span><ul><li><span class="name">userCertificate</span><ul><li>12050402564172114001138060275358805373</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:18:56 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">19</span><ul><li><span class="name">userCertificate</span><ul><li>5850275335281899680021320356432492558</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:19:41 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">20</span><ul><li><span class="name">userCertificate</span><ul><li>14447635487260724233449796859940282632</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:19:41 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">21</span><ul><li><span class="name">userCertificate</span><ul><li>16728550360999221651634506894938610341</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:20:29 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">22</span><ul><li><span class="name">userCertificate</span><ul><li>16030905390649360103346207998869143352</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 11 Jul 11 10:20:29 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">23</span><ul><li><span class="name">userCertificate</span><ul><li>18739817485093958723037461592510291989</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 15 Jul 11 16:47:35 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">24</span><ul><li><span class="name">userCertificate</span><ul><li>9099804057370938752416708935383533737</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 18 Jul 11 22:55:17 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">25</span><ul><li><span class="name">userCertificate</span><ul><li>18506899891304377465088800287631646645</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 18 Jul 11 22:55:29 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">26</span><ul><li><span class="name">userCertificate</span><ul><li>9740989011962920485166098611559070133</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 22 Jul 11 07:29:51 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">27</span><ul><li><span class="name">userCertificate</span><ul><li>12606765947201014004552070980564431376</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 28 Jul 11 10:59:54 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">28</span><ul><li><span class="name">userCertificate</span><ul><li>11863539923369887535883548696369594743</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 04 Aug 11 07:55:09 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">29</span><ul><li><span class="name">userCertificate</span><ul><li>14523020931429497840364095884714233910</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 04 Aug 11 07:55:09 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">30</span><ul><li><span class="name">userCertificate</span><ul><li>18802010376259540779962207147171705741</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 31 Aug 11 11:08:12 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">31</span><ul><li><span class="name">userCertificate</span><ul><li>6471328385581868711476413345994819127</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 31 Aug 11 16:03:23 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">32</span><ul><li><span class="name">userCertificate</span><ul><li>12062662917621376262424203111716494455</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 15 Sep 11 02:12:33 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">33</span><ul><li><span class="name">userCertificate</span><ul><li>19922459037596493581213701073508735518</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 15 Sep 11 14:30:21 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">34</span><ul><li><span class="name">userCertificate</span><ul><li>4170308715394771174203261292947718910</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 19 Sep 11 17:51:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">35</span><ul><li><span class="name">userCertificate</span><ul><li>5120396680976129203813117766483394758</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 21 Sep 11 18:51:34 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">36</span><ul><li><span class="name">userCertificate</span><ul><li>8551469534662953248701720692000801971</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 22 Sep 11 15:28:39 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">37</span><ul><li><span class="name">userCertificate</span><ul><li>2694298607835044575387938623595975156</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 29 Sep 11 18:46:27 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">38</span><ul><li><span class="name">userCertificate</span><ul><li>5403897671894201434087576466788430138</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 29 Sep 11 18:46:27 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">39</span><ul><li><span class="name">userCertificate</span><ul><li>14766500872587728926436578947211234945</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 29 Sep 11 18:46:27 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">40</span><ul><li><span class="name">userCertificate</span><ul><li>1969360307019232208588258315490543798</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 06 Oct 11 00:03:42 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">41</span><ul><li><span class="name">userCertificate</span><ul><li>13805847840723110206984528959889662778</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 06 Oct 11 00:03:42 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">42</span><ul><li><span class="name">userCertificate</span><ul><li>3231767018941084485056836680567973769</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 14 Oct 11 09:59:37 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">43</span><ul><li><span class="name">userCertificate</span><ul><li>6136447954200513613339807470452140907</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 19 Oct 11 14:50:54 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">44</span><ul><li><span class="name">userCertificate</span><ul><li>10594405372234083142850044012173086065</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 27 Oct 11 17:47:30 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">45</span><ul><li><span class="name">userCertificate</span><ul><li>15754083733651239988501909977176545970</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 29 Oct 11 15:33:25 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">46</span><ul><li><span class="name">userCertificate</span><ul><li>11322322126748539031686860974097456722</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 09 Nov 11 19:39:11 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">47</span><ul><li><span class="name">userCertificate</span><ul><li>14959541598610369708081995488729755398</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 09 Nov 11 19:39:11 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">48</span><ul><li><span class="name">userCertificate</span><ul><li>9182524120872630683840590262362405770</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 04:17:57 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">49</span><ul><li><span class="name">userCertificate</span><ul><li>16669236470555813098054077542559407296</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 15:34:20 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">50</span><ul><li><span class="name">userCertificate</span><ul><li>3674754774052853327023545058560749866</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 18:51:28 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">51</span><ul><li><span class="name">userCertificate</span><ul><li>9633560366377317563724388785725226531</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 18:51:28 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">52</span><ul><li><span class="name">userCertificate</span><ul><li>15638709831656528684702568260634584769</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 18:51:28 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">53</span><ul><li><span class="name">userCertificate</span><ul><li>6709907714158677764706972391007451489</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 18:51:28 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">54</span><ul><li><span class="name">userCertificate</span><ul><li>19248242646503970293758328328327080588</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 16 Nov 11 18:51:28 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">55</span><ul><li><span class="name">userCertificate</span><ul><li>8542658306393010305504570425231850862</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 26 Nov 11 15:22:15 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">56</span><ul><li><span class="name">userCertificate</span><ul><li>17595419601203870931006271723028906441</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 26 Nov 11 15:22:15 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">57</span><ul><li><span class="name">userCertificate</span><ul><li>4785835279669355583655938881778520658</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 08 Dec 11 10:15:42 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">58</span><ul><li><span class="name">userCertificate</span><ul><li>11464255240850822005868775757888289271</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Dec 11 20:32:44 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">59</span><ul><li><span class="name">userCertificate</span><ul><li>13727338751918614127036096091352063294</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 20 Dec 11 09:08:13 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">60</span><ul><li><span class="name">userCertificate</span><ul><li>18370876364836814682478861412110162712</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 07 Jan 12 03:22:58 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">61</span><ul><li><span class="name">userCertificate</span><ul><li>15267834862673402903106743055532086386</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 17 Jan 12 06:29:51 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">62</span><ul><li><span class="name">userCertificate</span><ul><li>3408248274011898168801785162541918558</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 17 Jan 12 17:17:35 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">63</span><ul><li><span class="name">userCertificate</span><ul><li>14853363054547314661961210718389246542</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 17 Jan 12 17:17:35 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">64</span><ul><li><span class="name">userCertificate</span><ul><li>12596712634254658922038599939618333517</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 17 Jan 12 17:17:35 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">65</span><ul><li><span class="name">userCertificate</span><ul><li>15096149773166661643506781301146359892</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 17 Jan 12 17:17:35 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">66</span><ul><li><span class="name">userCertificate</span><ul><li>6640353608178196551668524719592821580</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 18 Jan 12 16:56:42 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">67</span><ul><li><span class="name">userCertificate</span><ul><li>21101212183184683018320376770714445422</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 07 Feb 12 12:12:41 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">68</span><ul><li><span class="name">userCertificate</span><ul><li>13952963294473988644070408354367085293</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 03 Mar 12 14:01:50 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">69</span><ul><li><span class="name">userCertificate</span><ul><li>8667529493141077373787589337830742843</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Sat, 03 Mar 12 14:04:53 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">70</span><ul><li><span class="name">userCertificate</span><ul><li>3581346949597299018559127977551003508</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 06 Mar 12 10:25:06 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">71</span><ul><li><span class="name">userCertificate</span><ul><li>20048263815839888421248152673232994616</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 08 Mar 12 14:53:52 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">72</span><ul><li><span class="name">userCertificate</span><ul><li>17517586373986021538185981193045611788</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:35:40 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">73</span><ul><li><span class="name">userCertificate</span><ul><li>8552546453560890677641840806857081094</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:35:56 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">74</span><ul><li><span class="name">userCertificate</span><ul><li>10379760794806923837693709575601520776</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:36:13 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">75</span><ul><li><span class="name">userCertificate</span><ul><li>13599191545244014068920415655283029444</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:36:51 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">76</span><ul><li><span class="name">userCertificate</span><ul><li>19038326648537872633383796119133911227</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:36:59 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">77</span><ul><li><span class="name">userCertificate</span><ul><li>13440400604018561112023537614995276527</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Wed, 14 Mar 12 18:37:08 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">78</span><ul><li><span class="name">userCertificate</span><ul><li>6015727751708413147025701626966430557</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 15 Mar 12 13:29:59 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">79</span><ul><li><span class="name">userCertificate</span><ul><li>12456931176019563439576415323272167179</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 26 Mar 12 14:40:24 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">80</span><ul><li><span class="name">userCertificate</span><ul><li>4438488660125662580497778986344055441</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 26 Mar 12 14:40:33 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">81</span><ul><li><span class="name">userCertificate</span><ul><li>18286597439084641425633112599863399111</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 26 Mar 12 21:20:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">82</span><ul><li><span class="name">userCertificate</span><ul><li>15150636431386499852278088849868898525</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Thu, 19 Apr 12 09:17:24 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">83</span><ul><li><span class="name">userCertificate</span><ul><li>9413740367916934725524378084784768186</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 30 Apr 12 20:16:21 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">84</span><ul><li><span class="name">userCertificate</span><ul><li>19938043504660635228180518346323043109</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 09:43:22 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">85</span><ul><li><span class="name">userCertificate</span><ul><li>3936191338939076990689077746497253713</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:16 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">86</span><ul><li><span class="name">userCertificate</span><ul><li>10039124784021198556626729044643418900</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:16 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">87</span><ul><li><span class="name">userCertificate</span><ul><li>2045920717981776911350965682598978887</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:34 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">88</span><ul><li><span class="name">userCertificate</span><ul><li>12528850273339548576627250082579067926</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:34 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">89</span><ul><li><span class="name">userCertificate</span><ul><li>11326432605603160013664517330210149298</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:55 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">90</span><ul><li><span class="name">userCertificate</span><ul><li>13567118698638783540421032428061778306</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:55 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">91</span><ul><li><span class="name">userCertificate</span><ul><li>14511455546385872832794765995651106902</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:11:55 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">92</span><ul><li><span class="name">userCertificate</span><ul><li>9898705350528108967233993090825718033</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:16:20 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">93</span><ul><li><span class="name">userCertificate</span><ul><li>12200626009134537545199978398746808306</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 01 May 12 10:16:53 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">94</span><ul><li><span class="name">userCertificate</span><ul><li>7624955769492031351074051210488601794</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 11 May 12 06:10:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">95</span><ul><li><span class="name">userCertificate</span><ul><li>12578953966579613084519948813967654595</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 11 May 12 06:10:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">96</span><ul><li><span class="name">userCertificate</span><ul><li>16850738090450324439314003364754421205</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Fri, 11 May 12 06:10:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">97</span><ul><li><span class="name">userCertificate</span><ul><li>2203305533163133959750028367382091333</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Mon, 06 Aug 12 18:24:02 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">98</span><ul><li><span class="name">userCertificate</span><ul><li>14540377289302665572735039702951441811</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 18 Sep 12 16:12:05 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">99</span><ul><li><span class="name">userCertificate</span><ul><li>18244777679847125680837237748408928706</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 18 Sep 12 16:12:05 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">100</span><ul><li><span class="name">userCertificate</span><ul><li>17317703406938269401099145732380474970</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 18 Sep 12 16:13:49 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">101</span><ul><li><span class="name">userCertificate</span><ul><li>9048354325167497831898969642461237543</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 18 Sep 12 16:14:08 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">102</span><ul><li><span class="name">userCertificate</span><ul><li>9835191522837184195846579768505545167</li></ul></li><li><span class="name">revocationDate</span><ul><li><span class="name">utcTime</span><ul><li>Tue, 18 Sep 12 16:14:08 +0000</li></ul></li></ul></li><li><span class="name">crlEntryExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLReasons</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>unspecified</li></ul></li></ul></li></ul></li></ul></li></ul></li><li><span class="name">crlExtensions</span><ul><li><span class="name">0</span><ul><li><span class="name">extnId</span><ul><li>id-ce-authorityKeyIdentifier</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li><span class="name">keyIdentifier</span><ul><li>TFjLJfBBT1L0KMiBQ5umqKDmkuU=</li></ul></li></ul></li></ul></li><li><span class="name">1</span><ul><li><span class="name">extnId</span><ul><li>id-ce-cRLNumber</li></ul></li><li><span class="name">critical</span><ul><li></li></ul></li><li><span class="name">extnValue</span><ul><li>1409</li></ul></li></ul></li></ul></li></ul></li><li><span class="name">signatureAlgorithm</span><ul><li><span class="name">algorithm</span><ul><li>sha1WithRSAEncryption</li></ul></li><li><span class="name">parameters</span><ul><li><span class="name">null</span><ul><li></li></ul></li></ul></li></ul></li><li><span class="name">signature</span><ul><li><div style="overflow: auto; word-wrap: break-word">AA/h0YFZyuYXJ39BXC/Xaxi/pBd6RFTWdC7g7VEJouQoI5dcPEuvCD9TxOdd1seNfT64AAIhtn6cdfKZVxpz94Ww7HTduWYWVtQthS5MeI6QJEj+WpiBEfzGIzWEEsU5zC2mUo5PVO/+0q9d3n4DV0eyO7PYNRBLbeNZlc5HhKLiXOYxpIYkI0pu6voagCLdx6Y4gpaEUjiN40MeP2kh87hhoDJbr49t53eE3kaKnxHZV+nS69fUDECgnUcVRgzentBtsM3o41w7ETpoAxhMqET0QexvZUQovRef2WxaKA98Al5E5oyfCpDkjo4qvnViXNHMtE1NRpOgfN01tRBBZp8=</div></li></ul></li></ul>
+  </div>
+  </div>
+  <!-- end .grid_9 -->
+</div>
+<!-- end .container_16 -->
+</body>
+</html>

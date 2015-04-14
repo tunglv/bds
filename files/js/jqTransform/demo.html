@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="gmapkey" content="" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <title></title>
+
+        <link rel="stylesheet" href="jqtransformplugin/jqtransform.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="demo.css" type="text/css" media="all" />
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+        <script type="text/javascript" src="jqtransformplugin/jquery.jqtransform.js" ></script>
+        <script language="javascript">
+            $(function(){
+                $('form').jqTransform();
+                $(".jqTransformCheckboxWrapper").on('click', function(){
+                    if($('input', this).is(':checked')){
+                        console.log('checked');   
+                    }else{
+                        console.log('uncheck')
+                    }
+                    
+                });
+            });
+
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <form>
+            <div class="rowElem"><label>Checkbox: </label><input type="checkbox" name="chbox" value="aaa"></div>
+
+        </form>
+
+    </body>
+</html>

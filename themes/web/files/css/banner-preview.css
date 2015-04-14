@@ -1,0 +1,43 @@
+﻿.ban_scroll{
+    width: 100px;
+    overflow:hidden;
+    position: absolute;
+    z-index: 10;
+    top:0px;
+}
+
+#ban_left{
+    left: 1px;
+    text-align:right;
+}
+#ban_left .adshared
+{
+    position:relative;
+    margin-bottom: 10px;
+    }
+#ban_right{
+    right: 1px;
+}
+#ban_right .adshared
+{
+    position:relative;
+    margin-bottom: 10px;
+    }
+.adshared div
+{
+display:none;
+}
+.adshared>:first-child
+{
+display:block;
+}
+
+input[type="image"]
+{
+    padding:0px;
+    border:none;    
+    }
+.additem
+{
+    margin-bottom:10px;
+    }

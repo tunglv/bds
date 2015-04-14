@@ -1,0 +1,176 @@
+/*jquery ui*/
+.ui-dialog-tinymce {
+    width: 900px !important;
+    margin: auto;
+}
+.ui-widget-content {
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    color: #222222;
+}
+.ui-menu {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 2px;
+}
+.ui-autocomplete {
+    cursor: default;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+img{
+    display: inline-block;
+}
+#ajax-loading{
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    z-index: 99999;
+    background-color: #fff;
+    display: none;
+}
+#ajax-loading img{
+    vertical-align: -3px;
+}
+.logintitle .subtitle.error{
+    color: #B94A48;    
+}
+.logintitle .subtitle.success{
+    color: #468847;    
+}
+
+.leftpanel .dropdown .opened{
+    display: block;
+}
+.leftpanel .dropdown .opened .active a{
+    text-decoration: underline;
+}
+span.required,
+.controls .error,
+div.errorMessage{
+    color: #B94A48;
+}
+.stdform label.error {
+    color: #666;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    margin-left: auto;
+    padding: 5px 20px 0 0;
+    text-align: right;
+    width: 200px;
+}
+.captcha_img{
+    height: 44px;
+    vertical-align: -19px;
+    cursor: pointer;
+}
+.captcha_refresh{
+    margin-left: 3px;
+    vertical-align: -10px;
+}
+
+/* stdformsmall */
+.stdform.stdformsmall label{
+    width: 100px;
+}
+
+.stdform.stdformsmall .stdformbutton,
+.stdform.stdformsmall .errorMessage {
+    margin-left: 120px;
+}
+.stdform.stdformsmall div.par {
+    margin: 5px 0;
+}
+.ui-datepicker-current{
+    display: none;
+}
+.ui-datepicker-close{
+    float: right;
+}
+.breadcrumb span{
+    color: #CCCCCC;
+}
+.grid-address-full{
+    font-size: 10px;
+    color: #888;
+}
+
+td.preview img{
+    width: 100px;
+}
+div.image_group select{
+    width: 100px; 
+}
+div.shop-form-grid-images{
+    overflow:auto;
+    height: 350px;
+}
+div.shop-form-grid-attrs{
+    overflow:auto;
+    height: 420px;
+}
+
+.nav-tabs a{
+    cursor: pointer;
+}
+.tab-upload-image{
+    margin: 0px !important;
+}
+.tab-branch{
+    margin: 10px 0px !important;
+    font-weight: bold;
+}
+#add-more-branch{
+    float: right;
+}
+
+
+/* param*/
+.param-group .label{
+    font-weight: bold;
+}
+.param-parent{
+
+    float: left;
+    width: 250px;
+}
+.param-childs{
+    display: none;
+}
+.param-child{
+    margin-left: 20px;
+    font-weight: normal;
+}
+.param-parent .toogle{
+    font-weight: normal;
+    cursor: pointer;    
+}
+
+.pagination ul li{
+    padding: 0;
+}
+.grid-view .filters input{
+    width: 88% !important;
+}
+
+table.table tr.filters, table.table tr th{
+    background-color: #eee;
+}
+
+.grid-view table.table th a.asc {
+    background: url("img/up.gif") no-repeat scroll right center transparent;
+    padding-right: 10px;
+}
+.grid-view table.table th a.desc {
+    background: url("img/down.gif") no-repeat scroll right center transparent;
+    padding-right: 10px;
+}
