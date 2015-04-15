@@ -80,6 +80,15 @@
                 '200'       => array('width' => 200, 'height' => 144, 'quality' => 90),
             ),
         ),
+        'project' => array(
+            'path' => 'upload/project/',
+            'img' => array(
+                '940'       => array('width' => 940, 'height' => '100%', 'quality' => 90),
+                '530'       => array('width' => 530, 'height' => '100%', 'quality' => 90),
+                '170'       => array('width' => 170, 'height' => 100, 'quality' => 90),
+                '90'       => array('width' => 90, 'height' => 90, 'quality' => 90),
+            ),
+        ),
         'product' => array(
             'path' => 'upload/product/',
             'img' => array(

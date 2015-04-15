@@ -81,6 +81,15 @@
                     <li<?php if($this->menu_child_selected == 'saler'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/saler')?>">Quản lý nhà mô giới</a></li>
                 </ul>
             </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'project'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/project')?>">
+                    <span class="icon-fire"></span> Danh sách dự án
+                </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'project') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'project_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/project/create')?>">Thêm dự án</a></li>
+                    <li<?php if($this->menu_child_selected == 'project'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/project')?>">Quản lý dự án</a></li>
+                </ul>
+            </li>
         </ul>
     </div><!--leftmenu-->
 
