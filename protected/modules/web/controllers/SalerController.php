@@ -52,17 +52,30 @@ class SalerController extends WebController {
     public function actionList($type = 0) {
         $this->layout = '//layouts/main';
 
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('Saler', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('list');
+        $this->render('list',array('dataProvider'=>$dataProvider));
     }
 
-    public function actionDetail($id = 0){
+    public function actionDetail($id = 0, $alias = ''){
+        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
         $this->layout = '//layouts/main';
 
+        $saler = Saler::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('detail');
+        $this->render('detail', array('saler'=>$saler));
     }
 
     /**

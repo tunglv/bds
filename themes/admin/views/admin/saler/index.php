@@ -40,36 +40,19 @@
         array(
             'name' => 'image',
             'type'      =>  'html',
-            'value' => 'CHtml::image($data->getImageUrl($data->id,"260"), "", array("style" => "width: 100px"))',
+            'value' => 'CHtml::image($data->getImageUrl($data->id,"200"), "", array("style" => "width: 100px"))',
             'filter' => FALSE
         ),
         array(
-            'name' => 'title',
+            'name' => 'name',
             'type'      =>  'raw',
-            'value' => '$data->title',
-        ),
-        array(
-            'name' => 'desc',
-            'type'      =>  'html',
-            'value' => '$data->desc',
-            'filter' => FALSE
-        ),
-        array(
-            'name' => 'type',
-            'type'      =>  'raw',
-            'value' => '$data->typeLabel',
-            'filter' => News::model()->getTypeData()
-        ),
-        array(
-            'name' => 'topic_id',
-            'type'      =>  'raw',
-            'value' => '$data->topic["title"]',
-            'filter' => TopicNews::model()->getData()
+            'value' => '$data->name',
         ),
         array(
             'name' => 'created',
             'type'      =>  'raw',
-            'value' => 'date("h:s d-m-y",$data->created)'
+            'value' => 'date("h:s d-m-y",$data->created)',
+            'filter' => FALSE
         ),
         array(
             'class'=>'CButtonColumn',

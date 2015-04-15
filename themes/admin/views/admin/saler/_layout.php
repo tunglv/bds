@@ -9,14 +9,14 @@
             <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
                 <?php if($this->manager->isManager):?>
                 <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'create'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/create')?>">Thêm danh ba</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/saler/create')?>">Thêm danh ba</a></li>
                 <li class="ui-state-default ui-corner-top <?php if($this->menu_sub_selected == 'index'):?> ui-tabs-selected ui-state-active<?php endif?>">
-                    <a href="<?php echo $this->createUrl('/admin/pt/')?>">Danh ba</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/saler/')?>">Danh ba</a></li>
                 <?php endif?>
                 
                 <?php if($this->menu_sub_selected == 'update'):?> 
                 <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
-                    <a href="<?php echo $this->createUrl('/admin/pt/update')?>">Cập nhật danh ba</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/saler/update')?>">Cập nhật danh ba</a></li>
                 <?php endif?>
             </ul>
         
@@ -25,7 +25,6 @@
                 <?php echo $content?>
             </div>
         </div>
-
         <div class="clearfix"></div>
     </div><!--contentinner-->
 </div><!--maincontent-->

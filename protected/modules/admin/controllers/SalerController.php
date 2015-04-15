@@ -99,7 +99,7 @@ class SalerController extends AdminController {
             $model->image = 'default';
             $model->created = time();
             Yii::import('ext.TextParser');
-            $model->alias = $model->alias ? $model->alias : $model->title;
+            $model->alias = $model->alias ? $model->alias : $model->name;
             $model->alias = TextParser::toSEOString($model->alias);
 
 //            var_dump($model->validate());

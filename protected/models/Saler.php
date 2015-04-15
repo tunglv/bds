@@ -63,6 +63,7 @@ class Saler extends CActiveRecord
 			array('email, website, fax', 'length', 'max'=>50),
 			array('skyper, yahoo', 'length', 'max'=>25),
 			array('area', 'length', 'max'=>2000),
+            array('content', 'safe'),
 
             array('image_file', 'file', 'allowEmpty' => true),
             array('image_file', 'file', 'types'=>'jpg, gif, png', 'allowEmpty' => true),
@@ -128,6 +129,7 @@ class Saler extends CActiveRecord
 			'ward_id' => 'Ward',
 			'area' => 'Area',
 			'created' => 'Created',
+            'content' => 'Giới thiệu công ty'
 		);
 	}
 

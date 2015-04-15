@@ -72,13 +72,13 @@
                     <li<?php if($this->menu_child_selected == 'ptTopic'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/pt/indexTopic')?>">Quản lý chủ đề</a></li>
                 </ul>
             </li>
-            <li class="dropdown <?php if($this->menu_parent_selected == 'catagory'):?>active<?php endif?>">
-                <a href="<?php echo $this->createUrl('/admin/catagory')?>">
-                    <span class="icon-fire"></span> Danh mục tài liệu
+            <li class="dropdown <?php if($this->menu_parent_selected == 'saler'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/saler')?>">
+                    <span class="icon-fire"></span> Danh sách nhà mô giới
                 </a>
-                <ul class="<?php echo ($this->menu_parent_selected == 'catagory') ? 'opened':'closed'?>">
-                    <li<?php if($this->menu_child_selected == 'catagory_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/catagory/create')?>">Thêm danh mục tài liệu</a></li>
-                    <li<?php if($this->menu_child_selected == 'catagory'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/catagory')?>">Quản lý danh mục tài liệu</a></li>
+                <ul class="<?php echo ($this->menu_parent_selected == 'saler') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'saler_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/saler/create')?>">Thêm danh nhà môi giới</a></li>
+                    <li<?php if($this->menu_child_selected == 'saler'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/saler')?>">Quản lý nhà mô giới</a></li>
                 </ul>
             </li>
         </ul>

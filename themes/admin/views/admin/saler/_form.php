@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/files/editors/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="/files/editors/tiny_mce/editor_admin.js"></script>
 <script type="text/javascript" src="/files/js/relCopy.jquery.js"></script>
 <style>
     .checkbocklist {
@@ -82,6 +84,14 @@
                 </div>
 
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'mobile', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'mobile',array('maxlength'=>15, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'mobile', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'email', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->textField($model,'email',array('maxlength'=>50, 'class' => 'input-large')); ?>
@@ -89,6 +99,34 @@
                     </div>
                 </div>
 
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'website', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'website',array('maxlength'=>50, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'website', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'skyper', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'skyper',array('maxlength'=>25, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'skyper', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'yahoo', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'yahoo',array('maxlength'=>25, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'yahoo', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'area', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textArea($model,'area',array('maxlength'=> 255, 'style' => 'height: 80px;width: 625px;', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'area', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
                 <script>
                     $(function(){
                         $("#a_url").click(function(){
@@ -177,12 +215,19 @@
                     <div class="controls">
                         <?php if($this->action->id == 'update'):?>
                             <img id="img_file" style="display: none; height: 60px; width: auto; margin-left: 220px;" /> 
-                            <img id="img_url" style="height: 60px; width: auto; margin-left: 220px;" src="<?php echo Pt::model()->getImageUrl( $model->id , '260');?>"/>
+                            <img id="img_url" style="height: 60px; width: auto; margin-left: 220px;" src="<?php echo Saler::model()->getImageUrl( $model->id , '200');?>"/>
                             <!--<img style="height: 60px; width: auto;margin-left: 220px;" src="<?php // echo Pt::model()->getImgUrl($model->id, $model->image.'_small.jpg');?>" />-->
                             <?php else:?> 
                             <img id="img_file" style="display: none; height: 60px; width: auto; margin-left: 220px;" /> 
                             <img id="img_url" style="display: none; height: 60px; width: auto; margin-left: 220px;" />
                             <?php endif?> 
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'content', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textArea($model,'content',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 
