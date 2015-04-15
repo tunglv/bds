@@ -4,7 +4,7 @@
     </div>
     <div class="tt-thumb-cnt">
         <h2>
-            <a class="link_blue" href="<?php echo$data->url?>" title="<?php echo $data->title?>"><?php echo $data->title?></a>
+            <a class="link_blue" href="<?php echo $data->url?>" title="<?php echo $data->title?>"><?php echo $data->title?></a>
         </h2>
         <div class="datetime"><?php echo date("d/m/Y H:i", $data->created)?></div>
         <p style="text-rendering:geometricPrecision;"><?php echo $data->desc?></p>

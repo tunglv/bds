@@ -176,4 +176,10 @@ class Saler extends CActiveRecord
         return Yii::app()->getBaseUrl(TRUE).'/'.$contentPath;
     }
 
+    public function getUrl($id = 0, $alias = null){
+        $alias = $alias ? $alias : $this->alias;
+        $id = $id ? $id : $this->id;
+
+        return Yii::app()->createUrl('/web/saler/detail', array('alias'=>$alias,'id' => $id));
+    }
 }

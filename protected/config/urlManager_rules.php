@@ -40,6 +40,9 @@ $array_base = array(
     '/cac-chu-de-phong-thuy' => '/web/architecture/listTopic',
     '/phong-thuy/<alias:[\w\-]+>-<id:\d+>' => '/web/architecture/detail',
 
+    '/nha-mo-gioi' => '/web/saler/list',
+    '/nha-mo-gioi/<alias:[\w\-]+>-<id:\d+>'=>'/web/saler/detail',
+
     '/nha-dat-ban'=>'/web/sale/list',
     '/nha-cho-thue'=>'/web/rent/list',
 

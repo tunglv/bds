@@ -110,7 +110,7 @@
     </ul>
 </li>
 <li class="lv0"><a href="javascript:;" class="nolink ">Danh sách dự án</a></li>
-<li class="lv0"><a href="http://batdongsan.com.vn/dien-dan-hoi-dap-bat-dong-san" class="haslink ">Nhà mô giới tiêu biểu</a></li>
+<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/saler/list')?>" class="haslink ">Nhà mô giới tiêu biểu</a></li>
 </ul>
 </div>
 <div class="menupad"></div>
