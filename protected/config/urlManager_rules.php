@@ -43,6 +43,8 @@ $array_base = array(
     '/nha-mo-gioi' => '/web/saler/list',
     '/nha-mo-gioi/<alias:[\w\-]+>-<id:\d+>'=>'/web/saler/detail',
 
+    '/du-an' => '/web/project/group',
+
     '/nha-dat-ban'=>'/web/sale/list',
     '/nha-cho-thue'=>'/web/rent/list',
 
