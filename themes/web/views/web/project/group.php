@@ -117,7 +117,7 @@
         // });
     });
 </script>
-
+<?php if(count($project_1) > 0):?>
 <div class="tc-duan-tin project-parent-cate-list">
     <h2 class="tit_l borderbold">
         <a href="http://batdongsan.com.vn/khu-dan-cu" title="Khu dân cư"><span style="white-space:nowrap;">Khu dân cư</span></a>
@@ -127,7 +127,7 @@
     <div class="">
         <div class="listcompanyitem">
             <?php foreach($project_1 as $_key => $_val):?>
-                <div class="parentitem clearboth">
+                <div class="parentitem">
                     <div class="ava">
                         <a href="http://batdongsan.com.vn/khu-dan-cu-quan-8/kdc-truong-dinh-hoi-3-pj2093" title="<?php echo $_val->name?>">
                             <img src="<?php echo $_val->getImageUrl('','90')?>" class="bor-none" alt="<?php echo $_val->name?>">
@@ -141,37 +141,26 @@
             <?php endforeach;?>
             <div class="clear"></div>
         </div>
-
     </div>
-
 </div>
+<?php endif;?>
 
 <div class="tc-duan-tin project-parent-cate-list">
     <h2 class="tit_l borderbold">
-        <a href="http://batdongsan.com.vn/khu-do-thi-moi" title="Khu đô thị mới">
-                        <span style="white-space:nowrap;">
-                            Khu đô thị mới</span></a>
+        <a href="http://batdongsan.com.vn/khu-do-thi-moi" title="Khu đô thị mới"><span style="white-space:nowrap;">Khu đô thị mới</span></a>
     </h2>
-
     <div class="clear10"></div>
 
-
     <div class="">
-
         <div class="listcompanyitem">
-
             <div class="parentitem clearboth">
                 <div class="ava">
-                    <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                       title="Lâm Viên Villas">
-                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg"
-                             class="bor-none" alt="Lâm Viên Villas">
+                    <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="Lâm Viên Villas">
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg" class="bor-none" alt="Lâm Viên Villas">
                     </a>
                 </div>
                 <div class="link">
-                    <div class="mar-bot"><strong><a title="Lâm Viên Villas"
-                                                    href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098">
-                                Lâm Viên Villas</a></strong></div>
+                    <div class="mar-bot"><strong><a title="Lâm Viên Villas" href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098">Lâm Viên Villas</a></strong></div>
                     <div><span class="colorboldblue">Địa chỉ: </span>Xã Đặng Xá, Gia Lâm, Hà Nội</div>
                 </div>
             </div>
