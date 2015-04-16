@@ -44,6 +44,7 @@ $array_base = array(
     '/nha-mo-gioi/<alias:[\w\-]+>-<id:\d+>'=>'/web/saler/detail',
 
     '/du-an' => '/web/project/group',
+    '/du-an/<alias:[\w\-]+>-<type:\d+>' => '/web/project/list',
 
     '/nha-dat-ban'=>'/web/sale/list',
     '/nha-cho-thue'=>'/web/rent/list',

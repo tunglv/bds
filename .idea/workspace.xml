@@ -43,8 +43,8 @@
       <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="3128">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="3128">
+              <caret line="37" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/project/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075" vertical-offset="204" max-vertical-offset="1139">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1139">
               <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding />
             </state>
@@ -73,8 +73,8 @@
       <file leaf-file-name="urlManager_rules.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/config/urlManager_rules.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5867621" vertical-offset="437" max-vertical-offset="1360">
-              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.7906977" vertical-offset="340" max-vertical-offset="1377">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -90,22 +90,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ProjectController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="4080">
-              <caret line="229" column="24" selection-start-line="229" selection-start-column="24" selection-end-line="229" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="left.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/admin/views/common/left.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="769" max-vertical-offset="1734">
-              <caret line="89" column="156" selection-start-line="89" selection-start-column="156" selection-end-line="89" selection-end-column="156" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="1734">
+              <caret line="96" column="30" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+              <folding>
+                <marker date="1429119757455" expanded="true" signature="51:8137" placeholder="..." />
+                <marker date="1429119757455" expanded="true" signature="332:8110" placeholder="..." />
+                <marker date="1429119757455" expanded="true" signature="386:8099" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -642,15 +636,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -696,7 +690,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429104059914</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dự án">
+      <created>1429163920542</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1429163920542</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,7 +712,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39165446" sideWeight="0.59224445" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -754,11 +754,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/protected/config/urlManager_rules.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/news/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="3638">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="75" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/common/left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="1581">
+          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+          <folding>
+            <marker date="1429119757455" expanded="true" signature="51:8137" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="332:8110" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="386:8099" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/project/_layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="612">
+          <caret line="18" column="99" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin/views/common/left.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="769" max-vertical-offset="1734">
           <caret line="89" column="156" selection-start-line="89" selection-start-column="156" selection-end-line="89" selection-end-column="156" />
-          <folding />
+          <folding>
+            <marker date="1429119757455" expanded="true" signature="51:8137" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="332:8110" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="386:8099" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -966,20 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Province.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/web/views/web/saler/_right_content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-107.23077" vertical-offset="0" max-vertical-offset="11169">
-          <caret line="164" column="69" selection-start-line="164" selection-start-column="69" selection-end-line="164" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/web/views/web/decorate/_item_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="812">
@@ -998,13 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="3230">
           <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/web/views/web/saler/_item_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="1309">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1060,16 +1079,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin/views/common/left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="769" max-vertical-offset="1734">
-          <caret line="89" column="156" selection-start-line="89" selection-start-column="156" selection-end-line="89" selection-end-column="156" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="1734">
+          <caret line="96" column="30" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+          <folding>
+            <marker date="1429119757455" expanded="true" signature="51:8137" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="332:8110" placeholder="..." />
+            <marker date="1429119757455" expanded="true" signature="386:8099" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="3128">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="3128">
+          <caret line="37" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1078,14 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="3638">
           <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="75" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="4080">
-          <caret line="229" column="24" selection-start-line="229" selection-start-column="24" selection-end-line="229" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1108,7 +1123,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/project/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075" vertical-offset="204" max-vertical-offset="1139">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1139">
           <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
@@ -1116,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/urlManager_rules.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5867621" vertical-offset="437" max-vertical-offset="1360">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.7906977" vertical-offset="340" max-vertical-offset="1377">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
           <folding />
         </state>
       </provider>
