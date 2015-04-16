@@ -20,390 +20,56 @@
 
 <div class="tc-duan-img">
 
-
-    <div class="tc-duan-img-0" style="display: none;">
-        <div>
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="Lâm Viên Villas">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33.jpg"
-                     width="530px" height="345px" alt="Lâm Viên Villas">
-            </a>
-        </div>
-        <div class="tc-duan-tit1">
-            <h3 class="title-tt">
+    <?php foreach ($project as $_key => $_val): ?>
+        <div class="tc-duan-img-<?php echo $_key ?>" style="display: none;">
+            <div>
                 <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                   title="Lâm Viên Villas">
-                    Lâm Viên Villas</a></h3>
-                    <span>
-                        Xã Đặng Xá, Gia Lâm, Hà Nội</span></div>
-    </div>
-
-    <div class="tc-duan-img-1" style="display: block;">
-        <div>
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-               title="The Mall City II">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb530x345.505796.jpg"
-                     width="530px" height="345px" alt="The Mall City II">
-            </a>
+                   title="<?php echo $_val->name ?>">
+                    <img src="<?php echo $_val->getImageUrl('', '530') ?>" width="530px" height="345px"
+                         alt="<?php echo $_val->name ?>">
+                </a>
+            </div>
+            <div class="tc-duan-tit1">
+                <h3 class="title-tt"><a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
+                                        title="<?php echo $_val->name ?>"><?php echo $_val->name ?></a></h3>
+                <span><?php echo $_val->address ?></span>
+            </div>
         </div>
-        <div class="tc-duan-tit1">
-            <h3 class="title-tt">
-                <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-                   title="The Mall City II">
-                    The Mall City II</a></h3>
-                    <span>
-                        Xã Vĩnh Tân, Tân Uyên, Bình Dương</span></div>
-    </div>
-
-    <div class="tc-duan-img-2" style="display: none;">
-        <div>
-            <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-               title="Chánh Hưng Apartment">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb530x345.504461.jpg"
-                     width="530px" height="345px" alt="Chánh Hưng Apartment">
-            </a>
-        </div>
-        <div class="tc-duan-tit1">
-            <h3 class="title-tt">
-                <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                   title="Chánh Hưng Apartment">
-                    Chánh Hưng Apartment</a></h3>
-                    <span>
-                        Phố Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh</span></div>
-    </div>
-
-    <div class="tc-duan-img-3" style="display: none;">
-        <div>
-            <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-               title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb530x345.490898.jpg"
-                     width="530px" height="345px" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
-            </a>
-        </div>
-        <div class="tc-duan-tit1">
-            <h3 class="title-tt">
-                <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-                   title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                    Khu nghỉ dưỡng Cẩm An–Hội An</a></h3>
-                    <span>
-                        Phường Cẩm An, Hội An, Quảng Nam</span></div>
-    </div>
-
-    <div class="tc-duan-img-4" style="display: none;">
-        <div>
-            <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb530x345.475326.jpg"
-                     width="530px" height="345px" alt="Mega Ruby">
-            </a>
-        </div>
-        <div class="tc-duan-tit1">
-            <h3 class="title-tt">
-                <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                    Mega Ruby</a></h3>
-                    <span>
-                        Phường Phú Hữu, Quận 9, Hồ Chí Minh</span></div>
-    </div>
+    <?php endforeach; ?>
 
 </div>
 <div class="clear"></div>
-<div class="tc-duan-2"
-     style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 540px;">
+<div class="tc-duan-2" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 540px;">
+    <ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 1980px; left: -720px;">
+        <?php foreach ($project as $_key => $_val): ?>
+            <li id="item_<?php echo $_key ?>" style="overflow: hidden; float: left; width: 170px; height: 168px;">
+                <div style="background-color: #CFE5F7;">
+                    <div class="tc-duan-tit2-content-img">
+                        <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="<?php echo $_val->name?>">
+                            <img src="<?php echo $_val->getImageUrl('', '170')?>" width="170px" height="100px" alt="<?php echo $_val->name?>">
+                        </a>
+                    </div>
+                    <div style="text-align: center; margin-top: 5px;">
+                        <div>
+                            <strong><a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="<?php echo $_val->name?>"><?php echo $_val->name?></a></strong>
+                        </div>
+                        <div class="tc-duan-tit2-content-text">
+                            <p class="pad-bot-10"><?php echo $_val->address?></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="bar bar_<?php echo $_key?>" style="display: none;"><img style="width: 170px;" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/bar-arrow.jpg">
+                    </div>
+                </div>
+            </li>
+        <?php endforeach ?>
+    </ul>
 
-<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 1980px; left: -720px;">
-<li id="item_2" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-               title="Chánh Hưng Apartment">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.504461.jpg"
-                     width="170px" height="100px" alt="Chánh Hưng Apartment">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                           title="Chánh Hưng Apartment">
-                        Chánh Hưng Apartment</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phố Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_2"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-<li id="item_3" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-               title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.490898.jpg"
-                     width="170px" height="100px" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a
-                        href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-                        title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                        Khu nghỉ dưỡng Cẩm An–Hội An</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phường Cẩm An, Hội An, Quảng Nam</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_3"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-<li id="item_4" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.475326.jpg"
-                     width="170px" height="100px" alt="Mega Ruby">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                        Mega Ruby</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phường Phú Hữu, Quận 9, Hồ Chí Minh</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_4"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_0" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="Lâm Viên Villas">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33(1).jpg"
-                     width="170px" height="100px" alt="Lâm Viên Villas">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                           title="Lâm Viên Villas">
-                        Lâm Viên Villas</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Xã Đặng Xá, Gia Lâm, Hà Nội</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_0" style="display: none;"><img style="width: 170px;"
-                                                           src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_1" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-               title="The Mall City II">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.505796.jpg"
-                     width="170px" height="100px" alt="The Mall City II">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-                           title="The Mall City II">
-                        The Mall City II</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Xã Vĩnh Tân, Tân Uyên, Bình Dương</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_1" style="display: block;"><img style="width: 170px;"
-                                                            src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_2" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-               title="Chánh Hưng Apartment">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.504461.jpg"
-                     width="170px" height="100px" alt="Chánh Hưng Apartment">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                           title="Chánh Hưng Apartment">
-                        Chánh Hưng Apartment</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phố Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_2"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_3" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-               title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.490898.jpg"
-                     width="170px" height="100px" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a
-                        href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-                        title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                        Khu nghỉ dưỡng Cẩm An–Hội An</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phường Cẩm An, Hội An, Quảng Nam</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_3"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_4" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.475326.jpg"
-                     width="170px" height="100px" alt="Mega Ruby">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                        Mega Ruby</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phường Phú Hữu, Quận 9, Hồ Chí Minh</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_4"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-
-<li id="item_0" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="Lâm Viên Villas">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33(1).jpg"
-                     width="170px" height="100px" alt="Lâm Viên Villas">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                           title="Lâm Viên Villas">
-                        Lâm Viên Villas</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Xã Đặng Xá, Gia Lâm, Hà Nội</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_0" style="display: none;"><img style="width: 170px;"
-                                                           src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-<li id="item_1" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-               title="The Mall City II">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.505796.jpg"
-                     width="170px" height="100px" alt="The Mall City II">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-                           title="The Mall City II">
-                        The Mall City II</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Xã Vĩnh Tân, Tân Uyên, Bình Dương</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_1" style="display: block;"><img style="width: 170px;"
-                                                            src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-<li id="item_2" style="overflow: hidden; float: left; width: 170px; height: 168px;">
-    <div style="background-color: #CFE5F7;">
-        <div class="tc-duan-tit2-content-img">
-            <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-               title="Chánh Hưng Apartment">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb170x100.504461.jpg"
-                     width="170px" height="100px" alt="Chánh Hưng Apartment">
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px;">
-            <div>
-                <strong><a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                           title="Chánh Hưng Apartment">
-                        Chánh Hưng Apartment</a></strong>
-            </div>
-            <div class="tc-duan-tit2-content-text">
-                <p class="pad-bot-10">
-                    Phố Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="bar bar_2"><img style="width: 170px;"
-                                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bar-arrow.jpg">
-        </div>
-    </div>
-</li>
-</ul>
-
-<div class="btnnext"><img
-        src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/next.png"></div>
-<div class="btnprev"><img
-        src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/prev.png"></div>
-<input type="hidden" id="currPrj" value="1">
+    <div class="btnnext"><img
+            src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/next.png"></div>
+    <div class="btnprev"><img
+            src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/prev.png"></div>
+    <input type="hidden" id="currPrj" value="0">
 </div>
 
 
@@ -454,83 +120,25 @@
 
 <div class="tc-duan-tin project-parent-cate-list">
     <h2 class="tit_l borderbold">
-        <a href="http://batdongsan.com.vn/khu-dan-cu" title="Khu dân cư">
-                        <span style="white-space:nowrap;">
-                            Khu dân cư</span></a>
+        <a href="http://batdongsan.com.vn/khu-dan-cu" title="Khu dân cư"><span style="white-space:nowrap;">Khu dân cư</span></a>
     </h2>
 
     <div class="clear10"></div>
-
-
     <div class="">
-
         <div class="listcompanyitem">
-
-            <div class="parentitem clearboth">
-                <div class="ava">
-                    <a href="http://batdongsan.com.vn/khu-dan-cu-quan-8/kdc-truong-dinh-hoi-3-pj2093"
-                       title="KDC Trương Đình Hội 3">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.518985.jpg"
-                             class="bor-none" alt="KDC Trương Đình Hội 3">
-                    </a>
-                </div>
-                <div class="link">
-                    <div class="mar-bot"><strong><a title="KDC Trương Đình Hội 3"
-                                                    href="http://batdongsan.com.vn/khu-dan-cu-quan-8/kdc-truong-dinh-hoi-3-pj2093">
-                                KDC Trương Đình Hội 3</a></strong></div>
-                    <div><span class="colorboldblue">Địa chỉ: </span>Đường 74, Phường 16, Quận 8, Hồ Chí Minh</div>
-                </div>
-            </div>
-
-            <div class="parentitem ">
-                <div class="ava">
-                    <a href="http://batdongsan.com.vn/khu-dan-cu-quan-8/khu-dan-cu-vhome-pj2079"
-                       title="Khu dân cư VHome">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.510618.jpg"
-                             class="bor-none" alt="Khu dân cư VHome">
-                    </a>
-                </div>
-                <div class="link">
-                    <div class="mar-bot"><strong><a title="Khu dân cư VHome"
-                                                    href="http://batdongsan.com.vn/khu-dan-cu-quan-8/khu-dan-cu-vhome-pj2079">
-                                Khu dân cư VHome</a></strong></div>
-                    <div><span class="colorboldblue">Địa chỉ: </span>Đường 74, Phường 16, Quận 8, Hồ Chí Minh</div>
-                </div>
-            </div>
-
-            <div class="parentitem clearboth">
-                <div class="ava">
-                    <a href="http://batdongsan.com.vn/khu-dan-cu-tan-uyen-bd/khu-dan-cu-hill-land-19-pj2049"
-                       title="Khu dân cư Hill Land 19">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.493480.jpg"
-                             class="bor-none" alt="Khu dân cư Hill Land 19">
-                    </a>
-                </div>
-                <div class="link">
-                    <div class="mar-bot"><strong><a title="Khu dân cư Hill Land 19"
-                                                    href="http://batdongsan.com.vn/khu-dan-cu-tan-uyen-bd/khu-dan-cu-hill-land-19-pj2049">
-                                Khu dân cư Hill Land 19</a></strong></div>
-                    <div><span class="colorboldblue">Địa chỉ: </span>Đường ĐT 747, Xã Khánh Bình, Tân Uyên, Bình Dương
+            <?php foreach($project_1 as $_key => $_val):?>
+                <div class="parentitem clearboth">
+                    <div class="ava">
+                        <a href="http://batdongsan.com.vn/khu-dan-cu-quan-8/kdc-truong-dinh-hoi-3-pj2093" title="<?php echo $_val->name?>">
+                            <img src="<?php echo $_val->getImageUrl('','90')?>" class="bor-none" alt="<?php echo $_val->name?>">
+                        </a>
+                    </div>
+                    <div class="link">
+                        <div class="mar-bot"><strong><a title="<?php echo $_val->name?>" href="http://batdongsan.com.vn/khu-dan-cu-quan-8/kdc-truong-dinh-hoi-3-pj2093"><?php echo $_val->name?></a></strong></div>
+                        <div><span class="colorboldblue">Địa chỉ: </span><?php echo $_val->name?></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="parentitem ">
-                <div class="ava">
-                    <a href="http://batdongsan.com.vn/khu-dan-cu-duc-hoa-la/bao-ngoc-resident-long-an-pj2035"
-                       title="Bảo Ngọc Resident Long An">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.439819.jpg"
-                             class="bor-none" alt="Bảo Ngọc Resident Long An">
-                    </a>
-                </div>
-                <div class="link">
-                    <div class="mar-bot"><strong><a title="Bảo Ngọc Resident Long An"
-                                                    href="http://batdongsan.com.vn/khu-dan-cu-duc-hoa-la/bao-ngoc-resident-long-an-pj2035">
-                                Bảo Ngọc Resident Long An</a></strong></div>
-                    <div><span class="colorboldblue">Địa chỉ: </span>Xã Mỹ Hạnh Nam, Đức Hòa, Long An</div>
-                </div>
-            </div>
-
+            <?php endforeach;?>
             <div class="clear"></div>
         </div>
 
@@ -556,7 +164,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
                        title="Lâm Viên Villas">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg"
                              class="bor-none" alt="Lâm Viên Villas">
                     </a>
                 </div>
@@ -572,7 +180,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
                        title="The Mall City II">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.505796.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.505796.jpg"
                              class="bor-none" alt="The Mall City II">
                     </a>
                 </div>
@@ -588,7 +196,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-trang-kh/khu-do-thi-vcn-phuoc-hai-pj2067"
                        title="Khu đô thị VCN Phước Hải">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.504696.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.504696.jpg"
                              class="bor-none" alt="Khu đô thị VCN Phước Hải">
                     </a>
                 </div>
@@ -604,7 +212,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-do-thi-moi-can-giuoc-la/khu-do-thi-south-center-pj2061"
                        title="Khu đô thị South Center">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.503383.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.503383.jpg"
                              class="bor-none" alt="Khu đô thị South Center">
                     </a>
                 </div>
@@ -643,7 +251,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-can-ho-binh-thanh/saigonres-nguyen-xi-pj2101"
                        title="Saigonres Nguyễn Xí">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.439821.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.439821.jpg"
                              class="bor-none" alt="Saigonres Nguyễn Xí">
                     </a>
                 </div>
@@ -659,7 +267,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-can-ho-quan-2/the-krista-pj2100" title="The Krista">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg"
                              class="bor-none" alt="The Krista">
                     </a>
                 </div>
@@ -677,7 +285,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-can-ho-quan-2/chung-cu-bo-cong-an-pj2099"
                        title="Chung cư Bộ Công An">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg"
                              class="bor-none" alt="Chung cư Bộ Công An">
                     </a>
                 </div>
@@ -692,7 +300,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-can-ho-quan-2/binh-an-pearl-pj2097" title="Bình An Pearl">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/no-photo.jpg"
                              class="bor-none" alt="Bình An Pearl">
                     </a>
                 </div>
@@ -730,7 +338,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/cao-oc-van-phong-cau-giay/pv-oil-tower-pj2075"
                        title="PV Oil Tower">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.509963.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.509963.jpg"
                              class="bor-none" alt="PV Oil Tower">
                     </a>
                 </div>
@@ -746,7 +354,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/cao-oc-van-phong-quan-1/smart-view-building-pj1994"
                        title="Smart View Building">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.470507.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.470507.jpg"
                              class="bor-none" alt="Smart View Building">
                     </a>
                 </div>
@@ -763,7 +371,7 @@
             <div class="parentitem clearboth">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/cao-oc-van-phong-quan-1/abacus-tower-pj1992" title="Abacus Tower">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.470483.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.470483.jpg"
                              class="bor-none" alt="Abacus Tower">
                     </a>
                 </div>
@@ -780,7 +388,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/cao-oc-van-phong-quan-3/idc-building-pj1991" title="IDC Building">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.470442.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.470442.jpg"
                              class="bor-none" alt="IDC Building">
                     </a>
                 </div>
@@ -817,7 +425,7 @@
             <div class="parentitem clearboth">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-thuong-mai-dich-vu-quan-8/city-mall-pj2036" title="City Mall">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.481524.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.481524.jpg"
                              class="bor-none" alt="City Mall">
                     </a>
                 </div>
@@ -835,7 +443,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-thuong-mai-dich-vu-di-an-bd/the-mall-city-pj1857"
                        title="The Mall City">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.439674.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.439674.jpg"
                              class="bor-none" alt="The Mall City">
                     </a>
                 </div>
@@ -851,7 +459,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-thuong-mai-dich-vu-binh-tan/an-lac-plaza-pj1853"
                        title="An Lạc Plaza">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.437419.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.437419.jpg"
                              class="bor-none" alt="An Lạc Plaza">
                     </a>
                 </div>
@@ -868,7 +476,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-thuong-mai-dich-vu-tan-uyen-bd/khu-do-thi-thuong-mai-ijc-vsip-pj1762"
                        title="Khu đô thị thương mại IJC@VSIP">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.406723.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.406723.jpg"
                              class="bor-none" alt="Khu đô thị thương mại IJC@VSIP">
                     </a>
                 </div>
@@ -906,7 +514,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-ngu-hanh-son-ddn/vinpearl-premium-da-nang-pj2084"
                        title="Vinpearl Premium Đà Nẵng">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.511381.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.511381.jpg"
                              class="bor-none" alt="Vinpearl Premium Đà Nẵng">
                     </a>
                 </div>
@@ -924,7 +532,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-nha-trang-kh/vinpearl-premium-golf-land-pj2083"
                        title="Vinpearl Premium Golf Land">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.511322.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.511322.jpg"
                              class="bor-none" alt="Vinpearl Premium Golf Land">
                     </a>
                 </div>
@@ -940,7 +548,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-nha-trang-kh/vinpearl-premium-nha-trang-bay-pj2082"
                        title="Vinpearl Premium Nha Trang Bay">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.511203.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.511203.jpg"
                              class="bor-none" alt="Vinpearl Premium Nha Trang Bay">
                     </a>
                 </div>
@@ -956,7 +564,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-nha-trang-kh/vinpearl-luxury-nha-trang-pj2081"
                        title="Vinpearl Luxury Nha Trang">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.511119.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.511119.jpg"
                              class="bor-none" alt="Vinpearl Luxury Nha Trang">
                     </a>
                 </div>
@@ -993,7 +601,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-cong-nghiep-binh-tan/khu-cong-nghiep-tan-tao-pj2024"
                        title="Khu công nghiệp Tân Tạo">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.479471.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.479471.jpg"
                              class="bor-none" alt="Khu công nghiệp Tân Tạo">
                     </a>
                 </div>
@@ -1010,7 +618,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-cong-nghiep-que-vo-bn/khu-cong-nghiep-que-vo-iii-pj2021"
                        title="Khu công nghiệp Quế Võ III">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.478984.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.478984.jpg"
                              class="bor-none" alt="Khu công nghiệp Quế Võ III">
                     </a>
                 </div>
@@ -1026,7 +634,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-cong-nghiep-que-vo-bn/khu-cong-nghiep-que-vo-ii-pj2020"
                        title="Khu công nghiệp Quế Võ II">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.478883.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.478883.jpg"
                              class="bor-none" alt="Khu công nghiệp Quế Võ II">
                     </a>
                 </div>
@@ -1043,7 +651,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-cong-nghiep-que-vo-bn/khu-cong-nghiep-que-vo-pj2019"
                        title="Khu công nghiệp Quế Võ">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.478834.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.478834.jpg"
                              class="bor-none" alt="Khu công nghiệp Quế Võ">
                     </a>
                 </div>
@@ -1081,7 +689,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-phuc-hop-thanh-xuan/handico-le-van-luong-pj2038"
                        title="Handico Lê Văn Lương">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.484094.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.484094.jpg"
                              class="bor-none" alt="Handico Lê Văn Lương">
                     </a>
                 </div>
@@ -1099,7 +707,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-phuc-hop-vung-tau-vt/the-imperial-complex-pj2027"
                        title="The Imperial Complex">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.479842.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.479842.jpg"
                              class="bor-none" alt="The Imperial Complex">
                     </a>
                 </div>
@@ -1117,7 +725,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-phuc-hop-quan-10/viettel-complex-pj2026"
                        title="Viettel Complex">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.479738.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.479738.jpg"
                              class="bor-none" alt="Viettel Complex">
                     </a>
                 </div>
@@ -1134,7 +742,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/khu-phuc-hop-quan-1/saigon-centre-pj2025" title="Saigon Centre">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.479580.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.479580.jpg"
                              class="bor-none" alt="Saigon Centre">
                     </a>
                 </div>
@@ -1171,7 +779,7 @@
             <div class="parentitem clearboth">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/du-an-khac-hoai-duc/westpoint-pj2095" title="Westpoint">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.519448.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.519448.jpg"
                              class="bor-none" alt="Westpoint">
                     </a>
                 </div>
@@ -1188,7 +796,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-sapphire-pj2090" title="Mega Sapphire">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.517769.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.517769.jpg"
                              class="bor-none" alt="Mega Sapphire">
                     </a>
                 </div>
@@ -1204,7 +812,7 @@
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/du-an-khac-di-an-bd/him-lam-phu-dong-pj2086"
                        title="Him Lam Phú Đông">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.514790.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.514790.jpg"
                              class="bor-none" alt="Him Lam Phú Đông">
                     </a>
                 </div>
@@ -1219,7 +827,7 @@
             <div class="parentitem ">
                 <div class="ava">
                     <a href="http://batdongsan.com.vn/du-an-khac-quan-7/lotus-city-pj2066" title="Lotus City">
-                        <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop90x90.439820.jpg"
+                        <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop90x90.439820.jpg"
                              class="bor-none" alt="Lotus City">
                     </a>
                 </div>
@@ -1394,7 +1002,8 @@
                 margin-top: 10px !important;
             }
         </style>
-        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
+        <script type="text/javascript"
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
         <script type="text/javascript">
 
             var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
@@ -1462,8 +1071,9 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
                            title="Lâm Viên Villas">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33(2).jpg"
-                                 width="156" height="100" alt="Lâm Viên Villas">
+                            <img
+                                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/20150211150707-fc33(2).jpg"
+                                width="156" height="100" alt="Lâm Viên Villas">
                         </a>
                     </div>
                     <div class="prj_vip">
@@ -1478,7 +1088,7 @@
                     <div>
                         <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/du-an/dragon-city.html"
                            title="Dragon Parc" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.509866.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.509866.jpg"
                                  width="156" height="100" alt="Dragon Parc">
                         </a>
                     </div>
@@ -1494,7 +1104,7 @@
                     <div>
                         <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/HTML_ThaoNTT_TAN%20PHUOC/TanPhuoc.html"
                            title="Tân Phước Plaza" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.439843.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.439843.jpg"
                                  width="156" height="100" alt="Tân Phước Plaza">
                         </a>
                     </div>
@@ -1510,7 +1120,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-can-ho-son-tra-ddn/can-ho-cao-cap-azura-pj1015"
                            title="Căn hộ cao cấp Azura">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.508252.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.508252.jpg"
                                  width="156" height="100" alt="Căn hộ cao cấp Azura">
                         </a>
                     </div>
@@ -1526,7 +1136,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
                            title="Chánh Hưng Apartment">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.504461.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.504461.jpg"
                                  width="156" height="100" alt="Chánh Hưng Apartment">
                         </a>
                     </div>
@@ -1542,7 +1152,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
                            title="The Mall City II">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.505796.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.505796.jpg"
                                  width="156" height="100" alt="The Mall City II">
                         </a>
                     </div>
@@ -1558,7 +1168,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
                            title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.490898.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490898.jpg"
                                  width="156" height="100" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
                         </a>
                     </div>
@@ -1574,7 +1184,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-dan-cu-binh-chanh/duong-hong-garden-house-pj1695"
                            title="Dương Hồng Garden House">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.490297.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490297.jpg"
                                  width="156" height="100" alt="Dương Hồng Garden House">
                         </a>
                     </div>
@@ -1590,7 +1200,7 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-dan-cu-binh-thanh/dai-phuc-river-view-pj1511"
                            title="Đại Phúc River View">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.424550.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.424550.jpg"
                                  width="156" height="100" alt="Đại Phúc River View">
                         </a>
                     </div>
@@ -1605,7 +1215,7 @@
 
                     <div>
                         <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.475326.jpg"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.475326.jpg"
                                  width="156" height="100" alt="Mega Ruby">
                         </a>
                     </div>
@@ -1651,7 +1261,7 @@
                 <a title="Tin tức, dự án BĐS nổi bật tuần từ 18/2 đến 23/2"
                    href="http://batdongsan.com.vn/tin-thi-truong/tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232-ar45679">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.244078.tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.244078.tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232.jpg">
                 </a>
             </div>
         </div>
@@ -1670,7 +1280,7 @@
                 <a title="Doanh nghiệp “nản” với nhà ở xã hội"
                    href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-nan-voi-nha-o-xa-hoi-ar46277">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.266769.doanh-nghiep-nan-voi-nha-o-xa-hoi.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.266769.doanh-nghiep-nan-voi-nha-o-xa-hoi.jpg">
                 </a>
             </div>
         </div>
@@ -1689,7 +1299,7 @@
                 <a title="Danh Khôi Á Châu mở bán thành công dự án căn hộ Nhất Lan 3"
                    href="http://batdongsan.com.vn/tin-thi-truong/danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3-ar46252">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.266529.danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.266529.danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3.jpg">
                 </a>
             </div>
         </div>
@@ -1708,7 +1318,7 @@
                 <a title="Dự án chuyển đổi có giá bán không quá 12 triệu đồng/m2?"
                    href="http://batdongsan.com.vn/chinh-sach-quan-ly/du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2-ar46197">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.265969.du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.265969.du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2.jpg">
                 </a>
             </div>
         </div>
@@ -1727,7 +1337,7 @@
                 <a title="Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà"
                    href="http://batdongsan.com.vn/tin-thi-truong/nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha-ar46167">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.252693.nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.252693.nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha.jpg">
                 </a>
             </div>
         </div>
@@ -1738,7 +1348,7 @@
                    title="Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà">
                     Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà<img class="news-image-video-icon"
                                                                                         atl=""
-                                                                                        src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/bds-video.png"></a>
+                                                                                        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/bds-video.png"></a>
             </p>
         </div>
         <div style="clear: both;"></div>
@@ -1748,7 +1358,7 @@
                 <a title="Doanh nghiệp chờ giải cứu sẽ khiến thị trường khó khăn hơn"
                    href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon-ar46087">
                     <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop60x60.265045.doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon.jpg">
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.265045.doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon.jpg">
                 </a>
             </div>
         </div>
@@ -1901,13 +1511,13 @@
              altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://kientrucvip.com/" bid="1351" tip="" tp="7"
              w="240" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=1351" target="_blank" title=""
                                rel="nofollow"><img
-                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.343517.jpg"
+                    src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.343517.jpg"
                     style="width: 100%; height:90px;" class="view-count click-count" bannerid="1351"></a></div>
         <div class="aditem" time="10" style="margin-bottom: 10px;" src="http://file1.batdongsan.com.vn/file.245648.jpg"
              altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://thanglonglaw.com.vn" bid="643" tip=""
              tp="7" w="210" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=643" target="_blank" title=""
                                       rel="nofollow"><img
-                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.245648.jpg"
+                    src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.245648.jpg"
                     style="width: 100%; height:90px;" class="view-count click-count" bannerid="643"></a></div>
     </div>
 

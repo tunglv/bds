@@ -57,7 +57,7 @@ class Project extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('created', 'numerical', 'integerOnly'=>true),
+			array('province_id, district_id, ward_id, created', 'numerical', 'integerOnly'=>true),
 			array('name, alias, address, image', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
 			array('website, yahoo', 'length', 'max'=>50),

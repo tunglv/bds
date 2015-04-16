@@ -46,9 +46,78 @@ class ProjectController extends WebController {
     public function actionGroup(){
         $this->layout = '//layouts/main';
 
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 5;
+        $project = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 1);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_1 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 2);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_2 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 3);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_3 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 4);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_4 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 5);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_5 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 6);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_6 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 7);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_7 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 8);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_8 = Project::model()->findAll($criteria);
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 9);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 4;
+        $project_9 = Project::model()->findAll($criteria);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('group');
+        $this->render('group', array(
+            'project'=>$project,
+            'project_1'=>$project_1,
+            'project_2'=>$project_2,
+            'project_3'=>$project_3,
+            'project_4'=>$project_4,
+            'project_5'=>$project_5,
+            'project_6'=>$project_6,
+            'project_7'=>$project_7,
+            'project_8'=>$project_8,
+            'project_9'=>$project_9
+        ));
     }
     /**
      * @author tunglv Doe <tunglv.1990@gmail.com>
