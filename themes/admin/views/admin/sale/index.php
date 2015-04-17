@@ -40,7 +40,7 @@
         array(
             'name' => 'image',
             'type'      =>  'html',
-            'value' => 'CHtml::image($data->getImageUrl($data->id,"85"), "", array("style" => "width: 100px"))',
+            'value' => 'CHtml::image($data->getImageUrl($data->id,"122"), "", array("style" => "width: 100px"))',
         ),
         array(
             'name' => 'title',
@@ -48,31 +48,9 @@
             'value' => '$data->title',
         ),
         array(
-            'name' => 'manager_id',
+            'name' => 'price',
             'type'      =>  'raw',
-            'value' => '$data->manager["name"]',
-        ),
-        array(
-            'name' => 'number',
-            'type'      =>  'raw',
-            'value' => '$data->number'
-        ),
-        array(
-            'name' => 'productInColors',
-            'type'      =>  'raw',
-            'value' => '$data->getColorLabelList()',
-            'filter' => FALSE
-        ),
-        array(
-            'name' => 'productInSizes',
-            'type'      =>  'raw',
-            'value' => '$data->getSizeLabelList()',
-            'filter' => FALSE
-        ),
-        array(
-            'name' => 'is_viewed',
-            'type'      =>  'raw',
-            'value' => '"<a href=\'/admin/product/statistics?id=".$data->id."\'>".$data->is_viewed."</a>"'
+            'value' => '$data->price.$data->price_type'
         ),
         array(
             'name' => 'created',

@@ -93,7 +93,7 @@
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'price', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textField($model,'price',array('maxlength'=>255, 'class' => 'input-small input numeric format')); ?>
+                        <?php echo $form->textField($model,'price',array('maxlength'=>255, 'class' => 'input-small')); ?>
                         <?php echo $form->textField($model,'price_type',array('maxlength'=>255, 'class' => 'input-small', 'placeholder' => 'VND')); ?>
                         <?php echo $form->error($model,'price', array('class' => 'help-inline error'));?>
                     </div>

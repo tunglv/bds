@@ -48,11 +48,6 @@ class SaleController extends AdminController {
 
         $criteria = new CDbCriteria;
 //            $criteria->order = 't.id ASC';
-        $criteria->with = array(
-            'manager' => array(
-                'select' => 'name'
-            ),
-        );
 
         if ($productFilter = Yii::app()->request->getQuery('BdsSale')) {
             $model->attributes = $productFilter;
@@ -217,8 +212,7 @@ class SaleController extends AdminController {
         }
 
         $this->render('_form', array(
-            'model' => $model,
-            'paramIdData'=>$paramIdData
+            'model' => $model
         ));
     }
 
