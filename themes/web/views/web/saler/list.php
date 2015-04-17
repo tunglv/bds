@@ -1,3 +1,58 @@
+<style>
+    .hidden {
+        display: none;
+    }
+    .pagination{
+        clear: both;
+        height: 24px;
+    }
+    .pagination a:hover{
+        color: #000 !important;
+        font-weight: bold;
+    }
+    .pagination li.active{
+        color: #000 !important;
+        font-weight: bold;
+    }
+    .pagination.paging.pagination-centered {
+        background-color: #ececec;
+        line-height: 30px;
+        height: 30px;
+        margin-top: 5px;
+    }
+    .yiiPager{
+        float: right;
+        margin-top: 5px;
+    }
+    .yiiPager li{
+        margin-left: 2px;
+        width: auto;
+        color: #000000;
+        text-decoration: none;
+        height: 23px;
+        line-height: 23px;
+        float: left;
+        padding-left: 6px;
+        padding-right: 6px;
+        border: 1px solid #ccc;
+        list-style: none;
+    }
+    .yiiPager li.active{
+        text-align: center !important;
+        background-color: #055699;
+        margin-left: 2px !important;
+        width: auto !important;
+        color: White !important;
+        text-decoration: none !important;
+        height: 23px !important;
+        line-height: 23px !important;
+        float: left !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        border: 1px solid #ccc !important;
+        font-weight: bold !important;
+    }
+</style>
 <div id="MainContent"></div>
 <div class="clear">
 </div>

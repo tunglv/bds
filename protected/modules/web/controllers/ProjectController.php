@@ -125,20 +125,77 @@ class ProjectController extends WebController {
      * @param
      * @return page home of site
      */
-    public function actionList($type = 0) {
+    public function actionList($alias = '') {
+        $type = 0;
+        /*
+         * '1' => 'cao-oc-van-phong',
+            '2' => 'khu-can-ho',
+            '3' => 'khu-do-thi-moi',
+            '4' => 'khu-thuong-mai-dich-vu',
+            '5' => 'khu-phuc-hop',
+            '6' => 'khu-dan-cu',
+            '7' => 'khu-du-lich-nghi-duong',
+            '8' => 'khu-cong-nghiep',
+            '9' => 'du-an-khac'
+         */
+        switch($alias){
+            case 'cao-oc-van-phong':
+                $type = 1;
+                break;
+            case 'khu-can-ho':
+                $type = 2;
+                break;
+            case 'khu-do-thi-moi':
+                $type = 3;
+                break;
+            case 'khu-thuong-mai-dich-vu':
+                $type = 4;
+                break;
+            case 'khu-phuc-hop':
+                $type = 5;
+                break;
+            case 'khu-dan-cu':
+                $type = 6;
+                break;
+            case 'khu-du-lich-nghi-duong':
+                $type = 7;
+                break;
+            case 'khu-cong-nghiep':
+                $type = 8;
+                break;
+            case 'du-an-khac':
+                $type = 9;
+                break;
+        }
         $this->layout = '//layouts/main';
-
+        if(!$type) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('list');
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', $type);
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('Project', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('list', array('dataProvider'=>$dataProvider));
     }
 
-    public function actionDetail($id = 0){
+    public function actionDetail($type='', $alias ='', $id = 0){
         $this->layout = '//layouts/main';
+        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
+        $project = Project::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('detail');
+        $this->render('detail', array('project'=>$project));
     }
 
     /**

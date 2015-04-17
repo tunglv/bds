@@ -21,54 +21,33 @@
 <div>
     <div id="ctl27_ctl01_ProjectInfomation1_infoDetail">
         <div class="prjava">
-            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb200x150.497797.jpg"
-                 width="200px" height="150px">
+            <img src="<?php echo $project->getImageUrl('','170')?>" width="200px" height="150px">
         </div>
         <div class="prjinfo">
             <ul>
                 <li>
-                    <h1>KĐT Làng Sen Việt Nam</h1>
+                    <h1><?php echo $project->name?></h1>
                 </li>
                 <li>
-                    <label>
-                        Địa chỉ:</label>
-                    Đường Tỉnh Lộ 10, Xã Đức Hoà Đông, Đức Hòa, Long An
+                    <label>Địa chỉ:</label> <?php echo $project->address?>
                 </li>
                 <li>
-                    <label>
-                        Số điện thoại:
-                    </label>
-                    0839333789
-                    |
-                    <label>
-                        Fax:
-                    </label>
-                    0839333808
+                    <label>Số điện thoại:</label> <?php echo $project->mobile?>|<label>Fax:</label> <?php echo $project->fax?>
                 </li>
                 <li>
-                    <label>
-                        Website:
-                    </label>
-                    <a href="http://www.phuckhang.vn/" target="_blank" rel="nofollow">www.phuckhang.vn</a>
+                    <label>Website:</label><a href="<?php echo $project->website?>" target="_blank" rel="nofollow"> <?php echo $project->website?></a>
                 </li>
                 <li>
-                    <label>
-                        Email:
-                    </label>
-
-                    Đang cập nhật
+                    <label>Email:</label> <?php echo $project->email?>
                 </li>
                 <li>
-                    <label>
-                        Nick chat yahoo:</label> Đang cập nhật
+                    <label>Nick chat yahoo:</label> <?php echo $project->yahoo?>
                 </li>
             </ul>
         </div>
         <div class="clear">
         </div>
     </div>
-
-
 </div>
 
 <ul class="tabProject">
@@ -92,7 +71,9 @@
     <li value="5">
         <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Bán hàng</a>
     </li>
-
+    <li value="6">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Video</a>
+    </li>
     <li value="7">
         <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Hình ảnh</a>
     </li>
@@ -103,189 +84,45 @@
 <div class="clear"></div>
 
 <div class="editor" style="clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl00$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_0"
-           value="1">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl00$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_0" value="1">
 
-    <div class="a1">
-        <h2 class="h34">
-            <strong>Khu đô thị Văn hóa – Thương mại – Du lịch Làng sen Việt nam</strong></h2>
-
-        <p>
-            <br>
-            <strong>Nơi hàng ngàn người mong về – Hàng triệu người muốn đến</strong></p>
-
-        <p>
-            &nbsp;</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497772.jpg"
-                 style="width: 550px; height: 802px;"></p>
-
-        <h3 class="h34" style="text-align: center;">
-            <em>Phối cảnh tổng thể dự án Làng Sen Việt Nam</em></h3>
-
-        <p>
-            <br>
-            Khu đô thị Văn hóa - Thương mại - Du lịch Làng Sen có quy mô hơn 50ha được Phúc Khang Corporation đầu tư tại
-            huyện Đức Hòa, Tỉnh Long An. Dưới bàn tay của kiến trúc sư Võ Trọng Nghĩa, một trong 10 kiến trúc sư tiêu
-            biểu của năm 2012 do tạp chí kiến trúc Architectural Record bình chọn, Làng sen Việt Nam sẽ không chỉ đơn
-            thuần là chốn an cư mà đây còn là nơi họ tìm về những giá trị văn hóa, truyền thống của con người Việt Nam
-            tưởng chừng như đã bị lãng quên trong thời hiện đại.</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497768.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-        <p style="text-align: center;">
-            <em>Dãy nhà View hồ sen tại Làng Sen Việt Nam</em></p>
-
-        <p>
-            <br>
-            Ý tưởng chủ đạo của Làng sen Việt Nam chính là làng sen và văn hóa giữa 3 miền Bắc – Trung – Nam với những
-            giá trị tinh túy nhất của từng vùng miền đều sẽ được tái hiện một cách rõ nét nhất tại dự án.<br>
-            <br>
-            Làng sen Việt Nam nằm liền kề trung tâm Thành phố Hồ Chí Minh, Làng Sen Việt Nam chỉ cách TP.HCM với 20 phút
-            di chuyển. Từ Làng Sen Việt Nam, bạn sẽ dễ dàng di chuyển vào Chợ Lớn, Quận 1 hay Sân bay Tân Sơn Nhất, đvà
-            ặc biệt để đến các tiện ích xung quanh như Bến xe Miền Tây - Siêu thị Co.op Mart, bệnh viện, trung tâm hành
-            chính, trường học các cấp chỉ mất khoảng 10 phút.</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497766.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-        <p style="text-align: center;">
-            <em>Trung tâm thương mại trong dự án</em></p>
-
-        <p>
-            <br>
-            Hình ảnh cây đa – giếng nước – cột đình vốn chỉ là ký ức thì nay đx được tái hiện một cách chân thực nhất
-            tại Làng sen Việt Nam. Dọc 2 bên đường để vào trong dự án là những hàng cau thẳng tắp như đón chào những
-            người con xa quê trở về với nguồn cội.</p>
-
-        <p>
-            &nbsp;</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497770.jpg"
-                 style="width: 550px; height: 307px;"></p>
-
-        <p style="text-align: center;">
-            <em>Hồ Tịnh Đế Liên</em></p>
-
-        <p>
-            <br>
-            Trung tâm dự án được thiết kế với một hồ sen rộng đến 2 ha. Giữa hồ sen là một "Trung tâm hội nghị Tre Việt”
-            được làm hoàn toàn bằng tre với sức chứa hơn 1000 người.<br>
-            <br>
-            Đi dọc trung tâm dự án là dải con đường thương mại 3 miền Bắc – Trung – Nam. Với quãng đường đi bộ khoảng
-            hơn 1.5km quý khách hàng sẽ lần đầu tiên cảm nhận được tất cả các giá trị về ẩm thực và thương mại đặc trưng
-            nhất của 3 vùng miền của Việt Nam. Đây chính là điểm đặc biệt nhất mà không một nơi nào có được.</p>
-
-        <p>
-            &nbsp;</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497769.jpg"
-                 style="width: 550px; height: 345px;"></p>
-
-        <p style="text-align: center;">
-            <em>Con đường thương mại tại Làng sen Việt Nam</em></p>
-
-        <p>
-            &nbsp;</p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497767.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-        <p style="text-align: center;">
-            <em>Trường Phù Đổng Thiên Vương</em></p>
-
-    </div>
+    <?php echo $project->overview?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl01$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_1"
-           value="2">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl01$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_1" value="2">
 
-    <div class="a1">
-        <p>
-            Làng Sen Việt Nam nằm liền kề các khu đô thị mới được quy hoạch tốt, hiện đại như KĐT Sing Việt (300 ha),
-            Happy Land (338 ha), trường ĐH&nbsp; quốc tế Tân Tạo (100 ha), khu dân cư E-city Tân Đức (348 ha). Dự án chỉ
-            cách Sài Gòn chừng 30 phút, với kết nối thằng tuyến đường lớn Trần Văn Giàu.</p>
-    </div>
+    <?php echo $project->ha_tang?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl02$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_2"
-           value="3">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl02$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_2" value="3">
 
-    <div class="a1">
-        <p>
-            Nhìn tổng thể từ trên cao thì dự án Làng Sen Việt Nam giống như hình mặt trống đồng Đông Sơn với những hoa
-            văn tinh xảo, hay có thể tưởng tượng như một lá sen đang căng tràn sức sống.<br>
-            <br>
-            Các dãy phố được quy hoạch thông mình và hiện đại. Mỗi vị trí nơi đây đều có giá trị riêng, các dãy nhà tại
-            đây đều được giáp với cây xanh hay kênh rạch, với vị trí đẹp (không có nhà chính diện ngã 3 trong dự án).
-        </p>
-
-    </div>
+    <?php echo $project->thiet_ke?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl03$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_3"
-           value="4">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl03$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_3" value="4">
 
-    <div class="a1">
-        <p>
-            Khu đô thị Văn hóa – Thương mại – Du lịch Làng sen Việt nam được quy hoạch ngay mặt đường tỉnh lộ 10, huyện
-            Đức Hòa, Tỉnh Long An.</p>
-
-    </div>
+    <?php echo $project->location?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl04$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_4"
-           value="5">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl04$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_4" value="5">
 
-    <div class="a1">
-        <br>
-
-    </div>
+    <?php echo $project->ban_hang?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5"
-           value="7">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="6">
 
-    <div class="a1">
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497772.jpg"
-                 style="width: 550px; height: 802px;"></p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497768.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497766.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497770.jpg"
-                 style="width: 550px; height: 307px;"></p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497769.jpg"
-                 style="width: 550px; height: 345px;"></p>
-
-        <p style="text-align: center;">
-            <img alt="" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.497767.jpg"
-                 style="width: 550px; height: 309px;"></p>
-
-    </div>
+    <?php echo $project->video?>
 </div>
+<div class="editor" style="display:none;clear: both">
+    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="7">
 
+    <?php echo $project->images?>
+</div>
 <div id="googleMap" style="display: none; clear: both" class="MapProjectDetail">
     <strong>Tiện ích trên bản đồ:</strong><br>
 
@@ -384,68 +221,7 @@
 <br>
 
 <div id="enterpriseInfo" class="editor" style="display: none;">
-    <div id="ctl27_ctl01_EnterpriseInfo1_enterpriseForm">
-        <h3>
-            <span>Công ty CP Đầu tư và Xây dựng Phúc Khang</span></h3>
-
-        <div class="info" style="margin-top: 10px; padding: 10px;">
-            <div class="d11">
-                <img id="ctl27_ctl01_EnterpriseInfo1_imgLogo" title="Công ty CP Đầu tư và Xây dựng Phúc Khang"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.2061.jpg"
-                     style="height:110px;width:110px;">
-            </div>
-            <div class="d12">
-                <ul>
-                    <li>
-                        <span id="ctl27_ctl01_EnterpriseInfo1_lblAddress">Địa chỉ</span>:
-                        Số 37 đường 3/2, Phường.11, Quận.10, Thành Phố Hồ Chí Minh
-                    </li>
-                    <li>
-                        <span id="ctl27_ctl01_EnterpriseInfo1_lblPhone">Điện thoại</span>:
-                        0839292222
-                        |
-                        <span id="ctl27_ctl01_EnterpriseInfo1_lblFax">Fax</span>:
-                        0839293130
-                    </li>
-                    <li>
-                        <span id="ctl27_ctl01_EnterpriseInfo1_lblWebpage">Website</span>:
-                        <span id="ctl27_ctl01_EnterpriseInfo1_hplWebpage"
-                              title="www.phuckhang.vn">www.phuckhang.vn</span>
-                    </li>
-                    <li>
-                        <span id="ctl27_ctl01_EnterpriseInfo1_lblEmail">Email</span>:
-                        <script type="text/javascript"><!--
-                            var prefix = 'm&#97;&#105;lt&#111;:';
-                            var path = 'hr' + 'ef' + '=';
-                            var attr = '&#105;&#110;&#102;&#111;&#64;&#112;&#104;&#117;&#99;&#107;&#104;&#97;&#110;&#103;&#46;&#118;&#110;';
-                            var txt = '';
-                            var tool = 'title = ""';
-                            document.write('<a ' + path + '"' + prefix + attr + '"' + tool + '>');
-                            document.write(txt != '' ? txt : attr);
-                            document.write('</a>');
-                            //--></script>
-                        <a href="mailto:info@phuckhang.vn" title="">info@phuckhang.vn</a>
-                        <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt
-                            Javascript để có thể xem.&lt;/em&gt;</noscript>
-
-                    </li>
-                    <li>
-                        <span id="ctl27_ctl01_EnterpriseInfo1_Label1">Chat với người liên hệ công ty</span>
-                    <span class="nickchat">
-                        <img alt="Yahoo"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/yahoo.gif">
-                        <a id="ctl27_ctl01_EnterpriseInfo1_hplChat" href="javascript:void(0)">Nick chat chưa được cập
-                            nhật!</a>
-                    </span></li>
-                </ul>
-            </div>
-            <div class="clear">
-            </div>
-        </div>
-        <div class="separable">
-        </div>
-
-    </div>
+    <?php echo $project->chu_dau_tu?>
 
 </div>
 </div>
@@ -507,15 +283,16 @@
 <input type="hidden" name="ctl00$ctl27$ctl01$hdLong" id="hdLong" value="106.497550964355">
 <input type="hidden" name="ctl00$ctl27$ctl01$hdAddress" id="hdAddress"
        value="Đường Tỉnh Lộ 10, Xã Đức Hoà Đông, Đức Hòa, Long An">
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.BlcokUI.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/main.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/geometry.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.tooltipmarker.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/InfoBox.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.BlcokUI.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/main.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/geometry.js"></script>
+<script type="text/javascript"
+        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.tooltipmarker.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/InfoBox.js"></script>
 
 
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/ProjectDetail.ascx.js"></script>
+<script type="text/javascript"
+        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/ProjectDetail.ascx.js"></script>
 <!--Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36-->
 </div>
 
@@ -768,7 +545,8 @@
             margin-top: 10px !important;
         }
     </style>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
+    <script type="text/javascript"
+            src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
     <script type="text/javascript">
 
         var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
@@ -823,13 +601,13 @@
          altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://kientrucvip.com/" bid="1351" tip="" tp="7"
          w="240" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=1351" target="_blank" title=""
                            rel="nofollow"><img
-                src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.343517.jpg"
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.343517.jpg"
                 style="width: 100%; height:90px;" class="view-count click-count" bannerid="1351"></a></div>
     <div class="aditem" time="10" style="margin-bottom: 10px;" src="http://file1.batdongsan.com.vn/file.245648.jpg"
          altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://thanglonglaw.com.vn" bid="643" tip="" tp="7"
          w="210" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=643" target="_blank" title=""
                            rel="nofollow"><img
-                src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.245648.jpg"
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.245648.jpg"
                 style="width: 100%; height:90px;" class="view-count click-count" bannerid="643"></a></div>
 </div>
 
@@ -847,7 +625,7 @@
             <div class="enterprise-vip-img">
                 <a href="http://batdongsan.com.vn/dau-tu-du-an-quan-3/cong-ty-co-phan-dau-tu-phat-trien-song-da-ep499">
                     <img class="img"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.1887.jpg"
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1887.jpg"
                          alt="Công ty Cổ phần Đầu tư Phát triển Sông Đà">
                 </a>
             </div>
@@ -863,7 +641,7 @@
             <div class="enterprise-vip-img">
                 <a href="http://batdongsan.com.vn/dau-tu-du-an-dong-da/tong-cong-ep38">
                     <img class="img"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.442353.jpg"
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.442353.jpg"
                          alt="Tổng Công ty Đầu tư Phát triển Nhà và Đô thị HUD">
                 </a>
             </div>
@@ -880,7 +658,7 @@
             <div class="enterprise-vip-img">
                 <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-1/cong-ty-cb-ep68">
                     <img class="img"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.327785.jpg"
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.327785.jpg"
                          alt="Công ty CB Richard Ellis Việt Nam (CBRE)">
                 </a>
             </div>
@@ -896,7 +674,7 @@
             <div class="enterprise-vip-img">
                 <a href="http://batdongsan.com.vn/xay-dung-dau-tu-bds-dong-da/tong-cong-ty-cp-xuat-nhap-khau-va-xay-dung-viet-nam-ep279">
                     <img class="img"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.1679.jpg"
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1679.jpg"
                          alt="Tổng công ty CP Xuất nhập khẩu và Xây dựng Việt Nam">
                 </a>
             </div>
@@ -913,7 +691,7 @@
             <div class="enterprise-vip-img">
                 <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-cau-giay/cong-ty-co-ep288">
                     <img class="img"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.1686.jpg"
+                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1686.jpg"
                          alt="Công ty Cổ phần Bất động sản B.D.S">
                 </a>
             </div>

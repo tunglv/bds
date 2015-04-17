@@ -103,13 +103,25 @@
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/decorate/list', array('alias' => 'mach-ban'))?>" class="haslink ">Mách bạn</a></li>
     </ul>
 </li>
-<li class="lv0"><a href="" class="haslink ">Phong thủy</a>
+<li class="lv0"><a href="" class="nolink">Phong thủy</a>
     <ul>
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'tu-van-phong-thuy'))?>" class="haslink ">Tư vấn phong thủy</a></li>
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'mach-ban'))?>" class="haslink ">Mách bạn</a></li>
     </ul>
 </li>
-<li class="lv0"><a href="javascript:;" class="nolink ">Danh sách dự án</a></li>
+<li class="lv0"><a class="haslink" href="<?php echo Yii::app()->createUrl('/web/project/group')?>">Danh sách dự án</a>
+    <ul>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'cao-oc-van-phong'))?>" class="haslink ">Cao ốc văn phòng</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-can-ho'))?>" class="haslink ">Khu căn hộ</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-do-thi-moi'))?>" class="haslink ">Khu đô thị mới</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-thuong-mai-dich-vu'))?>" class="haslink ">Khu thương mại - dịch vụ</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-phuc-hop'))?>" class="haslink ">Khu phức hợp</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-dan-cu'))?>" class="haslink ">Khu dân cư</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-du-lich-nghi-duong'))?>" class="haslink ">Khu du lịch - nghỉ dưỡng</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'khu-cong-nghiep'))?>" class="haslink ">Khu công nghiệp</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'du-an-khac'))?>" class="haslink ">Dự án khác</a></li>
+    </ul>
+</li>
 <li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/saler/list')?>" class="haslink ">Nhà mô giới tiêu biểu</a></li>
 </ul>
 </div>

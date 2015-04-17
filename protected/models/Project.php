@@ -190,11 +190,30 @@ class Project extends CActiveRecord
         return $this->typeData[$this->type];
     }
 
-    public function getUrl($id = 0, $alias = null){
+    public function getAliasTypeData(){
+        return array(
+            '1' => 'cao-oc-van-phong',
+            '2' => 'khu-can-ho',
+            '3' => 'khu-do-thi-moi',
+            '4' => 'khu-thuong-mai-dich-vu',
+            '5' => 'khu-phuc-hop',
+            '6' => 'khu-dan-cu',
+            '7' => 'khu-du-lich-nghi-duong',
+            '8' => 'khu-cong-nghiep',
+            '9' => 'du-an-khac'
+        );
+    }
+
+    public function getAliasTypeLabel(){
+        return $this->aliasTypeData[$this->type];
+    }
+
+    public function getUrl($id = 0, $alias = null, $type = ''){
         $alias = $alias ? $alias : $this->alias;
         $id = $id ? $id : $this->id;
+        $type = $type ? $type : $this->aliasTypeLabel;
 
-        return Yii::app()->createUrl('/web/project/detail', array('alias'=>$alias,'id' => $id));
+        return Yii::app()->createUrl('/web/project/detail', array('type'=>$type, 'alias'=>$alias,'id' => $id));
     }
 
     public function getImageUrl($id = null, $size = '90'){

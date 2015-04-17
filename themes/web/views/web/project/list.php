@@ -1,3 +1,58 @@
+<style>
+    .hidden {
+        display: none;
+    }
+    .pagination{
+        clear: both;
+        height: 24px;
+    }
+    .pagination a:hover{
+        color: #000 !important;
+        font-weight: bold;
+    }
+    .pagination li.active{
+        color: #000 !important;
+        font-weight: bold;
+    }
+    .pagination.paging.pagination-centered {
+        background-color: #ececec;
+        line-height: 30px;
+        height: 30px;
+        margin-top: 5px;
+    }
+    .yiiPager{
+        float: right;
+        margin-top: 5px;
+    }
+    .yiiPager li{
+        margin-left: 2px;
+        width: auto;
+        color: #000000;
+        text-decoration: none;
+        height: 23px;
+        line-height: 23px;
+        float: left;
+        padding-left: 6px;
+        padding-right: 6px;
+        border: 1px solid #ccc;
+        list-style: none;
+    }
+    .yiiPager li.active{
+        text-align: center !important;
+        background-color: #055699;
+        margin-left: 2px !important;
+        width: auto !important;
+        color: White !important;
+        text-decoration: none !important;
+        height: 23px !important;
+        line-height: 23px !important;
+        float: left !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        border: 1px solid #ccc !important;
+        font-weight: bold !important;
+    }
+</style>
 <div id="MainContent"></div>
 <div class="clear">
 </div>
@@ -18,754 +73,35 @@
 <div class="project-by-cate-list">
 <div class="pad-bot-10">
     <h1 class="tit_l line_gr">
-        <a href="javascript:void(0)"><span style="white-space:nowrap;">
-                Khu đô thị mới</span></a>
-        <a href="http://batdongsan.com.vn/ban-do-du-an-khu-do-thi-moi" id="ctl28_ctl01_lnkToMap"
-           class="notab project-map-link" title="Xem trên bản đồ">
-            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/xemtrenbando-duan.png" alt="Xem trên bản đồ"
-                 width="131" height="24"></a>
+        <a href="javascript:void(0)"><span style="white-space:nowrap;">Khu đô thị mới</span></a>
+<!--        <a href="http://batdongsan.com.vn/ban-do-du-an-khu-do-thi-moi" id="ctl28_ctl01_lnkToMap" class="notab project-map-link" title="Xem trên bản đồ"><img src="--><?php //echo Yii::app()->baseUrl ?><!--/themes/web/files/images/xemtrenbando-duan.png" alt="Xem trên bản đồ" width="131" height="24"></a>-->
     </h1>
 </div>
 
+    <?php $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'_item_view',
+        'template'=>'{items}{pager}',
+        'enableSorting' => true,
 
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098" title="Lâm Viên Villas">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33.jpg" width="365px"
-                     height="230px" alt="Lâm Viên Villas" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098">
-                Lâm Viên Villas</a></h2>
+        'pagerCssClass' => 'pagination paging pagination-centered',
+        'pager' => Array(
+            'id'=>'',
+            //'class'=>'',
+            'internalPageCssClass'=>'',
+            'cssFile'=>'',
+            'header'=>'',
 
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Xã Đặng Xá, Gia Lâm, Hà Nội
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0435536688
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://bietthulamvien.vn/" target="_blank" rel="nofollow">http://bietthulamvien.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                <script type="text/javascript"><!--
-                    var prefix = 'm&#97;&#105;lt&#111;:';
-                    var path = 'hr' + 'ef' + '=';
-                    var attr = '&#118;&#105;&#114;&#64;&#118;&#105;&#103;&#108;&#97;&#99;&#101;&#114;&#97;&#108;&#97;&#110;&#100;&#46;&#118;&#110;';
-                    var txt = '';
-                    var tool = 'title = ""';
-                    document.write('<a ' + path + '"' + prefix + attr + '"' + tool + '>');
-                    document.write(txt != '' ? txt : attr);
-                    document.write('</a>');
-                    //--></script>
-                <a href="mailto:vir@viglaceraland.vn" title="">vir@viglaceraland.vn</a>
-                <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt Javascript
-                    để có thể xem.&lt;/em&gt;</noscript>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-               title="The Mall City II">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.505796.jpg" width="365px"
-                     height="230px" alt="The Mall City II" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070">
-                The Mall City II</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Xã Vĩnh Tân, Tân Uyên, Bình Dương
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                06503554999
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.diaockimoanh.com.vn/" target="_blank" rel="nofollow">www.diaockimoanh.com.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-trang-kh/khu-do-thi-vcn-phuoc-hai-pj2067"
-               title="Khu đô thị VCN Phước Hải">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.504696.jpg" width="365px"
-                     height="230px" alt="Khu đô thị VCN Phước Hải" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-trang-kh/khu-do-thi-vcn-phuoc-hai-pj2067">
-                Khu đô thị VCN Phước Hải</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Phường Phước Hải, Nha Trang, Khánh Hòa
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0586537999
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://vinhdiemtrung.com/" target="_blank" rel="nofollow">http://vinhdiemtrung.com</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                <script type="text/javascript"><!--
-                    var prefix = 'm&#97;&#105;lt&#111;:';
-                    var path = 'hr' + 'ef' + '=';
-                    var attr = '&#115;&#103;&#100;&#64;&#118;&#99;&#110;&#46;&#118;&#110;';
-                    var txt = '';
-                    var tool = 'title = ""';
-                    document.write('<a ' + path + '"' + prefix + attr + '"' + tool + '>');
-                    document.write(txt != '' ? txt : attr);
-                    document.write('</a>');
-                    //--></script>
-                <a href="mailto:sgd@vcn.vn" title="">sgd@vcn.vn</a>
-                <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt Javascript
-                    để có thể xem.&lt;/em&gt;</noscript>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-can-giuoc-la/khu-do-thi-south-center-pj2061"
-               title="Khu đô thị South Center">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.503383.jpg" width="365px"
-                     height="230px" alt="Khu đô thị South Center" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-can-giuoc-la/khu-do-thi-south-center-pj2061">
-                Khu đô thị South Center</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Nguyễn Thị Bẹ, Thị trấn Cần Giuộc, Cần Giuộc, Long An
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-be/khu-do-thi-gs-metrocity-pj2057"
-               title="Khu đô thị GS Metrocity">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.497854.jpg" width="365px"
-                     height="230px" alt="Khu đô thị GS Metrocity" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-be/khu-do-thi-gs-metrocity-pj2057">
-                Khu đô thị GS Metrocity</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Xã Nhơn Đức - Phước Kiển, Nhà Bè, Hồ Chí Minh
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/kdt-lang-sen-viet-nam-pj2055"
-               title="KĐT Làng Sen Việt Nam">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.497797.jpg" width="365px"
-                     height="230px" alt="KĐT Làng Sen Việt Nam" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/kdt-lang-sen-viet-nam-pj2055">
-                KĐT Làng Sen Việt Nam</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Tỉnh Lộ 10, Xã Đức Hoà Đông, Đức Hòa, Long An
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0839333789
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.phuckhang.vn/" target="_blank" rel="nofollow">www.phuckhang.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thanh-tri/khu-do-thi-hong-ha-eco-city-pj2053"
-               title="Khu đô thị Hồng Hà Eco City">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.495746.jpg" width="365px"
-                     height="230px" alt="Khu đô thị Hồng Hà Eco City" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thanh-tri/khu-do-thi-hong-ha-eco-city-pj2053">
-                Khu đô thị Hồng Hà Eco City</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Xã Tứ Hiệp, Thanh Trì, Hà Nội
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-son-tra-ddn/an-vien-city-pj2039" title="An Viên City">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.484207.jpg" width="365px"
-                     height="230px" alt="An Viên City" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-son-tra-ddn/an-vien-city-pj2039">
-                An Viên City</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Ngô Quyền, quận Sơn Trà, Đà Nẵng
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thu-duc/van-phuc-riverside-city-pj2034"
-               title="Vạn Phúc Riverside City">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.481377.jpg" width="365px"
-                     height="230px" alt="Vạn Phúc Riverside City" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thu-duc/van-phuc-riverside-city-pj2034">
-                Vạn Phúc Riverside City</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Khu phố 5, Phường Hiệp Bình Phước, Thủ Đức, Hồ Chí Minh
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0462946548
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.daiphuc.com.vn/" target="_blank" rel="nofollow">www.daiphuc.com.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-hoang-mai/kdt-tay-nam-kim-giang-pj2030"
-               title="KĐT Tây Nam Kim Giang">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.480512.jpg" width="365px"
-                     height="230px" alt="KĐT Tây Nam Kim Giang" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-hoang-mai/kdt-tay-nam-kim-giang-pj2030">
-                KĐT Tây Nam Kim Giang</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Kim Giang, Phường Đại Kim, Hoàng Mai, Hà Nội
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thuan-an-bd/an-son-riverside-pj2023"
-               title="An Sơn Riverside">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.479383.jpg" width="365px"
-                     height="230px" alt="An Sơn Riverside" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-thuan-an-bd/an-son-riverside-pj2023">
-                An Sơn Riverside</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Xã An Sơn, Thuận An, Bình Dương
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-ngo-quyen-hp/td-lakeside-pj2006" title="TD Lakeside">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.472339.jpg" width="365px"
-                     height="230px" alt="TD Lakeside" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-ngo-quyen-hp/td-lakeside-pj2006">
-                TD Lakeside</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Lê Hồng Phong, Phường Đông Khê, Ngô Quyền, Hải Phòng
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0313686530
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.tdgroup.com.vn/" target="_blank" rel="nofollow">www.tdgroup.com.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-di-an-bd/kdt-ecohomes-tri-thuc-tre-pj1997"
-               title="KĐT Ecohomes Tri Thức Trẻ">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.439819.jpg" width="365px"
-                     height="230px" alt="KĐT Ecohomes Tri Thức Trẻ" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-di-an-bd/kdt-ecohomes-tri-thuc-tre-pj1997">
-                KĐT Ecohomes Tri Thức Trẻ</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Thị xã Dĩ An, Bình Dương
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0905629897
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.ecohomesvietnam.com/" target="_blank" rel="nofollow">www.ecohomesvietnam.com</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                <script type="text/javascript"><!--
-                    var prefix = 'm&#97;&#105;lt&#111;:';
-                    var path = 'hr' + 'ef' + '=';
-                    var attr = '&#118;&#105;&#101;&#116;&#103;&#105;&#97;&#112;&#104;&#97;&#116;&#103;&#114;&#111;&#117;&#112;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;';
-                    var txt = '';
-                    var tool = 'title = ""';
-                    document.write('<a ' + path + '"' + prefix + attr + '"' + tool + '>');
-                    document.write(txt != '' ? txt : attr);
-                    document.write('</a>');
-                    //--></script>
-                <a href="mailto:vietgiaphatgroup@gmail.com" title="">vietgiaphatgroup@gmail.com</a>
-                <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt Javascript
-                    để có thể xem.&lt;/em&gt;</noscript>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-hue-tth/an-dong-villas-pj1988" title="An Đông Villas">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.468714.jpg" width="365px"
-                     height="230px" alt="An Đông Villas" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-hue-tth/an-dong-villas-pj1988">
-                An Đông Villas</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Phường An Đông, Huế, Thừa Thiên Huế
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 clearboth mar-right">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-trang-kh/khu-do-thi-an-binh-tan-pj1986"
-               title="Khu đô thị An Bình Tân">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.468389.jpg" width="365px"
-                     height="230px" alt="Khu đô thị An Bình Tân" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-nha-trang-kh/khu-do-thi-an-binh-tan-pj1986">
-                Khu đô thị An Bình Tân</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Phường Phước Long , Nha Trang, Khánh Hòa
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                0436330739
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                Đang cập nhật
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                Đang cập nhật
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="list2item2 ">
-    <div class="">
-        <div class="tc-img">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-ben-cat-bd/ben-cat-golden-land-pj1981"
-               title="Bến Cát Golden Land">
-                <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb365x230.466284.jpg" width="365px"
-                     height="230px" alt="Bến Cát Golden Land" class="borderccc">
-            </a>
-        </div>
-        <h2 class="largefont">
-            <a href="http://batdongsan.com.vn/khu-do-thi-moi-ben-cat-bd/ben-cat-golden-land-pj1981">
-                Bến Cát Golden Land</a></h2>
-
-        <div>
-            <div>
-                            <span class="colorblue">
-                                Địa chỉ: </span>Đường Hùng Vương, Xã An Điền, Bến Cát, Bình Dương
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Số điện thoại: </span>
-                06503510288
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Website: </span>
-                <a href="http://www.cuongthinhphatland.vn/" target="_blank" rel="nofollow">www.cuongthinhphatland.vn</a>
-            </div>
-            <div>
-                            <span class="colorblue">
-                                Email: </span>
-                <script type="text/javascript"><!--
-                    var prefix = 'm&#97;&#105;lt&#111;:';
-                    var path = 'hr' + 'ef' + '=';
-                    var attr = '&#105;&#110;&#102;&#111;&#64;&#99;&#117;&#111;&#110;&#103;&#116;&#104;&#105;&#110;&#104;&#112;&#104;&#97;&#116;&#108;&#97;&#110;&#100;&#46;&#118;&#110;';
-                    var txt = '';
-                    var tool = 'title = ""';
-                    document.write('<a ' + path + '"' + prefix + attr + '"' + tool + '>');
-                    document.write(txt != '' ? txt : attr);
-                    document.write('</a>');
-                    //--></script>
-                <a href="mailto:info@cuongthinhphatland.vn" title="">info@cuongthinhphatland.vn</a>
-                <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt Javascript
-                    để có thể xem.&lt;/em&gt;</noscript>
-
-            </div>
-        </div>
-    </div>
-</div>
+            'hiddenPageCssClass'=>'hidden',
+            'selectedPageCssClass'=>'active',
+            'nextPageLabel'=>'Sau',
+            'prevPageLabel'=>'Trước',
+            'maxButtonCount'=>5
+        ),
+        'emptyText'=>'Hiện chưa có sản phẩm nào, bạn hãy là người đầu tiên đăng sản phẩm trên meonho.net',
+    )); ?>
 
 <div class="clear">
-</div>
-<div class="tc-tit-bottom">
-    <div align="center" class="ks-pagination-links">
-        <a href="./Dự án Khu đô thị mới   Khu đô thị mới_files/Dự án Khu đô thị mới   Khu đô thị mới.html">
-            <div style="
-            margin-left: 2px;
-            width: auto;
-            color: #000000;
-            text-decoration: none;
-            height: 23px;
-            line-height: 23px;
-            float: left;
-            padding-left: 6px;
-            padding-right: 6px;
-            border: 1px solid #ccc;" class="style-pager-row-selected" align="center">1
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p2">
-            <div style="
-            margin-left: 2px;
-            width: auto;
-            color: #000000;
-            text-decoration: none;
-            height: 23px;
-            line-height: 23px;
-            float: left;
-            padding-left: 6px;
-            padding-right: 6px;
-            border: 1px solid #ccc;" align="center">2
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p3">
-            <div style="
-            margin-left: 2px;
-            width: auto;
-            color: #000000;
-            text-decoration: none;
-            height: 23px;
-            line-height: 23px;
-            float: left;
-            padding-left: 6px;
-            padding-right: 6px;
-            border: 1px solid #ccc;" align="center">3
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p4">
-            <div style="
-            margin-left: 2px;
-            width: auto;
-            color: #000000;
-            text-decoration: none;
-            height: 23px;
-            line-height: 23px;
-            float: left;
-            padding-left: 6px;
-            padding-right: 6px;
-            border: 1px solid #ccc;" align="center">4
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p5">
-            <div style="
-            margin-left: 2px;
-            width: auto;
-            color: #000000;
-            text-decoration: none;
-            height: 23px;
-            line-height: 23px;
-            float: left;
-            padding-left: 6px;
-            padding-right: 6px;
-            border: 1px solid #ccc;" align="center">5
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p2">
-            <div style="
-            margin-left: 2px;
-            margin-right: 2px;
-            padding-left: 6px;
-            padding-right: 6px ;
-            width: auto;
-            height: 23px;
-            color: #000000  ;
-            text-decoration: none ;
-            line-height: 23px ;
-            float: left;
-            border: 1px solid #ccc;" align="center">...
-            </div>
-        </a><a href="http://batdongsan.com.vn/khu-do-thi-moi/p20">
-            <div style="
-            margin-left: 2px;
-            margin-right: 2px;
-            padding-left: 6px;
-            padding-right: 6px ;
-            width: auto;
-            height: 23px;
-            color: #000000  ;
-            text-decoration: none ;
-            line-height: 23px ;
-            float: left;
-            border: 1px solid #ccc;" align="center">&gt;</div>
-        </a><span id="ctl28_ctl01_DataPager"></span>
-    </div>
 </div>
 </div>
 </div>
@@ -917,7 +253,8 @@
                 margin-top: 10px !important;
             }
         </style>
-        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
+        <script type="text/javascript"
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
         <script type="text/javascript">
 
             var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
@@ -1278,15 +615,17 @@
     <div class="aditem" time="10" style="margin-bottom: 10px;" src="http://file1.batdongsan.com.vn/file.343517.jpg"
          altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://kientrucvip.com/" bid="1351" tip="" tp="7"
          w="240" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=1351" target="_blank" title=""
-                           rel="nofollow"><img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.343517.jpg"
-                                               style="width: 100%; height:90px;" class="view-count click-count"
-                                               bannerid="1351"></a></div>
+                           rel="nofollow"><img
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.343517.jpg"
+                style="width: 100%; height:90px;" class="view-count click-count"
+                bannerid="1351"></a></div>
     <div class="aditem" time="10" style="margin-bottom: 10px;" src="http://file1.batdongsan.com.vn/file.245648.jpg"
          altsrc="http://file1.batdongsan.com.vn/file.0.jpg" link="http://thanglonglaw.com.vn" bid="643" tip="" tp="7"
          w="210" h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=643" target="_blank" title=""
-                           rel="nofollow"><img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.245648.jpg"
-                                               style="width: 100%; height:90px;" class="view-count click-count"
-                                               bannerid="643"></a></div>
+                           rel="nofollow"><img
+                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.245648.jpg"
+                style="width: 100%; height:90px;" class="view-count click-count"
+                bannerid="643"></a></div>
 </div>
 
 <div style="clear:both;"></div>
@@ -1310,8 +649,9 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
                            title="Lâm Viên Villas">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150211150707-fc33(1).jpg"
-                                 width="156" height="100" alt="Lâm Viên Villas">
+                            <img
+                                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/20150211150707-fc33(1).jpg"
+                                width="156" height="100" alt="Lâm Viên Villas">
                         </a>
                     </div>
                     <div class="prj_vip">
@@ -1326,7 +666,8 @@
                     <div>
                         <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/du-an/dragon-city.html"
                            title="Dragon Parc" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.509866.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.509866.jpg"
+                                 width="156"
                                  height="100" alt="Dragon Parc">
                         </a>
                     </div>
@@ -1342,7 +683,8 @@
                     <div>
                         <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/HTML_ThaoNTT_TAN%20PHUOC/TanPhuoc.html"
                            title="Tân Phước Plaza" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.439843.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.439843.jpg"
+                                 width="156"
                                  height="100" alt="Tân Phước Plaza">
                         </a>
                     </div>
@@ -1358,7 +700,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-can-ho-son-tra-ddn/can-ho-cao-cap-azura-pj1015"
                            title="Căn hộ cao cấp Azura">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.508252.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.508252.jpg"
+                                 width="156"
                                  height="100" alt="Căn hộ cao cấp Azura">
                         </a>
                     </div>
@@ -1374,7 +717,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
                            title="Chánh Hưng Apartment">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.504461.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.504461.jpg"
+                                 width="156"
                                  height="100" alt="Chánh Hưng Apartment">
                         </a>
                     </div>
@@ -1390,7 +734,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
                            title="The Mall City II">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.505796.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.505796.jpg"
+                                 width="156"
                                  height="100" alt="The Mall City II">
                         </a>
                     </div>
@@ -1406,7 +751,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
                            title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.490898.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490898.jpg"
+                                 width="156"
                                  height="100" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
                         </a>
                     </div>
@@ -1422,7 +768,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-dan-cu-binh-chanh/duong-hong-garden-house-pj1695"
                            title="Dương Hồng Garden House">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.490297.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490297.jpg"
+                                 width="156"
                                  height="100" alt="Dương Hồng Garden House">
                         </a>
                     </div>
@@ -1438,7 +785,8 @@
                     <div>
                         <a href="http://batdongsan.com.vn/khu-dan-cu-binh-thanh/dai-phuc-river-view-pj1511"
                            title="Đại Phúc River View">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.424550.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.424550.jpg"
+                                 width="156"
                                  height="100" alt="Đại Phúc River View">
                         </a>
                     </div>
@@ -1453,7 +801,8 @@
 
                     <div>
                         <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb150x150.475326.jpg" width="156"
+                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.475326.jpg"
+                                 width="156"
                                  height="100" alt="Mega Ruby">
                         </a>
                     </div>
