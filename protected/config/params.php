@@ -89,6 +89,14 @@
                 '90'       => array('width' => 90, 'height' => 90, 'quality' => 90),
             ),
         ),
+        'sale' => array(
+            'path' => 'upload/sale/',
+            'tempPath' => 'upload/temp/sale/',
+            'img' => array(
+                '856'       => array('width' => 747, 'height' => '100%', 'fix'=>'inside', 'quality' => 100),
+                '122'       => array('width' => 122, 'height' => '100%', 'fix'=>'inside',  'quality' => 100)
+            ),
+        ),
         'product' => array(
             'path' => 'upload/product/',
             'img' => array(

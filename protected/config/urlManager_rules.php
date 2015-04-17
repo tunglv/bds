@@ -1,9 +1,6 @@
 <?php  
 $array_base = array(
-//    'http://<sub:\w+>.anuong.dev' => '/site/page',  
-    'http://<sub:\w+>.anuong.dev<any:.*>' => '/site<any>',
-    'http://<sub:\w+>.anuong.hehe.vn<any:.*>' => '/site<any>',
-    
+
     '/<module:(admin|gii)>' => '/<module>',
 
 //    '/<city_alias:[\w\-]+>' => '/web/page/index',
