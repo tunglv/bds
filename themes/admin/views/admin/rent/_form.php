@@ -110,7 +110,7 @@
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'status', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->dropDownList($model,'status', BdsSale::model()->getStatusData()); ?>
+                        <?php echo $form->dropDownList($model,'status', BdsRent::model()->getStatusData()); ?>
                         <?php echo $form->error($model,'status', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
                                             url: '<?php $params = array();
                                             if($product_id = Yii::app()->request->getQuery('id')) $params['id'] = $product_id;
 //                                            if($karaoke_id = Yii::app()->request->getQuery('branch_karaoke_id')) $params['branch_karaoke_id'] = $karaoke_id;
-                                            echo $this->createUrl('/admin/sale/uploadImages', $params)?>'
+                                            echo $this->createUrl('/admin/rent/uploadImages', $params)?>'
                                         });
 
                                         // Load existing files:
@@ -314,11 +314,11 @@
 </div>
 <script>
 
-    $('#BdsSale_title').bind('blur keyup', function() {
-        $('#BdsSale_alias').val($(this).val().toAlias().replaceAll(' ', '-').toLowerCase());
+    $('#BdsRent_title').bind('blur keyup', function() {
+        $('#BdsRent_alias').val($(this).val().toAlias().replaceAll(' ', '-').toLowerCase());
     });
 //
-    $("#BdsSale_title").keyup(function(){
+    $("#BdsRent_title").keyup(function(){
         $('#name_char_count').text($(this).val().length);
     }).keyup();
 //

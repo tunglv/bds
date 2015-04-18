@@ -90,6 +90,24 @@
                     <li<?php if($this->menu_child_selected == 'project'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/project')?>">Quản lý dự án</a></li>
                 </ul>
             </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'sale'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/sale')?>">
+                    <span class="icon-fire"></span> Danh sách nhà - đất bán
+                </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'sale') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'sale_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/sale/create')?>">Thêm nhà - đất bán</a></li>
+                    <li<?php if($this->menu_child_selected == 'sale'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/sale')?>">Quản lý nhà - đất bán</a></li>
+                </ul>
+            </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'rent'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/rent')?>">
+                    <span class="icon-fire"></span> Danh sách nhà - đất cho thuê
+                </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'rent') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'rent_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/rent/create')?>">Thêm nhà - đất cho thuê</a></li>
+                    <li<?php if($this->menu_child_selected == 'rent'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/rent')?>">Quản lý nhà - đất cho thuê</a></li>
+                </ul>
+            </li>
         </ul>
     </div><!--leftmenu-->
 

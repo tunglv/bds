@@ -18,29 +18,22 @@
 
 <div id="product-detail">
 <div class="pm-title">
-    <h1>
-        SCENIC VALLEY - CƠ HỘI CUỐI CÙNG SỞ HỮU CĂN HỘ VỊ TRÍ ĐẸP + GIÁ TỐT NHẤT TẠI PHÚ MỸ HƯNG </h1>
+    <h1><?php echo $sale->title?></h1>
 </div>
 
 <div class="kqchitiet">
         <span class="diadiem-title mar-right-15">
-            <b>Khu vực:</b> <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley">Bán căn hộ chung cư tại
-                Scenic Valley</a> - Quận 7 - Hồ Chí Minh</span>
-
+            <b>Khu vực:</b> <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley">Bán căn hộ chung cư tại Scenic Valley</a> - Quận 7 - Hồ Chí Minh</span>
         <span style="display: inline-block;"><span class="gia-title mar-right-15">
-            <b>
-                Giá:</b>
+            <b>Giá:</b>
             <strong>
-                28 triệu/m²&nbsp;
-
+                <?php echo $sale->price .' '.$sale->price_type?>&nbsp;
             </strong>
         </span>
 
             <span class="gia-title">
-                <b>
-                    Diện tích:</b>
-                <strong>
-                    Không xác định</strong>
+                <b>Diện tích:</b>
+                <strong><?php echo $sale->area?></strong>
             </span></span>
 
 </div>
@@ -48,77 +41,7 @@
     Thông tin mô tả
 </div>
 <div class="pm-content stat" ct="2" ac="2" cid="6532059">
-    Hotline: 0902825353 *chủ Đầu Tư Phú Mỹ Hưng*<br> <br> Vào ngày 15/03/2015 Công Ty Phú Mỹ Hưng tiếp tục công bố bán
-    giai đoạn 4 của dự án ScenicValley.<br> <br> + Dự án căn hộ cao cấp Cuối Cùng mang phong cách SINGAPORE liền kề SÔNG
-    + Sân GOLF tại Phú Mỹ Hưng: một không gian sống thanh bình, xanh mát với nhiều tiện ích, dịch vụ để tận hưởng cuộc
-    sống hạnh phúc.<br> <br> Vị trí: thuộc khu Trung tâm Phú Mỹ Hưng, mất khoảng 3 phút đi bộ đến các điểm sau:<br> -
-    Cách Hồ Bán Nguyệt - Cầu Ánh Sao<br> - Trung tâm thương mại Cresent Mall<br> - Trung tâm hội nghị triển lãm Nam Sài
-    Gòn<br> - Bệnh viện FV, Tâm Đức …<br> <br> Giá bán: từ 28 triệu đồng/m2 (giá đã gồm Tiền sử dụng đất, 10% VAT, 2%
-    bảo trì). <br> Diện tích: 70m2, 80m2, 100m2, 130m2, 150 m2 ...<br> Lịch thanh toán: thanh toán 30 tháng, cứ 2tháng
-    5% <br> Pháp lý: sổ hồng với quyền sử dụng đất ở ổn định, lâu dài<br> Đặc biệt: nhiều ngân hàng hỗ trợ cho vay với
-    lãi suất cực kỳ ưu đãi<br> <br> Những lý do nên chọn mua dự án Scenic Valley :<br> <br>- VỀ GIÁ: Giá căn hộ tại PMH
-    như sau:<br>* Căn hộ tiêu chuẩn: từ 35 triệu/m2 (như Sky Garden 3...)<br>* Căn hộ cao cấp: từ 40 triệu/m2 (như Mỹ
-    Đức, Mỹ Phúc ...)<br>* Căn hộ cao cấp vị trí đẹp: từ 50 triệu/m2 (như Panorama, Riverside, Riverpark)<br>=&gt;
-    Scenic Valley là căn hộ cao cấp nhưng mức giá chỉ từ 28 triệu/m2 - 30 triệu / m2<br> <br> <br>- Về vị trí: thuộc
-    trung tâm Phú Mỹ Hưng, trong khu giải trí - thể thao - trị liệu. Bên cạnh là sông - sân golf - sân tennis - hồ bơi
-    đáy cát.<br> <br>- Về tiện ích căn hộ: hồ bơi, phòng tập thể dục, phòng chơi trẻ em, khu tiệc nướng Barbecue, hoa
-    viên nội khu, sảnh tiếp khách sang trọng...<br> <br>- Được tặng kèm ô đậu xe ô tô trị giá 400 triệu đồng <br> <br>-
-    An ninh: tại ngõ vào dự án được bố trí lối chặn bảo vệ tăng tính an ninh - đẳng cấp cho dự án.<br> <br>- Tiếp tân:
-    dự án được bố trí tiếp tân trực dưới tầng trệt làm dự án trở nên sang trọng hơn. <br> <br>- Thiết kế: thuộc 1 trong
-    những dự án cao cấp tại PMH được design theo phong cách Singapo hiện đại, vật liệu xây dựng cao cấp đẹp.<br> <br>
-    Thông tin tham khảo:<br> <br> <a rel="nofollow" target="_blank" href="http://www.phumyhung.com.vn/vn/scenicvalley">http://www.phumyhung.com.vn/vn/scenicvalley</a>
-    <br> <a rel="nofollow" target="_blank"
-            href="http://kinhdoanh.vnexpress.net/tin-tuc/bat-dong-san/mo-ban-thanh-cong-giai-doan-mot-du-an-scenic-valley-3089022.html">http://kinhdoanh.vnexpress.net/tin-tuc/bat-dong-san/mo-ban-thanh-cong-giai-doan-mot-du-an-scenic-valley-3089022.html</a>
-    <a rel="nofollow" target="_blank"
-       href="http://www.thanhnien.com.vn/pages/20141007/scenic-valley-cho-nhung-co-hoi-vang-tro-thanh-cu-dan-phu-my-hung.aspx">http://www.thanhnien.com.vn/pages/20141007/scenic-valley-cho-nhung-co-hoi-vang-tro-thanh-cu-dan-phu-my-hung.aspx</a>
-    <br> <br> Liên hệ đường dây nóng: 0902825353 để được tư vấn và tham quan nhà mẫu ( 24/24 )<br> <br> SÀN GIAO DỊCH
-    BẤT ĐỘNG SẢN PHÚ MỸ HƯNG<br>Tầng trệt, Cao ốc Lawrence S. Ting<br>801 Đại lộ <a
-        href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-59">Nguyễn Văn Linh</a>, P. Tân Phú,
-    Q.7, TP.HCM<br>Điện thoại: 0902825353<br>E-mail: <a href="mailto:lelong@pmh.com.vn"
-                                                        rel="nofollow">lelong@pmh.com.vn</a><br>Giờ làm việc:
-    8:00~19:00, cả Chủ nhật và Ngày Lễ<br>
-
-    <div id="ctl27_ctl01_ltVideo">
-
-        <div id="togglevideo_6532059" style="text-align: center;">
-            <div style="height: 10px; clear: both;">
-            </div>
-            <div id="mediaplayer_6532059_wrapper" style="position: relative; width: 745px; height: 419px;">
-                <object type="application/x-shockwave-flash" data="http://batdongsan.com.vn/jwplayer.swf" width="100%"
-                        height="100%" bgcolor="#000000" id="mediaplayer_6532059" name="mediaplayer_6532059"
-                        tabindex="0">
-                    <param name="allowfullscreen" value="true">
-                    <param name="allowscriptaccess" value="always">
-                    <param name="seamlesstabbing" value="true">
-                    <param name="wmode" value="opaque">
-                    <param name="flashvars"
-                           value="netstreambasepath=http%3A%2F%2Fbatdongsan.com.vn%2Fban-can-ho-chung-cu-duong-nguyen-van-linh-prj-scenic-valley%2Fco-i-cuoi-cung-so-huu-vi-tri-dep-gia-tot-nhat-tai-phu-my-hung-pr6532059&amp;id=mediaplayer_6532059&amp;file=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fhttps%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DNklpyKnxxeQ&amp;controlbar.position=over&amp;controlbar.idlehide=true&amp;controlbar.dock=true&amp;logo.file=%2Fimages%2Flogo-web.png">
-                </object>
-            </div>
-            <div style="height: 10px; clear: both;">
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(document).ready(function () {
-
-                jwplayer('mediaplayer_6532059').setup({
-                    'flashplayer': '/jwplayer.swf',
-                    'id': 'playerID',
-                    'width': '745',
-                    'height': '419',
-                    'file': 'http://www.youtube.com/embed/https://www.youtube.com/watch?v=NklpyKnxxeQ',
-                    'controlbar.position': 'over',
-                    "controlbar.idlehide": true,
-                    "controlbar.dock": true,
-                    'logo.file': '/images/logo-web.png'
-                });
-
-            });
-        </script>
-
-
-    </div>
-
+    <?php echo $sale->content?>
 </div>
 
 <div class="pm-middle-content">
@@ -224,101 +147,6 @@
                  class="slideshow-icon-back" id="icon-back">
             <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb-next1.png"
                  class="slideshow-icon-next" id="icon-next">
-        </div>
-
-        <div id="googleMap" class="MapProductDetail" style="display: none">
-
-            <div class="utilityform">
-
-                <span class="utility-header">Chọn bán kính</span>
-
-                <div class="utilityradius">
-
-                    <label for="rad200">
-                        <input type="radio" name="radius" checked="checked" id="rad200" value="200">
-                        200 m</label>
-
-                    <label for="rad500">
-                        <input type="radio" name="radius" id="rad500" value="500">
-                        500 m</label>
-
-                    <label for="rad1000">
-                        <input type="radio" name="radius" id="rad1000" value="1000">
-                        1 km</label>
-
-                    <label for="rad2000">
-                        <input type="radio" name="radius" id="rad2000" value="2000">
-                        2 km</label>
-
-                    <label for="rad5000">
-                        <input type="radio" name="radius" id="rad5000" value="5000">
-                        5 km</label>
-
-                    <label for="rad10000">
-                        <input type="radio" name="radius" id="rad10000" value="10000">
-                        10 km</label>
-
-                </div>
-
-
-                <span class="utility-header">Chọn loại tiện ích</span>
-
-                <div class="utilitylist">
-
-                    <label for="util4">
-                        <input type="checkbox" checked="checked" id="util4" value="4">
-                        Trường học</label>
-
-                    <label for="util10">
-                        <input type="checkbox" id="util10" value="10">
-                        Dự án</label>
-
-                    <label for="util5">
-                        <input type="checkbox" id="util5" value="5">
-                        Cơ sở y tế</label>
-
-                    <label for="util3">
-                        <input type="checkbox" id="util3" value="3">
-                        Cơ quan hành chính</label>
-
-                    <label for="util2">
-                        <input type="checkbox" checked="checked" id="util2" value="2">
-                        TT thể thao, giải trí</label>
-
-                    <label for="util1">
-                        <input type="checkbox" checked="checked" id="util1" value="1">
-                        Địa điểm mua sắm</label>
-
-                    <label for="util6">
-                        <input type="checkbox" id="util6" value="6">
-                        Bến xe, trạm xe</label>
-
-                    <label for="util7">
-                        <input type="checkbox" id="util7" value="7">
-                        Công trình công cộng</label>
-
-                    <label for="util0">
-                        <input type="checkbox" id="util0" value="0">
-                        Nhà hàng</label>
-
-                    <label for="util8">
-                        <input type="checkbox" id="util8" value="8">
-                        Khách sạn</label>
-
-                    <label for="util9">
-                        <input type="checkbox" id="util9" value="9">
-                        Tiện ích khác</label>
-
-                </div>
-
-            </div>
-            <div id="maputility"></div>
-            <div class="utilityResult">
-                <div class="utilityResultHeader">
-                </div>
-                <div class="utilityResultList">
-                </div>
-            </div>
         </div>
     </div>
 </div>

@@ -52,17 +52,32 @@ class SaleController extends WebController {
     public function actionList($type = 0) {
         $this->layout = '//layouts/main';
 
+        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', $type);
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('BdsSale', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('list');
+        $this->render('list', array('dataProvider'=>$dataProvider));
     }
 
     public function actionDetail($id = 0){
         $this->layout = '//layouts/main';
 
+        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $sale = BdsSale::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('detail');
+        $this->render('detail', array('sale'=>$sale));
     }
 
     /**

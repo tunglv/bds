@@ -97,6 +97,14 @@
                 '122'       => array('width' => 122, 'height' => '100%', 'fix'=>'inside',  'quality' => 100)
             ),
         ),
+        'rent' => array(
+            'path' => 'upload/rent/',
+            'tempPath' => 'upload/temp/rent/',
+            'img' => array(
+                '856'       => array('width' => 747, 'height' => '100%', 'fix'=>'inside', 'quality' => 100),
+                '122'       => array('width' => 122, 'height' => '100%', 'fix'=>'inside',  'quality' => 100)
+            ),
+        ),
         'product' => array(
             'path' => 'upload/product/',
             'img' => array(
