@@ -132,10 +132,10 @@ class ImagesRent extends CActiveRecord
         $img_cnf = Yii::app()->params['rent'];
         $image = $image ? $image : $this->image;
 
-        $product_id = $product_id ? $product_id : $this->bds_sale_id;
+        $product_id = $product_id ? $product_id : $this->bds_rent_id;
 
         // detect image on local
-        $imagePath = "{$img_cnf['path']}/{$product_id}/{$type}/{$image}.jpg";
+        $imagePath = "{$img_cnf['path']}{$product_id}/{$type}/{$image}.jpg";
         return Yii::app()->getBaseUrl(true)."/{$imagePath}";
 
     }

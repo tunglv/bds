@@ -29,7 +29,7 @@
     <link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css/jquery.fancybox-buttons.css" media="all" rel="stylesheet" type="text/css">
     <link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css/jquery-ui.css" media="all" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.cookie.js"></script>
+
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.AdvanceHiddenDropbox.js"></script>
 
     <link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css/ie.css" type="text/css" rel="stylesheet">
@@ -93,7 +93,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.emoticon.js"></script>
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->baseUrl?><!--/themes/web/files/js/BDSChat.js"></script>-->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->baseUrl?><!--/themes/web/files/js/chatPopup.js"></script>-->
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.cookie(1).js"></script>
+<!--<script type="text/javascript" src="--><?php //echo Yii::app()->baseUrl?><!--/themes/web/files/js/jquery.cookie(1).js"></script>-->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->baseUrl?><!--/themes/web/files/js/chatCommon.js"></script>-->
 
 </body>

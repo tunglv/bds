@@ -77,7 +77,7 @@
         Nhà đất bán tại Việt Nam</h1>
 
     <div class="Footer">
-        Có <span class="greencolor"><strong>58,753</strong></span> bất động sản.
+        Có <span class="greencolor"><strong><?php echo $dataProvider->totalItemCount?></strong></span> bất động sản.
     </div>
 </div>
 <div id="bannerQC">
@@ -91,7 +91,7 @@
         <li class="active" rel="all"><span><span style="white-space:nowrap;">
                     <a onclick="ChangeTypeListProduct(&#39;all&#39;);" id="ctl29_ctl01_blFilterAll"
                        href="javascript:__doPostBack('ctl00$ctl29$ctl01$blFilterAll','')">Tất cả tin rao</a>
-                    (58753) </span></span></li>
+                    (<?php echo $dataProvider->totalItemCount?>) </span></span></li>
     </ul>
     <input type="hidden" name="ctl00$ctl29$ctl01$hddFilter" id="ctl29_ctl01_hddFilter">
 
@@ -101,17 +101,26 @@
 
         <div class="order">
             <span>Sắp xếp theo: </span>
-            <select name="ctl00$ctl29$ctl01$ddlSortReult"
-                    onchange="sortchange();setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl29$ctl01$ddlSortReult\&#39;,\&#39;\&#39;)&#39;, 0)"
-                    id="ddlSortReult">
+            <select id="choise-type" class="choise-number">
                 <option value="0">Thông thường</option>
                 <option value="1">Tin mới nhất</option>
                 <option value="2">Giá thấp nhất</option>
                 <option value="3">Giá cao nhất</option>
                 <option value="4">Diện tích nhỏ nhất</option>
                 <option value="5">Diện tích lớn nhất</option>
-
-            </select></div>
+            </select>
+<!--            <select name="ctl00$ctl29$ctl01$ddlSortReult"-->
+<!--                    onchange="sortchange();setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl29$ctl01$ddlSortReult\&#39;,\&#39;\&#39;)&#39;, 0)"-->
+<!--                    id="ddlSortReult">-->
+<!--                <option value="0">Thông thường</option>-->
+<!--                <option value="1">Tin mới nhất</option>-->
+<!--                <option value="2">Giá thấp nhất</option>-->
+<!--                <option value="3">Giá cao nhất</option>-->
+<!--                <option value="4">Diện tích nhỏ nhất</option>-->
+<!--                <option value="5">Diện tích lớn nhất</option>-->
+<!---->
+<!--</select>-->
+</div>
     </div>
 </div>
 <div class="clear">
@@ -545,3 +554,14 @@
     <div id="SubBottomRightMainContent" style="float: left; width: 430px;
                 margin-left: 5px"></div>
 </div>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/files/js/jquery.cookie.js"></script>
+<script>
+    if($.cookie('choise-type')){
+        $("#choise-type").val($.cookie('choise-type'));
+    };
+    $('#choise-type').on('change', function(){
+        var type = $(this).val();
+        $.cookie("choise-type", type, { expires : 1 });
+        location.reload();
+    });
+</script>

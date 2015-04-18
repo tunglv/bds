@@ -60,22 +60,17 @@
             src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/homea.gif"></a>
 </div>
 <ul class="dropdown-navigative-menu">
-<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/nha-dat-ban');?>" class="haslink ">Nhà đất bán</a>
+<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'tong-hop'));?>" class="haslink ">Nhà đất bán</a>
     <ul>
-        <li class="lv1"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu" class="haslink ">Bán căn hộ
-                chung cư</a></li>
-        <li class="lv1"><a href="http://batdongsan.com.vn/ban-nha-rieng" class="haslink ">Bán nhà riêng</a>
-        </li>
-        <li class="lv1"><a href="http://batdongsan.com.vn/ban-nha-biet-thu-lien-ke" class="haslink ">Bán nhà
-                biệt thự, liền kề</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-chung-cu'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-nha-rieng'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-khu-lien-ke'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
     </ul>
 </li>
-<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/nha-cho-thue');?>" class="haslink ">Nhà đất cho thuê</a>
+<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/rent/list', array('typeOf' => 'tong-hop'));?>" class="haslink ">Nhà đất cho thuê</a>
     <ul>
-        <li class="lv1"><a href="http://batdongsan.com.vn/cho-thue-can-ho-chung-cu" class="haslink ">Cho
-                thuê căn hộ chung cư</a></li>
-        <li class="lv1"><a href="http://batdongsan.com.vn/cho-thue-nha-rieng" class="haslink ">Cho thuê nhà
-                riêng</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/rent/list', array('typeOf' => 'cho-thue-can-ho-chung-cu'))?>" class="haslink ">Cho thuê căn hộ chung cư</a></li>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/rent/list', array('typeOf' => 'cho-thue-nha-rieng'))?>" class="haslink ">Cho thuê nhà riêng</a></li>
     </ul>
 </li>
 <li class="lv0"><a href="<?php echo Yii::app()->createUrl('/tin-tuc');?>" class="haslink ">Tin tức</a>

@@ -44,8 +44,11 @@ $array_base = array(
     '/du-an/<alias:[\w\-]+>' => '/web/project/list',
     '/du-an/<type:[\w\-]+>/<alias:[\w\-]+>-<id:\d+>' => '/web/project/detail',
 
-    '/nha-dat-ban'=>'/web/sale/list',
-    '/nha-cho-thue'=>'/web/rent/list',
+    '/nha-dat-ban/<typeOf:[\w\-]+>'=>'/web/sale/list',
+    '/nha-dat-ban/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/sale/detail',
+
+    '/nha-cho-thue/<typeOf:[\w\-]+>'=>'/web/rent/list',
+    '/nha-cho-thue/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/rent/detail',
 
     // branch
     '/<city_alias:[\w\-]+>/<alias:[\w\-]+>-<id:\d+>' => '/web/branch/view',

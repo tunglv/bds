@@ -135,7 +135,7 @@ class ImagesSale extends CActiveRecord
         $product_id = $product_id ? $product_id : $this->bds_sale_id;
 
         // detect image on local
-        $imagePath = "{$img_cnf['path']}/{$product_id}/{$type}/{$image}.jpg";
+        $imagePath = "{$img_cnf['path']}{$product_id}/{$type}/{$image}.jpg";
         return Yii::app()->getBaseUrl(true)."/{$imagePath}";
 
     }

@@ -47,106 +47,32 @@
 <div class="pm-middle-content">
 
     <ul class="detail-more-info">
-        <li><a href="javascript:void(0);" onclick="showPhoto(this)" rel="nofollow" class="active" title="Xem Ảnh"><span>Xem Ảnh</span></a>
-        </li>
+        <li><a href="javascript:void(0);" onclick="showPhoto(this)" rel="nofollow" class="active" title="Xem Ảnh"><span>Xem Ảnh</span></a></li>
         <li><a href="javascript:void(0);" onclick="showMap(this)" rel="nofollow" class="view-map"
                title="Xem Bản đồ"><span>Xem Bản đồ</span></a></li>
     </ul>
 
-
+    <?php $productImage = $sale->imagesProducts;?>
     <div class="img-map">
         <div id="photoSlide" class="photo" style="position: relative;">
             <div id="divPhotoActive" class="show-img" style="display: table-row; cursor: pointer; height: 510px;">
                 <div style="display: table-cell; vertical-align: middle; min-height: 326px; width:745px; border: 0px; text-align: center">
-                    <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101515-689c.jpg"
-                         alt="Scenic Valley - cơ hội cuối cùng sở hữu căn hộ vị trí đẹp + giá tốt nhất tại Phú Mỹ Hưng "
-                         style="width:auto; height:auto;" id="imgSlide1"><img
-                        style="width:auto; height:auto;display: none" id="imgSlide2"
-                        src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg">
+                    <img src="<?php echo $productImage[0]->getUrl('856')?>" alt="<?php echo $sale->title?>" style="width:auto; height:auto;" id="imgSlide1">
+                    <img style="width:auto; height:auto;display: none" id="imgSlide2" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg">
                 </div>
             </div>
             <div id="autoplay" ac="manual"><span>Xem tự động</span></div>
             <div class="list-img">
                 <ul id="thumbs">
-
-                    <li class="current">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 1"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101515-689c(1).jpg">
+                    <?php foreach($productImage as $_key => $_val):?>
+                    <li class="<?php if($_key == 0):?>current<?php endif;?>">
+                        <img onmouseover="this.style.cursor='pointer'" alt="<?php echo $sale->title?>" title="<?php echo $sale->title?>" src="<?php echo $_val->getUrl('856')?>">
                     </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 2"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101515-a336.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 3"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101516-f712.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 4"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101517-0a5f.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 5"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101518-f2bc.jpg"
-                             style="cursor: pointer;">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 6"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101517-aba6.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 7"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101517-fa42.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 8"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101517-cc33.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 9"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101519-bbf5.jpg">
-                    </li>
-
-                    <li class="">
-                        <img onmouseover="this.style.cursor=&#39;pointer&#39;"
-                             alt="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng "
-                             title="scenic valley cơ hội cuối cùng sở hữu căn hộ vị trí đẹp giá tốt nhất tại phú mỹ hưng  | 10"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150225101517-58f9.jpg"
-                             style="cursor: pointer;">
-                    </li>
-
+                    <?php endforeach;?>
                 </ul>
             </div>
-            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb-back1.png"
-                 class="slideshow-icon-back" id="icon-back">
-            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb-next1.png"
-                 class="slideshow-icon-next" id="icon-next">
+            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb-back1.png" class="slideshow-icon-back" id="icon-back">
+            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb-next1.png" class="slideshow-icon-next" id="icon-next">
         </div>
     </div>
 </div>
@@ -169,7 +95,7 @@
                                 Thuộc dự án
                             </div>
                             <div class="right">
-                                <a href="http://batdongsan.com.vn/scenic-valley-pj1860">Scenic Valley</a>
+                                <a href="http://batdongsan.com.vn/scenic-valley-pj1860"><?php echo $sale->project_name?></a>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -179,7 +105,7 @@
                                 Địa chỉ
                             </div>
                             <div class="right">
-                                Dự án Scenic Valley, Quận 7, Hồ Chí Minh
+                                <?php echo $sale->address?>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -189,7 +115,7 @@
                                 Mã số
                             </div>
                             <div class="right">
-                                6532059
+                                <?php echo $sale->code?>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -199,7 +125,7 @@
                                 Loại tin rao
                             </div>
                             <div class="right">
-                                Bán căn hộ chung cư
+                                <?php echo $sale->typeLabel?>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -209,7 +135,7 @@
                                 Ngày đăng tin
                             </div>
                             <div class="right">
-                                02-03-2015
+                                <?php echo date('m-d-Y', $sale->created)?>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -219,7 +145,7 @@
                                 Ngày hết hạn
                             </div>
                             <div class="right">
-                                12-03-2015
+                                <?php echo date('m-d-Y', ($sale->created + 604800))?>
                             </div>
                             <div style="clear: both">
                             </div>
@@ -242,7 +168,7 @@
                             Tên liên lạc
                         </div>
                         <div class="right">
-                            Lê Văn Long
+                            <?php echo $sale->name_contact?>
                         </div>
                         <div style="clear: both">
                         </div>
@@ -253,17 +179,7 @@
                             Điện thoại
                         </div>
                         <div class="right">
-                            0902825353
-                        </div>
-                        <div style="clear: both">
-                        </div>
-                    </div>
-                    <div id="ctl27_ctl01_contactMobile" class="right-content">
-                        <div class="normalblue left">
-                            Mobile
-                        </div>
-                        <div class="right">
-                            0902825353
+                            <?php echo $sale->phone_contact?>
                         </div>
                         <div style="clear: both">
                         </div>
@@ -273,64 +189,11 @@
                             Email
                         </div>
                         <div class="right">
-                            <script type="text/javascript"><!--
-                                document.write("<a rel='nofollow' href='mailto:&#76;&#101;&#76;&#111;&#110;&#103;&#64;&#112;&#109;&#104;&#46;&#99;&#111;&#109;&#46;&#118;&#110;'>&#76;&#101;&#76;&#111;&#110;&#103;&#64;&#112;&#109;&#104;&#46;&#99;&#111;&#109;&#46;&#118;&#110;</a>");
-                                //--></script>
-                            <a rel="nofollow" href="mailto:LeLong@pmh.com.vn">LeLong@pmh.com.vn</a>
-                            <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích hoạt
-                                Javascript để có thể xem.&lt;/em&gt;</noscript>
-
+                            <?php echo $sale->email_contact?>
                         </div>
                         <div style="clear: both">
                         </div>
                     </div>
-                    <div style="display: none">
-                        <div id="ctl27_ctl01_dottedLine" style="border-bottom: 1px dotted #d7d7d7; margin-top: 5px;">
-                        </div>
-                        <div id="ctl27_ctl01_customerInfo" class="right-title">
-                            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/2arrow.jpg">
-                            &nbsp;
-                            Thông tin người đăng tin
-                        </div>
-                        <div id="ctl27_ctl01_customerName" class="right-content">
-                            <div class="normalblue left">
-                                Đăng bởi
-                            </div>
-                            <div class="right">
-                                Lê Văn Long
-                            </div>
-                            <div style="clear: both">
-                            </div>
-                        </div>
-                        <div id="ctl27_ctl01_customerPhone" class="right-content">
-                            <div class="normalblue left">
-                                Điện thoại
-                            </div>
-                            <div class="right">
-                                0854118888
-                            </div>
-                            <div style="clear: both">
-                            </div>
-                        </div>
-                        <div id="ctl27_ctl01_customerEmail" class="right-content">
-                            <div class="normalblue left">
-                                Email
-                            </div>
-                            <div class="right">
-                                <script type="text/javascript"><!--
-                                    document.write("<a rel='nofollow' href='mailto:&#76;&#101;&#76;&#111;&#110;&#103;&#64;&#112;&#109;&#104;&#46;&#99;&#111;&#109;&#46;&#118;&#110;'>&#76;&#101;&#76;&#111;&#110;&#103;&#64;&#112;&#109;&#104;&#46;&#99;&#111;&#109;&#46;&#118;&#110;</a>");
-                                    //--></script>
-                                <a rel="nofollow" href="mailto:LeLong@pmh.com.vn">LeLong@pmh.com.vn</a>
-                                <noscript>&lt;em&gt;Địa chỉ email này được bảo vệ bởi JavaScript.&lt;BR&gt;Bạn cần kích
-                                    hoạt Javascript để có thể xem.&lt;/em&gt;</noscript>
-
-                            </div>
-                            <div style="clear: both">
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
                 <!--end right-->
             </td>
@@ -344,244 +207,6 @@
 
 <br>
 
-
-<div style="position: relative;">
-    <div class="btn-green">
-        <span><span>
-            <div class="btn-feedback">Phản hồi</div>
-        </span></span>
-    </div>
-    <div class="pl-popup fb-popup">
-        <div class="pl-popup-title fb-popup">
-            <span class="fb-popup">Phản hồi</span>
-
-            <div id="pl-popup-close" class="fb-popup">X</div>
-        </div>
-        <div class="pl-popup-tab fb-popup">
-            <div class="button current fb-popup" rel="info">Tin rao</div>
-            <div class="button fb-popup" rel="stats" style="display: none;">Thống kê</div>
-            <div class="button fb-popup" rel="map">Bản đồ</div>
-            <div class="pl-popup-tab-content tab-info fb-popup">
-                <label for="info-1" class="fb-popup">
-                    <input type="checkbox" id="info-1" class="fb-popup" value="Nội dung tin rao chưa chính xác">Nội dung
-                    tin rao chưa chính xác</label>
-                <label for="info-2" class="fb-popup">
-                    <input type="checkbox" id="info-2" class="fb-popup"
-                           value="Hình ảnh video trong tin rao chưa chính xác">Hình ảnh video trong tin rao chưa chính
-                    xác</label>
-                <label for="info-3" class="fb-popup">
-                    <input type="checkbox" id="info-3" class="fb-popup" value="Giá cao hơn so với thực tế">Giá cao hơn
-                    so với thực tế</label>
-                <label class="fb-popup">Phản hồi khác:</label>
-                <textarea cols="20" rows="5" id="info-4" class="fb-popup"></textarea>
-            </div>
-            <div class="pl-popup-tab-content tab-stats fb-popup" style="display: none;">
-                <label for="stats-1" class="fb-popup">
-                    <input type="checkbox" id="stats-1" class="fb-popup" value="Giá nhìn chung chưa chính xác">Giá nhìn
-                    chung chưa chính xác</label>
-                <label for="stats-2" class="fb-popup">
-                    <input type="checkbox" id="stats-2" class="fb-popup" value="Giá thấp hơn so với thực tế">Giá thấp
-                    hơn so với thực tế</label>
-                <label for="stats-3" class="fb-popup">
-                    <input type="checkbox" id="stats-3" class="fb-popup" value="Giá cao hơn so với thực tế">Giá cao hơn
-                    so với thực tế</label>
-                <label class="fb-popup">Phản hồi khác:</label>
-                <textarea cols="20" rows="5" id="stats-4"></textarea>
-            </div>
-            <div class="pl-popup-tab-content tab-map fb-popup">
-                <label for="map-1" class="fb-popup">
-                    <input type="checkbox" id="map-1" class="fb-popup" value="Tốc độ load chậm">Tốc độ load chậm</label>
-                <label for="map-2" class="fb-popup">
-                    <input type="checkbox" id="map-2" class="fb-popup" value="Vị trí bất động sản chưa chính xác">Vị trí
-                    bất động sản chưa chính xác</label>
-                <label for="map-3" class="fb-popup">
-                    <input type="checkbox" id="map-3" class="fb-popup" value="Vị trí tiện ích chưa chính xác">Vị trí
-                    tiện ích chưa chính xác</label>
-                <label for="map-4" class="fb-popup">
-                    <input type="checkbox" id="map-4" class="fb-popup" value="Bản đồ lỗi">Bản đồ lỗi</label>
-                <label class="fb-popup">Phản hồi khác:</label>
-                <textarea cols="20" rows="5" id="map-5" class="fb-popup"></textarea>
-            </div>
-            <div class="pl-popup-captcha fb-popup">
-                <span class="fb-popup">Mã bảo vệ: </span>
-                <input type="text" id="popup-captcha" class="fb-popup" style="width:130px;">
-                <img class="pl-popup-imgcaptcha fb-popup" id="pl-popup-img-captcha"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/CaptchaGenerator.aspx">
-                <img class="pl-popup-imgrefresh fb-popup" onmouseover="this.style.cursor=&#39;pointer&#39;"
-                     onclick="javascript:refreshCaptcha(&#39;pl-popup-img-captcha&#39;);" title="Đổi mã an toàn"
-                     alt="renew capcha"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/icon-reload.png">
-            </div>
-            <div class="pl-popup-message"></div>
-            <div class="btn-green fb-popup">
-                <span class="fb-popup"><span class="fb-popup">
-                    <a class="btn-sendfeedback fb-popup" rel="nofollow" href="javascript:void(0)">Gửi</a>
-                </span></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-
-    $(function () {
-
-        $('.pl-popup-tab > div.button').click(function () {
-            $('.pl-popup-tab > div.button').removeClass('current');
-            $(this).addClass('current');
-
-            var rel = $(this).attr('rel');
-            $('.pl-popup-tab-content').hide();
-            $('.tab-' + rel).show();
-        });
-
-        $('#pl-popup-close').click(function () {
-            $('.pl-popup').css('display', 'none');
-            $('body').unbind('click');
-        });
-
-        $('.btn-feedback').click(function (evt1) {
-
-            $('.pl-popup').css('display', 'block');
-
-            evt1.preventDefault();
-            evt1.stopPropagation();
-
-            $('body').bind('click', this, function (_evt) {
-
-                if ($(_evt.target).hasClass('fb-popup')) {
-                    return;
-                }
-
-                $('.pl-popup').css('display', 'none');
-                $('body').unbind('click');
-
-            });
-
-        });
-
-        $('.btn-sendfeedback').click(function () {
-
-            $('.pl-popup-message').html('');
-
-            var fbType = 0;
-            var fbText = '';
-            var tab = '';
-
-            if ($('.pl-popup-tab div.button[rel=info]').hasClass('current')) {
-                fbType = 1;
-                tab = 'info';
-            } else if ($('.pl-popup-tab div.button[rel=stats]').hasClass('current')) {
-                fbType = 2;
-                tab = 'stats';
-            } else if ($('.pl-popup-tab div.button[rel=map]').hasClass('current')) {
-                fbType = 3;
-                tab = 'map';
-            }
-
-            $('.tab-' + tab + ' input[type=checkbox]:checked').each(function () {
-                fbText = fbText + $(this).val() + ". ";
-            });
-            var fbText1 = Trim($('.tab-' + tab + ' textarea').val());
-
-            var captcha = $('#popup-captcha').val();
-
-            if (captcha.length == 0) {
-                alert('Bạn cần nhập mã bảo vệ');
-                return;
-            }
-            if (fbText.length == 0 && fbText1.length == 0) {
-                alert('Bạn cần chọn/nhập phản hồi');
-                return;
-            }
-
-            $('.pl-popup-message').html('Đang gửi phản hồi');
-
-            $.post('/HandlerWeb/FeedbackServiceHandler.ashx', {
-                type: 'productdetail',
-                fbType: fbType,
-                fbText: fbText + ". " + fbText1,
-                captcha: captcha,
-                lnk: window.location.href
-            }, function (data) {
-
-                $('.pl-popup-message').html('');
-
-                if (data.success == false) {
-                    alert(data.msg);
-                } else {
-                    $('.pl-popup').css('display', 'none');
-                    $('body').unbind('click');
-                    refreshCaptcha('pl-popup-img-captcha');
-                    $('#popup-captcha').val('');
-                    $('.pl-popup-tab-content label input').removeAttr('checked');
-                    $('.pl-popup-tab-content textarea').val('');
-
-                    alert("Cảm ơn bạn đã gửi phản hồi đến chúng tôi!");
-                }
-
-            }, 'json');
-
-        });
-
-        if ($('#chart-container').length > 0) {
-
-            $('#chart-container').highcharts({
-                chart: {
-                    type: 'line'
-                },
-                title: {
-                    text: xtitle,
-                    style: {"font-family": "Tahoma", "font-size": "20px", "color": "#0a3e7a"}
-                },
-                subtitle: {
-                    text: 'Đơn vị: Triệu/m²',
-                    x: -20
-                },
-                xAxis: {
-                    categories: xAxis
-                },
-                yAxis: {
-                    title: {
-                        text: 'Giá bất động sản'
-                    }
-                },
-                tooltip: {
-                    crosshairs: true,
-                    shared: true,
-                    style: {
-                        color: '#333333',
-                        fontSize: '12px',
-                        'font-family': 'Tahoma',
-                        padding: '8px'
-                    }
-                },
-                legend: {
-                    itemStyle: {
-                        color: '#333333',
-                        fontSize: '12px',
-                        'font-family': 'Tahoma',
-                        padding: '8px'
-                    }
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: false
-                        },
-                        enableMouseTracking: true
-                    }
-                },
-                series: xdata
-            });
-        } else {
-            $('div.button[rel=stats], .tab-stats').hide();
-        }
-
-    });
-
-</script>
 <div class="clear"></div>
 <br>
 
@@ -591,7 +216,6 @@
 <input type="hidden" name="ctl00$ctl27$ctl01$hdLong" id="hdLong" value="106.71733856201172">
 <input type="hidden" name="ctl00$ctl27$ctl01$hdAddress" id="hdAddress" value="Dự án Scenic Valley, Quận 7, Hồ Chí Minh">
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.BlcokUI.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/main.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/geometry.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.tooltipmarker.js"></script>
@@ -635,570 +259,55 @@
     <div class="Left">
     </div>
     <div class="Repeat">
-        <h2>
-            Bán căn hộ chung cư dự án Scenic Valley
-        </h2>
+        <h2><?php echo $sale->typeLabel?> <?php echo $sale->project_name?></h2>
     </div>
-    <div class="Right">
-    </div>
+    <div class="Right"></div>
 </div>
-
-<div class="vip1">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phu-19-prj-scenic-valley/t-my-hung-gd-4-gia-cuc-tot-0906000776-pr6493181"
-           title="Hot!! Căn hộ Scenic Valley Phú Mỹ Hưng giai đoạn 4, giá cực tốt - 0906000776"
-           style="text-rendering: optimizeLegibility;">
-            HOT!! CĂN HỘ SCENIC VALLEY PHÚ MỸ HƯNG GIAI ĐOẠN 4, GIÁ CỰC TỐT - 0906000776
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phu-19-prj-scenic-valley/t-my-hung-gd-4-gia-cuc-tot-0906000776-pr6493181"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20150131123107712.jpg"
-                     alt="Hot!! Căn hộ Scenic Valley Phú Mỹ Hưng giai đoạn 4, giá cực tốt - 0906000776">
-
-            </a>
+<?php foreach($same as $_key => $_val):?>
+    <div class="<?php echo $_key==0 ? 'vip1' : 'vip5'?>">
+        <div class="p-title">
+            <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>" style="text-rendering: optimizeLegibility;"><?php echo $_val->title?></a>
         </div>
+        <div class="p-main">
+            <div class="p-main-image-crop">
+                <a class="product-avatar" href="<?php echo $_val->url?>" onclick="">
+                    <img class="product-avatar-img" src="<?php echo $_val->getImageUrl()?>" alt="<?php echo $_val->title?>">
+                </a>
+            </div>
 
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Scenic Valley là căn hộ cuối cùng của Phú Mỹ Hưng đối diện sân golf và dòng sông cảnh quan.. . Vị trí
-                trung tâm Đô thị, chỉ mất 2 phút tản bộ đến SECC, hồ Bán Nguyệt, Crescent Mall, khu thương mại tài chính
-                Quốc Tế... . . Kiến trúc Singapore do Công <a rel="nofollow" target="_blank"
-                                                              href="http://www.canhoscenicvalley.net/"></a><a
-                    href="mailto:khanhvanpmh@gmail.com" rel="nofollow"></a>...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.3 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            71 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                03/03/2015
+            <div class="p-content">
+                <div class="p-main-text" style="text-rendering: optimizeLegibility;">
+                    Scenic Valley là căn hộ cuối cùng của Phú Mỹ Hưng đối diện sân golf và dòng sông cảnh quan.. . Vị trí
+                    trung tâm Đô thị, chỉ mất 2 phút tản bộ đến SECC, hồ Bán Nguyệt, Crescent Mall, khu thương mại tài chính
+                    Quốc Tế... . . Kiến trúc Singapore do Công <a rel="nofollow" target="_blank" href="http://www.canhoscenicvalley.net/"></a><a href="mailto:khanhvanpmh@gmail.com" rel="nofollow"></a>...
+                </div>
             </div>
             <div class="clear"></div>
+            <div class="p-bottom-crop">
+                <div class="floatleft">
+                    Giá:
+                                            <span class="product-price">
+                                                <?php echo $_val->price?> <?php echo $_val->price_type?>
+                                            </span>&nbsp;
+                    Diện tích:
+                                            <span class="product-area">
+                                                <?php echo $_val->area?> m²</span>&nbsp;
+                    Quận/huyện:
+                                            <span class="product-city-dist">
+                                                Quận 7,
+                                                Hồ Chí Minh
+                                            </span>
+                </div>
+                <div class="floatright" style="padding-right: 10px;">
+                    <?php echo date('d/m/Y', $_val->created)?>
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
+
+        <div class="clear10"></div>
     </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phu-19-prj-scenic-valley/lai-my-hung-quan-7-gia-tot-pr6558258"
-           title="Cần bán lại căn hộ Scenic Valley Phú Mỹ Hưng, Quận 7, giá tốt"
-           style="text-rendering: optimizeLegibility;">
-            Cần bán lại căn hộ Scenic Valley Phú Mỹ Hưng, Quận 7, giá tốt
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phu-19-prj-scenic-valley/lai-my-hung-quan-7-gia-tot-pr6558258"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/20150303142559-4008.jpg"
-                     alt="Cần bán lại căn hộ Scenic Valley Phú Mỹ Hưng, Quận 7, giá tốt">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Cần bán lại căn hộ Scenic Valley Phú Mỹ Hưng, quận 7, giá tốt.. Diện tích 77m2 với thiết kế 2 phòng ngủ,
-                2WC. Giá 2,45 tỷ (còn thương lượng), của hướng Đông Nam, căn hộ nằm ở tầng 11. Hiện tại đã thanh toán
-                30% từ chủ đầu tư. Thời gian giao nhà là th...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.45 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            77 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                03/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley/tien-chuyen-nhuong-70m2-77m2-89m2-107m2-gia-2-25-ty-4-ty-0906-3878-96-pr6393413"
-           title="Cần tiền chuyển nhượng Scenic Valley 70m2 - 77m2 - 89m2 - 107m2, giá 2.25 tỷ - 4 tỷ - 0906 3878 96"
-           style="text-rendering: optimizeLegibility;">
-            Cần tiền chuyển nhượng Scenic Valley 70m2 - 77m2 - 89m2 - 107m2, giá 2.25 tỷ - 4 tỷ - 0906 3878 96
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley/tien-chuyen-nhuong-70m2-77m2-89m2-107m2-gia-2-25-ty-4-ty-0906-3878-96-pr6393413"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20150110152754948.jpg"
-                     alt="Cần tiền chuyển nhượng Scenic Valley 70m2 - 77m2 - 89m2 - 107m2, giá 2.25 tỷ - 4 tỷ - 0906 3878 96">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Cần tiền chuyển nhượng lại 1 số căn Scenic Valley Phú Mỹ Hưng, diện tích nhỏ.. 70m2 giá 2.25 tỷ. 77m2
-                giá 2.35 tỷ - 2.5 tỷ. 89m2 giá 2.9 tỷ. 110m2 giá 3.2 tỷ - 4 tỷ. Tầng thấp - tầng cao đều có. Sang tên
-                trực tiếp chủ đầu tư. Hiện thanh toán 25%. LH:...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.25 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                03/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phong-9-prj-scenic-valley/phu-my-hung-cach-singapore-pr6416606"
-           title="Scenic Valley-Phú Mỹ Hưng - Phong cách Singapore" style="text-rendering: optimizeLegibility;">
-            Scenic Valley-Phú Mỹ Hưng - Phong cách Singapore
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-phuong-tan-phong-9-prj-scenic-valley/phu-my-hung-cach-singapore-pr6416606"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20150115103038492.jpg"
-                     alt="Scenic Valley-Phú Mỹ Hưng - Phong cách Singapore">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Scenic Valley - Căn hộ ven sân golf giá tốt nhất Phú Mỹ Hưng,.. Không gian sống mang phong cách
-                Singapore. Diện tích từ 70 - 155 m2, lịch thanh toán 2 tháng 5%. Năm 2017 nhận nhà.. Nằm liền kề sân
-                golf 9 lỗ, sân tập golf mini, hồ bơi đáy cát, sân ten<a href="mailto:trangltt@pmh.com.vn"
-                                                                        rel="nofollow"></a><a rel="nofollow"
-                                                                                              target="_blank"
-                                                                                              href="http://www.phumyhung.com.vn/vn/scenicvalley"></a>...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.1 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley/gia-tot-nhat-phu-my-hung-pr6453355"
-           title="Scenic Valley - Giá tốt nhất Phú Mỹ Hưng, Quận 7" style="text-rendering: optimizeLegibility;">
-            Scenic Valley - Giá tốt nhất Phú Mỹ Hưng, Quận 7
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-scenic-valley/gia-tot-nhat-phu-my-hung-pr6453355"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20150122150829857.jpg"
-                     alt="Scenic Valley - Giá tốt nhất Phú Mỹ Hưng, Quận 7">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Scenic Valley - Căn hộ ven sân golf giá tốt nhất Phú Mỹ Hưng.. Không gian sống mang phong cách
-                Singapore.. Diện tích từ 70 - 155 m2, lịch thanh toán 2 tháng 5%. Năm 2017 nhận nhà.. Nằm liền kề sân
-                golf 9 lỗ, sân tập golf mini, hồ bơi đáy cát, sân ten<a href="mailto:Trangltt@pmh.com.vn"
-                                                                        rel="nofollow"></a><a rel="nofollow"
-                                                                                              target="_blank"
-                                                                                              href="http://www.phumyhung.com.vn/vn/scenicvalley"></a>...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            30 triệu/m²
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/t-co-i-hiem-co-so-huu-gia-dinh-tai-my-hung-l-h-0939-901-786-pr5866061"
-           title="Hot, cơ hội hiếm có sở hữu căn hộ gia đình tại Scenic Valley - Phú Mỹ Hưng. L/H: 0939 901 786"
-           style="text-rendering: optimizeLegibility;">
-            Hot, cơ hội hiếm có sở hữu căn hộ gia đình tại Scenic Valley - Phú Mỹ Hưng. L/H: 0939 901 786
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/t-co-i-hiem-co-so-huu-gia-dinh-tai-my-hung-l-h-0939-901-786-pr5866061"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20141008094422405.jpg"
-                     alt="Hot, cơ hội hiếm có sở hữu căn hộ gia đình tại Scenic Valley - Phú Mỹ Hưng. L/H: 0939 901 786">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Tiếp nối thành công của Happy Valley, Green Valley, công ty Phú Mỹ Hưng chào bán Scenic Valley - Thung
-                lũng cảnh quan để đáp ứng mong muốn sở hữu nhà ở Phú Mỹ Hưng, thu hút đông đảo khách hàng quan tâm, chọn
-                mua.
-                .
-                . Đơn vị thiết kế đến từ Singapore...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.7 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            89 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/so-huu-ngay-trung-tam-my-hung-chi-tu-2-ty-tline-0939-901-786-pr5695286"
-           title="Sở hữu căn hộ Scenic Valley ngay trung tâm Phú Mỹ Hưng, chỉ từ 2.3 tỷ  - Hotline 0939 901 786"
-           style="text-rendering: optimizeLegibility;">
-            Sở hữu căn hộ Scenic Valley ngay trung tâm Phú Mỹ Hưng, chỉ từ 2.3 tỷ - Hotline 0939 901 786
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/so-huu-ngay-trung-tam-my-hung-chi-tu-2-ty-tline-0939-901-786-pr5695286"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20140910092301479.jpg"
-                     alt="Sở hữu căn hộ Scenic Valley ngay trung tâm Phú Mỹ Hưng, chỉ từ 2.3 tỷ  - Hotline 0939 901 786">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                - Là dự án cuối cùng nằm kề bên sân golf Nam Sài Gòn và dòng sông cảnh quan xanh mát.
-                . - Đối diện Crescent Mall, gần khu The Crescent (Hồ bán nguyệt, cầu Ánh Sao).
-                . - Gần khu thương mại Tài Chính Quốc Tế.
-                . - Gần khu chăm sóc sức khỏe, sắc đẹp cao ...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.3 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/hot-mo-giai-doan-4-gia-tot-nhat-tu-chu-dau-tu-my-hung-pr6176611"
-           title="Hot, mở bán giai đoạn 4 Scenic Valley, giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng"
-           style="text-rendering: optimizeLegibility;">
-            Hot, mở bán giai đoạn 4 Scenic Valley, giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/hot-mo-giai-doan-4-gia-tot-nhat-tu-chu-dau-tu-my-hung-pr6176611"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20141129090334182.jpg"
-                     alt="Hot, mở bán giai đoạn 4 Scenic Valley, giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Giữ vị trí "án ngữ" của khu phố Scenic Valley, tòa nhà A, B, C có mặt hướng về phía dòng sông cảnh quan,
-                sân golf xanh mát, mở rộng ra là toàn thể khu đô thị Phú Mỹ Hưng phồn hoa, nơi có ánh đèn rực rở của khu
-                Thương Mại Tài Chính Quốc Tế, khu Cresce<a href="mailto:baominh@pmh.com.vn" rel="nofollow"></a><a
-                    rel="nofollow" target="_blank" href="http://www.phumyhunghome.net/"></a>...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            Thỏa thuận
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/hot-giai-doan-4-gia-tot-nhat-tu-chu-dau-tu-my-hung-pr5511475"
-           title="Bán giai đoạn 4 Scenic Valley - giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng"
-           style="text-rendering: optimizeLegibility;">
-            Bán giai đoạn 4 Scenic Valley - giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar"
-               href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/hot-giai-doan-4-gia-tot-nhat-tu-chu-dau-tu-my-hung-pr5511475"
-               onclick="">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.20140807110042004.jpg"
-                     alt="Bán giai đoạn 4 Scenic Valley - giá tốt nhất từ chủ đầu tư Phú Mỹ Hưng">
-
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Tiếp nối thành công của Happy Valley, Green Valley, công ty Phú Mỹ Hưng chào bán Scenic Valley - Thung
-                lũng cảnh quan để đáp ứng mong muốn sở hữu nhà ở Phú Mỹ Hưng.. . Đơn vị thiết kế đến từ Singapore – công
-                ty KYTA đã khéo léo xử lý, nên tại Scenic ...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            1.9 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            70 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <div class="clear10"></div>
-</div>
-
-<div class="vip5">
-    <div class="p-title">
-        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ton-dat-tien-phuong-tan-phu-19-prj-scenic-valley/vi-tri-dep-gia-tot-co-i-de-so-huu-nha-ngay-trung-tam-quan-7-pr5869114"
-           title="Căn hộ Scenic Valley - vị trí đẹp, giá bán tốt, cơ hội để bạn sở hữu nhà ngay trung tâm Quận 7"
-           style="text-rendering: optimizeLegibility;">
-            Căn hộ Scenic Valley - vị trí đẹp, giá bán tốt, cơ hội để bạn sở hữu nhà ngay trung tâm Quận 7
-        </a>
-    </div>
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar" href="javaScript:void(0)" onclick="togglevideo(5869114)">
-                <img class="product-avatar-img"
-                     src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/crop120x90.462481.jpg"
-                     alt="Căn hộ Scenic Valley - vị trí đẹp, giá bán tốt, cơ hội để bạn sở hữu nhà ngay trung tâm Quận 7">
-                <span class="product-video colorboldblue">Xem Video</span> <span> <img alt="videoicon" id="videoicon"
-                                                                                       class="video-icon"
-                                                                                       src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/playicon.png"></span>
-            </a>
-        </div>
-
-        <div class="p-content">
-            <div class="p-main-text" style="text-rendering: optimizeLegibility;">
-                Phú Mỹ Hưng sẽ chào bán giai đoạn 4 dự án căn hộ Scenic Valley ở cạnh sân golf Phú Mỹ Hưng trong tháng
-                1/2015. Đây thuộc dòng sản phẩm căn hộ giá vừa phải với diện tích từ 70 - 77 - 79 - 80 - 89 - 101 - 133
-                m2.
-                . Với vị trí thuận lợi cư dân ở căn h...
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="p-bottom-crop">
-            <div class="floatleft">
-                Giá:
-                                        <span class="product-price">
-                                            2.5 tỷ
-                                        </span>&nbsp;
-                Diện tích:
-                                        <span class="product-area">
-                                            77 m²</span>&nbsp;
-                Quận/huyện:
-                                        <span class="product-city-dist">
-                                            Quận 7,
-                                            Hồ Chí Minh
-                                        </span>
-            </div>
-            <div class="floatright" style="padding-right: 10px;">
-                02/03/2015
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div rel="videook" videourl="https://www.youtube.com/watch?v=j8KMRXNMehA&amp;list=UUE8b1_l0zcDvIf94oI6h3XQ"
-         id="togglevideo_5869114" style="text-align: center; padding-bottom: 15px; display: none;">
-        <div id="mediaplayer_5869114_wrapper" style="position: relative; width: auto; height: 360px;">
-            <object type="application/x-shockwave-flash" data="http://batdongsan.com.vn/jwplayer.swf" width="100%"
-                    height="100%" bgcolor="#000000" id="mediaplayer_5869114" name="mediaplayer_5869114" tabindex="0">
-                <param name="allowfullscreen" value="true">
-                <param name="allowscriptaccess" value="always">
-                <param name="seamlesstabbing" value="true">
-                <param name="wmode" value="opaque">
-                <param name="flashvars"
-                       value="netstreambasepath=http%3A%2F%2Fbatdongsan.com.vn%2Fban-can-ho-chung-cu-duong-nguyen-van-linh-prj-scenic-valley%2Fco-i-cuoi-cung-so-huu-vi-tri-dep-gia-tot-nhat-tai-phu-my-hung-pr6532059&amp;id=mediaplayer_5869114&amp;className=video&amp;file=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fhttps%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dj8KMRXNMehA%26list%3DUUE8b1_l0zcDvIf94oI6h3XQ&amp;controlbar.position=over&amp;controlbar.idlehide=true&amp;controlbar.dock=true&amp;logo.file=%2Fimages%2Flogo-web.png">
-            </object>
-        </div>
-        <div style="height:10px; clear:both;"></div>
-        <div><a onclick="togglevideo(5869114)" href="javaScript:void(0)"
-                style="color: #055699; font-weight: bold; padding-top: 10px;">Tắt Video</a></div>
-    </div>
-    <div class="clear10"></div>
-</div>
+<?php endforeach?>
 
 </div>
 </div>
@@ -1206,8 +315,7 @@
 </div>
 <p id="view_other_product">
     <a id="ctl31_ctl01_lnkSimilar" rel="nofollow"
-       href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-prj-scenic-valley">Xem thêm các tin khác
-        tại khu vực này</a>
+       href="http://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-van-linh-prj-scenic-valley">Xem thêm các tin khác tại khu vực này</a>
 </p>
 
 <div class="separable">

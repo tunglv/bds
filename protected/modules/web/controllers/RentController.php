@@ -49,20 +49,88 @@ class RentController extends WebController {
      * @param
      * @return page home of site
      */
-    public function actionList($type = 0) {
+    public function actionList($typeOf = '') {
+        $type1 = 0;
+        switch($typeOf){
+            case 'cho-thue-can-ho-chung-cu':
+                $type1 = 1;
+                break;
+            case 'cho-thue-nha-rieng':
+                $type1 = 2;
+                break;
+            default:
+                $type1 = 0;
+        }
+
         $this->layout = '//layouts/main';
 
+        $criteria = new CDbCriteria();
+        if($type1) $criteria->compare('t.type', $type1);
+
+        if(Yii::app()->request->cookies['choise-type'] && $type = Yii::app()->request->cookies['choise-type']->value){
+            switch ($type) {
+                case 1:
+                    $criteria->order = 't.id DESC';
+                    break;
+                case 2:
+                    $criteria->order = 't.price ASC';
+                    break;
+                case 3:
+                    $criteria->order = 't.price DESC';
+                    break;
+                case 4:
+                    $criteria->order = 't.area ASC';
+                    break;
+                case 5:
+                    $criteria->order = 't.area DESC';
+                    break;
+            }
+        }else{
+            $criteria->order = 't.id DESC';
+        }
+
+        $dataProvider = new CActiveDataProvider('BdsRent', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('list');
+        $this->render('list', array('dataProvider'=>$dataProvider));
     }
 
-    public function actionDetail($id = 0){
+    public function actionDetail($alias = '', $id = 0){
         $this->layout = '//layouts/main';
 
-//        $product_viewed = $this->_getCookieViewedProduct();
+        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
-        $this->render('detail');
+        $sale = BdsRent::model()->findByPk($id);
+//        $product_viewed = $this->_getCookieViewedProduct();
+        $sameSale = $this->_getSameProject($sale->project_id, $sale->type);
+
+        $this->render('detail', array('sale'=>$sale, 'same' => $sameSale));
+    }
+
+    private function _getSameProject($project_id = 0, $type = 0){
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.project_id', $project_id);
+        $criteria->compare('t.type', $type);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 10;
+
+        $product = BdsRent::model()->findAll($criteria);
+
+//        $result = array();
+//
+//        foreach ($product as $value) {
+//            if($value->id != $sale_id) $result[] = $value;
+//            else continue;
+//        }
+
+        return $product;
     }
 
     /**

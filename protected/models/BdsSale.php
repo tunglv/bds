@@ -61,10 +61,9 @@ class BdsSale extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, location, dist_id, price, price_type, area, created, code', 'required'),
-			array('created, date_start, date_end, floor, room, befor, way, toilet', 'numerical', 'integerOnly'=>true),
-			array('title, alias, address, furniture, address_contact', 'length', 'max'=>500),
-			array('location', 'length', 'max'=>1000),
+			array('title, project_id, dist_id, price, price_type, area, created, code', 'required'),
+			array('created, date_start, date_end, floor, room, befor, way, toilet, project_id', 'numerical', 'integerOnly'=>true),
+			array('title, project_name, alias, address, furniture, address_contact', 'length', 'max'=>500),
 			array('dist_id, province_id, ward_id', 'length', 'max'=>10),
 			array('price, price_type, code, name_contact, phone_contact, email_contact', 'length', 'max'=>100),
 			array('area, image', 'length', 'max'=>250),
@@ -85,6 +84,7 @@ class BdsSale extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'imagesProducts' => array(self::HAS_MANY, 'ImagesSale', 'bds_sale_id'),
 		);
 	}
 
@@ -97,7 +97,7 @@ class BdsSale extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'alias' => 'Alias',
-			'location' => 'Location',
+			'project_id' => 'Thuộc dự án',
 			'dist_id' => 'Dist',
 			'province_id' => 'Province',
 			'ward_id' => 'Ward',
@@ -181,7 +181,7 @@ class BdsSale extends CActiveRecord
         return $this->statusData[$this->status];
     }
 
-    public function getImageUrl($id = null,$size = '85', $image = null){
+    public function getImageUrl($id = null,$size = '122', $image = null){
         $id = $id ? $id : $this->id;
         $image = $image ? $image : $this->image;
         $imgConf = Yii::app()->params->sale;
@@ -193,14 +193,24 @@ class BdsSale extends CActiveRecord
         return array(
             '1' => 'Bán chung cư',
             '2' => 'Bán nhà riêng',
-            '3' => 'Bán khu liền kề',
-            '4' => 'Cho thuê chung cư',
-            '5' => 'Cho thuê nhà riêng'
+            '3' => 'Bán khu liền kề'
         );
     }
 
     public function getTypeLabel(){
         return $this->typeData[$this->type];
+    }
+
+    public function getAliasTypeData(){
+        return array(
+            '1' => 'ban-chung-cu',
+            '2' => 'ban-nha-rieng',
+            '3' => 'ban-khu-lien-ke'
+        );
+    }
+
+    public function getAliasTypeLabel(){
+        return $this->aliasTypeData[$this->type];
     }
 
     public function getNewSyntax(){
@@ -216,5 +226,12 @@ class BdsSale extends CActiveRecord
             return $this->getNewSyntax();
         }
         return $new_syntax;
+    }
+
+    public function getUrl($id = 0, $alias = null){
+        $alias = $alias ? $alias : $this->alias;
+        $id = $id ? $id : $this->id;
+
+        return Yii::app()->createUrl('/web/sale/detail', array('alias'=>$alias,'id' => $id));
     }
 }
