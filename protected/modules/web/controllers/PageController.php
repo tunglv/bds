@@ -52,9 +52,69 @@ class PageController extends WebController {
     public function actionIndex() {
         $this->layout = '//layouts/main';
 
+//        news
+        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', 3);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 16;
+        $criteria->offset = 0;
+        $news = News::model()->findAll($criteria);
+
+//        news viewest
+        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', 3);
+        $criteria->order = 't.viewed DESC';
+        $criteria->limit = 6;
+        $news_viewest = News::model()->findAll($criteria);
+
+        //        6 newest rule news
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', 3);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 6;
+        $news_rule = News::model()->findAll($criteria);
+
+//        sale
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.status', 'ENABLE');
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 10;
+        $criteria->offset = 0;
+        $sale = BdsSale::model()->findAll($criteria);
+
+        //        phong thuy viewest
+        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', 3);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 6;
+        $pt = Pt::model()->findAll($criteria);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('index');
+        //        kien truc viewest
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 6;
+        $architecture = Architecture::model()->findAll($criteria);
+
+        //        newest project
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 10;
+        $project = Project::model()->findAll($criteria);
+
+
+        $maxOffest = Saler::model()->count() < 20 ? 0 : Saler::model()->count() - 20;
+        $offset = rand ( 0, $maxOffest);
+        //        newest project
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 20;
+        $criteria->offset = $offset;
+        $saler = Saler::model()->findAll($criteria);
+
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('index', array('news'=>$news, 'sale'=>$sale, 'news_viewest' => $news_viewest, 'news_rule' => $news_rule, 'pt' => $pt, 'architecture'=>$architecture, 'project' => $project, 'saler'=>$saler));
     }
 
     /**

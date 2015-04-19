@@ -1,6 +1,6 @@
 /*
-SQLyog Community v11.31 (64 bit)
-MySQL - 5.6.20 : Database - bds
+SQLyog Ultimate v10.42 
+MySQL - 5.5.27 : Database - bds
 *********************************************************************
 */
 
@@ -12,13 +12,7 @@ MySQL - 5.6.20 : Database - bds
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`bds` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
-USE `bds`;
-
 /*Table structure for table `architecture` */
-
-DROP TABLE IF EXISTS `architecture`;
 
 CREATE TABLE `architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -40,13 +34,12 @@ insert  into `architecture`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topi
 
 /*Table structure for table `bds_rent` */
 
-DROP TABLE IF EXISTS `bds_rent`;
-
 CREATE TABLE `bds_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de',
   `alias` varchar(500) DEFAULT NULL,
-  `location` varchar(1000) NOT NULL COMMENT 'Khu vuc',
+  `project_id` int(11) NOT NULL COMMENT 'Khu vuc',
+  `project_name` varchar(500) DEFAULT NULL,
   `dist_id` varchar(10) NOT NULL COMMENT 'Quan/ huyen',
   `province_id` varchar(10) DEFAULT NULL COMMENT 'Tinh/ tp',
   `ward_id` varchar(10) DEFAULT NULL COMMENT 'Phuong/ xa',
@@ -77,17 +70,16 @@ CREATE TABLE `bds_rent` (
 
 /*Data for the table `bds_rent` */
 
-insert  into `bds_rent`(`id`,`title`,`alias`,`location`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Cho thuê nhà ở Đỗ Đức Dục','cho-thue-nha-o-do-duc-duc','Nhà số 2, ngách 32/39, phố Đỗ Đức Dục','1',NULL,NULL,2000000,'vnd','35','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429328278,NULL,'JMBXI','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d0cf689f1','ENABLE');
+insert  into `bds_rent`(`id`,`title`,`alias`,`project_id`,`project_name`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Cho thuê nhà ở Đỗ Đức Dục','cho-thue-nha-o-do-duc-duc',0,NULL,'1',NULL,NULL,2000000,'vnd','35','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429328278,NULL,'JMBXI','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d0cf689f1','ENABLE');
 
 /*Table structure for table `bds_sale` */
-
-DROP TABLE IF EXISTS `bds_sale`;
 
 CREATE TABLE `bds_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de',
   `alias` varchar(500) DEFAULT NULL,
-  `location` varchar(1000) NOT NULL COMMENT 'Khu vuc',
+  `project_id` int(11) NOT NULL COMMENT 'Thuoc du an',
+  `project_name` varchar(500) DEFAULT NULL COMMENT 'ten du an',
   `dist_id` varchar(10) NOT NULL COMMENT 'Quan/ huyen',
   `province_id` varchar(10) DEFAULT NULL COMMENT 'Tinh/ tp',
   `ward_id` varchar(10) DEFAULT NULL COMMENT 'Phuong/ xa',
@@ -98,7 +90,7 @@ CREATE TABLE `bds_sale` (
   `created` int(11) NOT NULL,
   `address` varchar(500) DEFAULT NULL COMMENT 'Dia chi',
   `code` varchar(100) NOT NULL COMMENT 'Ma code',
-  `type` enum('1','2','3','4','5') DEFAULT '1' COMMENT '1. Ban chung cu. 2. Ban nha rieng. 3. Ban khu lien ke. 4. Cho thue chung cu. 5. Cho thue nha rieng',
+  `type` enum('1','2','3') DEFAULT '1' COMMENT '1. Ban chung cu. 2. Ban nha rieng. 3. Ban khu lien ke. 4. Cho thue chung cu. 5. Cho thue nha rieng',
   `date_start` int(11) DEFAULT NULL COMMENT 'Ngay dang tin',
   `date_end` int(11) DEFAULT NULL COMMENT 'Ngay het han',
   `floor` int(5) DEFAULT NULL COMMENT 'So tang',
@@ -118,11 +110,38 @@ CREATE TABLE `bds_sale` (
 
 /*Data for the table `bds_sale` */
 
-insert  into `bds_sale`(`id`,`title`,`alias`,`location`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Bán nhà ở Trung Văn','ban-nha-o-trung-van','Nhà số 2, Trung Văn, Nam Từ Liêm, Hà Nội','1',NULL,NULL,2147483647,'vnđ','80','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429329269,NULL,'4L0GX','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d56c2790f','ENABLE');
+insert  into `bds_sale`(`id`,`title`,`alias`,`project_id`,`project_name`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Bán nhà ở Trung Văn','ban-nha-o-trung-van',0,NULL,'1',NULL,NULL,2147483647,'vnđ','80','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429329269,NULL,'4L0GX','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d56c2790f','ENABLE');
+
+/*Table structure for table `catagory` */
+
+CREATE TABLE `catagory` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id cua chuyen muc',
+  `name` varchar(255) NOT NULL COMMENT 'ten cua chuyen muc',
+  `alias` varchar(255) NOT NULL COMMENT 'alias cua chuyen muc',
+  `index` int(1) DEFAULT NULL COMMENT 'vi tri cua chuyen muc',
+  `manager_id` int(11) unsigned NOT NULL COMMENT 'id quan ly tao chuyen muc',
+  `time_create` datetime DEFAULT NULL COMMENT 'thoi gian tao chuyen muc',
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  CONSTRAINT `catagory_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `catagory` */
+
+/*Table structure for table `city` */
+
+CREATE TABLE `city` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(120) NOT NULL,
+  `alias` varchar(120) NOT NULL,
+  `code` varchar(20) NOT NULL,
+  `time_create` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `city` */
 
 /*Table structure for table `decorate` */
-
-DROP TABLE IF EXISTS `decorate`;
 
 CREATE TABLE `decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -144,8 +163,6 @@ insert  into `decorate`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`create
 
 /*Table structure for table `district` */
 
-DROP TABLE IF EXISTS `district`;
-
 CREATE TABLE `district` (
   `districtid` varchar(5) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -162,8 +179,6 @@ insert  into `district`(`districtid`,`name`,`type`,`location`,`provinceid`) valu
 
 /*Table structure for table `images_rent` */
 
-DROP TABLE IF EXISTS `images_rent`;
-
 CREATE TABLE `images_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -178,8 +193,6 @@ insert  into `images_rent`(`id`,`image`,`bds_rent_id`,`is_cover`) values (3,'553
 
 /*Table structure for table `images_sale` */
 
-DROP TABLE IF EXISTS `images_sale`;
-
 CREATE TABLE `images_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -190,11 +203,9 @@ CREATE TABLE `images_sale` (
 
 /*Data for the table `images_sale` */
 
-insert  into `images_sale`(`id`,`image`,`bds_sale_id`,`is_cover`) values (1,'553131ae3db3b',2,1),(2,'553131b9c3da3',2,0),(3,'5531d56c10dc2',1,0),(4,'5531d56c2790f',1,1);
+insert  into `images_sale`(`id`,`image`,`bds_sale_id`,`is_cover`) values (3,'5531d56c10dc2',1,0),(4,'5531d56c2790f',1,1);
 
 /*Table structure for table `manager` */
-
-DROP TABLE IF EXISTS `manager`;
 
 CREATE TABLE `manager` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -216,8 +227,6 @@ insert  into `manager`(`id`,`email`,`password`,`status`,`name`,`phone`,`yahoo`,`
 
 /*Table structure for table `news` */
 
-DROP TABLE IF EXISTS `news`;
-
 CREATE TABLE `news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet',
@@ -237,8 +246,6 @@ CREATE TABLE `news` (
 insert  into `news`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`viewed`,`created`,`type`,`image`) values (1,'Lượng người tìm mua, thuê BĐS tăng vọt ngay những ngày đầu năm mới âm lịch 2015','luong-nguoi-tim-mua-thue-bds-tang-vot-ngay-nhung-ngay-dau-nam-moi-am-lich-2015','Theo số liệu cập nhật mới nhất từ Batdongsan.com.vn, ngay từ những ngày đầu năm mới, từ 22/2-2/3/2015 (tức ngày 4-12/1 âm lịch), khi các doanh nghiệp BĐS mới bắt đầu hoạt động trở lại, thậm chí một số đơn vị vẫn chưa khai xuân, chưa có dự án mở bán mới nh','<p>Điều n&agrave;y c&agrave;ng khẳng định r&otilde; xu hướng thị trường được Batdongsan.com.vn phản &aacute;nh trong 5 năm qua, đ&oacute; l&agrave; giai đoạn đầu năm mới &Acirc;m lịch l&agrave; thời điểm thị trường bất động sản c&oacute; lượng người quan t&acirc;m v&agrave; c&oacute; giao dịch nhiều nhất trong năm. Giai đoạn n&agrave;y bắt đầu ngay từ tuần đầu ti&ecirc;n của th&aacute;ng gi&ecirc;ng &Acirc;m Lịch v&agrave; k&eacute;o d&agrave;i khoảng 2 th&aacute;ng sau đ&oacute;.</p>\r\n<p>Kh&ocirc;ng chỉ vậy, nhằm đ&oacute;n đầu cơ hội của thị trường, ngay sau tết &acirc;m lịch 2015, nhiều doanh nghiệp, m&ocirc;i giới bất động sản đ&atilde; sớm hoạt động trở lại. C&ugrave;ng với đ&oacute;, thị trường giao dịch cũng được khởi động sớm hơn mọi năm.</p>\r\n<p>&Ocirc;ng Đo&agrave;n Ch&iacute; Thanh, Tổng gi&aacute;m đốc C&ocirc;ng ty BĐS&nbsp;Ho&agrave;ng Anh S&agrave;i G&ograve;n, cho biết, trong những ng&agrave;y đầu năm mới, c&aacute;c dự &aacute;n Ho&agrave;ng Anh S&agrave;i G&ograve;n ph&acirc;n phối ghi nhận lượng kh&aacute;ch h&agrave;ng đến giao dịch khả quan, đặc biệt l&agrave; dự &aacute;n Hưng Ng&acirc;n Garden. Nhiều kh&aacute;ch h&agrave;ng đ&atilde; quyết định mua từ cuối năm nhưng đợi dịp đầu năm &Acirc;m lịch mới tiến h&agrave;nh giao dịch với hy vọng mở đầu một năm mới su&ocirc;n sẻ, thuận lợi, ngo&agrave;i ra c&ograve;n được nhận lộc l&igrave; x&igrave; từ doanh nghiệp.&nbsp;</p>\r\n<p>&ldquo;So với c&ugrave;ng thời điểm năm ngo&aacute;i, hoạt động mua b&aacute;n trong năm 2015 s&ocirc;i động hơn nhiều, d&ograve;ng tiền từ nước ngo&agrave;i đổ về tăng, nhu cầu mua nh&agrave; của người nước ngo&agrave;i cũng nhiều hơn c&aacute;c năm trước. Hầu hết c&aacute;c doanh nghiệp đều phấn khởi v&igrave; khởi đầu một năm thuận lợi&rdquo;, &ocirc;ng Thanh dự b&aacute;o.</p>\r\n<p>S&agrave;n giao dịch Thế giới bất động sản (ph&acirc;n phối dự &aacute;n Vinhomes, Masteri Thảo Điền, Imperia) cũng x&aacute;c nhận lượng giao dịch rất tốt trong những ng&agrave;y đầu năm mới với số lượng kh&aacute;ch t&igrave;m mua cao hơn hẳn so với mọi năm, trong đ&oacute; c&oacute; nhiều kh&aacute;ch h&agrave;ng l&agrave; người nước ngo&agrave;i. T&iacute;nh từ ng&agrave;y bắt đầu đi l&agrave;m (m&ugrave;ng 6 tết), s&agrave;n đ&atilde; giao dịch hơn 10 căn thuộc c&aacute;c dự &aacute;n cao cấp.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Lượng người t&igrave;m mua, thu&ecirc; BĐS tăng vọt ngay những ng&agrave;y đầu năm mới &acirc;m lịch 2015 \" src=\"/themes/web/files/images/20150303162239-1448.jpg\" alt=\"Nhu cầu t&igrave;m kiếm nh&agrave; đất\" /></p>\r\n<table align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td><em>Nhu cầu t&igrave;m kiếm nh&agrave; đất tăng cao những ng&agrave;y đầu năm &acirc;m lịch 2015. Ảnh: TT</em></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>Kh&ocirc;ng chỉ ở ph&acirc;n kh&uacute;c căn hộ, c&aacute;c dự &aacute;n đất nền tại Tp.HCM v&agrave; B&igrave;nh Dương do C&ocirc;ng ty CP Địa ốc Kim Oanh ph&acirc;n phối cũng đều đ&atilde; c&oacute; giao dịch v&agrave;o những ng&agrave;y đầu năm mới. &Ocirc;ng L&yacute; Gia Khang, Phụ tr&aacute;ch Marketting của Kim Oanh, cho biết, ngay từ ng&agrave;y m&ugrave;ng 6 tết, c&ocirc;ng ty đ&atilde; c&oacute; 2 kh&aacute;ch h&agrave;ng k&yacute; hợp đồng. Nh&igrave;n chung, những kh&aacute;ch h&agrave;ng giao dịch đầu xu&acirc;n đều được hưởng khuyến m&atilde;i từ c&aacute;c chương tr&igrave;nh ch&agrave;o năm mới n&ecirc;n những ai đ&atilde; x&aacute;c định mua sẽ lựa chọn giao dịch v&agrave;o thời điểm n&agrave;y để được hưởng nhiều ưu đ&atilde;i.</p>\r\n<p>Kết quả khảo s&aacute;t một số s&agrave;n bất động sản lớn tại H&agrave; Nội cũng cho thấy, hoạt động t&igrave;m mua, giao dịch tại c&aacute;c s&agrave;n những ng&agrave;y đầu năm cũng nhộn nhịp hơn hẳn c&aacute;c năm trước. Ri&ecirc;ng S&agrave;n giao dịch Đất Xanh Miền Bắc, trong v&ograve;ng 6 ng&agrave;y (từ 6-12/1 &acirc;m lịch), đ&atilde; c&oacute; hơn 150 giao dịch th&agrave;nh c&ocirc;ng, thuộc c&aacute;c dự &aacute;n CT2B Nghĩa Đ&ocirc;, CT1 Complex H&agrave; Đ&ocirc;ng, Five Star Garden Kim Giang&hellip; C&ograve;n CenGroup cũng đ&atilde; b&aacute;n được gần 50 căn hộ, trong đ&oacute;, c&aacute;c dự &aacute;n được kh&aacute;ch h&agrave;ng quan t&acirc;m nhất l&agrave; Helios Tower, 75&nbsp;Tam Trinh, Goldenmark City...&nbsp;</p>\r\n<p>Mặc d&ugrave; vẫn c&oacute; một số s&agrave;n hoạt động kh&aacute; im ắng, nhưng với việc c&aacute;c doanh nghiệp bất động sản đồng loạt khai xu&acirc;n từ ng&agrave;y m&ugrave;ng 6 Tết &acirc;m lịch, c&ugrave;ng với đ&oacute;, kh&ocirc;ng &iacute;t s&agrave;n giao dịch c&oacute; ngay c&aacute;c hợp đồng được k&yacute; kết v&agrave;o ng&agrave;y mở h&agrave;ng đ&atilde; cho thấy thị trường BĐS khởi động một năm mới với nhiều t&iacute;n hiệu lạc quan. C&aacute;c doanh nghiệp đều kỳ vọng 2015 sẽ l&agrave; một năm bứt ph&aacute; của thị trường sau 7 năm d&agrave;i ảm đạm.</p>\r\n<p>L&yacute; giải nguy&ecirc;n nh&acirc;n thị trường nhộn nhịp ngay những ng&agrave;y đầu năm mới, &ocirc;ng L&ecirc; Xu&acirc;n Trường, Tổng gi&aacute;m đốc Batdongsan.com.vn, cho biết, đầu năm mới &acirc;m lịch thường l&agrave; thời điểm bắt đầu chu kỳ kinh doanh mới, với ri&ecirc;ng lĩnh vực bất động sản, rất nhiều người sẽ c&oacute; nhu cầu t&igrave;m mua nh&agrave;, thu&ecirc; văn ph&ograve;ng, mặt bằng kinh doanh hoặc thu&ecirc; nh&agrave; ở&hellip; Đặc biệt, năm 2015 n&agrave;y, thị trường đ&oacute;n nhận nhiều yếu tố thuận lợi từ việc &aacute;p dụng c&aacute;c sắc luật, nghị định mới, thu h&uacute;t đầu tư từ c&aacute;c c&aacute; nh&acirc;n, doanh nghiệp cả trong v&agrave; ngo&agrave;i nước.</p>\r\n<p>Ngo&agrave;i ra, lượng kiều hối đổ về Việt Nam ng&agrave;y một tăng cao trong những năm gần đ&acirc;y cũng l&agrave; nguy&ecirc;n nh&acirc;n khiến cho thị trường bất động sản đầu năm đ&oacute;n nhận lượng người quan t&acirc;m lớn hơn c&aacute;c thời điểm kh&aacute;c trong năm. Theo th&ocirc;ng tin từ Bộ Ngoại giao, trong năm 2014, lượng kiều hối ước t&iacute;nh khoảng 12 tỷ USD, trong đ&oacute; c&oacute; khoảng 1,5 tỷ USD kiều hối được d&ugrave;ng để mua nh&agrave; đất. Với m&ocirc;i trường đầu tư, kinh doanh được cải thiện, kiều b&agrave;o về qu&ecirc; hương đầu tư ng&agrave;y một nhiều hơn, đặc biệt, kể từ khi Luật Nh&agrave; ở (sửa đổi) được th&ocirc;ng qua (11/2014) tới nay, đ&atilde; c&oacute; 7.000 kiều b&agrave;o đứng t&ecirc;n sở hữu nh&agrave; ở tại Việt Nam.</p>\r\n<p>&nbsp;&ldquo;Trong nhiều năm qua, xu hướng thị trường tốt l&ecirc;n v&agrave;o những ng&agrave;y đầu năm c&oacute; biểu hiện rất r&otilde; r&agrave;ng v&agrave; được đ&ocirc;ng đảo c&aacute;c th&agrave;nh phần tham gia thị trường ghi nhận, thậm ch&iacute;, trong năm 2015 n&agrave;y, thị trường được dự đo&aacute;n sẽ tiếp đ&agrave; 2014 v&agrave; c&oacute; sự phục hồi mạnh mẽ hơn. Tuy nhi&ecirc;n, kh&ocirc;ng phải ai hoạt động trong lĩnh vực bất động sản cũng lưu &yacute; v&agrave; khai th&aacute;c triệt để cơ hội n&agrave;y. V&igrave; vậy, theo t&ocirc;i, c&aacute;c nh&agrave; m&ocirc;i giới bất động sản n&ecirc;n sớm vận h&agrave;nh bộ m&aacute;y v&agrave; tăng cường tất cả c&aacute;c hoạt động để tận dụng tối đa cơ hội n&agrave;y, bởi đ&acirc;y l&agrave; thời điểm v&agrave;ng để b&aacute;n h&agrave;ng v&agrave; cũng l&agrave; thời điểm họ c&oacute; thể gặt h&aacute;i được nhiều th&agrave;nh quả nhất trong năm&rdquo;, &ocirc;ng Trường nhận định.</p>\r\n<p style=\"text-align: right;\"><strong>Hiền Thu</strong><br /><em>(Theo Nhịp sống thời đại)</em></p>',1,NULL,1425618829,'1','260'),(2,'Sức hút mới từ các dự án tại khu vực Nam Từ Liêm','suc-hut-moi-tu-cac-du-an-tai-khu-vuc-nam-tu-liem','Bước sang năm 2015, nhiều chuyên gia và doanh nghiệp đều kỳ vọng đây sẽ là năm khởi sắc của thị trường BĐS sau thời gian dài ảm đạm. Đặc biệt, những khu vực “mới nổi” như 2 quận Nam – Bắc Từ Liêm, nhất là các dự án dọc trục đường Hồ Tùng Mậu được đánh giá','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: justify;\">Ngay từ những ng&agrave;y đầu năm, nhiều s&agrave;n giao dịch bắt đầu hoạt động trở lại với rất đ&ocirc;ng kh&aacute;ch h&agrave;ng đến t&igrave;m hiểu v&agrave; đặt cọc dự &aacute;n. Tại một số quận trung t&acirc;m như Thanh Xu&acirc;n, Cầu Giấy, Nam Từ Li&ecirc;m&hellip; c&aacute;c đơn vị li&ecirc;n tiếp mở b&aacute;n c&aacute;c dự &aacute;n mới nhằm thu h&uacute;t nguồn tiền từ ph&iacute;a kh&aacute;ch h&agrave;ng. Tuy nhi&ecirc;n, c&aacute;c dự &aacute;n sở hữu c&ugrave;ng vị tr&iacute; lại được ch&agrave;o b&aacute;n với mức gi&aacute; kh&aacute;c nhau, thậm ch&iacute; ch&ecirc;nh lệch từ 3 &ndash; 5 triệu/m2.</p>\r\n<p style=\"text-align: justify;\">Cụ thể, tổ hợp Goldmark City (136 Hồ T&ugrave;ng Mậu) được chủ đầu tư đưa ra mức gi&aacute; khoảng 25 &ndash; 28 triệu/m2. Với diện t&iacute;ch căn hộ từ 68 &ndash; 161 m2, t&iacute;nh ra kh&aacute;ch h&agrave;ng sẽ phải bỏ ra trung b&igrave;nh 2,7 tỷ đồng để sở hữu căn hộ tại đ&acirc;y. Tương tự, dự &aacute;n Sun Square (21 L&ecirc; Đức Thọ) trong đợt mở b&aacute;n mới đ&acirc;y tr&ecirc;n s&agrave;n giao dịch bất động sản trực tuyến batdongsans.vn cũng ni&ecirc;m yết mức gi&aacute; 27 triệu/m2 nhưng chưa bao gồm VAT.</p>\r\n<table align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Sức h&uacute;t mới từ c&aacute;c dự &aacute;n tại khu vực Nam Từ Li&ecirc;m \" src=\"http://file4.batdongsan.com.vn/2015/03/16/wxbwknn6/20150316081841-266b.jpg\" alt=\"Phối cảnh dự &aacute;n  Scitech Tower\" /></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center;\"><em>Phối cảnh dự &aacute;n Scitech Tower</em></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p style=\"text-align: justify;\">Giải th&iacute;ch về vấn đề ch&ecirc;nh lệch gi&aacute; b&aacute;n giữa c&aacute;c dự &aacute;n, Ngọc - nh&acirc;n vi&ecirc;n m&ocirc;i giới c&oacute; 5 năm kinh nghiệm cho biết, do đ&acirc;y l&agrave; khu vực trung t&acirc;m, hạ tầng đồng bộ, kết nối chuỗi đ&ocirc; thị lớn như Mỹ Đ&igrave;nh, Trung H&ograve;a Nh&acirc;n Ch&iacute;nh&hellip;; hơn nữa cũng kh&ocirc;ng c&ograve;n nhiều dự &aacute;n cho kh&aacute;ch h&agrave;ng lựa chọn tại khu &ldquo;đất v&agrave;ng&rdquo; n&agrave;y n&ecirc;n một số chủ đầu tư dựa v&agrave;o đ&oacute; để đẩy mức gi&aacute; l&ecirc;n cao; đối với những căn hộ ho&agrave;n thiện hầu hết đều c&oacute; gi&aacute; tr&ecirc;n dưới 2 tỷ đồng.&nbsp;</p>\r\n<p style=\"text-align: justify;\">Tuy nhi&ecirc;n đầu năm 2015, một số chủ đầu tư lại lựa chọn phương &aacute;n kinh doanh kh&aacute;c, chủ yếu dựa v&agrave;o khả năng t&agrave;i ch&iacute;nh v&agrave; nhu cầu của đa số kh&aacute;ch h&agrave;ng khi tung ra thị trường những sản phẩm c&oacute; mức gi&aacute; vừa phải chỉ từ 1,4 tỷ/căn hộ. Điển h&igrave;nh l&agrave; dự &aacute;n chung cư chất lượng cao Scitech Tower &ndash; 280 Hồ T&ugrave;ng Mậu.&nbsp;</p>\r\n<p style=\"text-align: justify;\">Đại diện đơn vị tư vấn b&aacute;n h&agrave;ng Scitech Tower cho biết: Tuy kh&ocirc;ng tổ chức mở b&aacute;n rầm rộ nhưng từ trước tết Nguy&ecirc;n đ&aacute;n, dự &aacute;n nhận được rất nhiều sự quan t&acirc;m từ ph&iacute;a kh&aacute;ch h&agrave;ng. Do đ&oacute;, ngay khi khai xu&acirc;n v&agrave;o m&ugrave;ng 6 tết đ&atilde; c&oacute; 7 kh&aacute;ch h&agrave;ng đến đặt cọc k&yacute; hợp đồng. Cũng theo vị n&agrave;y, từ ng&agrave;y m&ugrave;ng 6 đến ng&agrave;y 14 đ&atilde; c&oacute; 35 giao dịch th&agrave;nh c&ocirc;ng, t&iacute;nh ra trung b&igrave;nh mỗi ng&agrave;y c&oacute; 4 &ndash; 5 giao dịch tại dự &aacute;n. L&yacute; giải về khả năng thanh khoản nhanh như vậy, vị n&agrave;y chia sẻ th&ecirc;m: Scitech Tower nằm ngay mặt đường Hồ T&ugrave;ng Mậu, gần c&aacute;c trường ĐH Quốc gia, Thương mại, chợ, si&ecirc;u thị, khu vui chơi, giải tr&iacute;&hellip;Tuy sở hữu vị tr&iacute; tương đương nhưng tại Scitech Tower, chủ đầu tư cam kết b&agrave;n giao căn hộ ho&agrave;n thiện nội thất cao cấp cho kh&aacute;ch h&agrave;ng như s&agrave;n gỗ, tủ bếp, điều h&ograve;a, b&igrave;nh n&oacute;ng lạnh, thiết bị vệ sinh&hellip;với gi&aacute; b&aacute;n thấp hơn so với nhiều dự &aacute;n kh&aacute;c trong khu vực. B&ecirc;n cạnh những k&ecirc;nh b&aacute;n h&agrave;ng truyền thống, đơn vị c&ograve;n ni&ecirc;m yết 121 căn hộ tr&ecirc;n trang b&aacute;n h&agrave;ng trực tuyến batdongsans.vn. Chỉ sau gần 2 th&aacute;ng, đ&atilde; c&oacute; 2/3 số lượng căn hộ được b&aacute;n hết.&nbsp;</p>\r\n<p style=\"text-align: justify;\">So s&aacute;nh bảng gi&aacute; b&aacute;n tr&ecirc;n một số trang web rao vặt về bất động sản, gi&aacute; giao dịch tr&ecirc;n thị trường của Scitech Tower dao động từ 21,5 &ndash; 23 triệu/m2 (bao gồm VAT) với diện t&iacute;ch căn hộ từ 60 &ndash; 122 m2 (2 &ndash; 4 PN), thấp hơn từ 3 &ndash; 5 triệu/m2 so với dự &aacute;n Goldmark City, Home City, từ 4 &ndash; 6 triệu/m2 so với dự &aacute;n Sun Square. Dự &aacute;n VC7 Housing Complex (136 Hồ T&ugrave;ng Mậu) nằm ngay cạnh cũng được ch&agrave;o b&aacute;n với mức gi&aacute; tương đương. Tuy nhi&ecirc;n khi gọi điện đến một số nh&acirc;n vi&ecirc;n b&aacute;n h&agrave;ng th&igrave; nhận được c&acirc;u trả lời: Mức gi&aacute; n&agrave;y chỉ được &aacute;p dụng cho g&oacute;i b&agrave;n giao th&ocirc;, kh&aacute;ch h&agrave;ng sẽ phải tự ho&agrave;n thiện nội thất khi nhận nh&agrave;.&nbsp;</p>\r\n<p style=\"text-align: justify;\">Hiện tại, Scitech Tower đ&atilde; x&acirc;y xong 2 tầng hầm v&agrave; thi c&ocirc;ng đến tầng nổi thứ 2. Theo đại diện chủ đầu tư, sau đợt nghỉ tết Nguy&ecirc;n đ&aacute;n c&ocirc;ng tr&igrave;nh sẽ được thi c&ocirc;ng trở lại v&agrave;o cuối th&aacute;ng gi&ecirc;ng nhằm đảm bảo tiến độ b&agrave;n giao cho kh&aacute;ch h&agrave;ng v&agrave;o qu&yacute; IV/2016.</p>\r\n<p style=\"text-align: justify;\">Sau khi được chia t&aacute;ch từ huyện Từ Li&ecirc;m th&agrave;nh 2 quận Nam &ndash; Bắc Từ Li&ecirc;m, đ&acirc;y được coi l&agrave; vị tr&iacute; trung t&acirc;m mới của thủ đ&ocirc; với nhiều tiện &iacute;ch hiện đại, hạ tầng đồng bộ, kết nối giao th&ocirc;ng thuận tiện. Do đ&oacute;, những dự &aacute;n sở hữu vị tr&iacute; đắc địa tại quận Nam Từ Li&ecirc;m chắc chắn sẽ l&agrave; t&acirc;m điểm ch&uacute; &yacute; của kh&aacute;ch h&agrave;ng v&agrave; giới đầu tư trong thời gian tới.</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo Handico)</em>&nbsp;</div>',1,NULL,1426476689,'1','260'),(3,'Đồng Tháp: Khởi công dự án nhà ở xã hội giá từ 300 triệu đồng/căn','dong-thap-khoi-cong-du-an-nha-o-xa-hoi-gia-tu-300-trieu-dongcan','Dự án nhà ở xã hội với quy mô 500 căn hộ vừa được chủ đầu tư là Công ty CP Đầu tư Sen Vàng tiến hành khởi công xây dựng tại thành phố Cao Lãnh, tỉnh Đồng Tháp.','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Đồng Th&aacute;p: Khởi c&ocirc;ng dự &aacute;n nh&agrave; ở x&atilde; hội gi&aacute; từ 300 triệu đồng/căn \" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/03/20150303032157271.jpg\" alt=\"Dự &aacute;n nh&agrave; ở x&atilde; hội tại TP Cao L&atilde;nh, Đồng Th&aacute;p\" /><br /><em>Dự &aacute;n nh&agrave; ở x&atilde; hội quy m&ocirc; 500 căn hộ vừa được c&ocirc;ng ty Sen V&agrave;ng&nbsp;khởi c&ocirc;ng tại Đồng Th&aacute;p</em></p>\r\n<p style=\"text-align: justify;\">Đại diện chủ đầu tư cho biết, Dự &aacute;n đầu tư x&acirc;y dựng 500 căn nh&agrave; ở x&atilde; hội đ&atilde; được&nbsp;UBND tỉnh Đồng Th&aacute;p ph&ecirc; duyệt&nbsp;đầu tư theo Quyết định số 224/QĐ-UBND.HC ng&agrave;y 13/03/2012. Dự &aacute;n n&agrave;y cũng được ph&ecirc; duyệt theo&nbsp;đề &aacute;n Ph&aacute;t triển nh&agrave; ở x&atilde; hội giai đoạn 2011 - 2015 v&agrave; định hướng đến năm 2020 của UBND tỉnh Đồng Th&aacute;p.</p>\r\n<p style=\"text-align: justify;\">Vị tr&iacute; dự &aacute;n nằm&nbsp;tại phường Mỹ Ph&uacute;, th&agrave;nh phố Cao L&atilde;nh, diện t&iacute;ch khoảng&nbsp;03-05 ha. Về quy m&ocirc;, dự &aacute;n sẽ cung cấp khoảng&nbsp;500 căn hộ&nbsp;c&oacute; diện t&iacute;ch&nbsp;từ 70 m2. Được biết, mức&nbsp;gi&aacute; b&aacute;n dự kiến của dự &aacute;n n&agrave;y chỉ&nbsp;từ 300 -&nbsp;500 triệu&nbsp;đồng/căn, v&agrave;&nbsp;được ng&acirc;n h&agrave;ng t&agrave;i trợ 70% - 80% gi&aacute; trị căn hộ với l&atilde;i suất ưu đ&atilde;i (thời hạn vay 10 đ&ecirc;́n 15 năm).</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo B&aacute;o X&acirc;y dựng Online)</em>&nbsp;</div>',1,NULL,1426478873,'1','260'),(4,'Xây đường băng cho sân bay Cam Ranh với gần 2.000 tỷ đồng','xay-duong-bang-cho-san-bay-cam-ranh-voi-gan-2-000-ty-dong','Ngày 15/3, UBND tỉnh Khánh Hòa đã tiến hành khởi công xây dựng đường băng số 2, sân bay quốc tế Cam Ranh với tổng vốn đầu tư 1.935 tỷ đồng.','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: justify;\">Theo quy hoạch, đường băng rộng 45m, d&agrave;i 3.048m, đạt ti&ecirc;u chuẩn Cảng h&agrave;ng kh&ocirc;ng cấp 4E, nghĩa l&agrave; c&oacute; thể tiếp nhận c&aacute;c loại m&aacute;y bay chở kh&aacute;ch cỡ lớn hiện tại như B777, B767, A321, A320.</p>\r\n<p style=\"text-align: justify;\">B&ecirc;n cạnh đường băng ch&iacute;nh, dự &aacute;n c&ograve;n c&oacute; c&aacute;c hạng mục kh&aacute;c như&nbsp;đường nối với khu qu&acirc;n sự, đường lăn nối với khu h&agrave;ng kh&ocirc;ng d&acirc;n dụng, hệ thống th&ocirc;ng tin t&iacute;n hiệu quản l&yacute; bay, tường r&agrave;o, s&acirc;n đỗ m&aacute;y bay... C&ocirc;ng tr&igrave;nh sẽ đ&aacute;p ứng ti&ecirc;u chuẩn khai th&aacute;c do Tổ chức H&agrave;ng kh&ocirc;ng d&acirc;n dụng quốc tế đưa ra.</p>\r\n<p style=\"text-align: justify;\">Chủ đầu tư dự &aacute;n l&agrave; Ban quản l&yacute; dự &aacute;n c&aacute;c c&ocirc;ng tr&igrave;nh trọng điểm tỉnh Kh&aacute;nh H&ograve;a với tổng chi ph&iacute; 1.935 tỷ đồng. Qu&aacute; tr&igrave;nh thi c&ocirc;ng sẽ do 4 nh&agrave; thầu l&agrave; C&ocirc;ng ty CP Ph&uacute;c Sơn, Tổng c&ocirc;ng ty X&acirc;y dựng Giao th&ocirc;ng 4, Tổng c&ocirc;ng ty 319 v&agrave; C&ocirc;ng ty X&acirc;y lắp Cơ kh&iacute; Phương Nam đảm nhận với thời gian 36 th&aacute;ng.</p>\r\n<table align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td><em><img title=\"X&acirc;y đường băng cho s&acirc;n bay Cam Ranh với gần 2.000 tỷ đồng \" src=\"http://file4.batdongsan.com.vn/2015/03/16/0I4XNtd4/20150316075630-cba9.jpg\" alt=\"c&ocirc;ng tr&igrave;nh mới\" /></em></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center;\"><em>&Ocirc;ng Ho&agrave;ng Trung Hải, Ph&oacute; thủ tướng Ch&iacute;nh phủ bấm n&uacute;t khởi c&ocirc;ng x&acirc;y dựng<br />Ảnh: B&igrave;nh Minh</em></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p style=\"text-align: justify;\">Theo &ocirc;ng Huỳnh Kỳ Trầm, đại diện chủ đầu tư, qua gần 50 năm sử dụng, đường băng số 1 đ&atilde; xuất hiện nhiều hư hỏng v&agrave; tiềm ẩn yếu tố mất an to&agrave;n. V&igrave; thề, tuổi thọ đường cất hạ c&aacute;nh n&agrave;y chỉ c&ograve;n khoảng 3-4 năm nữa. Hơn nữa, cảng H&agrave;ng kh&ocirc;ng quốc tế Cam Ranh hiện nay đ&atilde; qu&aacute; tải 125%.</p>\r\n<p style=\"text-align: justify;\">&Ocirc;ng Trầm cho biết, s&acirc;n bay Cam Ranh hiện đang được d&acirc;n sự v&agrave; qu&acirc;n đội d&ugrave;ng chung n&ecirc;n qu&aacute; tải. B&ecirc;n cạnh đ&oacute;, việc sử dụng chung đường băng kh&ocirc;ng thể bảo đảm an to&agrave;n, an ninh bay. S&acirc;n bay sẽ tiếp tục n&acirc;ng cấp đường băng số 1 sau khi x&acirc;y dựng xong đường băng số 2 nhằm đ&aacute;p ứng nhu cầu ng&agrave;y c&agrave;ng tăng cao.</p>\r\n<p style=\"text-align: justify;\">Ph&oacute; thủ tướng Ho&agrave;ng Trung Hải đ&atilde; ph&aacute;t biểu tại lễ khởi c&ocirc;ng. &Ocirc;ng đ&aacute;nh gi&aacute;, đường băng mới l&agrave; nhu cầu cần thiết của cảng H&agrave;ng kh&ocirc;ng quốc tế Cam Ranh. Việc n&acirc;ng cấp, x&acirc;y mới đường băng kh&ocirc;ng chỉ ph&aacute;t triển về kinh tế x&atilde; hội m&agrave; c&ograve;n đảm bảo an ninh quốc ph&ograve;ng cho Kh&aacute;nh H&ograve;a v&agrave; cả khu vực miền Trung, T&acirc;y Nguy&ecirc;n.</p>\r\n<p style=\"text-align: justify;\">Trong năm 2014, tỉnh Kh&aacute;nh H&ograve;a đ&atilde; đ&oacute;n 2 triệu lượt kh&aacute;ch th&ocirc;ng qua cảng h&agrave;ng kh&ocirc;ng Cam Ranh, năm 2015, dự kiến sẽ đ&oacute;n 2,5 triệu kh&aacute;ch.</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo Vnexpress)</em>&nbsp;</div>',2,NULL,1426479000,'1','260');
 
 /*Table structure for table `project` */
-
-DROP TABLE IF EXISTS `project`;
 
 CREATE TABLE `project` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -273,8 +280,6 @@ insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`e
 
 /*Table structure for table `province` */
 
-DROP TABLE IF EXISTS `province`;
-
 CREATE TABLE `province` (
   `provinceid` varchar(5) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -287,8 +292,6 @@ CREATE TABLE `province` (
 insert  into `province`(`provinceid`,`name`,`type`) values ('01','Hà Nội','Thành Phố'),('02','Hà Giang','Tỉnh'),('04','Cao Bằng','Tỉnh'),('06','Bắc Kạn','Tỉnh'),('08','Tuyên Quang','Tỉnh'),('10','Lào Cai','Tỉnh'),('11','Điện Biên','Tỉnh'),('12','Lai Châu','Tỉnh'),('14','Sơn La','Tỉnh'),('15','Yên Bái','Tỉnh'),('17','Hòa Bình','Tỉnh'),('19','Thái Nguyên','Tỉnh'),('20','Lạng Sơn','Tỉnh'),('22','Quảng Ninh','Tỉnh'),('24','Bắc Giang','Tỉnh'),('25','Phú Thọ','Tỉnh'),('26','Vĩnh Phúc','Tỉnh'),('27','Bắc Ninh','Tỉnh'),('30','Hải Dương','Tỉnh'),('31','Hải Phòng','Thành Phố'),('33','Hưng Yên','Tỉnh'),('34','Thái Bình','Tỉnh'),('35','Hà Nam','Tỉnh'),('36','Nam Định','Tỉnh'),('37','Ninh Bình','Tỉnh'),('38','Thanh Hóa','Tỉnh'),('40','Nghệ An','Tỉnh'),('42','Hà Tĩnh','Tỉnh'),('44','Quảng Bình','Tỉnh'),('45','Quảng Trị','Tỉnh'),('46','Thừa Thiên Huế','Tỉnh'),('48','Đà Nẵng','Thành Phố'),('49','Quảng Nam','Tỉnh'),('51','Quảng Ngãi','Tỉnh'),('52','Bình Định','Tỉnh'),('54','Phú Yên','Tỉnh'),('56','Khánh Hòa','Tỉnh'),('58','Ninh Thuận','Tỉnh'),('60','Bình Thuận','Tỉnh'),('62','Kon Tum','Tỉnh'),('64','Gia Lai','Tỉnh'),('66','Đắk Lắk','Tỉnh'),('67','Đắk Nông','Tỉnh'),('68','Lâm Đồng','Tỉnh'),('70','Bình Phước','Tỉnh'),('72','Tây Ninh','Tỉnh'),('74','Bình Dương','Tỉnh'),('75','Đồng Nai','Tỉnh'),('77','Bà Rịa - Vũng Tàu','Tỉnh'),('79','Hồ Chí Minh','Thành Phố'),('80','Long An','Tỉnh'),('82','Tiền Giang','Tỉnh'),('83','Bến Tre','Tỉnh'),('84','Trà Vinh','Tỉnh'),('86','Vĩnh Long','Tỉnh'),('87','Đồng Tháp','Tỉnh'),('89','An Giang','Tỉnh'),('91','Kiên Giang','Tỉnh'),('92','Cần Thơ','Thành Phố'),('93','Hậu Giang','Tỉnh'),('94','Sóc Trăng','Tỉnh'),('95','Bạc Liêu','Tỉnh'),('96','Cà Mau','Tỉnh');
 
 /*Table structure for table `pt` */
-
-DROP TABLE IF EXISTS `pt`;
 
 CREATE TABLE `pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -308,9 +311,37 @@ CREATE TABLE `pt` (
 
 insert  into `pt`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topic_id`,`created`,`type`,`image`) values (1,'Nhà cấp 4 và những cấm kỵ theo phong thủy','nha-cap-4-va-nhung-cam-ky-theo-phong-thuy','Xây nhà một tầng (hay còn gọi là nhà cấp 4) tưởng chừng là việc khá đơn giản và không có yêu cầu nhiều về kĩ thuật hiện đại. Tuy nhiên, loại hình nhà này lại có khá nhiều điều cấm kỵ cần lưu ý theo phong thủy.','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: justify;\">Nh&agrave; cấp 4 hiện nay kh&ocirc;ng c&ograve;n được x&acirc;y dựng nhiều, chủ yếu chỉ xuất hiệni ở một số v&ugrave;ng qu&ecirc; hoặc đồi n&uacute;i để dễ trồng trọt, chăn nu&ocirc;i hoặc thuận theo địa h&igrave;nh. X&acirc;y nh&agrave; cấp 4 tưởng chừng l&agrave; một điều kh&aacute; đơn giản v&agrave; kh&ocirc;ng y&ecirc;u cầu nhiều về kĩ thuật, nhưng lại c&oacute; kh&aacute; nhiều điều cấm kỵ về mặt phong thủy.</p>\r\n<p style=\"text-align: justify;\">Dưới đ&acirc;y l&agrave; 18 cấm kỵ phong thủy khi x&acirc;y dựng nh&agrave; cấp 4 m&agrave; c&aacute;c gia chủ phải ch&uacute; &yacute; kh&ocirc;ng phạm phải</p>\r\n<p style=\"text-align: justify;\">1. Kh&ocirc;ng x&acirc;y dựng nh&agrave; ở cấp 4 tr&ecirc;n lưng n&uacute;i hay cửa ra v&agrave;o của khe n&uacute;i. Điều n&agrave;y kh&ocirc;ng những kh&ocirc;ng c&oacute; lợi về mặt địa l&yacute; m&agrave; gia chủ v&agrave; c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh c&ograve;n dễ mắc bệnh tật.</p>\r\n<p style=\"text-align: justify;\">2. Kh&ocirc;ng được x&acirc;y nh&agrave; ở cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ dễ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa tổn t&agrave;i lộc cho gia chủ.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy \" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081311694.jpg\" alt=\"Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 \" /><br /><em>Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa<br />tổn t&agrave;i lộc cho gia chủ</em></p>\r\n<p style=\"text-align: justify;\">3. Kh&ocirc;ng n&ecirc;n trồng c&acirc;y đại thụ ở vị tr&iacute; đối diện với cửa ch&iacute;nh của căn nh&agrave;. Điều n&agrave;y kh&ocirc;ng những cản trở dương kh&iacute; v&agrave;o trong nh&agrave; m&agrave; c&ograve;n rước th&ecirc;m &acirc;m kh&iacute; v&agrave;o nh&agrave;. X&eacute;t tr&ecirc;n thực tế, trồng c&acirc;y to trước nh&agrave; cũng khiến cho mọi người ra v&agrave;o bất tiện hơn, khi mưa to gi&oacute; lớn cũng dễ h&uacute;t sấm s&eacute;t, dễ g&acirc;y nguy hiểm cho mọi người hơn. Hoặc m&ugrave;a thu l&aacute; rụng cũng dễ bay v&agrave;o c&aacute;c ph&ograve;ng khiến cho căn ph&ograve;ng kh&ocirc;ng c&ograve;n được sạch sẽ nữa.</p>\r\n<p style=\"text-align: justify;\">4. Kh&ocirc;ng được để c&acirc;y kh&ocirc; trước cửa. D&ugrave; l&agrave; c&acirc;y nhỏ, c&acirc;y đứng thẳng hay bị đổ xuống đất th&igrave; c&acirc;y kh&ocirc; cũng kh&ocirc;ng tốt theo trong phong thủy. N&oacute; dễ ảnh hưởng đến người gi&agrave; v&agrave; dẫn dụ sự ngh&egrave;o kh&oacute; đến cho gia đ&igrave;nh. Tốt nhất nếu c&oacute; th&igrave; h&atilde;y chặt bỏ hết những c&acirc;y như thế.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy 1\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081314003.jpg\" alt=\"Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;\" /><br /><em>Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;</em></p>\r\n<p style=\"text-align: justify;\">5. Hướng t&acirc;y bắc của nh&agrave; cấp 4 c&oacute; c&acirc;y cổ thụ l&agrave; điều rất may mắn. C&acirc;y lớn trồng ở hướng n&agrave;y sẽ gi&uacute;p bảo vệ v&agrave; mang lại hạnh ph&uacute;c cho c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh. Nếu gia chủ kh&ocirc;ng biết, chặt c&acirc;y đi th&igrave; c&oacute; thể sẽ bị họa tuyệt tự tuyệt t&ocirc;n. C&aacute;c gia chủ n&ecirc;n ch&uacute; &yacute; hơn đến điều n&agrave;y.</p>\r\n<p style=\"text-align: justify;\">6. Nh&agrave; c&acirc;́p 4 kh&ocirc;ng n&ecirc;n qu&aacute; cao so với những nh&agrave; xung quanh, nếu kh&ocirc;ng sẽ bị hao t&agrave;i tốn tiền của. N&oacute;i về mặt logic th&igrave; nh&agrave; ở như thế n&agrave;y cũng sẽ gặp nhiều nguy hiểm, đơn cử như sẽ l&agrave; th&agrave;nh phần đứng mũi chịu s&agrave;o, dễ gặp phải hỏa hoạn, tai nạn b&atilde;o gi&oacute; hay bị kh&ocirc;ng k&iacute;ch v&agrave; &aacute;nh nắng mặt trời cũng chiếu trực tiếp v&agrave;o nhiều. Dương thịnh th&igrave; &acirc;m suy, &acirc;m dương kh&ocirc;ng h&ograve;a hợp cũng sẽ g&acirc;y ảnh hưởng xấu đến sức khỏe của mọi người trong gia đ&igrave;nh.</p>\r\n<p style=\"text-align: justify;\">7. Trừ con trưởng, những người con c&ograve;n lại trong gia đ&igrave;nh kh&ocirc;ng được x&acirc;y dựng ở s&acirc;n trong nh&agrave; của bố mẹ. Nếu rơi v&agrave;o trường hợp n&agrave;y th&igrave; cả hai nh&agrave; sẽ c&ugrave;ng bị suy yếu.</p>\r\n<p style=\"text-align: justify;\">8. Tuyệt đối kh&ocirc;ng được x&acirc;y dựng hay sửa sang nh&agrave; cửa khi trong nh&agrave; c&oacute; người mang bầu. Sửa một ch&uacute;t cũng kh&ocirc;ng được, hay chỉ đơn giản l&agrave; thay gạch l&aacute;t s&agrave;n cũng kh&ocirc;ng n&ecirc;n bởi n&oacute; sẽ ảnh hưởng đến việc sinh non của người phụ nữ.</p>\r\n<p style=\"text-align: justify;\">9. Nền m&oacute;ng của ng&ocirc;i nh&agrave; cấp 4 thấp đằng trước, cao hơn ở ph&iacute;a sau th&igrave; gia đ&igrave;nh sẽ gặp may mắn, ngược lại đằng trước cao, ph&iacute;a sau thấp l&agrave; điều kh&ocirc;ng tốt l&agrave;nh.</p>\r\n<p style=\"text-align: justify;\">10. Nếu m&oacute;ng nh&agrave; cấp 4 tại hướng T&acirc;y Bắc bị thiếu hụt, mặc d&ugrave; kh&ocirc;ng l&agrave;m tổn hại đến vận kh&iacute; của gia đ&igrave;nh nhưng sẽ c&oacute; khả năng thiếu thốn về đường con c&aacute;i, v&agrave; ảnh hưởng đến sức khỏa của bố mẹ, dễ mắc bệnh về đường h&ocirc; hấp.</p>\r\n<p style=\"text-align: justify;\">11. M&oacute;ng của ng&ocirc;i nh&agrave; ở hướng T&acirc;y Nam bị sứt mẻ hay thiếu hụt th&igrave; đường ti&ecirc;u h&oacute;a của gia chủ cũng sẽ gặp vấn đề. Nhưng ngược lại th&igrave; sẽ c&oacute; lợi cho quan chức, lương bổng, địa vị của c&aacute;c th&agrave;nh vi&ecirc;n.</p>\r\n<p style=\"text-align: justify;\">12. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng Nam bị sứt mẻ, vận kh&iacute; của gia đ&igrave;nh cũng kh&ocirc;ng bị ảnh hưởng nhiều nhưng sẽ kh&ocirc;ng c&oacute; lợi cho việc sinh con đẻ c&aacute;i.</p>\r\n<p style=\"text-align: justify;\">13. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng bắc bị thiếu hụt th&igrave; tuy rằng kh&ocirc;ng g&acirc;y hại lớn cho gia đ&igrave;nh th&igrave; cũng c&oacute; thể sẽ ảnh hưởng đến đường ti&ecirc;u h&oacute;a của mọi người. Kh&ocirc;ng n&ecirc;n x&acirc;y cửa lớn ở vị tr&iacute; n&agrave;y, nếu như c&oacute; &yacute; định x&acirc;y th&igrave; cũng n&ecirc;n mời thầy phong thủy đến để xem x&eacute;t gi&uacute;p đỡ.</p>\r\n<p style=\"text-align: justify;\">14. Nh&agrave; cấp 4 hẹp b&ecirc;n tr&aacute;i, rộng b&ecirc;n phải hay hẹp phải rộng tr&aacute;i đều kh&ocirc;ng phải l&agrave; điều tốt l&agrave;nh, con trai sinh ra nếu kh&ocirc;ng bị đơn độc th&igrave; cũng sẽ ngh&egrave;o h&egrave;n.</p>\r\n<p style=\"text-align: justify;\">15. Nh&agrave; cấp 4 c&oacute; m&oacute;ng hoặc h&igrave;nh dạng rộng trước, hẹp sau giống h&igrave;nh c&aacute;i thang ngược th&igrave; gia chủ sẽ kh&oacute; giữ được của cải, nh&acirc;n khẩu cũng khan hiếm.</p>\r\n<p style=\"text-align: justify;\">16. Nếu h&igrave;nh d&aacute;ng của căn nh&agrave; hẹp trước rộng sau giống h&igrave;nh c&aacute;i thang th&igrave; gia chủ sinh sống ở đ&acirc;y kh&ocirc;ng chỉ c&oacute; ph&uacute;c m&agrave; c&ograve;n cao sang, được thanh thế lẫy lừng trong x&atilde; hội.</p>\r\n<p style=\"text-align: justify;\">17. Nếu m&oacute;ng nh&agrave; hoặc căn nh&agrave; c&oacute; h&igrave;nh tam gi&aacute;c, nếu nhọn trước rộng sau th&igrave; được gọi l&agrave; Điền B&uacute;t, người nh&agrave; sẽ bị hao t&agrave;i tốn của, đặc biệt l&agrave; c&oacute; thể dẫn đến việc người phụ nữ trong gia đ&igrave;nh kh&ocirc;ng được may mắn. C&ograve;n nhọn sau rộng trước th&igrave; trong phong thủy gọi l&agrave; sao hỏa vẫy đu&ocirc;i. Nh&agrave; ở như vậy rất kh&ocirc;ng tốt, người trong nh&agrave; dễ bị bệnh nan y, chết do tai nạn.</p>\r\n<p style=\"text-align: justify;\">18. Nếu m&oacute;ng nh&agrave; hoặc h&igrave;nh dạng căn nh&agrave; b&ecirc;n tr&aacute;i d&agrave;i, b&ecirc;n phải ngắn th&igrave; sẽ ảnh hưởng kh&ocirc;ng tốt đến vợ v&agrave; c&aacute;c con của gia chủ.</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo Kh&aacute;m ph&aacute;)</em>&nbsp;</div>',NULL,1,1426753087,'1','260');
 
-/*Table structure for table `saler` */
+/*Table structure for table `realty` */
 
-DROP TABLE IF EXISTS `saler`;
+CREATE TABLE `realty` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `id_catagory` int(11) unsigned NOT NULL,
+  `des` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `manager_id` int(11) unsigned DEFAULT NULL,
+  `phone_constact` varchar(120) DEFAULT NULL,
+  `email_constact` varchar(120) DEFAULT NULL,
+  `city_id` int(11) unsigned NOT NULL,
+  `notes` varchar(255) DEFAULT NULL,
+  `time_create` datetime NOT NULL,
+  `time_update` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  KEY `id_catagory` (`id_catagory`),
+  KEY `user_id` (`user_id`),
+  KEY `city_id` (`city_id`),
+  CONSTRAINT `realty_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`),
+  CONSTRAINT `realty_ibfk_2` FOREIGN KEY (`id_catagory`) REFERENCES `catagory` (`id`),
+  CONSTRAINT `realty_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `realty_ibfk_4` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `realty` */
+
+/*Table structure for table `saler` */
 
 CREATE TABLE `saler` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -341,8 +372,6 @@ insert  into `saler`(`id`,`name`,`alias`,`address`,`phone`,`mobile`,`email`,`web
 
 /*Table structure for table `topic_architecture` */
 
-DROP TABLE IF EXISTS `topic_architecture`;
-
 CREATE TABLE `topic_architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de topic kien truc',
@@ -358,8 +387,6 @@ CREATE TABLE `topic_architecture` (
 insert  into `topic_architecture`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Thiết kế nhà đẹp','thiet-ke-nha-dep','260','Thiết kế nhà đẹp',1426905978);
 
 /*Table structure for table `topic_decorate` */
-
-DROP TABLE IF EXISTS `topic_decorate`;
 
 CREATE TABLE `topic_decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -377,8 +404,6 @@ insert  into `topic_decorate`(`id`,`title`,`alias`,`image`,`desc`,`created`) val
 
 /*Table structure for table `topic_news` */
 
-DROP TABLE IF EXISTS `topic_news`;
-
 CREATE TABLE `topic_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL COMMENT 'Tieu de cua topic',
@@ -395,8 +420,6 @@ insert  into `topic_news`(`id`,`title`,`alias`,`desc`,`image`,`created`) values 
 
 /*Table structure for table `topic_pt` */
 
-DROP TABLE IF EXISTS `topic_pt`;
-
 CREATE TABLE `topic_pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet phong thuy',
@@ -411,9 +434,28 @@ CREATE TABLE `topic_pt` (
 
 insert  into `topic_pt`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Phong thủy và những điều kiêng kỵ','phong-thuy-va-nhung-dieu-kieng-ky','260','Phong thủy là một phần rất quan trọng trong việc xây dựng nhà cửa, vì vậy chúng ta hãy cùng tìm hiểu những điều không nên làm khi xây dựng.',1426752320);
 
-/*Table structure for table `ward` */
+/*Table structure for table `user` */
 
-DROP TABLE IF EXISTS `ward`;
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(120) NOT NULL,
+  `full_name` varchar(120) DEFAULT NULL,
+  `email` varchar(120) NOT NULL,
+  `phone` varchar(120) DEFAULT NULL,
+  `address` varchar(120) NOT NULL,
+  `cmnd` varchar(120) DEFAULT NULL,
+  `age` int(2) DEFAULT NULL,
+  `status` enum('ENABLE','DISABLE','PENDING','DELETE','LOCK') NOT NULL DEFAULT 'PENDING',
+  `time_create` datetime NOT NULL,
+  `manager_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `user` */
+
+/*Table structure for table `ward` */
 
 CREATE TABLE `ward` (
   `wardid` varchar(5) NOT NULL,
