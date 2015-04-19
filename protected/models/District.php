@@ -94,4 +94,27 @@ class District extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getAll($city_id = null, $cache = true){
+        $criteria=new CDbCriteria;
+        $criteria->compare('city_id',$city_id);
+        $data = Districts::model()->findAll($criteria);
+        return $data;
+    }
+
+    public function getData($city_id = null){
+        return CHtml::listData($this->getAll($city_id), 'id', 'name');
+    }
+    public function getCityLabelList(){
+        $html = NULL;
+        if($this->city){
+            $html = "<ul>";
+            foreach($this->city as $tags_news){
+                $html .= "<li>".$tags_news->name."</li>";
+            }
+            $html .= "</ul>";
+        }
+        return $html;
+
+    }
 }
