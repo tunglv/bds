@@ -98,7 +98,8 @@ class SaleController extends AdminController {
             $model->alias = $model->alias ? $model->alias : $model->name;
             $model->alias = TextParser::toSEOString($model->alias);
             $model->code = $model->getNewSyntax();
-            $model->dist_id = '1';
+            $model->price = str_replace('.','', $model->price);
+            $model->area = str_replace('.','', $model->area);
 
 //            var_dump($model->validate());
 //            var_dump($model->getErrors());die;
@@ -183,7 +184,8 @@ class SaleController extends AdminController {
             $post = Yii::app()->request->getPost('BdsSale');
             //             echo "<pre>";print_r($post);echo "</pre>";die;
             $model->attributes = $post;
-
+            $model->price = str_replace('.','', $model->price);
+            $model->area = str_replace('.','', $model->area);
             $model->created = $model->created ? $model->created : time();
             if ($model->validate()) {
                 Yii::import('ext.TextParser');

@@ -56,7 +56,7 @@ class Saler extends CActiveRecord
 		return array(
 			array('name, image', 'required'),
 			array('created', 'numerical', 'integerOnly'=>true),
-			array('name, alias, image', 'length', 'max'=>255),
+			array('name, alias, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('address', 'length', 'max'=>500),
 			array('phone, MST', 'length', 'max'=>15),
 			array('mobile', 'length', 'max'=>11),

@@ -7,7 +7,7 @@
  * @property string $id
  * @property string $title
  * @property string $location
- * @property string $dist_id
+ * @property string $district_id
  * @property string $province_id
  * @property string $ward_id
  * @property integer $price
@@ -59,19 +59,18 @@ class BdsRent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, project_id, dist_id, price, price_type, area, created, code', 'required'),
-			array('price, created, date_start, date_end, floor, room, befor, way, toilet', 'numerical', 'integerOnly'=>true),
+			array('title, project_id, district_id, price, price_type, area, created, code', 'required'),
+			array('created, date_start, date_end, floor, room, befor, way, toilet', 'numerical', 'integerOnly'=>true),
 			array('title, project_name, alias, address, furniture, address_contact', 'length', 'max'=>500),
-			array('location', 'length', 'max'=>1000),
-			array('dist_id, province_id, ward_id', 'length', 'max'=>10),
-			array('price_type, code, name_contact, phone_contact, email_contact', 'length', 'max'=>100),
-			array('area, image', 'length', 'max'=>250),
+            array('province_id, district_id, ward_id', 'length', 'max'=>5),
+			array('price, price_type, code, name_contact, phone_contact, email_contact', 'length', 'max'=>100),
+			array('area, image, province_name, district_name, ward_name', 'length', 'max'=>250),
 			array('type', 'length', 'max'=>1),
 			array('content', 'safe'),
             array('status', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, location, dist_id, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact', 'safe', 'on'=>'search'),
+			array('id, title, district_id, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -95,8 +94,7 @@ class BdsRent extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'Title',
-			'location' => 'Location',
-			'dist_id' => 'Dist',
+			'district_id' => 'Dist',
 			'province_id' => 'Province',
 			'ward_id' => 'Ward',
 			'price' => 'Price',
@@ -135,8 +133,7 @@ class BdsRent extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('location',$this->location,true);
-		$criteria->compare('dist_id',$this->dist_id,true);
+		$criteria->compare('district_id',$this->district_id,true);
 		$criteria->compare('province_id',$this->province_id,true);
 		$criteria->compare('ward_id',$this->ward_id,true);
 		$criteria->compare('price',$this->price);

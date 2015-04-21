@@ -57,9 +57,10 @@ class Project extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('province_id, district_id, ward_id, created', 'numerical', 'integerOnly'=>true),
-			array('name, alias, address, image', 'length', 'max'=>255),
+			array('created', 'numerical', 'integerOnly'=>true),
+			array('name, alias, address, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
+			array('province_id, district_id, ward_id', 'length', 'max'=>5),
 			array('website, yahoo', 'length', 'max'=>50),
 			array('email', 'length', 'max'=>100),
 			array('type', 'length', 'max'=>1),
@@ -222,5 +223,14 @@ class Project extends CActiveRecord
         $imgConf = Yii::app()->params->project;
         $contentPath = $imgConf['path']."{$id}/".$size.'.jpg';
         return Yii::app()->getBaseUrl(TRUE).'/'.$contentPath;
+    }
+
+    public function getAll(){
+        $data = Project::model()->findAll();
+        return $data;
+    }
+
+    public function getData(){
+        return CHtml::listData($this->getAll(), 'id', 'name');
     }
 }

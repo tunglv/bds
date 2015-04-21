@@ -107,6 +107,20 @@
                     </div>
                 </div>
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'fax', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'fax',array('maxlength'=>25, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'fax', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'MST', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'MST',array('maxlength'=>25, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'MST', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'skyper', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->textField($model,'skyper',array('maxlength'=>25, 'class' => 'input-large')); ?>
@@ -132,6 +146,7 @@
                     <?php echo $form->labelEx($model,'province_id', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->dropDownList($model,'province_id', Province::model()->getData(), array('empty'=>'--Tỉnh/Tp--')); ?>
+                        <?php echo $form->textField($model,'province_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
                         <?php echo $form->error($model,'province_id', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
@@ -139,7 +154,12 @@
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'district_id', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->dropDownList($model,'district_id', District::model()->getData(), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'district_id', District::model()->getData($model->province_id), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'district_id', array(), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'district_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
                         <?php echo $form->error($model,'district_id', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
@@ -147,7 +167,12 @@
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'ward_id', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->dropDownList($model,'ward_id', Ward::model()->getData(), array('empty'=>'--Phường/Xa--')); ?>
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'ward_id', Ward::model()->getData($model->district_id), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'ward_id', array(), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'ward_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
                         <?php echo $form->error($model,'ward_id', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
@@ -268,6 +293,7 @@
         $('#name_char_count').text($(this).val().length);
     }).keyup();
     $("#Saler_province_id").on('change', function(){
+        $('#Saler_province_name').val($(this).find(":selected").text());
         $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
             .done(function( data ) {
                 data = jQuery.parseJSON(data);
@@ -280,6 +306,7 @@
             });
     });
     $("#Saler_district_id").on('change', function(){
+        $('#Saler_district_name').val($(this).find(":selected").text());
         $.post( "/admin/saler/getWard", { districtid: $(this).val()})
             .done(function( data ) {
                 data = jQuery.parseJSON(data);
@@ -290,5 +317,8 @@
 
                 $('#Saler_ward_id').html(html);
             });
+    });
+    $("#Saler_ward_id").on('change', function() {
+        $('#Saler_ward_name').val($(this).find(":selected").text());
     });
 </script>

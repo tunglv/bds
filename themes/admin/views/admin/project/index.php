@@ -49,6 +49,42 @@
             'value' => '$data->name',
         ),
         array(
+            'name' => 'mobile',
+            'type'      =>  'raw',
+            'value' => '$data->mobile',
+        ),
+        array(
+            'name' => 'fax',
+            'type'      =>  'raw',
+            'value' => '$data->fax',
+        ),
+        array(
+            'name' => 'website',
+            'type'      =>  'raw',
+            'value' => '$data->website',
+        ),
+        array(
+            'name' => 'email',
+            'type'      =>  'raw',
+            'value' => '$data->email',
+        ),
+        array(
+            'name' => 'yahoo',
+            'type'      =>  'raw',
+            'value' => '$data->yahoo',
+        ),
+        array(
+            'name' => 'type',
+            'type'      =>  'raw',
+            'value' => '$data->typeLabel',
+        ),
+        array(
+            'name' => 'address',
+            'type'      =>  'raw',
+            'value' => '$data->address." - ".$data->district_name." - ".$data->province_name',
+            'filter' => FALSE
+        ),
+        array(
             'name' => 'created',
             'type'      =>  'raw',
             'value' => 'date("h:s d-m-y",$data->created)',

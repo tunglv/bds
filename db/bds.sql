@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v10.42 
-MySQL - 5.5.27 : Database - bds
+SQLyog Community v11.31 (64 bit)
+MySQL - 5.6.20 : Database - bds
 *********************************************************************
 */
 
@@ -12,7 +12,13 @@ MySQL - 5.5.27 : Database - bds
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`bds` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `bds`;
+
 /*Table structure for table `architecture` */
+
+DROP TABLE IF EXISTS `architecture`;
 
 CREATE TABLE `architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,16 +40,21 @@ insert  into `architecture`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topi
 
 /*Table structure for table `bds_rent` */
 
+DROP TABLE IF EXISTS `bds_rent`;
+
 CREATE TABLE `bds_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de',
   `alias` varchar(500) DEFAULT NULL,
-  `project_id` int(11) NOT NULL COMMENT 'Khu vuc',
+  `project_id` int(11) NOT NULL COMMENT 'Du an',
   `project_name` varchar(500) DEFAULT NULL,
-  `dist_id` varchar(10) NOT NULL COMMENT 'Quan/ huyen',
+  `district_id` varchar(10) NOT NULL COMMENT 'Quan/ huyen',
+  `district_name` varchar(255) DEFAULT NULL,
   `province_id` varchar(10) DEFAULT NULL COMMENT 'Tinh/ tp',
+  `province_name` varchar(255) DEFAULT NULL,
   `ward_id` varchar(10) DEFAULT NULL COMMENT 'Phuong/ xa',
-  `price` int(11) NOT NULL COMMENT 'Gia',
+  `ward_name` varchar(255) DEFAULT NULL,
+  `price` float NOT NULL COMMENT 'Gia',
   `price_type` varchar(100) NOT NULL COMMENT 'Don vi gia',
   `area` varchar(250) NOT NULL COMMENT 'Dien tich',
   `content` text COMMENT 'Thong tin',
@@ -70,27 +81,32 @@ CREATE TABLE `bds_rent` (
 
 /*Data for the table `bds_rent` */
 
-insert  into `bds_rent`(`id`,`title`,`alias`,`project_id`,`project_name`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Cho thuê nhà ở Đỗ Đức Dục','cho-thue-nha-o-do-duc-duc',0,NULL,'1',NULL,NULL,2000000,'vnd','35','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429328278,NULL,'JMBXI','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d0cf689f1','ENABLE');
+insert  into `bds_rent`(`id`,`title`,`alias`,`project_id`,`project_name`,`district_id`,`district_name`,`province_id`,`province_name`,`ward_id`,`ward_name`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Cho thuê nhà ở Đỗ Đức Dục','cho-thue-nha-o-do-duc-duc',2,'Mường Thanh hotel','019',NULL,'01',NULL,'00631',NULL,2000000,'vnd','35','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429328278,'Số 8 Đỗ Đức Dục','JMBXI','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d0cf689f1','ENABLE');
 
 /*Table structure for table `bds_sale` */
+
+DROP TABLE IF EXISTS `bds_sale`;
 
 CREATE TABLE `bds_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de',
   `alias` varchar(500) DEFAULT NULL,
-  `project_id` int(11) NOT NULL COMMENT 'Thuoc du an',
-  `project_name` varchar(500) DEFAULT NULL COMMENT 'ten du an',
-  `dist_id` varchar(10) NOT NULL COMMENT 'Quan/ huyen',
-  `province_id` varchar(10) DEFAULT NULL COMMENT 'Tinh/ tp',
-  `ward_id` varchar(10) DEFAULT NULL COMMENT 'Phuong/ xa',
-  `price` int(11) NOT NULL COMMENT 'Gia',
+  `project_id` int(11) NOT NULL COMMENT 'Du an',
+  `project_name` varchar(500) DEFAULT NULL,
+  `district_id` varchar(5) NOT NULL COMMENT 'Quan/ huyen',
+  `district_name` varchar(255) DEFAULT NULL,
+  `province_id` varchar(5) DEFAULT NULL COMMENT 'Tinh/ tp',
+  `province_name` varchar(255) DEFAULT NULL,
+  `ward_id` varchar(5) DEFAULT NULL COMMENT 'Phuong/ xa',
+  `ward_name` varchar(255) DEFAULT NULL,
+  `price` float NOT NULL COMMENT 'Gia',
   `price_type` varchar(100) NOT NULL COMMENT 'Don vi gia',
   `area` varchar(250) NOT NULL COMMENT 'Dien tich',
   `content` text COMMENT 'Thong tin',
   `created` int(11) NOT NULL,
   `address` varchar(500) DEFAULT NULL COMMENT 'Dia chi',
   `code` varchar(100) NOT NULL COMMENT 'Ma code',
-  `type` enum('1','2','3') DEFAULT '1' COMMENT '1. Ban chung cu. 2. Ban nha rieng. 3. Ban khu lien ke. 4. Cho thue chung cu. 5. Cho thue nha rieng',
+  `type` enum('1','2','3','4','5') DEFAULT '1' COMMENT '1. Ban chung cu. 2. Ban nha rieng. 3. Ban khu lien ke. 4. Cho thue chung cu. 5. Cho thue nha rieng',
   `date_start` int(11) DEFAULT NULL COMMENT 'Ngay dang tin',
   `date_end` int(11) DEFAULT NULL COMMENT 'Ngay het han',
   `floor` int(5) DEFAULT NULL COMMENT 'So tang',
@@ -110,38 +126,11 @@ CREATE TABLE `bds_sale` (
 
 /*Data for the table `bds_sale` */
 
-insert  into `bds_sale`(`id`,`title`,`alias`,`project_id`,`project_name`,`dist_id`,`province_id`,`ward_id`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Bán nhà ở Trung Văn','ban-nha-o-trung-van',0,NULL,'1',NULL,NULL,2147483647,'vnđ','80','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429329269,NULL,'4L0GX','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'5531d56c2790f','ENABLE');
-
-/*Table structure for table `catagory` */
-
-CREATE TABLE `catagory` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id cua chuyen muc',
-  `name` varchar(255) NOT NULL COMMENT 'ten cua chuyen muc',
-  `alias` varchar(255) NOT NULL COMMENT 'alias cua chuyen muc',
-  `index` int(1) DEFAULT NULL COMMENT 'vi tri cua chuyen muc',
-  `manager_id` int(11) unsigned NOT NULL COMMENT 'id quan ly tao chuyen muc',
-  `time_create` datetime DEFAULT NULL COMMENT 'thoi gian tao chuyen muc',
-  PRIMARY KEY (`id`),
-  KEY `manager_id` (`manager_id`),
-  CONSTRAINT `catagory_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `catagory` */
-
-/*Table structure for table `city` */
-
-CREATE TABLE `city` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(120) NOT NULL,
-  `alias` varchar(120) NOT NULL,
-  `code` varchar(20) NOT NULL,
-  `time_create` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `city` */
+insert  into `bds_sale`(`id`,`title`,`alias`,`project_id`,`project_name`,`district_id`,`district_name`,`province_id`,`province_name`,`ward_id`,`ward_name`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Bán nhà ở Trung Văn','ban-nha-o-trung-van',1,'Dự án A','019',NULL,'01',NULL,'00631',NULL,2500000000,'vnđ','80','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429329269,'Số 8 Đỗ Đức Dục','4L0GX','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','Ma Xuan Phong','So 10 Phong Xuan Ma','098765432','phongmx@gmail.com','5531d56c2790f','ENABLE');
 
 /*Table structure for table `decorate` */
+
+DROP TABLE IF EXISTS `decorate`;
 
 CREATE TABLE `decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -163,6 +152,8 @@ insert  into `decorate`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`create
 
 /*Table structure for table `district` */
 
+DROP TABLE IF EXISTS `district`;
+
 CREATE TABLE `district` (
   `districtid` varchar(5) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -179,6 +170,8 @@ insert  into `district`(`districtid`,`name`,`type`,`location`,`provinceid`) valu
 
 /*Table structure for table `images_rent` */
 
+DROP TABLE IF EXISTS `images_rent`;
+
 CREATE TABLE `images_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -193,6 +186,8 @@ insert  into `images_rent`(`id`,`image`,`bds_rent_id`,`is_cover`) values (3,'553
 
 /*Table structure for table `images_sale` */
 
+DROP TABLE IF EXISTS `images_sale`;
+
 CREATE TABLE `images_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -203,9 +198,11 @@ CREATE TABLE `images_sale` (
 
 /*Data for the table `images_sale` */
 
-insert  into `images_sale`(`id`,`image`,`bds_sale_id`,`is_cover`) values (3,'5531d56c10dc2',1,0),(4,'5531d56c2790f',1,1);
+insert  into `images_sale`(`id`,`image`,`bds_sale_id`,`is_cover`) values (1,'553131ae3db3b',2,1),(2,'553131b9c3da3',2,0),(3,'5531d56c10dc2',1,0),(4,'5531d56c2790f',1,1);
 
 /*Table structure for table `manager` */
+
+DROP TABLE IF EXISTS `manager`;
 
 CREATE TABLE `manager` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -227,6 +224,8 @@ insert  into `manager`(`id`,`email`,`password`,`status`,`name`,`phone`,`yahoo`,`
 
 /*Table structure for table `news` */
 
+DROP TABLE IF EXISTS `news`;
+
 CREATE TABLE `news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet',
@@ -247,6 +246,8 @@ insert  into `news`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`viewed`,`c
 
 /*Table structure for table `project` */
 
+DROP TABLE IF EXISTS `project`;
+
 CREATE TABLE `project` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -259,9 +260,12 @@ CREATE TABLE `project` (
   `yahoo` varchar(50) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `type` enum('1','2','3','4','5','6','7','8','9') DEFAULT NULL COMMENT '1: cao oc van phong, 2: khu can ho, 3: khu do thi moi, 4: khu thuong mai dich vu, 5: khu phuc hop, 6: khu dan cu, 7: khu du lich nghi duong, 8: khu cong nghiep, 9: du an khac',
-  `province_id` int(11) DEFAULT NULL,
-  `district_id` int(11) DEFAULT NULL,
-  `ward_id` int(11) DEFAULT NULL,
+  `province_id` varchar(5) DEFAULT NULL,
+  `province_name` varchar(255) DEFAULT NULL,
+  `district_id` varchar(5) DEFAULT NULL,
+  `district_name` varchar(255) DEFAULT NULL,
+  `ward_id` varchar(5) DEFAULT NULL,
+  `ward_name` varchar(255) DEFAULT NULL,
   `overview` text,
   `ha_tang` text,
   `thiet_ke` text,
@@ -276,9 +280,11 @@ CREATE TABLE `project` (
 
 /*Data for the table `project` */
 
-insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`district_id`,`ward_id`,`overview`,`ha_tang`,`thiet_ke`,`location`,`ban_hang`,`video`,`images`,`chu_dau_tu`,`created`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1',NULL,NULL,NULL,'<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',1429103900),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1',NULL,NULL,NULL,'<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>',1429156709),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1',NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',1429156784),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8',NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',1429156837),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','7',NULL,NULL,NULL,'<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>',1429156933);
+insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`overview`,`ha_tang`,`thiet_ke`,`location`,`ban_hang`,`video`,`images`,`chu_dau_tu`,`created`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',1429103900),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>',1429156709),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',1429156784),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8',NULL,NULL,NULL,NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',1429156837),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','7','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>',1429156933);
 
 /*Table structure for table `province` */
+
+DROP TABLE IF EXISTS `province`;
 
 CREATE TABLE `province` (
   `provinceid` varchar(5) NOT NULL,
@@ -292,6 +298,8 @@ CREATE TABLE `province` (
 insert  into `province`(`provinceid`,`name`,`type`) values ('01','Hà Nội','Thành Phố'),('02','Hà Giang','Tỉnh'),('04','Cao Bằng','Tỉnh'),('06','Bắc Kạn','Tỉnh'),('08','Tuyên Quang','Tỉnh'),('10','Lào Cai','Tỉnh'),('11','Điện Biên','Tỉnh'),('12','Lai Châu','Tỉnh'),('14','Sơn La','Tỉnh'),('15','Yên Bái','Tỉnh'),('17','Hòa Bình','Tỉnh'),('19','Thái Nguyên','Tỉnh'),('20','Lạng Sơn','Tỉnh'),('22','Quảng Ninh','Tỉnh'),('24','Bắc Giang','Tỉnh'),('25','Phú Thọ','Tỉnh'),('26','Vĩnh Phúc','Tỉnh'),('27','Bắc Ninh','Tỉnh'),('30','Hải Dương','Tỉnh'),('31','Hải Phòng','Thành Phố'),('33','Hưng Yên','Tỉnh'),('34','Thái Bình','Tỉnh'),('35','Hà Nam','Tỉnh'),('36','Nam Định','Tỉnh'),('37','Ninh Bình','Tỉnh'),('38','Thanh Hóa','Tỉnh'),('40','Nghệ An','Tỉnh'),('42','Hà Tĩnh','Tỉnh'),('44','Quảng Bình','Tỉnh'),('45','Quảng Trị','Tỉnh'),('46','Thừa Thiên Huế','Tỉnh'),('48','Đà Nẵng','Thành Phố'),('49','Quảng Nam','Tỉnh'),('51','Quảng Ngãi','Tỉnh'),('52','Bình Định','Tỉnh'),('54','Phú Yên','Tỉnh'),('56','Khánh Hòa','Tỉnh'),('58','Ninh Thuận','Tỉnh'),('60','Bình Thuận','Tỉnh'),('62','Kon Tum','Tỉnh'),('64','Gia Lai','Tỉnh'),('66','Đắk Lắk','Tỉnh'),('67','Đắk Nông','Tỉnh'),('68','Lâm Đồng','Tỉnh'),('70','Bình Phước','Tỉnh'),('72','Tây Ninh','Tỉnh'),('74','Bình Dương','Tỉnh'),('75','Đồng Nai','Tỉnh'),('77','Bà Rịa - Vũng Tàu','Tỉnh'),('79','Hồ Chí Minh','Thành Phố'),('80','Long An','Tỉnh'),('82','Tiền Giang','Tỉnh'),('83','Bến Tre','Tỉnh'),('84','Trà Vinh','Tỉnh'),('86','Vĩnh Long','Tỉnh'),('87','Đồng Tháp','Tỉnh'),('89','An Giang','Tỉnh'),('91','Kiên Giang','Tỉnh'),('92','Cần Thơ','Thành Phố'),('93','Hậu Giang','Tỉnh'),('94','Sóc Trăng','Tỉnh'),('95','Bạc Liêu','Tỉnh'),('96','Cà Mau','Tỉnh');
 
 /*Table structure for table `pt` */
+
+DROP TABLE IF EXISTS `pt`;
 
 CREATE TABLE `pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -311,37 +319,9 @@ CREATE TABLE `pt` (
 
 insert  into `pt`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topic_id`,`created`,`type`,`image`) values (1,'Nhà cấp 4 và những cấm kỵ theo phong thủy','nha-cap-4-va-nhung-cam-ky-theo-phong-thuy','Xây nhà một tầng (hay còn gọi là nhà cấp 4) tưởng chừng là việc khá đơn giản và không có yêu cầu nhiều về kĩ thuật hiện đại. Tuy nhiên, loại hình nhà này lại có khá nhiều điều cấm kỵ cần lưu ý theo phong thủy.','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: justify;\">Nh&agrave; cấp 4 hiện nay kh&ocirc;ng c&ograve;n được x&acirc;y dựng nhiều, chủ yếu chỉ xuất hiệni ở một số v&ugrave;ng qu&ecirc; hoặc đồi n&uacute;i để dễ trồng trọt, chăn nu&ocirc;i hoặc thuận theo địa h&igrave;nh. X&acirc;y nh&agrave; cấp 4 tưởng chừng l&agrave; một điều kh&aacute; đơn giản v&agrave; kh&ocirc;ng y&ecirc;u cầu nhiều về kĩ thuật, nhưng lại c&oacute; kh&aacute; nhiều điều cấm kỵ về mặt phong thủy.</p>\r\n<p style=\"text-align: justify;\">Dưới đ&acirc;y l&agrave; 18 cấm kỵ phong thủy khi x&acirc;y dựng nh&agrave; cấp 4 m&agrave; c&aacute;c gia chủ phải ch&uacute; &yacute; kh&ocirc;ng phạm phải</p>\r\n<p style=\"text-align: justify;\">1. Kh&ocirc;ng x&acirc;y dựng nh&agrave; ở cấp 4 tr&ecirc;n lưng n&uacute;i hay cửa ra v&agrave;o của khe n&uacute;i. Điều n&agrave;y kh&ocirc;ng những kh&ocirc;ng c&oacute; lợi về mặt địa l&yacute; m&agrave; gia chủ v&agrave; c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh c&ograve;n dễ mắc bệnh tật.</p>\r\n<p style=\"text-align: justify;\">2. Kh&ocirc;ng được x&acirc;y nh&agrave; ở cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ dễ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa tổn t&agrave;i lộc cho gia chủ.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy \" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081311694.jpg\" alt=\"Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 \" /><br /><em>Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa<br />tổn t&agrave;i lộc cho gia chủ</em></p>\r\n<p style=\"text-align: justify;\">3. Kh&ocirc;ng n&ecirc;n trồng c&acirc;y đại thụ ở vị tr&iacute; đối diện với cửa ch&iacute;nh của căn nh&agrave;. Điều n&agrave;y kh&ocirc;ng những cản trở dương kh&iacute; v&agrave;o trong nh&agrave; m&agrave; c&ograve;n rước th&ecirc;m &acirc;m kh&iacute; v&agrave;o nh&agrave;. X&eacute;t tr&ecirc;n thực tế, trồng c&acirc;y to trước nh&agrave; cũng khiến cho mọi người ra v&agrave;o bất tiện hơn, khi mưa to gi&oacute; lớn cũng dễ h&uacute;t sấm s&eacute;t, dễ g&acirc;y nguy hiểm cho mọi người hơn. Hoặc m&ugrave;a thu l&aacute; rụng cũng dễ bay v&agrave;o c&aacute;c ph&ograve;ng khiến cho căn ph&ograve;ng kh&ocirc;ng c&ograve;n được sạch sẽ nữa.</p>\r\n<p style=\"text-align: justify;\">4. Kh&ocirc;ng được để c&acirc;y kh&ocirc; trước cửa. D&ugrave; l&agrave; c&acirc;y nhỏ, c&acirc;y đứng thẳng hay bị đổ xuống đất th&igrave; c&acirc;y kh&ocirc; cũng kh&ocirc;ng tốt theo trong phong thủy. N&oacute; dễ ảnh hưởng đến người gi&agrave; v&agrave; dẫn dụ sự ngh&egrave;o kh&oacute; đến cho gia đ&igrave;nh. Tốt nhất nếu c&oacute; th&igrave; h&atilde;y chặt bỏ hết những c&acirc;y như thế.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy 1\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081314003.jpg\" alt=\"Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;\" /><br /><em>Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;</em></p>\r\n<p style=\"text-align: justify;\">5. Hướng t&acirc;y bắc của nh&agrave; cấp 4 c&oacute; c&acirc;y cổ thụ l&agrave; điều rất may mắn. C&acirc;y lớn trồng ở hướng n&agrave;y sẽ gi&uacute;p bảo vệ v&agrave; mang lại hạnh ph&uacute;c cho c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh. Nếu gia chủ kh&ocirc;ng biết, chặt c&acirc;y đi th&igrave; c&oacute; thể sẽ bị họa tuyệt tự tuyệt t&ocirc;n. C&aacute;c gia chủ n&ecirc;n ch&uacute; &yacute; hơn đến điều n&agrave;y.</p>\r\n<p style=\"text-align: justify;\">6. Nh&agrave; c&acirc;́p 4 kh&ocirc;ng n&ecirc;n qu&aacute; cao so với những nh&agrave; xung quanh, nếu kh&ocirc;ng sẽ bị hao t&agrave;i tốn tiền của. N&oacute;i về mặt logic th&igrave; nh&agrave; ở như thế n&agrave;y cũng sẽ gặp nhiều nguy hiểm, đơn cử như sẽ l&agrave; th&agrave;nh phần đứng mũi chịu s&agrave;o, dễ gặp phải hỏa hoạn, tai nạn b&atilde;o gi&oacute; hay bị kh&ocirc;ng k&iacute;ch v&agrave; &aacute;nh nắng mặt trời cũng chiếu trực tiếp v&agrave;o nhiều. Dương thịnh th&igrave; &acirc;m suy, &acirc;m dương kh&ocirc;ng h&ograve;a hợp cũng sẽ g&acirc;y ảnh hưởng xấu đến sức khỏe của mọi người trong gia đ&igrave;nh.</p>\r\n<p style=\"text-align: justify;\">7. Trừ con trưởng, những người con c&ograve;n lại trong gia đ&igrave;nh kh&ocirc;ng được x&acirc;y dựng ở s&acirc;n trong nh&agrave; của bố mẹ. Nếu rơi v&agrave;o trường hợp n&agrave;y th&igrave; cả hai nh&agrave; sẽ c&ugrave;ng bị suy yếu.</p>\r\n<p style=\"text-align: justify;\">8. Tuyệt đối kh&ocirc;ng được x&acirc;y dựng hay sửa sang nh&agrave; cửa khi trong nh&agrave; c&oacute; người mang bầu. Sửa một ch&uacute;t cũng kh&ocirc;ng được, hay chỉ đơn giản l&agrave; thay gạch l&aacute;t s&agrave;n cũng kh&ocirc;ng n&ecirc;n bởi n&oacute; sẽ ảnh hưởng đến việc sinh non của người phụ nữ.</p>\r\n<p style=\"text-align: justify;\">9. Nền m&oacute;ng của ng&ocirc;i nh&agrave; cấp 4 thấp đằng trước, cao hơn ở ph&iacute;a sau th&igrave; gia đ&igrave;nh sẽ gặp may mắn, ngược lại đằng trước cao, ph&iacute;a sau thấp l&agrave; điều kh&ocirc;ng tốt l&agrave;nh.</p>\r\n<p style=\"text-align: justify;\">10. Nếu m&oacute;ng nh&agrave; cấp 4 tại hướng T&acirc;y Bắc bị thiếu hụt, mặc d&ugrave; kh&ocirc;ng l&agrave;m tổn hại đến vận kh&iacute; của gia đ&igrave;nh nhưng sẽ c&oacute; khả năng thiếu thốn về đường con c&aacute;i, v&agrave; ảnh hưởng đến sức khỏa của bố mẹ, dễ mắc bệnh về đường h&ocirc; hấp.</p>\r\n<p style=\"text-align: justify;\">11. M&oacute;ng của ng&ocirc;i nh&agrave; ở hướng T&acirc;y Nam bị sứt mẻ hay thiếu hụt th&igrave; đường ti&ecirc;u h&oacute;a của gia chủ cũng sẽ gặp vấn đề. Nhưng ngược lại th&igrave; sẽ c&oacute; lợi cho quan chức, lương bổng, địa vị của c&aacute;c th&agrave;nh vi&ecirc;n.</p>\r\n<p style=\"text-align: justify;\">12. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng Nam bị sứt mẻ, vận kh&iacute; của gia đ&igrave;nh cũng kh&ocirc;ng bị ảnh hưởng nhiều nhưng sẽ kh&ocirc;ng c&oacute; lợi cho việc sinh con đẻ c&aacute;i.</p>\r\n<p style=\"text-align: justify;\">13. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng bắc bị thiếu hụt th&igrave; tuy rằng kh&ocirc;ng g&acirc;y hại lớn cho gia đ&igrave;nh th&igrave; cũng c&oacute; thể sẽ ảnh hưởng đến đường ti&ecirc;u h&oacute;a của mọi người. Kh&ocirc;ng n&ecirc;n x&acirc;y cửa lớn ở vị tr&iacute; n&agrave;y, nếu như c&oacute; &yacute; định x&acirc;y th&igrave; cũng n&ecirc;n mời thầy phong thủy đến để xem x&eacute;t gi&uacute;p đỡ.</p>\r\n<p style=\"text-align: justify;\">14. Nh&agrave; cấp 4 hẹp b&ecirc;n tr&aacute;i, rộng b&ecirc;n phải hay hẹp phải rộng tr&aacute;i đều kh&ocirc;ng phải l&agrave; điều tốt l&agrave;nh, con trai sinh ra nếu kh&ocirc;ng bị đơn độc th&igrave; cũng sẽ ngh&egrave;o h&egrave;n.</p>\r\n<p style=\"text-align: justify;\">15. Nh&agrave; cấp 4 c&oacute; m&oacute;ng hoặc h&igrave;nh dạng rộng trước, hẹp sau giống h&igrave;nh c&aacute;i thang ngược th&igrave; gia chủ sẽ kh&oacute; giữ được của cải, nh&acirc;n khẩu cũng khan hiếm.</p>\r\n<p style=\"text-align: justify;\">16. Nếu h&igrave;nh d&aacute;ng của căn nh&agrave; hẹp trước rộng sau giống h&igrave;nh c&aacute;i thang th&igrave; gia chủ sinh sống ở đ&acirc;y kh&ocirc;ng chỉ c&oacute; ph&uacute;c m&agrave; c&ograve;n cao sang, được thanh thế lẫy lừng trong x&atilde; hội.</p>\r\n<p style=\"text-align: justify;\">17. Nếu m&oacute;ng nh&agrave; hoặc căn nh&agrave; c&oacute; h&igrave;nh tam gi&aacute;c, nếu nhọn trước rộng sau th&igrave; được gọi l&agrave; Điền B&uacute;t, người nh&agrave; sẽ bị hao t&agrave;i tốn của, đặc biệt l&agrave; c&oacute; thể dẫn đến việc người phụ nữ trong gia đ&igrave;nh kh&ocirc;ng được may mắn. C&ograve;n nhọn sau rộng trước th&igrave; trong phong thủy gọi l&agrave; sao hỏa vẫy đu&ocirc;i. Nh&agrave; ở như vậy rất kh&ocirc;ng tốt, người trong nh&agrave; dễ bị bệnh nan y, chết do tai nạn.</p>\r\n<p style=\"text-align: justify;\">18. Nếu m&oacute;ng nh&agrave; hoặc h&igrave;nh dạng căn nh&agrave; b&ecirc;n tr&aacute;i d&agrave;i, b&ecirc;n phải ngắn th&igrave; sẽ ảnh hưởng kh&ocirc;ng tốt đến vợ v&agrave; c&aacute;c con của gia chủ.</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo Kh&aacute;m ph&aacute;)</em>&nbsp;</div>',NULL,1,1426753087,'1','260');
 
-/*Table structure for table `realty` */
-
-CREATE TABLE `realty` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `id_catagory` int(11) unsigned NOT NULL,
-  `des` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `user_id` int(11) unsigned DEFAULT NULL,
-  `manager_id` int(11) unsigned DEFAULT NULL,
-  `phone_constact` varchar(120) DEFAULT NULL,
-  `email_constact` varchar(120) DEFAULT NULL,
-  `city_id` int(11) unsigned NOT NULL,
-  `notes` varchar(255) DEFAULT NULL,
-  `time_create` datetime NOT NULL,
-  `time_update` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `manager_id` (`manager_id`),
-  KEY `id_catagory` (`id_catagory`),
-  KEY `user_id` (`user_id`),
-  KEY `city_id` (`city_id`),
-  CONSTRAINT `realty_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`),
-  CONSTRAINT `realty_ibfk_2` FOREIGN KEY (`id_catagory`) REFERENCES `catagory` (`id`),
-  CONSTRAINT `realty_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  CONSTRAINT `realty_ibfk_4` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `realty` */
-
 /*Table structure for table `saler` */
+
+DROP TABLE IF EXISTS `saler`;
 
 CREATE TABLE `saler` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -357,9 +337,12 @@ CREATE TABLE `saler` (
   `skyper` varchar(25) DEFAULT NULL,
   `yahoo` varchar(25) DEFAULT NULL,
   `image` varchar(255) NOT NULL COMMENT 'avatar',
-  `province_id` int(11) DEFAULT NULL,
-  `district_id` int(11) DEFAULT NULL,
-  `ward_id` int(11) DEFAULT NULL,
+  `province_id` varchar(5) DEFAULT NULL,
+  `province_name` varchar(255) DEFAULT NULL,
+  `district_id` varbinary(5) DEFAULT NULL,
+  `district_name` varchar(255) DEFAULT NULL,
+  `ward_id` varbinary(5) DEFAULT NULL,
+  `ward_name` varchar(255) DEFAULT NULL,
   `area` varchar(2000) DEFAULT NULL COMMENT 'Khu vuc mo gioi',
   `content` text COMMENT 'gioi thieu cong ty',
   `created` int(11) DEFAULT NULL,
@@ -368,9 +351,11 @@ CREATE TABLE `saler` (
 
 /*Data for the table `saler` */
 
-insert  into `saler`(`id`,`name`,`alias`,`address`,`phone`,`mobile`,`email`,`website`,`fax`,`MST`,`skyper`,`yahoo`,`image`,`province_id`,`district_id`,`ward_id`,`area`,`content`,`created`) values (1,'Le van A','le-van-a','Nam Dinh','098765432','0350983726','alevan@gmail.com','http://a.com.vn',NULL,NULL,'a_levan','a_levan','200',NULL,NULL,NULL,'Vu Trong Phung','<p>L&agrave; đơn vị hoạt động trong lĩnh vực kinh doanh, tư vấn, quản l&yacute; v&agrave; tiếp thị bất động sản. Ch&uacute;ng t&ocirc;i đơn vị h&agrave;ng đầu cung cấp c&aacute;c dịch vụ bất động sản tại Việt Nam.&nbsp;<strong>THẾ GIỚI BẤT ĐỘNG SẢN</strong>&nbsp;nơi tập trung những sản phẩm&nbsp;<strong>Căn Hộ Cao Cấp - Chung Cư Cao Cấp - Cao Ốc Văn Ph&ograve;ng, Biệt Thự - Villa</strong>&nbsp;.... của c&aacute;c Dự &aacute;n đ&atilde; được chọn lọc sẽ đ&aacute;p ứng mọi nhu cầu về bất động sản của Qu&yacute; Kh&aacute;ch H&agrave;ng. Với đội ngũ chuy&ecirc;n vi&ecirc;n tư vấn bất động sản c&oacute; tr&igrave;nh độ chuy&ecirc;n m&ocirc;n cao, gi&agrave;u kinh nghiệm v&agrave; lu&ocirc;n lấy chữ t&iacute;n l&agrave;m trọng. Qu&yacute; kh&aacute;ch h&agrave;ng đến với ch&uacute;ng t&ocirc;i lu&ocirc;n lu&ocirc;n h&agrave;i l&ograve;ng với phong c&aacute;ch l&agrave;m việc chuy&ecirc;n nghiệp, tận t&acirc;m v&agrave; c&oacute; tr&aacute;ch nhiệm .Ch&uacute;ng t&ocirc;i hiểu rằng sự th&agrave;nh c&ocirc;ng của kh&aacute;ch h&agrave;ng ch&iacute;nh l&agrave; yếu tố quan trọng nhất mang lại th&agrave;nh c&ocirc;ng cho ch&uacute;ng t&ocirc;i. Q&uacute;y kh&aacute;ch h&agrave;ng l&agrave; chủ sở hữu bất động sản, chủ đầu tư, c&aacute;c kh&aacute;ch h&agrave;ng c&oacute; nhu cầu giao dịch hay ch&iacute;nh c&aacute;c bạn m&ocirc;i giới đến với Ch&uacute;ng t&ocirc;i l&agrave; đến với sự&nbsp;<strong>AN T&Acirc;M &ndash;TIN TƯỞNG</strong>&nbsp;v&agrave;<strong>TH&Agrave;NH C&Ocirc;NG</strong>.</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"/themes/web/files/images/file.517665.jpg\" alt=\"\" /></p>\r\n<p><em>Phối cảnh dự &aacute;n Vinhomes Central Park</em></p>\r\n<p><br /><strong>Địa chỉ li&ecirc;n hệ:</strong></p>\r\n<p><strong>C&Ocirc;NG TY CỔ PHẦN ĐẦU TƯ X&Acirc;Y DỰNG THẾ GIỚI BẤT ĐỘNG SẢN</strong></p>\r\n<p><strong>S&Agrave;N GIAO DỊCH THẾ GIỚI BẤT ĐỘNG SẢN&nbsp;</strong><br />Trụ sở 111 -113 Nguyễn Hữu Cảnh Phường 22 Quận B&igrave;nh Thạnh &ndash;TP HCM<br />Tel: (84.8) 35 123 999&ndash; Hotline: 1900 7191<br />Fax: (84.8) 38 99 49 79<br />Email: info@thegioibatdongsan.com.vn<br />Website: www.thegioibatdongsan.com.vn</p>\r\n<p><strong>C&aacute;c Chi Nh&aacute;nh tại TPHCM:</strong></p>\r\n<p>196 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.<br />133 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.<br />190 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.</p>\r\n<p><strong>Chi Nh&aacute;nh tại H&agrave; Nội:</strong></p>\r\n<p>Tầng 7 T&ograve;a nh&agrave; An &amp; Huy, 184 Nguyễn Tu&acirc;n, Q. Thanh Xu&acirc;n, H&agrave; Nội.</p>',1429085385);
+insert  into `saler`(`id`,`name`,`alias`,`address`,`phone`,`mobile`,`email`,`website`,`fax`,`MST`,`skyper`,`yahoo`,`image`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`area`,`content`,`created`) values (1,'Le van A','le-van-a','Nam Dinh','098765432','0350983726','alevan@gmail.com','http://a.com.vn','','','a_levan','a_levan','200','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','Vu Trong Phung','<p>L&agrave; đơn vị hoạt động trong lĩnh vực kinh doanh, tư vấn, quản l&yacute; v&agrave; tiếp thị bất động sản. Ch&uacute;ng t&ocirc;i đơn vị h&agrave;ng đầu cung cấp c&aacute;c dịch vụ bất động sản tại Việt Nam.&nbsp;<strong>THẾ GIỚI BẤT ĐỘNG SẢN</strong>&nbsp;nơi tập trung những sản phẩm&nbsp;<strong>Căn Hộ Cao Cấp - Chung Cư Cao Cấp - Cao Ốc Văn Ph&ograve;ng, Biệt Thự - Villa</strong>&nbsp;.... của c&aacute;c Dự &aacute;n đ&atilde; được chọn lọc sẽ đ&aacute;p ứng mọi nhu cầu về bất động sản của Qu&yacute; Kh&aacute;ch H&agrave;ng. Với đội ngũ chuy&ecirc;n vi&ecirc;n tư vấn bất động sản c&oacute; tr&igrave;nh độ chuy&ecirc;n m&ocirc;n cao, gi&agrave;u kinh nghiệm v&agrave; lu&ocirc;n lấy chữ t&iacute;n l&agrave;m trọng. Qu&yacute; kh&aacute;ch h&agrave;ng đến với ch&uacute;ng t&ocirc;i lu&ocirc;n lu&ocirc;n h&agrave;i l&ograve;ng với phong c&aacute;ch l&agrave;m việc chuy&ecirc;n nghiệp, tận t&acirc;m v&agrave; c&oacute; tr&aacute;ch nhiệm .Ch&uacute;ng t&ocirc;i hiểu rằng sự th&agrave;nh c&ocirc;ng của kh&aacute;ch h&agrave;ng ch&iacute;nh l&agrave; yếu tố quan trọng nhất mang lại th&agrave;nh c&ocirc;ng cho ch&uacute;ng t&ocirc;i. Q&uacute;y kh&aacute;ch h&agrave;ng l&agrave; chủ sở hữu bất động sản, chủ đầu tư, c&aacute;c kh&aacute;ch h&agrave;ng c&oacute; nhu cầu giao dịch hay ch&iacute;nh c&aacute;c bạn m&ocirc;i giới đến với Ch&uacute;ng t&ocirc;i l&agrave; đến với sự&nbsp;<strong>AN T&Acirc;M &ndash;TIN TƯỞNG</strong>&nbsp;v&agrave;<strong>TH&Agrave;NH C&Ocirc;NG</strong>.</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"/themes/web/files/images/file.517665.jpg\" alt=\"\" /></p>\r\n<p><em>Phối cảnh dự &aacute;n Vinhomes Central Park</em></p>\r\n<p><br /><strong>Địa chỉ li&ecirc;n hệ:</strong></p>\r\n<p><strong>C&Ocirc;NG TY CỔ PHẦN ĐẦU TƯ X&Acirc;Y DỰNG THẾ GIỚI BẤT ĐỘNG SẢN</strong></p>\r\n<p><strong>S&Agrave;N GIAO DỊCH THẾ GIỚI BẤT ĐỘNG SẢN&nbsp;</strong><br />Trụ sở 111 -113 Nguyễn Hữu Cảnh Phường 22 Quận B&igrave;nh Thạnh &ndash;TP HCM<br />Tel: (84.8) 35 123 999&ndash; Hotline: 1900 7191<br />Fax: (84.8) 38 99 49 79<br />Email: info@thegioibatdongsan.com.vn<br />Website: www.thegioibatdongsan.com.vn</p>\r\n<p><strong>C&aacute;c Chi Nh&aacute;nh tại TPHCM:</strong></p>\r\n<p>196 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.<br />133 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.<br />190 Nguyễn Hữu Cảnh, Phường 22, Quận B&igrave;nh Thạnh, Tp. Hồ Ch&iacute; Minh.</p>\r\n<p><strong>Chi Nh&aacute;nh tại H&agrave; Nội:</strong></p>\r\n<p>Tầng 7 T&ograve;a nh&agrave; An &amp; Huy, 184 Nguyễn Tu&acirc;n, Q. Thanh Xu&acirc;n, H&agrave; Nội.</p>',1429085385);
 
 /*Table structure for table `topic_architecture` */
+
+DROP TABLE IF EXISTS `topic_architecture`;
 
 CREATE TABLE `topic_architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -388,6 +373,8 @@ insert  into `topic_architecture`(`id`,`title`,`alias`,`image`,`desc`,`created`)
 
 /*Table structure for table `topic_decorate` */
 
+DROP TABLE IF EXISTS `topic_decorate`;
+
 CREATE TABLE `topic_decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de Noi-Ngoai that',
@@ -403,6 +390,8 @@ CREATE TABLE `topic_decorate` (
 insert  into `topic_decorate`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Sofa phòng khách','sofa-phong-khach','260','Các bài trí sofa phòng khách',1426760071);
 
 /*Table structure for table `topic_news` */
+
+DROP TABLE IF EXISTS `topic_news`;
 
 CREATE TABLE `topic_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -420,6 +409,8 @@ insert  into `topic_news`(`id`,`title`,`alias`,`desc`,`image`,`created`) values 
 
 /*Table structure for table `topic_pt` */
 
+DROP TABLE IF EXISTS `topic_pt`;
+
 CREATE TABLE `topic_pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet phong thuy',
@@ -434,28 +425,9 @@ CREATE TABLE `topic_pt` (
 
 insert  into `topic_pt`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Phong thủy và những điều kiêng kỵ','phong-thuy-va-nhung-dieu-kieng-ky','260','Phong thủy là một phần rất quan trọng trong việc xây dựng nhà cửa, vì vậy chúng ta hãy cùng tìm hiểu những điều không nên làm khi xây dựng.',1426752320);
 
-/*Table structure for table `user` */
-
-CREATE TABLE `user` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(120) NOT NULL,
-  `full_name` varchar(120) DEFAULT NULL,
-  `email` varchar(120) NOT NULL,
-  `phone` varchar(120) DEFAULT NULL,
-  `address` varchar(120) NOT NULL,
-  `cmnd` varchar(120) DEFAULT NULL,
-  `age` int(2) DEFAULT NULL,
-  `status` enum('ENABLE','DISABLE','PENDING','DELETE','LOCK') NOT NULL DEFAULT 'PENDING',
-  `time_create` datetime NOT NULL,
-  `manager_id` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `manager_id` (`manager_id`),
-  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-/*Data for the table `user` */
-
 /*Table structure for table `ward` */
+
+DROP TABLE IF EXISTS `ward`;
 
 CREATE TABLE `ward` (
   `wardid` varchar(5) NOT NULL,

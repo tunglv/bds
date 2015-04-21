@@ -67,12 +67,56 @@
                     </div>
                     <small class="desc">Name should be 255 chars <span id="name_char_count"></span></small>
                 </div>
+
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'location', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'project_id', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'location',array('maxlength'=> 1000, 'style' => 'height: 80px;width: 625px;', 'class' => 'input-large')); ?>
-                        <?php echo $form->error($model,'location', array('class' => 'help-inline error'));?>
+                        <?php echo $form->dropDownList($model,'project_id', Project::model()->getData(), array('empty'=>'--Dự án--')); ?>
+                        <?php echo $form->textField($model,'project_name',array('maxlength'=> 500, 'style' => 'display: none;', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'project_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'address', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'address',array('maxlength'=> 500, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'address', array('class' => 'help-inline error'));?>
                      </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'province_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'province_id', Province::model()->getData(), array('empty'=>'--Tỉnh/Tp--')); ?>
+                        <?php echo $form->textField($model,'province_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'province_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'district_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'district_id', District::model()->getData($model->province_id), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'district_id', array(), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'district_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'district_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'ward_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'ward_id', Ward::model()->getData($model->district_id), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'ward_id', array(), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'ward_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'ward_id', array('class' => 'help-inline error'));?>
+                    </div>
                 </div>
 <!--                <div class="par control-group">-->
 <!--                    --><?php //echo $form->labelEx($model,'made_by', array('class' => 'control-label')); ?>
@@ -93,7 +137,7 @@
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'price', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textField($model,'price',array('maxlength'=>255, 'class' => 'input-small')); ?>
+                        <?php echo $form->textField($model,'price',array('maxlength'=>255, 'class' => 'input-small input numeric format')); ?>
                         <?php echo $form->textField($model,'price_type',array('maxlength'=>255, 'class' => 'input-small', 'placeholder' => 'vd: VND')); ?>
                         <?php echo $form->error($model,'price', array('class' => 'help-inline error'));?>
                     </div>
@@ -108,19 +152,61 @@
                     <small class="desc">Number should be 255 chars <span id="price_char_count"></span></small>
                 </div>
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'floor', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'floor',array('maxlength'=>255, 'class' => 'input-small input numeric')); ?>
+                       <?php echo $form->error($model,'floor', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'room', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'room',array('maxlength'=>255, 'class' => 'input-small input numeric')); ?>
+                       <?php echo $form->error($model,'room', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'befor', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'befor',array('maxlength'=>255, 'class' => 'input-small input numeric')); ?>
+                       <?php echo $form->error($model,'befor', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'way', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'way',array('maxlength'=>255, 'class' => 'input-small input numeric')); ?>
+                       <?php echo $form->error($model,'way', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'toilet', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'toilet',array('maxlength'=>255, 'class' => 'input-small input numeric')); ?>
+                       <?php echo $form->error($model,'toilet', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'furniture', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textArea($model,'furniture',array('maxlength'=> 255, 'style' => 'height: 80px;width: 625px;', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'furniture', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'status', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->dropDownList($model,'status', BdsSale::model()->getStatusData()); ?>
                         <?php echo $form->error($model,'status', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
-<!--                <div class="par control-group">-->
-<!--                    --><?php //echo $form->labelEx($model,'catagory', array('class' => 'control-label')); ?>
-<!--                    <div class="controls">-->
-<!--                        --><?php //echo $form->dropDownList($model,'catagory', Catagory::model()->getData()); ?>
-<!--                        --><?php //echo $form->error($model,'type', array('class' => 'help-inline error'));?>
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'type', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'type', BdsSale::model()->getTypeData()); ?>
+                        <?php echo $form->error($model,'type', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
                 <div class="row-fluid">
                     <div class="par control-group">
                         <label class="control-label">Ảnh nhà, đất</label>
@@ -298,10 +384,42 @@
                     </div>
                 </div>
 
+
+
                 <div class="par control-group">
                     <?php echo $form->labelEx($model,'content', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->textArea($model,'content',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                    </div>
+                </div>
+
+                <h4 class="widgettitle">Thông tin người liên lạc</h4>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'name_contact', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'name_contact',array('maxlength'=>255, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'name_contact', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'address_contact', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'address_contact',array('maxlength'=>255, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'address_contact', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'phone_contact', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'phone_contact',array('maxlength'=>255, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'phone_contact', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'email_contact', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textField($model,'email_contact',array('maxlength'=>255, 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'email_contact', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
 
@@ -317,10 +435,56 @@
     $('#BdsSale_title').bind('blur keyup', function() {
         $('#BdsSale_alias').val($(this).val().toAlias().replaceAll(' ', '-').toLowerCase());
     });
+    $("#BdsSale_province_id").on('change', function(){
+        $('#BdsSale_province_name').val($(this).find(":selected").text());
+        $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Quận/huyện--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#BdsSale_district_id').html(html);
+            });
+    });
+    $("#BdsSale_district_id").on('change', function(){
+        $('#BdsSale_district_name').val($(this).find(":selected").text());
+        $.post( "/admin/saler/getWard", { districtid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Phường/Xã--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#BdsSale_ward_id').html(html);
+            });
+    });
+
+    $("#BdsSale_project_id").on('change', function(){
+        $('#BdsSale_project_name').val($(this).find(":selected").text());
+    });
 //
     $("#BdsSale_title").keyup(function(){
         $('#name_char_count').text($(this).val().length);
     }).keyup();
+
+    function format(number, n, x) {
+        var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+        return number.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&.');
+    };
+
+    $("#BdsSale_ward_id").on('change', function() {
+        $('#BdsSale_ward_name').val($(this).find(":selected").text());
+    });
+
+    $(function() {
+        var price = $('#BdsSale_price').val();
+
+        if(price) $('#BdsSale_price').val(format(parseInt(price)));
+    });
+    //
 //
 //    $("#Product_model").keyup(function(){
 //        $('#model_char_count').text($(this).val().length);

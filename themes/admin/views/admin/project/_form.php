@@ -76,6 +76,41 @@
                 </div>
 
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'province_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'province_id', Province::model()->getData(), array('empty'=>'--Tỉnh/Tp--')); ?>
+                        <?php echo $form->textField($model,'province_name',array('maxlength'=>255, 'style'=>'display: none','class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'province_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'district_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'district_id', District::model()->getData($model->province_id), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'district_id', array(), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'district_name',array('maxlength'=>255, 'style'=>'display: none', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'district_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'ward_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php if($this->action->id == 'update'):?>
+                            <?php echo $form->dropDownList($model,'ward_id', Ward::model()->getData($model->district_id), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php else:?>
+                            <?php echo $form->dropDownList($model,'ward_id', array(), array('empty'=>'--Phường/Xã--')); ?>
+                        <?php endif;?>
+                        <?php echo $form->textField($model,'ward_name',array('maxlength'=>255, 'style'=>'display: none', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'ward_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'mobile', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->textField($model,'mobile',array('maxlength'=>15, 'class' => 'input-large')); ?>
@@ -276,7 +311,41 @@
         </div>
 </div>
 <script>
-    $("#Pt_title").keyup(function(){
+    $("#Project_title").keyup(function(){
         $('#name_char_count').text($(this).val().length);
     }).keyup();
+    $("#Project_province_id").on('change', function(){
+
+        $('#Project_province_name').val($(this).find(":selected").text());
+
+        $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Quận/huyện--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#Project_district_id').html(html);
+            });
+    });
+    $("#Project_district_id").on('change', function(){
+
+        $('#Project_district_name').val($(this).find(":selected").text());
+
+        $.post( "/admin/saler/getWard", { districtid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Phường/Xã--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#Project_ward_id').html(html);
+            });
+    });
+
+    $("#Project_ward_id").on('change', function() {
+        $('#Project_ward_name').val($(this).find(":selected").text());
+    });
 </script>
