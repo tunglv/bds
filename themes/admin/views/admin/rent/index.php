@@ -50,7 +50,33 @@
         array(
             'name' => 'price',
             'type'      =>  'raw',
-            'value' => '$data->price.$data->price_type'
+            'value' => 'number_format($data->price, 0, \'\', \'.\')." ".$data->price_type'
+        ),
+        array(
+            'name' => 'project_name',
+            'type'      =>  'raw',
+            'value' => '$data->project_name',
+        ),
+        array(
+            'name' => 'area',
+            'type'      =>  'raw',
+            'value' => '$data->area',
+        ),
+        array(
+            'name' => 'code',
+            'type'      =>  'raw',
+            'value' => '$data->code',
+        ),
+        array(
+            'name' => 'type',
+            'type'      =>  'raw',
+            'value' => '$data->getTypeLabel()',
+            'filter' => $model->typeData
+        ),
+        array(
+            'name' => 'address',
+            'type'      =>  'raw',
+            'value' => '$data->address." - ".$data->district_name." - ".$data->province_name',
         ),
         array(
             'name' => 'created',

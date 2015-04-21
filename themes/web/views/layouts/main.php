@@ -50,26 +50,23 @@
 <body class="bg-site">
 
 <!--Home Master-->
-<form method="post" action="http://batdongsan.com.vn/HandlerWeb/redirect.ashx?IsMainSearch=true" id="form1"
-      enctype="multipart/form-data">
-    <div class="aspNetHidden">
-        <input type="hidden" name="DomainStatistic" id="DomainStatistic" value="http://statistic.batdongsan.com.vn">
-        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWRk4shcF5D9qb0bDJxwIsVlms+TO5A=">
-    </div>
+<div class="aspNetHidden">
+    <input type="hidden" name="DomainStatistic" id="DomainStatistic" value="http://statistic.batdongsan.com.vn">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWRk4shcF5D9qb0bDJxwIsVlms+TO5A=">
+</div>
 
 
-    <script type="text/javascript">
-        //<![CDATA[
-        __bannerContext = {"cateId": null, "pageId": 189, "currentPage": 0, "cityCode": null, "districtId": null};//]]>
-    </script>
+<script type="text/javascript">
+    //<![CDATA[
+    __bannerContext = {"cateId": null, "pageId": 189, "currentPage": 0, "cityCode": null, "districtId": null};//]]>
+</script>
 
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/banner.js"></script>
-    <div class="site-center">
-            <?php $this->renderPartial('//common/header', array('catagory'=>$this->catagory)); ?>
-            <?php echo $content ?>
-            <?php $this->renderPartial('//common/footer'); ?>
-    </div>
-</form>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/banner.js"></script>
+<div class="site-center">
+        <?php $this->renderPartial('//common/header', array('catagory'=>$this->catagory)); ?>
+        <?php echo $content ?>
+        <?php $this->renderPartial('//common/footer'); ?>
+</div>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.bt.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/common.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/common.validator.js"></script>

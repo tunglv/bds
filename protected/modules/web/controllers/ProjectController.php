@@ -17,7 +17,7 @@ class ProjectController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'detail', 'group'),
+                'actions' => array('error', 'list', 'detail', 'group', 'result'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -41,6 +41,36 @@ class ProjectController extends WebController {
                 $this->render($view, $error);
             }
         }
+    }
+
+    public function actionResult(){
+        $type = Yii::app()->request->getPost('choise-type');
+        $provincce = Yii::app()->request->getPost('choise-city');
+        $district = Yii::app()->request->getPost('choise-district');
+        $ward = Yii::app()->request->getPost('choise-ward');
+
+        $this->layout = '//layouts/main';
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', $type);
+        if($provincce) $criteria->compare('t.province_id', $provincce);
+        if($district) $criteria->compare('t.district_id', $district);
+        if($ward) $criteria->compare('t.ward_id', $ward);
+        $criteria->compare('t.type', $type);
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('Project', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('list', array('dataProvider'=>$dataProvider));
     }
 
     public function actionGroup(){

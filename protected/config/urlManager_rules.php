@@ -42,6 +42,7 @@ $array_base = array(
 
     '/du-an' => '/web/project/group',
     '/du-an/<alias:[\w\-]+>' => '/web/project/list',
+    '/ket-qua-tim-kiem-du-an' => '/web/project/result',
     '/du-an/<type:[\w\-]+>/<alias:[\w\-]+>-<id:\d+>' => '/web/project/detail',
 
     '/nha-dat-ban/<typeOf:[\w\-]+>'=>'/web/sale/list',

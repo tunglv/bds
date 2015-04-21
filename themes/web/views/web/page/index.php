@@ -743,12 +743,11 @@
         </div>
     </div>
     <div class="rc12">
-        <div class="divIndividual" style="height: 790px">
-            <div class="childIndividual notIndividualActive" style="left: 200px;">
+        <div class="divIndividual">
+            <div class="childIndividual individualActive">
                 <div>
                     <?php foreach($saler as $_key => $_val):?>
-                        <?php if($_key < 5):?>
-                            <div class="vip-row" style="height: 105px; overflow: hidden">
+                            <div class="vip-row" style="overflow: hidden">
                                 <div class="avatar">
                                     <a href="<?php echo $_val->url?>" rel="nofollow">
                                         <img class="img" style="float: left;" src="<?php echo $_val->getImageUrl()?>">
@@ -758,26 +757,6 @@
                                     <?php echo $_val->name?>
                                 </a>
                             </div>
-                        <?php endif;?>
-                    <?php endforeach;?>
-                </div>
-            </div>
-            <div class="childIndividual individualActive" style="left: 0px;">
-                <div id="repIndividualSecond">
-                    <?php foreach($saler as $_key => $_val):?>
-                        <?php if($_key > 4 && $_key < 10):?>
-                            <div class="vip-row" style="height: 105px; overflow: hidden">
-                                <div class="avatar">
-                                    <a href="<?php echo  $_val->url?>" rel="nofollow">
-                                        <img class="img" style="float: left;" src="<?php echo $_val->getImageUrl()?>">
-                                    </a>
-                                </div>
-                                <a class="link colorboldblue" href="<?php echo $_val->url?>" rel="nofollow"><?php echo $_val->name?></a>
-
-                                <div class="fone"><?php echo $_val->mobile?></div>
-                                <?php echo $_val->area?>
-                            </div>
-                        <?php endif;?>
                     <?php endforeach;?>
                 </div>
             </div>
@@ -792,17 +771,17 @@
         line-height: 20px;
     }
 
-    .divIndividual {
-        position: relative;
-        overflow: hidden;
-        width: 203px;
-    }
+    /*.divIndividual {*/
+        /*position: relative;*/
+        /*overflow: hidden;*/
+        /*width: 203px;*/
+    /*}*/
 
-    .divIndividual div.childIndividual {
-        position: absolute;
-        width: 203px;
-        top: 0;
-    }
+    /*.divIndividual div.childIndividual {*/
+        /*position: absolute;*/
+        /*width: 203px;*/
+        /*top: 0;*/
+    /*}*/
 </style>
 
 <script>
@@ -873,32 +852,32 @@
         + '</div>');
     }
 
-    $(function () {
-        var individualJsons = [
-            <?php foreach($saler as $_key => $_val):?>
-            <?php if($_key > 9):?>
-                {
-                    "Url": "<?php echo $_val->url?>",
-                    "Avatar": "<?php echo $_val->getImageUrl()?>",
-                    "Name": "<?php echo $_val->name?>",
-                    "Mobile": "<?php echo $_val->mobile?>",
-                    "ShortDesc": "<?php echo $_val->area?>"
-                },
-            <?php endif;?>
-            <?php endforeach?>
-        ];
-        RenderIndividuals(individualJsons);
-        SetInterValIndividual();
-        if ($('.divIndividual .childIndividual').length > 1) {
-            $('.divIndividual').mouseover(function () {
-                ClearInterValIndividual();
-            });
-
-            $('.divIndividual').mouseout(function () {
-                SetInterValIndividual();
-            });
-        }
-    });
+//    $(function () {
+//        var individualJsons = [
+//            <?php //foreach($saler as $_key => $_val):?>
+<!--            --><?php //if($_key > 9):?>
+//                {
+//                    "Url": "<?php //echo $_val->url?>//",
+//                    "Avatar": "<?php //echo $_val->getImageUrl()?>//",
+//                    "Name": "<?php //echo $_val->name?>//",
+//                    "Mobile": "<?php //echo $_val->mobile?>//",
+//                    "ShortDesc": "<?php //echo $_val->area?>//"
+//                },
+//            <?php //endif;?>
+<!--            --><?php //endforeach?>
+//        ];
+//        RenderIndividuals(individualJsons);
+//        SetInterValIndividual();
+//        if ($('.divIndividual .childIndividual').length > 1) {
+//            $('.divIndividual').mouseover(function () {
+//                ClearInterValIndividual();
+//            });
+//
+//            $('.divIndividual').mouseout(function () {
+//                SetInterValIndividual();
+//            });
+//        }
+//    });
 </script>
 
 
@@ -934,18 +913,6 @@
                 nhà đầu tư hay gia đình cần nhà để ở? Batdongsan.com.vn đều có thể giúp bạn. Tìm
                 tin bán nhà đất hoặc cho thuê nhà đất mới nhất bằng cách sử dụng công cụ tìm kiếm
                 hoặc các đường link ngay trên trang chủ.
-            </div>
-        </div>
-        <div id="BDS-set">
-            <div class="gotop">
-                <a href="http://batdongsan.com.vn/#" rel="nofollow">Lên đầu trang</a>&nbsp;
-                <!--<span class="icon harr">&nbsp;</span>--></div>
-            <div>
-                <a id="set-home" href="javascript:setHomepage()" rel="nofollow">
-                    <img alt="set homepage" onmouseout="this.src=&#39;/Images/sethome.jpg&#39;"
-                         onmouseover="this.src=&#39;/Images/sethome2.jpg&#39;"
-                         src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/sethome.jpg">
-                </a>
             </div>
         </div>
     </div>

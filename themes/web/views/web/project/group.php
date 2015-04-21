@@ -1,4 +1,4 @@
-<div id="MainContent"></div>
+<div id="MainContent" xmlns="http://www.w3.org/1999/html"></div>
 <div class="parent-main-left">
 <!-- begin breakcrum-->
 
@@ -372,136 +372,59 @@
         </div>
     </div>
     <div id="ctl30_BodyContainer" class="bor_box">
-
+        <form action="<?php echo Yii::app()->createUrl('/web/project/result')?>" method="POST">
         <div>
             <div class="pad" id="searchcp">
                 <div class="t_gr">
                     Tìm kiếm theo lĩnh vực
                 </div>
                 <div id="divCategory" class="searchrow advance-select-box" style="margin:0px;">
-            <span class="select-text">
-                <span class="select-text-content" style="width: 163px;">Khu dân cư</span>
-            </span>
-                    <input type="hidden" name="ddlCategoriess" id="hdCategory" value="148">
-
-                    <div id="divCatagoryOptions"
-                         class="advance-select-options advance-options advance-select-options-2">
-                        <ul class="advance-options" style="min-width: 188px;">
-
-                            <li vl="148" class="advance-options" style="min-width: 156px;">Khu dân cư</li>
-                            <li vl="150" class="advance-options" style="min-width: 156px;">Khu đô thị mới</li>
-                            <li vl="155" class="advance-options" style="min-width: 156px;">Khu căn hộ</li>
-                            <li vl="156" class="advance-options" style="min-width: 156px;">Cao ốc văn phòng</li>
-                            <li vl="157" class="advance-options" style="min-width: 156px;">Khu thương mại dịch vụ</li>
-                            <li vl="158" class="advance-options" style="min-width: 156px;">Khu du lịch- nghỉ dưỡng</li>
-                            <li vl="159" class="advance-options" style="min-width: 156px;">Khu công nghiệp</li>
-                            <li vl="160" class="advance-options" style="min-width: 156px;">Khu phức hợp</li>
-                            <li vl="161" class="advance-options" style="min-width: 156px;">Dự án khác</li>
-                        </ul>
-                    </div>
+                    <select name="choise-type" class="advance-options" style="min-width: 188px;padding: 4px;">
+                        <option value="1" class="advance-options" style="min-width: 156px;">Cao ốc văn phòng</option>
+                        <option value="2" class="advance-options" style="min-width: 156px;">Khu căn hộ</option>
+                        <option value="3" class="advance-options" style="min-width: 156px;">Khu đô thị mới</option>
+                        <option value="4" class="advance-options" style="min-width: 156px;">Khu thương mại dịch vụ</option>
+                        <option value="5" class="advance-options" style="min-width: 156px;">Khu phức hợp</option>
+                        <option value="6" class="advance-options" style="min-width: 156px;">Khu dân cư</option>
+                        <option value="7" class="advance-options" style="min-width: 156px;">Khu du lịch- nghỉ dưỡng</option>
+                        <option value="8" class="advance-options" style="min-width: 156px;">Khu công nghiệp</option>
+                        <option value="9" class="advance-options" style="min-width: 156px;">Dự án khác</option>
+                    </select>
                 </div>
                 <div class="t_gr">
                     Tỉnh/ Thành phố
                 </div>
                 <div id="divCity" class="searchrow advance-select-box" style="margin:0px;">
-            <span class="select-text">
-                <span class="select-text-content" style="width: 163px;">Chọn tỉnh thành</span>
-            </span>
-                    <input type="hidden" name="ddlCities" id="hdCity" value="CN">
-
-                    <div id="divCityOptions" class="advance-select-options advance-options advance-select-options-2">
-                        <ul class="advance-options" style="min-width: 188px;">
-
-                            <li vl="CN" class="advance-options current" style="min-width: 156px;">Chọn tỉnh thành</li>
-                            <li vl="SG" class="advance-options" style="min-width: 156px;">Hồ Chí Minh</li>
-                            <li vl="HN" class="advance-options" style="min-width: 156px;">Hà Nội</li>
-                            <li vl="BD" class="advance-options" style="min-width: 156px;">Bình Dương</li>
-                            <li vl="DDN" class="advance-options" style="min-width: 156px;">Đà Nẵng</li>
-                            <li vl="HP" class="advance-options" style="min-width: 156px;">Hải Phòng</li>
-                            <li vl="LA" class="advance-options" style="min-width: 156px;">Long An</li>
-                            <li vl="VT" class="advance-options" style="min-width: 156px;">Bà Rịa Vũng Tàu</li>
-                            <li vl="AG" class="advance-options" style="min-width: 156px;">An Giang</li>
-                            <li vl="BG" class="advance-options" style="min-width: 156px;">Bắc Giang</li>
-                            <li vl="BK" class="advance-options" style="min-width: 156px;">Bắc Kạn</li>
-                            <li vl="BL" class="advance-options" style="min-width: 156px;">Bạc Liêu</li>
-                            <li vl="BN" class="advance-options" style="min-width: 156px;">Bắc Ninh</li>
-                            <li vl="BTR" class="advance-options" style="min-width: 156px;">Bến Tre</li>
-                            <li vl="BDD" class="advance-options" style="min-width: 156px;">Bình Định</li>
-                            <li vl="BP" class="advance-options" style="min-width: 156px;">Bình Phước</li>
-                            <li vl="BTH" class="advance-options" style="min-width: 156px;">Bình Thuận</li>
-                            <li vl="CM" class="advance-options" style="min-width: 156px;">Cà Mau</li>
-                            <li vl="CT" class="advance-options" style="min-width: 156px;">Cần Thơ</li>
-                            <li vl="CB" class="advance-options" style="min-width: 156px;">Cao Bằng</li>
-                            <li vl="DDL" class="advance-options" style="min-width: 156px;">Đắk Lắk</li>
-                            <li vl="DNO" class="advance-options" style="min-width: 156px;">Đắk Nông</li>
-                            <li vl="DDB" class="advance-options" style="min-width: 156px;">Điện Biên</li>
-                            <li vl="DNA" class="advance-options" style="min-width: 156px;">Đồng Nai</li>
-                            <li vl="DDT" class="advance-options" style="min-width: 156px;">Đồng Tháp</li>
-                            <li vl="GL" class="advance-options" style="min-width: 156px;">Gia Lai</li>
-                            <li vl="HG" class="advance-options" style="min-width: 156px;">Hà Giang</li>
-                            <li vl="HNA" class="advance-options" style="min-width: 156px;">Hà Nam</li>
-                            <li vl="HT" class="advance-options" style="min-width: 156px;">Hà Tĩnh</li>
-                            <li vl="HD" class="advance-options" style="min-width: 156px;">Hải Dương</li>
-                            <li vl="HGI" class="advance-options" style="min-width: 156px;">Hậu Giang</li>
-                            <li vl="HB" class="advance-options" style="min-width: 156px;">Hòa Bình</li>
-                            <li vl="HY" class="advance-options" style="min-width: 156px;">Hưng Yên</li>
-                            <li vl="KH" class="advance-options" style="min-width: 156px;">Khánh Hòa</li>
-                            <li vl="KG" class="advance-options" style="min-width: 156px;">Kiên Giang</li>
-                            <li vl="KT" class="advance-options" style="min-width: 156px;">Kon Tum</li>
-                            <li vl="LCH" class="advance-options" style="min-width: 156px;">Lai Châu</li>
-                            <li vl="LDD" class="advance-options" style="min-width: 156px;">Lâm Đồng</li>
-                            <li vl="LS" class="advance-options" style="min-width: 156px;">Lạng Sơn</li>
-                            <li vl="LCA" class="advance-options" style="min-width: 156px;">Lào Cai</li>
-                            <li vl="NDD" class="advance-options" style="min-width: 156px;">Nam Định</li>
-                            <li vl="NA" class="advance-options" style="min-width: 156px;">Nghệ An</li>
-                            <li vl="NB" class="advance-options" style="min-width: 156px;">Ninh Bình</li>
-                            <li vl="NT" class="advance-options" style="min-width: 156px;">Ninh Thuận</li>
-                            <li vl="PT" class="advance-options" style="min-width: 156px;">Phú Thọ</li>
-                            <li vl="PY" class="advance-options" style="min-width: 156px;">Phú Yên</li>
-                            <li vl="QB" class="advance-options" style="min-width: 156px;">Quảng Bình</li>
-                            <li vl="QNA" class="advance-options" style="min-width: 156px;">Quảng Nam</li>
-                            <li vl="QNG" class="advance-options" style="min-width: 156px;">Quảng Ngãi</li>
-                            <li vl="QNI" class="advance-options" style="min-width: 156px;">Quảng Ninh</li>
-                            <li vl="QT" class="advance-options" style="min-width: 156px;">Quảng Trị</li>
-                            <li vl="ST" class="advance-options" style="min-width: 156px;">Sóc Trăng</li>
-                            <li vl="SL" class="advance-options" style="min-width: 156px;">Sơn La</li>
-                            <li vl="TNI" class="advance-options" style="min-width: 156px;">Tây Ninh</li>
-                            <li vl="TB" class="advance-options" style="min-width: 156px;">Thái Bình</li>
-                            <li vl="TN" class="advance-options" style="min-width: 156px;">Thái Nguyên</li>
-                            <li vl="TH" class="advance-options" style="min-width: 156px;">Thanh Hóa</li>
-                            <li vl="TTH" class="advance-options" style="min-width: 156px;">Thừa Thiên Huế</li>
-                            <li vl="TG" class="advance-options" style="min-width: 156px;">Tiền Giang</li>
-                            <li vl="TV" class="advance-options" style="min-width: 156px;">Trà Vinh</li>
-                            <li vl="TQ" class="advance-options" style="min-width: 156px;">Tuyên Quang</li>
-                            <li vl="VL" class="advance-options" style="min-width: 156px;">Vĩnh Long</li>
-                            <li vl="VP" class="advance-options" style="min-width: 156px;">Vĩnh Phúc</li>
-                            <li vl="YB" class="advance-options" style="min-width: 156px;">Yên Bái</li>
-                        </ul>
-                    </div>
+                    <select name="choise-city" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_province">
+                        <option value=""  class="advance-options current" style="min-width: 156px;">--Tỉnh/Tp--</option>
+                        <?php foreach(Province::model()->getAll() as $_key => $_val):?>
+                            <option value="<?php echo $_val->provinceid?>" class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                        <?php endforeach;?>
+                    </select>
                 </div>
                 <div class="t_gr">
                     Quận/ Huyện
                 </div>
                 <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
-            <span class="select-text">
-                <span class="select-text-content" style="width: 163px;">Chọn quận huyện</span>
-            </span>
-                    <input type="hidden" name="ddlDistricts" id="hdDistrict" value="0">
+                    <select name="choise-district" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>
+                    </select>
+                </div>
 
-                    <div id="divDistrictOptions"
-                         class="advance-select-options advance-options advance-select-options-2">
-                        <ul class="advance-options" style="min-width: 188px;">
-
-                            <li vl="0" class="advance-options current" style="min-width: 156px;">Chọn quận huyện</li>
-                        </ul>
-                    </div>
+                <div class="t_gr">
+                    Phường/Xã
+                </div>
+                <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
+                    <select name="choise-ward" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
+                    </select>
                 </div>
                 <div class="t_gr" style="text-align: center;">
-                    <input type="submit" name="ctl00$ctl30$ctl01$btnSearch" value="Tìm kiếm" id="ctl30_ctl01_btnSearch"
-                           class="searchbutton">
+                    <input type="submit" name="ctl00$ctl30$ctl01$btnSearch" value="Tìm kiếm" id="ctl30_ctl01_btnSearch" class="searchbutton">
                 </div>
             </div>
         </div>
+        </form>
         <style type="text/css">
             .searchbutton {
                 margin: 0 !important;
@@ -512,44 +435,70 @@
                 src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
         <script type="text/javascript">
 
-            var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
-                id: 'divCatagoryOptions',
-                hddValue: 'hdCategory'
-            });
-
-            var hdbCity = $('#divCity').AdvanceHiddenDropbox({
-                id: 'divCityOptions',
-                hddValue: 'hdCity'
-            });
-
-            var hdbDistrict = $('#divDistrict').AdvanceHiddenDropbox({
-                id: 'divDistrictOptions',
-                hddValue: 'hdDistrict'
-            });
-
-            $(function () {
-
-                hdbCity.BindChangeEvent({city: hdbCity, distr: hdbDistrict}, function (_scope) {
-
-                    var cityCode = _scope.city.GetValue();
-                    if (cityCode.length > 0) {
-                        $.get("/HandlerWeb/AddressHandler.ashx?type=district&code=" + cityCode, function (data) {
-                            if (data != null) {
-                                var _html = '';
-                                _html += '<li vl="0" class="advance-options">Chọn quận huyện</li>';
-
-                                $.each(data, function (index, item) {
-                                    _html += '<li vl="' + item.id + '" class="advance-options">' + item.name + '</li>';
-                                });
-
-                                _scope.distr.UpdateOptions(_html);
-                                _scope.distr.SetValue(0);
-                            }
+            $("#choise_province").on('change', function(){
+                $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
+                    .done(function( data ) {
+                        data = jQuery.parseJSON(data);
+                        var html = '';
+                        $.each(data, function( index, value ) {
+                            html += '<option value="'+index+'">'+value+'</option>';
                         });
-                    }
 
-                });
+                        $('#choise_district').html(html);
+                    });
             });
+
+            $("#choise_district").on('change', function(){
+                $.post( "/admin/saler/getWard", { districtid: $(this).val()})
+                    .done(function( data ) {
+                        data = jQuery.parseJSON(data);
+                        var html = '';
+                        $.each(data, function( index, value ) {
+                            html += '<option value="'+index+'">'+value+'</option>';
+                        });
+
+                        $('#choise_ward').html(html);
+                    });
+            });
+
+//            var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
+//                id: 'divCatagoryOptions',
+//                hddValue: 'hdCategory'
+//            });
+//
+//            var hdbCity = $('#divCity').AdvanceHiddenDropbox({
+//                id: 'divCityOptions',
+//                hddValue: 'hdCity'
+//            });
+//
+//            var hdbDistrict = $('#divDistrict').AdvanceHiddenDropbox({
+//                id: 'divDistrictOptions',
+//                hddValue: 'hdDistrict'
+//            });
+
+//            $(function () {
+//
+//                hdbCity.BindChangeEvent({city: hdbCity, distr: hdbDistrict}, function (_scope) {
+//
+//                    var cityCode = _scope.city.GetValue();
+//                    if (cityCode.length > 0) {
+//                        $.get("/HandlerWeb/AddressHandler.ashx?type=district&code=" + cityCode, function (data) {
+//                            if (data != null) {
+//                                var _html = '';
+//                                _html += '<li vl="0" class="advance-options">Chọn quận huyện</li>';
+//
+//                                $.each(data, function (index, item) {
+//                                    _html += '<li vl="' + item.id + '" class="advance-options">' + item.name + '</li>';
+//                                });
+//
+//                                _scope.distr.UpdateOptions(_html);
+//                                _scope.distr.SetValue(0);
+//                            }
+//                        });
+//                    }
+//
+//                });
+//            });
 
         </script>
     </div>

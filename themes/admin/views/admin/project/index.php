@@ -77,6 +77,7 @@
             'name' => 'type',
             'type'      =>  'raw',
             'value' => '$data->typeLabel',
+            'filter' => $model->typeData
         ),
         array(
             'name' => 'address',
