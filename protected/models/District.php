@@ -95,15 +95,15 @@ class District extends CActiveRecord
 		));
 	}
 
-    public function getAll($city_id = null, $cache = true){
+    public function getAll($provinceid = null){
         $criteria=new CDbCriteria;
-        $criteria->compare('city_id',$city_id);
-        $data = Districts::model()->findAll($criteria);
+        $criteria->compare('provinceid',$provinceid);
+        $data = District::model()->findAll($criteria);
         return $data;
     }
 
     public function getData($city_id = null){
-        return CHtml::listData($this->getAll($city_id), 'id', 'name');
+        return CHtml::listData($this->getAll($city_id), 'districtid', 'name');
     }
     public function getCityLabelList(){
         $html = NULL;

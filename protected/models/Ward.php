@@ -94,4 +94,27 @@ class Ward extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getAll($districtid = null){
+        $criteria=new CDbCriteria;
+        $criteria->compare('districtid',$districtid);
+        $data = Ward::model()->findAll($criteria);
+        return $data;
+    }
+
+    public function getData($city_id = null){
+        return CHtml::listData($this->getAll($city_id), 'wardid', 'name');
+    }
+    public function getDistrictLabelList(){
+        $html = NULL;
+        if($this->district){
+            $html = "<ul>";
+            foreach($this->district as $tags_news){
+                $html .= "<li>".$tags_news->name."</li>";
+            }
+            $html .= "</ul>";
+        }
+        return $html;
+
+    }
 }

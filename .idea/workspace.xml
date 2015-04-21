@@ -2,961 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49db7761-5566-4740-b1a3-20d35b3c04aa" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\10b83665\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\18267945\pager.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1af3b990\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1f4fabfd\highlight.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\1fc08b2d\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2a2c1d21\pager.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\arrow_collapse.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\arrow_expand.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\bullet_toggle_minus.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\bullet_toggle_plus.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\chronometer.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\close_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\panel-close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\panel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\2dbdb61\yii.debug.toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\css\ie.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\css\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\jquery.fancybox-1.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\fancybox\jquery.fancybox-1.3.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\jquery.tooltip-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\3ac5e4fb\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\css\ie.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\css\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\jquery.fancybox-1.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\fancybox\jquery.fancybox-1.3.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\jquery.tooltip-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\448e8002\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\45a8e926\pager.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\5eef0d39\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6787b104\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\css\ie.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\css\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\jquery.fancybox-1.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\fancybox\jquery.fancybox-1.3.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\jquery.tooltip-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\698b7063\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\6ab7dbf3\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\748a3958\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\7ccaa576\highlight.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\936ada09\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\css\ie.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\css\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\jquery.fancybox-1.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\fancybox\jquery.fancybox-1.3.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\jquery.tooltip-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\9a742467\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a3b57eb8\pager.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\a8f8ca19\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\aecde336\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\arrow_collapse.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\arrow_expand.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\bullet_toggle_minus.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\bullet_toggle_plus.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\chronometer.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\close_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\indicator.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\panel-close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\panel.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b4bdfe77\yii.debug.toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\css\ie.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\css\print.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\css\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_close.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_loading.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_nav_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_nav_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_e.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_n.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_ne.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_nw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_s.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_se.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_sw.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_shadow_w.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_title_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_title_main.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_title_over.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancy_title_right.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancybox-x.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancybox-y.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\fancybox.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\jquery.fancybox-1.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\fancybox\jquery.fancybox-1.3.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\jquery.tooltip-1.2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b95c0d4d\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\b978408c\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\detailview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\delete.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\jquery.yiigridview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\update.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\gridview\view.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\listview\down.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\listview\jquery.yiilistview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\listview\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\listview\styles.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\d056b1cb\listview\up.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\dcb9f334\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\e19e5443\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\autocomplete\indicator.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\autocomplete\jquery.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.ajaxqueue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.ba-bbq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.ba-bbq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.bgiframe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.history.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.maskedinput.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.maskedinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.multifile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.rating.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.treeview.async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.treeview.edit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.yiiactiveform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jquery.yiitab.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\css\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\js\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\jui\js\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\punycode.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\punycode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\rating\delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\rating\jquery.rating.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\rating\star.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-black-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-black.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-famfamfam-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-famfamfam.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-gray-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-red-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\images\treeview-red.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\treeview\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\eca926ff\yiitab\jquery.yiitab.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\f27c2c55\pager.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\server\bds\assets\f36c5a88\pager.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/web/controllers/PageController.php" afterPath="$PROJECT_DIR$/protected/modules/web/controllers/PageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/bds.sql" afterPath="$PROJECT_DIR$/db/bds.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/web/views/web/page/index.php" afterPath="$PROJECT_DIR$/themes/web/views/web/page/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/urlManager_rules.php" afterPath="$PROJECT_DIR$/protected/config/urlManager_rules.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/cache/8a5e16bbcf1717a7b9358d421eb75abd.bin" afterPath="$PROJECT_DIR$/protected/runtime/cache/8a5e16bbcf1717a7b9358d421eb75abd.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/District.php" afterPath="$PROJECT_DIR$/protected/models/District.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Province.php" afterPath="$PROJECT_DIR$/protected/models/Province.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Saler.php" afterPath="$PROJECT_DIR$/protected/models/Saler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Ward.php" afterPath="$PROJECT_DIR$/protected/models/Ward.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php" afterPath="$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="meohay.iws" />
@@ -984,137 +36,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/web/controllers/PageController.php">
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="1530" max-vertical-offset="2550">
-              <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.6022167" vertical-offset="2095" max-vertical-offset="5100">
+              <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/web/controllers/NewsController.php">
+      <file leaf-file-name="SalerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="816" max-vertical-offset="4352">
-              <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="4352">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/web/views/web/page/index.php">
+      <file leaf-file-name="Ward.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Ward.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39891696" vertical-offset="12750" max-vertical-offset="15419">
-              <caret line="814" column="30" selection-start-line="814" selection-start-column="30" selection-end-line="814" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="tag#li#0;tag#ul#0;tag#div#0;tag#div#0;tag#div#1" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#2;tag#div#1" expanded="false" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#7;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#9;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-                <marker date="1429415656365" expanded="false" signature="28485:28510" placeholder="..." />
-                <marker date="1429415656365" expanded="true" signature="41147:41178" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/web/views/common/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.192307" vertical-offset="1628" max-vertical-offset="2210">
-              <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1287" max-vertical-offset="2125">
+              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/News.php">
+      <file leaf-file-name="Province.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Province.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.346153" vertical-offset="2087" max-vertical-offset="3128">
-              <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="170" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="1785">
+              <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="params.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/config/params.php">
+      <file leaf-file-name="District.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/District.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="20.26923" vertical-offset="918" max-vertical-offset="2890">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1287" max-vertical-offset="2125">
+              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BdsSale.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/BdsSale.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3022" max-vertical-offset="4114">
+              <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -1133,24 +109,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Decorate.php" />
-        <option value="$PROJECT_DIR$/themes/web/views/web/architecture/detail.php" />
-        <option value="$PROJECT_DIR$/themes/web/views/web/architecture/_right_content.php" />
         <option value="$PROJECT_DIR$/protected/models/Architecture.php" />
         <option value="$PROJECT_DIR$/protected/modules/web/controllers/ArchitectureController.php" />
         <option value="$PROJECT_DIR$/protected/modules/web/controllers/DecorateController.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/decorate/group.php" />
         <option value="$PROJECT_DIR$/themes/admin/views/admin/saler/index.php" />
         <option value="$PROJECT_DIR$/themes/admin/views/admin/saler/_layout.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/sale/_right_content.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/saler/list.php" />
-        <option value="$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php" />
         <option value="$PROJECT_DIR$/protected/modules/web/controllers/SalerController.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/saler/detail.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/saler/_right_content.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/news/_item_view.php" />
-        <option value="$PROJECT_DIR$/protected/models/Saler.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/saler/_item_view.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/themes/admin/views/common/left.php" />
@@ -1184,6 +154,12 @@
         <option value="$PROJECT_DIR$/protected/modules/web/controllers/PageController.php" />
         <option value="$PROJECT_DIR$/themes/web/views/web/page/index.php" />
         <option value="$USER_HOME$/Desktop/db.php" />
+        <option value="$PROJECT_DIR$/protected/models/Saler.php" />
+        <option value="$PROJECT_DIR$/protected/models/Province.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php" />
+        <option value="$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php" />
+        <option value="$PROJECT_DIR$/protected/models/Ward.php" />
+        <option value="$PROJECT_DIR$/protected/models/District.php" />
       </list>
     </option>
   </component>
@@ -1191,8 +167,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1292" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1252,18 +228,6 @@
               <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1279,7 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1301,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1309,7 +273,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1327,7 +295,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sale" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1342,6 +322,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meohay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1422,6 +432,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meohay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1608,7 +648,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1292" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1617,20 +657,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35139093" sideWeight="0.54083204" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36282468" sideWeight="0.54083204" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35139093" sideWeight="0.45762712" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40677965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1663,10 +703,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/models/Saler.php">
+    <entry file="file://$PROJECT_DIR$/themes/web/views/common/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="3230">
-          <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="2210">
+          <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2087" max-vertical-offset="3128">
+          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="170" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2890">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1688,13 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5248485" vertical-offset="0" max-vertical-offset="1887">
           <caret line="74" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1153846" vertical-offset="1636" max-vertical-offset="4080">
-          <caret line="101" column="72" selection-start-line="0" selection-start-column="0" selection-end-line="234" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1762,13 +809,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/images.sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29411766" vertical-offset="85" max-vertical-offset="663">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/sale/index.php">
@@ -1783,23 +830,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3029" max-vertical-offset="7803">
           <caret line="214" column="29" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/sale/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4329897" vertical-offset="751" max-vertical-offset="5746">
-          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/sale/2/122/5531d56c10dc2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/sale/2/122/5531d56c2790f.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/web/views/web/sale/_item_view.php">
@@ -1855,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53264606" vertical-offset="9125" max-vertical-offset="9707">
           <caret line="556" column="105" selection-start-line="556" selection-start-column="105" selection-end-line="556" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1870,11 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26554623" vertical-offset="709" max-vertical-offset="1479">
           <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
-          <folding>
-            <element signature="n#actionList#0;n#SaleController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDetail#0;n#SaleController#0;n#!!top" expanded="false" />
-            <element signature="n#_getSameProject#0;n#SaleController#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1882,15 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/BdsSale.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1135" max-vertical-offset="4114">
-          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1898,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="9690">
           <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1906,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.2731957" vertical-offset="4233" max-vertical-offset="29257">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1914,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.56013745" vertical-offset="1873" max-vertical-offset="2822">
           <caret line="91" column="52" selection-start-line="91" selection-start-column="49" selection-end-line="91" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1922,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4669052" vertical-offset="132" max-vertical-offset="2499">
           <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1930,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40250447" vertical-offset="2801" max-vertical-offset="3995">
           <caret line="178" column="55" selection-start-line="178" selection-start-column="55" selection-end-line="178" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1938,53 +948,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../banner/ban_masteri/masteri.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.148148" vertical-offset="2162" max-vertical-offset="3655">
-          <caret line="134" column="90" selection-start-line="134" selection-start-column="90" selection-end-line="134" selection-end-column="90" />
-          <folding>
-            <marker date="1429407710987" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429407710987" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429407710987" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429407710987" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429407710987" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../corejs/new/mobile/core_mobile.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40301317" vertical-offset="25510" max-vertical-offset="63954">
-          <caret line="1488" column="76" selection-start-line="1488" selection-start-column="76" selection-end-line="1488" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../banner/ban_masteri/masteri.ads">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8042763" vertical-offset="89" max-vertical-offset="765">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.346153" vertical-offset="2087" max-vertical-offset="3128">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2087" max-vertical-offset="3128">
           <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="170" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/web/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="816" max-vertical-offset="4352">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1992,142 +962,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1394">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/params.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.26923" vertical-offset="918" max-vertical-offset="2890">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="2890">
           <caret line="23" column="20" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/web/views/common/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.192307" vertical-offset="1628" max-vertical-offset="2210">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="2210">
           <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/web/controllers/PageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="1530" max-vertical-offset="2550">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2550">
           <caret line="105" column="84" selection-start-line="105" selection-start-column="84" selection-end-line="105" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4755245" vertical-offset="0" max-vertical-offset="572">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2701252" vertical-offset="36" max-vertical-offset="1241">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/bds.sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8068182" vertical-offset="7700" max-vertical-offset="8228">
           <caret line="478" column="0" selection-start-line="460" selection-start-column="0" selection-end-line="469" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/web/views/web/page/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39891696" vertical-offset="12750" max-vertical-offset="15419">
-          <caret line="814" column="30" selection-start-line="814" selection-start-column="30" selection-end-line="814" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="tag#li#0;tag#ul#0;tag#div#0;tag#div#0;tag#div#1" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#2;tag#div#1" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#4;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <marker date="1429415656365" expanded="false" signature="28485:28510" placeholder="..." />
-            <marker date="1429415656365" expanded="true" signature="41147:41178" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-18.153847" vertical-offset="15474" max-vertical-offset="16286">
+          <caret line="938" column="26" selection-start-line="938" selection-start-column="26" selection-end-line="938" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Saler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.923077" vertical-offset="752" max-vertical-offset="3247">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/sale/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5406404" vertical-offset="1414" max-vertical-offset="5746">
+          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="115" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/BdsSale.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3022" max-vertical-offset="4114">
+          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/web/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4027094" vertical-offset="2295" max-vertical-offset="4352">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SalerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="4352">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Ward.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1287" max-vertical-offset="2125">
+          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/District.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1287" max-vertical-offset="2125">
+          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Province.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="1785">
+          <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin/views/admin/saler/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6022167" vertical-offset="2095" max-vertical-offset="5100">
+          <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

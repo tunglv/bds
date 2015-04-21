@@ -55,13 +55,14 @@ class Saler extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, image', 'required'),
-			array('province_id, district_id, ward_id, created', 'numerical', 'integerOnly'=>true),
+			array('created', 'numerical', 'integerOnly'=>true),
 			array('name, alias, image', 'length', 'max'=>255),
 			array('address', 'length', 'max'=>500),
 			array('phone, MST', 'length', 'max'=>15),
 			array('mobile', 'length', 'max'=>11),
 			array('email, website, fax', 'length', 'max'=>50),
 			array('skyper, yahoo', 'length', 'max'=>25),
+			array('province_id, district_id, ward_id', 'length', 'max'=>25),
 			array('area', 'length', 'max'=>2000),
             array('content', 'safe'),
 

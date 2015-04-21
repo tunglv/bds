@@ -127,6 +127,31 @@
                         <?php echo $form->error($model,'area', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'province_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'province_id', Province::model()->getData(), array('empty'=>'--Tỉnh/Tp--')); ?>
+                        <?php echo $form->error($model,'province_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'district_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'district_id', District::model()->getData(), array('empty'=>'--Quận/huyện--')); ?>
+                        <?php echo $form->error($model,'district_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'ward_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'ward_id', Ward::model()->getData(), array('empty'=>'--Phường/Xa--')); ?>
+                        <?php echo $form->error($model,'ward_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
                 <script>
                     $(function(){
                         $("#a_url").click(function(){
@@ -239,7 +264,31 @@
         </div>
 </div>
 <script>
-    $("#Pt_title").keyup(function(){
+    $("#Saler_title").keyup(function(){
         $('#name_char_count').text($(this).val().length);
     }).keyup();
+    $("#Saler_province_id").on('change', function(){
+        $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Quận/huyện--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#Saler_district_id').html(html);
+            });
+    });
+    $("#Saler_district_id").on('change', function(){
+        $.post( "/admin/saler/getWard", { districtid: $(this).val()})
+            .done(function( data ) {
+                data = jQuery.parseJSON(data);
+                var html = '<option value="">--Phường/Xã--</option>';
+                $.each(data, function( index, value ) {
+                    html += '<option value="'+index+'">'+value+'</option>';
+                });
+
+                $('#Saler_ward_id').html(html);
+            });
+    });
 </script>

@@ -88,4 +88,13 @@ class Province extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getAll(){
+        $data = Province::model()->findAll();
+        return $data;
+    }
+
+    public function getData(){
+        return CHtml::listData($this->getAll(), 'provinceid', 'name');
+    }
 }

@@ -26,13 +26,29 @@ class SalerController extends AdminController {
     public function accessRules() {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'index', 'update', 'delete'),
+                'actions' => array('create', 'index', 'update', 'delete', 'getDistrict', 'getWard'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
             ),
         );
+    }
+
+    public function actionGetDistrict(){
+        $provinceid = Yii::app()->request->getPost('provinceid');
+
+        $data = District::model()->getData($provinceid);
+
+        echo json_encode($data);
+    }
+
+    public function actionGetWard(){
+        $districtid = Yii::app()->request->getPost('districtid');
+
+        $data = Ward::model()->getData($districtid);
+
+        echo json_encode($data);
     }
 
     /**
