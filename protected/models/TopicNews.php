@@ -40,7 +40,7 @@ class TopicNews extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'required'),
-			array('created', 'numerical', 'integerOnly'=>true),
+			array('created, viewed', 'numerical', 'integerOnly'=>true),
 			array('title, image, alias', 'length', 'max'=>255),
 			array('desc', 'length', 'max'=>1000),
 

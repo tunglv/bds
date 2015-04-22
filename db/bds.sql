@@ -275,12 +275,13 @@ CREATE TABLE `project` (
   `images` text,
   `chu_dau_tu` text,
   `created` int(11) DEFAULT NULL,
+  `viewed` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `project` */
 
-insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`overview`,`ha_tang`,`thiet_ke`,`location`,`ban_hang`,`video`,`images`,`chu_dau_tu`,`created`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',1429103900),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>',1429156709),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1',NULL,NULL,NULL,NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',1429156784),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8',NULL,NULL,NULL,NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',1429156837),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','7','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>',1429156933);
+insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`overview`,`ha_tang`,`thiet_ke`,`location`,`ban_hang`,`video`,`images`,`chu_dau_tu`,`created`,`viewed`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1','01','Hà Nội',NULL,NULL,NULL,NULL,'<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',1429103900,NULL),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1','02','Hà Giang',NULL,NULL,NULL,NULL,'<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>',1429156709,NULL),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',1429156784,NULL),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',1429156837,NULL),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','1','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>',1429156933,NULL);
 
 /*Table structure for table `province` */
 
@@ -400,12 +401,13 @@ CREATE TABLE `topic_news` (
   `desc` varchar(1000) DEFAULT NULL COMMENT 'Mo ta ngan',
   `image` varchar(255) DEFAULT NULL COMMENT 'Anh dai dien',
   `created` int(11) DEFAULT NULL,
+  `viewed` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `topic_news` */
 
-insert  into `topic_news`(`id`,`title`,`alias`,`desc`,`image`,`created`) values (1,'Chuyên gia BĐS nhận định','chuyen-gia-bds-nhan-dinh','Cùng suy xét những nhận định có hết sức chính xác của các chuyên gia','260',1425618623),(2,'Bất động sản Anh','bat-dong-san-anh','Bất động sản Anh là một thị trường rất cường thịnh và thu hút nhiều nhà đầu tư trên thế giới','260',1425627039);
+insert  into `topic_news`(`id`,`title`,`alias`,`desc`,`image`,`created`,`viewed`) values (1,'Chuyên gia BĐS nhận định','chuyen-gia-bds-nhan-dinh','Cùng suy xét những nhận định có hết sức chính xác của các chuyên gia','260',1425618623,NULL),(2,'Bất động sản Anh','bat-dong-san-anh','Bất động sản Anh là một thị trường rất cường thịnh và thu hút nhiều nhà đầu tư trên thế giới','260',1425627039,NULL);
 
 /*Table structure for table `topic_pt` */
 

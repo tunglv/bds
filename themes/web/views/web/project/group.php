@@ -379,7 +379,7 @@
                     Tìm kiếm theo lĩnh vực
                 </div>
                 <div id="divCategory" class="searchrow advance-select-box" style="margin:0px;">
-                    <select name="choise-type" class="advance-options" style="min-width: 188px;padding: 4px;">
+                    <select name="choise-type" id="choise-type" class="advance-options" style="min-width: 188px;padding: 4px;">
                         <option value="1" class="advance-options" style="min-width: 156px;">Cao ốc văn phòng</option>
                         <option value="2" class="advance-options" style="min-width: 156px;">Khu căn hộ</option>
                         <option value="3" class="advance-options" style="min-width: 156px;">Khu đô thị mới</option>
@@ -390,6 +390,7 @@
                         <option value="8" class="advance-options" style="min-width: 156px;">Khu công nghiệp</option>
                         <option value="9" class="advance-options" style="min-width: 156px;">Dự án khác</option>
                     </select>
+                    <input type="hidden" name="type-label" id="type-label" value="Cao ốc văn phòng">
                 </div>
                 <div class="t_gr">
                     Tỉnh/ Thành phố
@@ -401,23 +402,42 @@
                             <option value="<?php echo $_val->provinceid?>" class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
                         <?php endforeach;?>
                     </select>
+                    <input type="hidden" name="city-label" id="city-label" value="">
                 </div>
                 <div class="t_gr">
                     Quận/ Huyện
                 </div>
                 <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
+                        <select name="choise-district" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
+                            <?php foreach(District::model()->getAll($province_id) as $_key => $_val):?>
+                                <option value="<?php echo $_val->districtid?>" <?php if($_val->districtid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                            <?php endforeach;?>
+                        </select>
+                    <?php else:?>
                     <select name="choise-district" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
                         <option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>
                     </select>
+                    <?php endif;?>
+                    <input type="hidden" name="district-label" id="district-label" value="">
                 </div>
 
                 <div class="t_gr">
                     Phường/Xã
                 </div>
                 <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id):?>
+                        <select name="choise-ward" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
+                            <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
+                                <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                            <?php endforeach;?>
+                        </select>
+                    <?php else:?>
                     <select name="choise-ward" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
                         <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
                     </select>
+                    <?php endif;?>
+                    <input type="hidden" name="ward-label" id="ward-label" value="">
                 </div>
                 <div class="t_gr" style="text-align: center;">
                     <input type="submit" name="ctl00$ctl30$ctl01$btnSearch" value="Tìm kiếm" id="ctl30_ctl01_btnSearch" class="searchbutton">
@@ -431,11 +451,49 @@
                 margin-top: 10px !important;
             }
         </style>
-        <script type="text/javascript"
-                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
         <script type="text/javascript">
 
+            function setCookie(c_name, value, exdays) {
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + exdays);
+                var c_value = value + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+                //c/onsole.log(c_name + "=" + c_value + " ;path=/");
+                document.cookie = c_name + "=" + c_value + " ;path=/";
+            }
+            function getCookie(c_name) {
+                var c_value = document.cookie;
+                var c_start = c_value.indexOf(" " + c_name + "=");
+                if (c_start == -1) {
+                    c_start = c_value.indexOf(c_name + "=");
+                }
+                if (c_start == -1) {
+                    c_value = null;
+                }
+                else {
+                    c_start = c_value.indexOf("=", c_start) + 1;
+                    var c_end = c_value.indexOf(";", c_start);
+                    if (c_end == -1) {
+                        c_end = c_value.length;
+                    }
+                    c_value = unescape(c_value.substring(c_start, c_end));
+                }
+                return c_value;
+            }
+
+            $("#choise-type").on('change', function() {
+                setCookie('s-pro-t', $(this).val());
+                $('#type-label').val($(this).find(":selected").text());
+            });
+
+            $("#choise_ward").on('change', function() {
+                setCookie('s-pro-w', $(this).val());
+                $('#ward-label').val($(this).find(":selected").text());
+            });
+
             $("#choise_province").on('change', function(){
+                setCookie('s-pro-p', $(this).val());
+                $('#city-label').val($(this).find(":selected").text());
                 $.post( "/admin/saler/getDistrict", { provinceid: $(this).val()})
                     .done(function( data ) {
                         data = jQuery.parseJSON(data);
@@ -449,6 +507,8 @@
             });
 
             $("#choise_district").on('change', function(){
+                setCookie('s-pro-d', $(this).val());
+                $('#district-label').val($(this).find(":selected").text());
                 $.post( "/admin/saler/getWard", { districtid: $(this).val()})
                     .done(function( data ) {
                         data = jQuery.parseJSON(data);
@@ -461,6 +521,19 @@
                     });
             });
 
+            $(function () {
+                var s_pro_t = getCookie('s-pro-t');
+                var s_pro_p = getCookie('s-pro-p');
+                var s_pro_d = getCookie('s-pro-d');
+                var s_pro_w = getCookie('s-pro-w');
+
+                if(s_pro_t){
+                    $('#choise-type option[value='+s_pro_t+']').attr('selected','selected');
+                }
+                if(s_pro_p){
+                    $('#choise_province option[value='+s_pro_p+']').attr('selected', 'selected');
+                }
+            });
 //            var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
 //                id: 'divCatagoryOptions',
 //                hddValue: 'hdCategory'
@@ -521,176 +594,21 @@
              class="customeScrollbar mCustomScrollbar _mCS_1">
             <div class="mCustomScrollBox mCS-light" id="mCSB_1"
                  style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-                <div class="mCSB_container" style="position: relative; top: -347px;">
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                           title="Lâm Viên Villas">
-                            <img
-                                src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/20150211150707-fc33(2).jpg"
-                                width="156" height="100" alt="Lâm Viên Villas">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-do-thi-moi-gia-lam/lam-vien-villas-pj2098"
-                           title="Lâm Viên Villas">
-                            Lâm Viên Villas
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/du-an/dragon-city.html"
-                           title="Dragon Parc" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.509866.jpg"
-                                 width="156" height="100" alt="Dragon Parc">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/du-an/dragon-city.html"
-                           title="Dragon Parc" target="_blank" rel="nofollow">
-                            Dragon Parc
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/HTML_ThaoNTT_TAN%20PHUOC/TanPhuoc.html"
-                           title="Tân Phước Plaza" target="_blank" rel="nofollow">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.439843.jpg"
-                                 width="156" height="100" alt="Tân Phước Plaza">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://file3.batdongsan.com.vn/FileUpload/LandingPage/HTML_ThaoNTT_TAN%20PHUOC/TanPhuoc.html"
-                           title="Tân Phước Plaza" target="_blank" rel="nofollow">
-                            Tân Phước Plaza
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-can-ho-son-tra-ddn/can-ho-cao-cap-azura-pj1015"
-                           title="Căn hộ cao cấp Azura">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.508252.jpg"
-                                 width="156" height="100" alt="Căn hộ cao cấp Azura">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-can-ho-son-tra-ddn/can-ho-cao-cap-azura-pj1015"
-                           title="Căn hộ cao cấp Azura">
-                            Căn hộ cao cấp Azura
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                           title="Chánh Hưng Apartment">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.504461.jpg"
-                                 width="156" height="100" alt="Chánh Hưng Apartment">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-can-ho-quan-8/chanh-hung-apartment-pj2062"
-                           title="Chánh Hưng Apartment">
-                            Chánh Hưng Apartment
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-                           title="The Mall City II">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.505796.jpg"
-                                 width="156" height="100" alt="The Mall City II">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-do-thi-moi-tan-uyen-bd/the-mall-city-ii-pj2070"
-                           title="The Mall City II">
-                            The Mall City II
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-                           title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490898.jpg"
-                                 width="156" height="100" alt="Khu nghỉ dưỡng Cẩm An–Hội An">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-du-lich-nghi-duong-hoi-an-qna/khu-nghi-duong-cam-anhoi-an-pj2045"
-                           title="Khu nghỉ dưỡng Cẩm An–Hội An">
-                            Khu nghỉ dưỡng Cẩm An–Hội An
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-dan-cu-binh-chanh/duong-hong-garden-house-pj1695"
-                           title="Dương Hồng Garden House">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.490297.jpg"
-                                 width="156" height="100" alt="Dương Hồng Garden House">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-dan-cu-binh-chanh/duong-hong-garden-house-pj1695"
-                           title="Dương Hồng Garden House">
-                            Dương Hồng Garden House
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/khu-dan-cu-binh-thanh/dai-phuc-river-view-pj1511"
-                           title="Đại Phúc River View">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.424550.jpg"
-                                 width="156" height="100" alt="Đại Phúc River View">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/khu-dan-cu-binh-thanh/dai-phuc-river-view-pj1511"
-                           title="Đại Phúc River View">
-                            Đại Phúc River View
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                    <div>
-                        <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/thumb150x150.475326.jpg"
-                                 width="156" height="100" alt="Mega Ruby">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="http://batdongsan.com.vn/du-an-khac-quan-9/mega-ruby-pj1956" title="Mega Ruby">
-                            Mega Ruby
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-
-                </div>
-                <div class="mCSB_scrollTools" style="position: absolute; display: block;">
-                    <div class="mCSB_draggerContainer">
-                        <div class="mCSB_dragger" style="position: absolute; height: 113px; top: 107px;"
-                             oncontextmenu="return false;">
-                            <div class="mCSB_dragger_bar" style="position: relative; line-height: 113px;"></div>
+                <div class="mCSB_container" style="position: relative;">
+                    <?php foreach($hot_project as $_key => $_val):?>
+                        <div>
+                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
+                                <img src="<?php echo $_val->getImageUrl()?>" width="156" height="100" alt="<?php echo $_val->name?>">
+                            </a>
                         </div>
-                        <div class="mCSB_draggerRail"></div>
+                        <div class="prj_vip">
+                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
+                                <?php echo $_val->name?>
+                            </a>
+                        </div>
+                        <div class="line_separate">
                     </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
@@ -700,8 +618,8 @@
     <div id="ctl33_FooterContainer">
     </div>
 </div>
-<div style="clear: both; margin-bottom: 10px;">
-</div>
+<div style="clear: both; margin-bottom: 10px;"></div>
+
 <!--//Modules/Project/ProjectHighlights.ascx-->
 <div class="container-common">
     <div id="ctl35_HeaderContainer" class="box-header">
@@ -710,122 +628,20 @@
         </div>
     </div>
     <div id="ctl35_BodyContainer" class="bor_box">
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Tin tức, dự án BĐS nổi bật tuần từ 18/2 đến 23/2"
-                   href="http://batdongsan.com.vn/tin-thi-truong/tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232-ar45679">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.244078.tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232.jpg">
-                </a>
+        <?php foreach($hot_news as $_key => $_val):?>
+            <div style="padding: 5px; width: 60px; height: 60px; float: left;">
+                <div class="many-readers-title-icon"><a title="<?php echo $_val->title?>" href="<?php echo $_val->url?>">
+                        <img style="width: 60px; height: 60px;" src="<?php echo $_val->getImageUrl()?>">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/tin-thi-truong/tin-tuc-du-an-bds-noi-bat-tuan-tu-182-den-232-ar45679"
-                   title="Tin tức, dự án BĐS nổi bật tuần từ 18/2 đến 23/2">
-                    Tin tức, dự án BĐS nổi bật tuần từ 18/2 đến 23/2</a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Doanh nghiệp “nản” với nhà ở xã hội"
-                   href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-nan-voi-nha-o-xa-hoi-ar46277">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.266769.doanh-nghiep-nan-voi-nha-o-xa-hoi.jpg">
-                </a>
+            <div class="data-default-CSSClass">
+                <p style="padding: 0px; margin: 5px 5px 0 0;">
+                    <a class="controls-view-date-contents-link" href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
+                </p>
             </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-nan-voi-nha-o-xa-hoi-ar46277"
-                   title="Doanh nghiệp “nản” với nhà ở xã hội">
-                    Doanh nghiệp “nản” với nhà ở xã hội</a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Danh Khôi Á Châu mở bán thành công dự án căn hộ Nhất Lan 3"
-                   href="http://batdongsan.com.vn/tin-thi-truong/danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3-ar46252">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.266529.danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/tin-thi-truong/danh-khoi-a-chau-mo-ban-thanh-cong-du-an-can-ho-nhat-lan-3-ar46252"
-                   title="Danh Khôi Á Châu mở bán thành công dự án căn hộ Nhất Lan 3">
-                    Danh Khôi Á Châu mở bán thành công dự án căn hộ Nhất Lan 3</a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Dự án chuyển đổi có giá bán không quá 12 triệu đồng/m2?"
-                   href="http://batdongsan.com.vn/chinh-sach-quan-ly/du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2-ar46197">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.265969.du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/chinh-sach-quan-ly/du-an-chuyen-doi-co-gia-ban-khong-qua-12-trieu-dongm2-ar46197"
-                   title="Dự án chuyển đổi có giá bán không quá 12 triệu đồng/m2?">
-                    Dự án chuyển đổi có giá bán không quá 12 triệu đồng/m2?</a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà"
-                   href="http://batdongsan.com.vn/tin-thi-truong/nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha-ar46167">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.252693.nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/tin-thi-truong/nguoi-thu-nhap-thap-kho-chung-minh-thu-nhap-de-vay-tien-mua-nha-ar46167"
-                   title="Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà">
-                    Người thu nhập thấp khó chứng minh thu nhập để vay tiền mua nhà<img class="news-image-video-icon"
-                                                                                        atl=""
-                                                                                        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/bds-video.png"></a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="padding: 5px; width: 60px; height: 60px; float: left;">
-            <div class="many-readers-title-icon">
-                <a title="Doanh nghiệp chờ giải cứu sẽ khiến thị trường khó khăn hơn"
-                   href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon-ar46087">
-                    <img style="width: 60px; height: 60px;"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/crop60x60.265045.doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="data-default-CSSClass">
-            <p style="padding: 0px; margin: 5px 5px 0 0;">
-                <a class="controls-view-date-contents-link"
-                   href="http://batdongsan.com.vn/phan-tich-nhan-dinh/doanh-nghiep-cho-giai-cuu-se-khien-thi-truong-kho-khan-hon-ar46087"
-                   title="Doanh nghiệp chờ giải cứu sẽ khiến thị trường khó khăn hơn">
-                    Doanh nghiệp chờ giải cứu sẽ khiến thị trường khó khăn hơn</a>
-            </p>
-        </div>
-        <div style="clear: both;"></div>
+            <div style="clear: both;"></div>
+        <?php endforeach;?>
 
         <div style="clear: both;"></div>
     </div>
@@ -845,33 +661,9 @@
 
         <div class="list">
             <ul>
-
-                <li><a href="http://batdongsan.com.vn/bat-dong-san-ha-noi" title="Bất động sản Hà Nội">
-                        Bất động sản Hà Nội</a></li>
-
-                <li><a href="http://batdongsan.com.vn/phong-thuy-voi-nhung-dieu-kieng-ky"
-                       title="Phong thủy và những điều kiêng kỵ">
-                        Phong thủy và những điều kiêng kỵ</a></li>
-
-                <li><a href="http://batdongsan.com.vn/bat-dong-san-tp-hcm" title="Bất động sản Tp.HCM">
-                        Bất động sản Tp.HCM</a></li>
-
-                <li><a href="http://batdongsan.com.vn/giai-phap-cho-khong-gian-nho-hep"
-                       title="Giải pháp cho không gian nhỏ, hẹp">
-                        Giải pháp cho không gian nhỏ, hẹp</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cau-thang-gieng-troi" title="Cầu thang - Giếng trời">
-                        Cầu thang - Giếng trời</a></li>
-
-                <li><a href="http://batdongsan.com.vn/thi-truong-can-ho-cao-cap" title="Thị trường căn hộ cao cấp">
-                        Thị trường căn hộ cao cấp</a></li>
-
-                <li><a href="http://batdongsan.com.vn/chuyen-muc-dich-su-dung-dat" title="Chuyển mục đích sử dụng đất">
-                        Chuyển mục đích sử dụng đất</a></li>
-
-                <li><a href="http://batdongsan.com.vn/thi-truong-can-ho-cho-thue" title="Thị trường căn hộ cho thuê">
-                        Thị trường căn hộ cho thuê</a></li>
-
+                <?php foreach($hot_topic as $_key => $_val):?>
+                <li><a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a></li>
+                <?php endforeach;?>
             </ul>
 
         </div>
@@ -881,78 +673,7 @@
     <div id="ctl36_FooterContainer">
     </div>
 </div>
-<div style="clear: both; margin-bottom: 10px;">
-</div>
-<!--//Modules/SubjectLink/View.ascx-->
-<div class="container-faq">
-    <div id="ctl38_HeaderContainer" class="box-header box-header-bg" style="margin-top: 1px;">
-        <div class="name_tit" align="center" style="padding-top: 0px;">
-            <h3>Hỏi - đáp</h3>
-        </div>
-    </div>
-    <div id="ctl38_BodyContainer" class="bor_box box-content-bg" style="line-height: 18px;">
-
-        <div class="list">
-            <ul>
-
-                <li>
-                    <a href="http://batdongsan.com.vn/hd-bai-tri-nha-cua-theo-phong-thuy/xin-hoi-cach-chon-va-bo-tri-den-cho-khu-vuon-them-dep-fq44660"
-                       title="Xin hỏi cách chọn và bố trí đèn cho khu vườn thêm đẹp?"><span class="faq-name">
-            Xin hỏi cách chọn và bố trí đèn cho khu vườn thêm đẹp?</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-nha-pho/tu-van-xay-nha-khoang-120m2-fq44657"
-                       title="Tư vấn xây nhà khoảng 120m2"><span class="faq-name">
-            Tư vấn xây nhà khoảng 120m2</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-nha-pho/tu-van-xay-nha-3-tang-dien-tich-7-5m-x-4-3-m-fq44655"
-                       title="Tư vấn xây nhà 3 tầng, diện tích 7.5m x 4.3 m"><span class="faq-name">
-            Tư vấn xây nhà 3 tầng, diện tích 7.5m x 4.3 m</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-thiet-ke-khac/thiet-ke-sua-lai-nha-cap-4-fq44651"
-                       title="Thiết kế sửa lại nhà cấp 4"><span class="faq-name">
-            Thiết kế sửa lại nhà cấp 4</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-xay-dung-hoan-cong/quy-hoach-duong-vanh-dai-fq44650"
-                       title="Quy hoạch đường vành đai"><span class="faq-name">
-            Quy hoạch đường vành đai</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-giai-phap-xay-dung/tu-van-xay-nha-4x12m-fq44648"
-                       title="Tư vấn xây nhà 4x12m"><span class="faq-name">
-            Tư vấn xây nhà 4x12m</span> </a></li>
-
-            </ul>
-        </div>
-
-
-        <div class="faq_box">
-            <label>Gửi câu hỏi của bạn tại đây</label>
-            <textarea name="txtContent" rows="2" cols="20" id="txtContent"></textarea>
-
-            <div>
-                <input type="button" name="btnSend" value="Gửi câu hỏi" id="btnSend" class="buttonSend"
-                       onclick="SendFAQ();">
-            </div>
-        </div>
-
-        <script language="javascript">
-            function SendFAQ() {
-                var content = $("#txtContent").val();
-                if (content != "") {
-                    if (localStorage) {
-                        localStorage["FAQQuestion"] = content;
-                    }
-
-                    window.location.href = "/dang-tin-hoi-dap";
-                }
-
-                return false;
-            }
-        </script>
-
-    </div>
-    <div id="ctl38_FooterContainer" class="Footer">
-    </div>
-</div>
+<div style="clear: both; margin-bottom: 10px;"></div>
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/FaqViewList/FAQOptionList.ascx--></div>

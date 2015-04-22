@@ -57,7 +57,7 @@ class Project extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('created', 'numerical', 'integerOnly'=>true),
+			array('created, viewed', 'numerical', 'integerOnly'=>true),
 			array('name, alias, address, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
 			array('province_id, district_id, ward_id', 'length', 'max'=>5),
@@ -215,6 +215,47 @@ class Project extends CActiveRecord
         $type = $type ? $type : $this->aliasTypeLabel;
 
         return Yii::app()->createUrl('/web/project/detail', array('type'=>$type, 'alias'=>$alias,'id' => $id));
+    }
+
+    public function getCUrl($type = '', $province_name = '', $province_id = ''){
+        $type = $type ? $type : $this->type;
+        $province_name = $province_name ? $province_name : $this->province_name;
+        $province_id = $province_id ? $province_id : $this->province_id;
+
+        $alias = '';
+        switch($type){
+            case 1:
+                $alias = 'cao-oc-van-phong';
+                break;
+            case 2:
+                $alias = 'khu-can-ho';
+                break;
+            case 3:
+                $alias = 'khu-do-thi-moi';
+                break;
+            case 4:
+                $alias = 'khu-thuong-mai-dich-vu';
+                break;
+            case 5:
+                $alias = 'khu-phuc-hop';
+                break;
+            case 6:
+                $alias = 'khu-dan-cu';
+                break;
+            case 7:
+                $alias = 'khu-du-lich-nghi-duong';
+                break;
+            case 8:
+                $alias = 'khu-cong-nghiep';
+                break;
+            case 9:
+                $alias = 'du-an-khac';
+                break;
+        }
+        Yii::import('ext.TextParser');
+        $province_alias = TextParser::toSEOString($province_name);
+
+        return Yii::app()->createUrl('/web/project/listC', array('alias'=>$alias, 'city'=>$province_alias,'cid' => $province_id));
     }
 
     public function getImageUrl($id = null, $size = '90'){
