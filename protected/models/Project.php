@@ -205,8 +205,9 @@ class Project extends CActiveRecord
         );
     }
 
-    public function getAliasTypeLabel(){
-        return $this->aliasTypeData[$this->type];
+    public function getAliasTypeLabel($type = null){
+        $type = $type ? $type : $this->type;
+        return $this->aliasTypeData[$type];
     }
 
     public function getUrl($id = 0, $alias = null, $type = ''){
@@ -222,36 +223,8 @@ class Project extends CActiveRecord
         $province_name = $province_name ? $province_name : $this->province_name;
         $province_id = $province_id ? $province_id : $this->province_id;
 
-        $alias = '';
-        switch($type){
-            case 1:
-                $alias = 'cao-oc-van-phong';
-                break;
-            case 2:
-                $alias = 'khu-can-ho';
-                break;
-            case 3:
-                $alias = 'khu-do-thi-moi';
-                break;
-            case 4:
-                $alias = 'khu-thuong-mai-dich-vu';
-                break;
-            case 5:
-                $alias = 'khu-phuc-hop';
-                break;
-            case 6:
-                $alias = 'khu-dan-cu';
-                break;
-            case 7:
-                $alias = 'khu-du-lich-nghi-duong';
-                break;
-            case 8:
-                $alias = 'khu-cong-nghiep';
-                break;
-            case 9:
-                $alias = 'du-an-khac';
-                break;
-        }
+        $alias = $this->getAliasTypeLabel($type);
+
         Yii::import('ext.TextParser');
         $province_alias = TextParser::toSEOString($province_name);
 
@@ -273,5 +246,13 @@ class Project extends CActiveRecord
 
     public function getData(){
         return CHtml::listData($this->getAll(), 'id', 'name');
+    }
+
+    public function getUrlList($type = null){
+        $type = $type ? $type : $this->type;
+
+        $alias = $this->getAliasTypeLabel($type);
+
+        return Yii::app()->createUrl('/web/project/list', array('alias'=>$type));
     }
 }

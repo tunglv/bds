@@ -86,14 +86,17 @@ class ProjectController extends WebController {
         $hot_topic = $this->_getHotTopic();
         $hot_project = $this->_getHotProject();
         $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $type);
+        $group_type = $this->_getGroupProject('type', '', 'type');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->render('list', array(
             'dataProvider'=>$dataProvider,
             'label' => $label,
+            'type' => $type,
             'hot_topic' => $hot_topic,
             'hot_project'=>$hot_project,
-            'group_province'=>$group_province
+            'group_province'=>$group_province,
+            'group_type'=>$group_type
         ));
     }
 
@@ -221,14 +224,17 @@ class ProjectController extends WebController {
         $hot_topic = $this->_getHotTopic();
         $hot_project = $this->_getHotProject();
         $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $infor['type']);
+        $group_type = $this->_getGroupProject('type', '', 'type');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->render('list', array(
             'dataProvider'=>$dataProvider,
+            'type'=>$infor['type'],
             'label'=>$infor['label'],
             'hot_topic' => $hot_topic,
             'hot_project'=>$hot_project,
-            'group_province'=>$group_province
+            'group_province'=>$group_province,
+            'group_type'=>$group_type
         ));
     }
 
@@ -266,14 +272,17 @@ class ProjectController extends WebController {
         $hot_topic = $this->_getHotTopic();
         $hot_project = $this->_getHotProject();
         $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $infor['type']);
+        $group_type = $this->_getGroupProject('type', '', 'type');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->render('list', array(
             'dataProvider'=>$dataProvider,
+            'type'=>$infor['type'],
             'label'=>$infor['label'],
             'hot_topic' => $hot_topic,
             'hot_project'=>$hot_project,
-            'group_province'=>$group_province
+            'group_province'=>$group_province,
+            'group_type'=>$group_type
         ));
     }
 

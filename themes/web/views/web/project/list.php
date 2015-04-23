@@ -293,102 +293,22 @@
 
 <div class="body-right">
 
-<div class="caooc-right-top">
-    <div class="caooc-right-top-header"><a
-            href="./Dự án Khu đô thị mới   Khu đô thị mới_files/Dự án Khu đô thị mới   Khu đô thị mới.html">
-            Khu đô thị mới
-            (308)</a></div>
-    <div class="caooc-right-top-drop">
-        <?php foreach($group_province as $_key => $_val):?>
-            <div class="caooc-right-top-cap1">
-                <a style="color: black" href="<?php echo $_val->cUrl?>">
-                    <?php echo $_val->province_name?>
-                    (<span class="countValue"><?php echo $_val->viewed?></span>)</a>
+    <?php foreach($group_type as $_k => $_v):?>
+        <div class="caooc-right-top">
+            <div class="caooc-right-top-header"><a href="<?php echo $_v->getUrlList()?>"><?php echo $_v->getTypeLabel()?> (<?php echo $_v->viewed?>)</a></div>
+            <div class="caooc-right-top-drop">
+                <?php if($_v->type == $type):?>
+                <?php foreach($group_province as $_key => $_val):?>
+                    <div class="caooc-right-top-cap1">
+                        <a style="color: black" href="<?php echo $_val->cUrl?>">
+                            <?php echo $_val->province_name?>
+                            (<span class="countValue"><?php echo $_val->viewed?></span>)</a>
+                    </div>
+                <?php endforeach;?>
+                <?php endif;?>
             </div>
-        <?php endforeach;?>
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-dan-cu">
-        Khu dân cư
-        (214)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-can-ho">
-        Khu căn hộ
-        (673)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-thuong-mai-dich-vu">
-        Khu thương mại dịch vụ
-        (59)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-du-lich-nghi-duong">
-        Khu du lịch- nghỉ dưỡng
-        (109)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-cong-nghiep">
-        Khu công nghiệp
-        (22)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/khu-phuc-hop">
-        Khu phức hợp
-        (187)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/du-an-khac">
-        Dự án khác
-        (59)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
-<div class="caooc-right-top-cap2">
-    <a style="color: black" href="http://batdongsan.com.vn/cao-oc-van-phong">
-        Cao ốc văn phòng
-        (211)</a>
-
-    <div class="caooc-right-top-drop">
-
-    </div>
-</div>
-
+        </div>
+    <?php endforeach;?>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
