@@ -17,7 +17,7 @@ class SalerController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'detail'),
+                'actions' => array('error', 'list', 'detail', 'result'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -41,6 +41,63 @@ class SalerController extends WebController {
                 $this->render($view, $error);
             }
         }
+    }
+
+    public function actionResult(){
+        $type = Yii::app()->request->getPost('choise-type');
+        $typeLabel = Yii::app()->request->getPost('type-label');
+        $provincce = Yii::app()->request->getPost('choise-city');
+        $provincceLabel = Yii::app()->request->getPost('city-label');
+        $district = Yii::app()->request->getPost('choise-district');
+        $districtLabel = Yii::app()->request->getPost('district-label');
+        $ward = Yii::app()->request->getPost('choise-ward');
+        $wardLabel = Yii::app()->request->getPost('ward-label');
+
+        $label = $typeLabel ? $typeLabel : 'Tổng hợp';
+        $label .= ($wardLabel ? ' - '.$wardLabel : '').($districtLabel ? ' - '.$districtLabel : '').($provincceLabel ? ' - '.$provincceLabel:'');
+
+        $this->layout = '//layouts/main';
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', $type);
+        if($provincce) {
+            $criteria->compare('t.province_id', $provincce);
+        }
+        if($district) {
+            $criteria->compare('t.district_id', $district);
+        }
+        if($ward) {
+            $criteria->compare('t.ward_id', $ward);
+
+        }
+        $criteria->compare('t.type', $type);
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('Project', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+
+        $hot_topic = $this->_getHotTopic();
+        $hot_project = $this->_getHotProject();
+        $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $type);
+        $group_type = $this->_getGroupProject('type', '', 'type');
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('list', array(
+            'dataProvider'=>$dataProvider,
+            'label' => $label,
+            'type' => $type,
+            'hot_topic' => $hot_topic,
+            'hot_project'=>$hot_project,
+            'group_province'=>$group_province,
+            'group_type'=>$group_type
+        ));
     }
 
     /**

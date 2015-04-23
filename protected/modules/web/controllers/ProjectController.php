@@ -292,9 +292,33 @@ class ProjectController extends WebController {
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
         $project = Project::model()->findByPk($id);
+        $hot_project = $this->_getHotProject();
+        $same_project = $this->_getSameProject($project->type, $project->district_id);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('detail', array('project'=>$project));
+        $this->render('detail', array(
+            'project'=>$project,
+            'hot_project'=>$hot_project,
+            'same_project'=>$same_project
+        ));
+    }
+
+    private function _getSameProject($type=null, $district_id=null){
+        if(!$type || !$district_id){
+            return array();
+        }
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.type', $type);
+        if($district_id) {
+            $criteria->compare('t.district_id', $district_id);
+        }
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 10;
+
+        $project = Project::model()->findAll($criteria);
+
+        return $project;
     }
 
     private function _getType($alias = ''){

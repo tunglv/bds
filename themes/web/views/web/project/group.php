@@ -408,7 +408,7 @@
                     Quận/ Huyện
                 </div>
                 <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
-                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
                         <select name="choise-district" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
                             <?php foreach(District::model()->getAll($province_id) as $_key => $_val):?>
                                 <option value="<?php echo $_val->districtid?>" <?php if($_val->districtid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
@@ -426,7 +426,7 @@
                     Phường/Xã
                 </div>
                 <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
-                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id):?>
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id):?>
                         <select name="choise-ward" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
                             <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
                                 <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>

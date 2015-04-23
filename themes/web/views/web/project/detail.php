@@ -301,79 +301,21 @@
 </div>
 <div id="RightMainContent" class="body-right">
 
+<?php if(count($same_project) > 0):?>
 <div class="container-default">
     <div id="ctl28_BodyContainer">
         <div id="ctl28_ctl01_projectOther" class="body-right">
             <div class="caooc-right-top">
                 <div class="caooc-right-top-header" style="text-align: center; text-transform: uppercase">
-                    <h2>Dự án KĐT Làng Sen Việt Nam</h2></div>
+                    <h2>Các dự án cùng Quận/Huyện</h2></div>
             </div>
-            <div class="caooc-right-top-cap2 bgblue" style="color: white;">
-                <a href="http://batdongsan.com.vn/cong-ty-cp-dau-tu-va-xay-dung-phuc-khang-eb687"
-                   style="color: white; font-weight: normal;"><strong>Giới thiệu</strong></a>
 
-                <div class="caooc-right-top-drop">
+            <?php foreach($same_project as $_key => $_val):?>
+                <div class="caooc-right-top-cap2" style="padding-left: 30px;">
+                    <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>" style="color: black; font-weight: normal"><?php echo $_val->name?></a>
+                    <div class="caooc-right-top-drop"></div>
                 </div>
-            </div>
-            <div class="caooc-right-top-cap2">
-                <a href="http://batdongsan.com.vn/cong-ty-cp-dau-tu-va-xay-dung-phuc-khang-ec687"
-                   style="color: black"><strong>Liên hệ</strong></a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
-
-            <div class="caooc-right-top">
-                <div class="caooc-right-top-cap2">
-                    <strong>Các dự án khác</strong></div>
-            </div>
-
-            <div class="caooc-right-top-cap2" style="padding-left: 30px;">
-                <a href="./KĐT Làng Sen Việt Nam   Dự án Khu đô thị mới KĐT Làng Sen Việt Nam_files/KĐT Làng Sen Việt Nam   Dự án Khu đô thị mới KĐT Làng Sen Việt Nam.html"
-                   title="KĐT Làng Sen Việt Nam" style="color: black; font-weight: normal">
-                    KĐT Làng Sen Việt Nam</a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
-            <div class="caooc-right-top-cap2" style="padding-left: 30px;">
-                <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/eco-sun-pj1415" title="Eco Sun"
-                   style="color: black; font-weight: normal">
-                    Eco Sun</a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
-            <div class="caooc-right-top-cap2" style="padding-left: 30px;">
-                <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/eco-town-pj1270" title="Eco Town"
-                   style="color: black; font-weight: normal">
-                    Eco Town</a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
-            <div class="caooc-right-top-cap2" style="padding-left: 30px;">
-                <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/sunflower-city-pj1084"
-                   title="Sunflower City" style="color: black; font-weight: normal">
-                    Sunflower City</a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
-            <div class="caooc-right-top-cap2" style="padding-left: 30px;">
-                <a href="http://batdongsan.com.vn/khu-do-thi-moi-duc-hoa-la/lang-sinh-thai-du-lich-eco-village-pj940"
-                   title="Làng sinh thái du lịch – Eco Village" style="color: black; font-weight: normal">
-                    Làng sinh thái du lịch – Eco Village</a>
-
-                <div class="caooc-right-top-drop">
-                </div>
-            </div>
-
+            <?php endforeach;?>
 
         </div>
         <script type="text/javascript">
@@ -386,6 +328,7 @@
     </div>
 
 </div>
+<?php endif;?>
 <!--//Modules/Project/ProjectOther.ascx-->
 <div class="container-common">
 <div id="ctl32_HeaderContainer" class="box-header">
@@ -431,7 +374,7 @@
                     Quận/ Huyện
                 </div>
                 <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
-                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
                         <select name="choise-district" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
                             <?php foreach(District::model()->getAll($province_id) as $_key => $_val):?>
                                 <option value="<?php echo $_val->districtid?>" <?php if($_val->districtid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
@@ -449,7 +392,7 @@
                     Phường/Xã
                 </div>
                 <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
-                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : 1;$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id):?>
+                    <?php $province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id):?>
                         <select name="choise-ward" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
                             <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
                                 <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
@@ -581,172 +524,44 @@
 
 <div style="clear:both;"></div>
 <!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
-<div class="enterprise-rightContent">
-    <div class="rc11">
-        <div class="title-style">
-            <h3>DOANH NGHIỆP TIÊU BIỂU</h3>
-        </div>
-    </div>
-    <div class="rc12">
-
-        <div class="vip-row">
-            <div class="enterprise-vip-img">
-                <a href="http://batdongsan.com.vn/dau-tu-du-an-quan-3/cong-ty-co-phan-dau-tu-phat-trien-song-da-ep499">
-                    <img class="img"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1887.jpg"
-                         alt="Công ty Cổ phần Đầu tư Phát triển Sông Đà">
-                </a>
-            </div>
-            <div class="enterprise-vip-link">
-                <a href="http://batdongsan.com.vn/dau-tu-du-an-quan-3/cong-ty-co-phan-dau-tu-phat-trien-song-da-ep499"
-                   title="Công ty Cổ phần Đầu tư Phát triển Sông Đà"> Công ty Cổ phần Đầu tư Phát triển Sông Đà</a>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-
-        <div class="vip-row">
-            <div class="enterprise-vip-img">
-                <a href="http://batdongsan.com.vn/dau-tu-du-an-dong-da/tong-cong-ep38">
-                    <img class="img"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.442353.jpg"
-                         alt="Tổng Công ty Đầu tư Phát triển Nhà và Đô thị HUD">
-                </a>
-            </div>
-            <div class="enterprise-vip-link">
-                <a href="http://batdongsan.com.vn/dau-tu-du-an-dong-da/tong-cong-ep38"
-                   title="Tổng Công ty Đầu tư Phát triển Nhà và Đô thị HUD"> Tổng Công ty Đầu tư Phát triển Nhà và Đô
-                    thị HUD</a>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-
-        <div class="vip-row">
-            <div class="enterprise-vip-img">
-                <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-1/cong-ty-cb-ep68">
-                    <img class="img"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.327785.jpg"
-                         alt="Công ty CB Richard Ellis Việt Nam (CBRE)">
-                </a>
-            </div>
-            <div class="enterprise-vip-link">
-                <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-1/cong-ty-cb-ep68"
-                   title="Công ty CB Richard Ellis Việt Nam (CBRE)"> Công ty CB Richard Ellis Việt Nam (CBRE)</a>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-
-        <div class="vip-row">
-            <div class="enterprise-vip-img">
-                <a href="http://batdongsan.com.vn/xay-dung-dau-tu-bds-dong-da/tong-cong-ty-cp-xuat-nhap-khau-va-xay-dung-viet-nam-ep279">
-                    <img class="img"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1679.jpg"
-                         alt="Tổng công ty CP Xuất nhập khẩu và Xây dựng Việt Nam">
-                </a>
-            </div>
-            <div class="enterprise-vip-link">
-                <a href="http://batdongsan.com.vn/xay-dung-dau-tu-bds-dong-da/tong-cong-ty-cp-xuat-nhap-khau-va-xay-dung-viet-nam-ep279"
-                   title="Tổng công ty CP Xuất nhập khẩu và Xây dựng Việt Nam"> Tổng công ty CP Xuất nhập khẩu và Xây
-                    dựng Việt Nam</a>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-
-        <div class="vip-row">
-            <div class="enterprise-vip-img">
-                <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-cau-giay/cong-ty-co-ep288">
-                    <img class="img"
-                         src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/file.1686.jpg"
-                         alt="Công ty Cổ phần Bất động sản B.D.S">
-                </a>
-            </div>
-            <div class="enterprise-vip-link">
-                <a href="http://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-cau-giay/cong-ty-co-ep288"
-                   title="Công ty Cổ phần Bất động sản B.D.S"> Công ty Cổ phần Bất động sản B.D.S</a>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-
-    </div>
-</div>
-
-<div style="clear:both;"></div>
-<!--//Modules/Enterprise/Viewer/TypicalEnterprise/TypicalEnterprise.ascx-->
 <div class="container-common">
-    <div id="ctl35_HeaderContainer" class="box-header">
+    <div id="ctl33_HeaderContainer" class="box-header">
         <div class="name_tit" align="center">
-            <div>HỎI - ĐÁP</div>
+            <div>Dự án nổi bật</div>
         </div>
     </div>
-    <div id="ctl35_BodyContainer" class="bor_box">
-
-        <div class="list">
-            <ul>
-
-                <li>
-                    <a href="http://batdongsan.com.vn/hd-bai-tri-nha-cua-theo-phong-thuy/xin-hoi-cach-chon-va-bo-tri-den-cho-khu-vuon-them-dep-fq44660"
-                       title="Xin hỏi cách chọn và bố trí đèn cho khu vườn thêm đẹp?"><span class="faq-name">
-            Xin hỏi cách chọn và bố trí đèn cho khu vườn thêm đẹp?</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-nha-pho/tu-van-xay-nha-khoang-120m2-fq44657"
-                       title="Tư vấn xây nhà khoảng 120m2"><span class="faq-name">
-            Tư vấn xây nhà khoảng 120m2</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-nha-pho/tu-van-xay-nha-3-tang-dien-tich-7-5m-x-4-3-m-fq44655"
-                       title="Tư vấn xây nhà 3 tầng, diện tích 7.5m x 4.3 m"><span class="faq-name">
-            Tư vấn xây nhà 3 tầng, diện tích 7.5m x 4.3 m</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-thiet-ke-khac/thiet-ke-sua-lai-nha-cap-4-fq44651"
-                       title="Thiết kế sửa lại nhà cấp 4"><span class="faq-name">
-            Thiết kế sửa lại nhà cấp 4</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-xay-dung-hoan-cong/quy-hoach-duong-vanh-dai-fq44650"
-                       title="Quy hoạch đường vành đai"><span class="faq-name">
-            Quy hoạch đường vành đai</span> </a></li>
-
-                <li><a href="http://batdongsan.com.vn/hd-giai-phap-xay-dung/tu-van-xay-nha-4x12m-fq44648"
-                       title="Tư vấn xây nhà 4x12m"><span class="faq-name">
-            Tư vấn xây nhà 4x12m</span> </a></li>
-
-            </ul>
-        </div>
+    <div id="ctl33_BodyContainer" class="bor_box">
 
 
-        <div class="faq_box">
-            <label>Gửi câu hỏi của bạn tại đây</label>
-            <textarea name="txtContent" rows="2" cols="20" id="txtContent"></textarea>
-
-            <div>
-                <input type="button" name="btnSend" value="Gửi câu hỏi" id="btnSend" class="buttonSend"
-                       onclick="SendFAQ();">
+        <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;"
+             class="customeScrollbar mCustomScrollbar _mCS_1">
+            <div class="mCustomScrollBox mCS-light" id="mCSB_1"
+                 style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+                <div class="mCSB_container" style="position: relative;">
+                    <?php foreach($hot_project as $_key => $_val):?>
+                        <div>
+                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
+                                <img src="<?php echo $_val->getImageUrl()?>" width="156" height="100" alt="<?php echo $_val->name?>">
+                            </a>
+                        </div>
+                        <div class="prj_vip">
+                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
+                                <?php echo $_val->name?>
+                            </a>
+                        </div>
+                        <div class="line_separate">
+                        </div>
+                    <?php endforeach;?>
+                </div>
             </div>
         </div>
-
-        <script language="javascript">
-            function SendFAQ() {
-                var content = $("#txtContent").val();
-                if (content != "") {
-                    if (localStorage) {
-                        localStorage["FAQQuestion"] = content;
-                    }
-
-                    window.location.href = "/dang-tin-hoi-dap";
-                }
-
-                return false;
-            }
-        </script>
-
+        <div class="clear">
+        </div>
     </div>
-    <div id="ctl35_FooterContainer">
+    <div id="ctl33_FooterContainer">
     </div>
 </div>
-<div style="clear: both; margin-bottom: 10px;">
-</div>
+<div style="clear: both; margin-bottom: 10px;"></div>
 <!--//Modules/FaqViewList/FAQOptionList.ascx--></div>
 
 <div class="banner-bottom">

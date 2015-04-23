@@ -183,4 +183,13 @@ class Saler extends CActiveRecord
 
         return Yii::app()->createUrl('/web/saler/detail', array('alias'=>$alias,'id' => $id));
     }
+
+    public function getAll(){
+        $data = Saler::model()->findAll();
+        return $data;
+    }
+
+    public function getData(){
+        return CHtml::listData($this->getAll(), 'id', 'name');
+    }
 }

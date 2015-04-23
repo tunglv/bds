@@ -150,6 +150,14 @@
                     </div>
                 </div>
 
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'saler_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'saler_id', Saler::model()->getData()); ?>
+                        <?php echo $form->error($model,'saler_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
                 <script>
                     $(function(){
                         $("#a_url").click(function(){

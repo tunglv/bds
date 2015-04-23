@@ -57,7 +57,7 @@ class Project extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('created, viewed', 'numerical', 'integerOnly'=>true),
+			array('created, viewed, saler_id', 'numerical', 'integerOnly'=>true),
 			array('name, alias, address, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
 			array('province_id, district_id, ward_id', 'length', 'max'=>5),
@@ -131,6 +131,7 @@ class Project extends CActiveRecord
 			'images' => 'Images',
 			'chu_dau_tu' => 'Chu Dau Tu',
 			'created' => 'Created',
+            'saler_id' => 'Saler'
 		);
 	}
 
@@ -253,6 +254,6 @@ class Project extends CActiveRecord
 
         $alias = $this->getAliasTypeLabel($type);
 
-        return Yii::app()->createUrl('/web/project/list', array('alias'=>$type));
+        return Yii::app()->createUrl('/web/project/list', array('alias'=>$alias));
     }
 }
