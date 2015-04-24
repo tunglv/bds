@@ -240,13 +240,20 @@ class Project extends CActiveRecord
         return Yii::app()->getBaseUrl(TRUE).'/'.$contentPath;
     }
 
-    public function getAll(){
-        $data = Project::model()->findAll();
+    public function getAll($district_id = null){
+        if($district_id){
+            $criteria = new CDbCriteria();
+            $criteria->compare('t.district_id', $district_id);
+
+            $data = Project::model()->findAll($criteria);
+        }else {
+            $data = Project::model()->findAll();
+        }
         return $data;
     }
 
-    public function getData(){
-        return CHtml::listData($this->getAll(), 'id', 'name');
+    public function getData($district_id = null){
+        return CHtml::listData($this->getAll($district_id), 'id', 'name');
     }
 
     public function getUrlList($type = null){

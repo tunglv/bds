@@ -42,18 +42,18 @@
             </div>
 
             <div class="t_gr">
-                Phường/Xã
+                Dự án
             </div>
             <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
-                <?php $province_id_ = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id && $province_id_):?>
+                <?php $province_id_ = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-proj']->value)) $distric_id = Yii::app()->request->cookies['s-pro-proj']->value;if($province_id && $province_id_):?>
                     <select name="wardid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
-                        <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
-                            <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                        <?php foreach(Project::model()->getAll($province_id) as $_key => $_val):?>
+                            <option value="<?php echo $_val->id?>" <?php if($_val->id == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
                         <?php endforeach;?>
                     </select>
                 <?php else:?>
                     <select name="wardid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
-                        <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>
                     </select>
                 <?php endif;?>
                 <input type="hidden" name="wardLabel" id="ward-label" value="">
@@ -163,7 +163,7 @@
     });
 
     $("#choise_ward").on('change', function() {
-        setCookie('s-pro-w', $(this).val());
+        setCookie('s-pro-proj', $(this).val());
         $('#ward-label').val($(this).find(":selected").text());
     });
 
@@ -192,18 +192,17 @@
         $('#district-label').val($(this).find(":selected").text());
 
         if($(this).val()) {
-            $.post("/web/project/getWard", {districtid: $(this).val()})
+            $.post("/web/project/getProject", {districtid: $(this).val()})
                 .done(function (data) {
                     data = jQuery.parseJSON(data);
                     var html = '';
                     $.each(data, function (index, value) {
                         html += '<option value="' + index + '">' + value + '</option>';
                     });
-
-                    $('#choise_ward').html('<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>');
+                    $('#choise_ward').html(html);
                 });
         }else{
-            $('#choise_ward').html(html);
+            $('#choise_ward').html('<option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>');
         }
     });
 
@@ -211,7 +210,7 @@
         var s_pro_t = getCookie('s-pro-t');
         var s_pro_p = getCookie('s-pro-p');
         var s_pro_d = getCookie('s-pro-d');
-        var s_pro_w = getCookie('s-pro-w');
+        var s_pro_w = getCookie('s-pro-proj');
 
         $('#type-label').val('noname');
         $('#city-label').val('noname');

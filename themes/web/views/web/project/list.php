@@ -327,10 +327,10 @@
                                 html += '<option value="' + index + '">' + value + '</option>';
                             });
 
-                            $('#choise_ward').html('<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>');
+                            $('#choise_ward').html(html);
                         });
                 }else{
-                    $('#choise_ward').html(html);
+                    $('#choise_ward').html('<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>');
                 }
             });
 

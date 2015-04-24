@@ -17,7 +17,7 @@ class ProjectController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'listC', 'detail', 'group', 'result', 'getDistrict', 'getWard'),
+                'actions' => array('error', 'list', 'listC', 'detail', 'group', 'result', 'getDistrict', 'getWard', 'getProject'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -41,6 +41,14 @@ class ProjectController extends WebController {
                 $this->render($view, $error);
             }
         }
+    }
+
+    public function actionGetProject(){
+        $districtid = Yii::app()->request->getPost('districtid');
+
+        $data = Project::model()->getData($districtid);
+
+        echo json_encode($data);
     }
 
     public function actionGetDistrict(){
