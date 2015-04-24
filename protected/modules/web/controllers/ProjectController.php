@@ -17,7 +17,7 @@ class ProjectController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'listC', 'detail', 'group', 'result'),
+                'actions' => array('error', 'list', 'listC', 'detail', 'group', 'result', 'getDistrict', 'getWard'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -43,35 +43,51 @@ class ProjectController extends WebController {
         }
     }
 
-    public function actionResult(){
-        $type = Yii::app()->request->getPost('choise-type');
-        $typeLabel = Yii::app()->request->getPost('type-label');
-        $provincce = Yii::app()->request->getPost('choise-city');
-        $provincceLabel = Yii::app()->request->getPost('city-label');
-        $district = Yii::app()->request->getPost('choise-district');
-        $districtLabel = Yii::app()->request->getPost('district-label');
-        $ward = Yii::app()->request->getPost('choise-ward');
-        $wardLabel = Yii::app()->request->getPost('ward-label');
+    public function actionGetDistrict(){
+        $provinceid = Yii::app()->request->getPost('provinceid');
+
+        $data = District::model()->getData($provinceid);
+
+        echo json_encode($data);
+    }
+
+    public function actionGetWard(){
+        $districtid = Yii::app()->request->getPost('districtid');
+
+        $data = Ward::model()->getData($districtid);
+
+        echo json_encode($data);
+    }
+//<typeLabel:[\w\-]+>-<typeid:\d+>,<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<wardLabel:[\w\-]+>-<wardid:[\w\-]+>
+    public function actionResult($typeLabel='',$typeid='', $cityLabel = '', $cityid = '', $distLabel = '', $distid = '', $wardLabel = '', $wardid = ''){
+//        $type = Yii::app()->request->getPost('choise-type');
+//        $typeLabel = Yii::app()->request->getPost('type-label');
+//        $provincce = Yii::app()->request->getPost('choise-city');
+//        $provincceLabel = Yii::app()->request->getPost('city-label');
+//        $district = Yii::app()->request->getPost('choise-district');
+//        $districtLabel = Yii::app()->request->getPost('district-label');
+//        $ward = Yii::app()->request->getPost('choise-ward');
+//        $wardLabel = Yii::app()->request->getPost('ward-label');
 
         $label = $typeLabel ? $typeLabel : 'Tổng hợp';
-        $label .= ($wardLabel ? ' - '.$wardLabel : '').($districtLabel ? ' - '.$districtLabel : '').($provincceLabel ? ' - '.$provincceLabel:'');
+        $label .= ($wardLabel ? ' - '.$wardLabel : '').($distLabel ? ' - '.$distLabel : '').($cityLabel ? ' - '.$cityLabel:'');
 
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $criteria = new CDbCriteria();
-        $criteria->compare('t.type', $type);
-        if($provincce) {
-            $criteria->compare('t.province_id', $provincce);
+        $criteria->compare('t.type', $typeid);
+        if($cityid) {
+            $criteria->compare('t.province_id', $cityid);
         }
-        if($district) {
-            $criteria->compare('t.district_id', $district);
+        if($distid) {
+            $criteria->compare('t.district_id', $distid);
         }
-        if($ward) {
-            $criteria->compare('t.ward_id', $ward);
+        if($wardid) {
+            $criteria->compare('t.ward_id', $wardid);
 
         }
-        $criteria->compare('t.type', $type);
+        $criteria->compare('t.type', $typeid);
         $criteria->order = 't.created DESC';
 
         $dataProvider = new CActiveDataProvider('Project', array(
@@ -85,14 +101,14 @@ class ProjectController extends WebController {
 
         $hot_topic = $this->_getHotTopic();
         $hot_project = $this->_getHotProject();
-        $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $type);
+        $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $typeid);
         $group_type = $this->_getGroupProject('type', '', 'type');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->render('list', array(
             'dataProvider'=>$dataProvider,
             'label' => $label,
-            'type' => $type,
+            'type' => $typeid,
             'hot_topic' => $hot_topic,
             'hot_project'=>$hot_project,
             'group_province'=>$group_province,
