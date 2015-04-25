@@ -376,6 +376,7 @@
             <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
                 <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
                     <select name="distid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>
                         <?php foreach(District::model()->getAll($province_id) as $_key => $_val):?>
                             <option value="<?php echo $_val->districtid?>" <?php if($_val->districtid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
                         <?php endforeach;?>
@@ -394,6 +395,7 @@
             <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
                 <?php $province_id_ = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id && $province_id_):?>
                     <select name="wardid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
                         <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
                             <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
                         <?php endforeach;?>
@@ -522,7 +524,7 @@
             $.post("/web/project/getDistrict", {provinceid: $(this).val()})
                 .done(function (data) {
                     data = jQuery.parseJSON(data);
-                    var html = '';
+                    var html = '<option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>';
                     $.each(data, function (index, value) {
                         html += '<option value="' + index + '">' + value + '</option>';
                     });
@@ -542,7 +544,7 @@
             $.post("/web/project/getWard", {districtid: $(this).val()})
                 .done(function (data) {
                     data = jQuery.parseJSON(data);
-                    var html = '';
+                    var html = '<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>';
                     $.each(data, function (index, value) {
                         html += '<option value="' + index + '">' + value + '</option>';
                     });

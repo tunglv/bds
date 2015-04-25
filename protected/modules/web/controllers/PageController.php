@@ -103,12 +103,12 @@ class PageController extends WebController {
         $project = Project::model()->findAll($criteria);
 
 
-        $maxOffest = Saler::model()->count() < 20 ? 0 : Saler::model()->count() - 20;
+        $maxOffest = Saler::model()->count() < 10 ? 0 : Saler::model()->count() - 10;
         $offset = rand ( 0, $maxOffest);
         //        newest project
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
-        $criteria->limit = 20;
+        $criteria->limit = 10;
         $criteria->offset = $offset;
         $saler = Saler::model()->findAll($criteria);
 

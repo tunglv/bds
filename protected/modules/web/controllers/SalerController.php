@@ -17,7 +17,7 @@ class SalerController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'detail', 'result'),
+                'actions' => array('error', 'list', 'detail', 'result', 'city'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -43,38 +43,42 @@ class SalerController extends WebController {
         }
     }
 
-    public function actionResult(){
-        $type = Yii::app()->request->getPost('choise-type');
-        $typeLabel = Yii::app()->request->getPost('type-label');
-        $provincce = Yii::app()->request->getPost('choise-city');
-        $provincceLabel = Yii::app()->request->getPost('city-label');
-        $district = Yii::app()->request->getPost('choise-district');
-        $districtLabel = Yii::app()->request->getPost('district-label');
-        $ward = Yii::app()->request->getPost('choise-ward');
-        $wardLabel = Yii::app()->request->getPost('ward-label');
+    public function actionResult($cityLabel = '', $cityid = '', $distLabel = '', $distid = '', $projectLabel = '', $projectid = ''){
+//        $provincce = Yii::app()->request->getPost('choise-city');
+//        $provincceLabel = Yii::app()->request->getPost('city-label');
+//        $district = Yii::app()->request->getPost('choise-district');
+//        $districtLabel = Yii::app()->request->getPost('district-label');
+//        $project = Yii::app()->request->getPost('choise_ward');
+//        $projectLabel = Yii::app()->request->getPost('ward-label');
 
-        $label = $typeLabel ? $typeLabel : 'Tổng hợp';
-        $label .= ($wardLabel ? ' - '.$wardLabel : '').($districtLabel ? ' - '.$districtLabel : '').($provincceLabel ? ' - '.$provincceLabel:'');
+        $label = ($projectLabel ? $projectLabel : '').($distLabel ? ' - '.$distLabel : '').($cityLabel ? ' - '.$cityLabel:'');
 
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $criteria = new CDbCriteria();
-        $criteria->compare('t.type', $type);
-        if($provincce) {
-            $criteria->compare('t.province_id', $provincce);
+        if(!$cityid){
+            throw new CHttpException(404, 'The requested page does not exist.');
         }
-        if($district) {
-            $criteria->compare('t.district_id', $district);
-        }
-        if($ward) {
-            $criteria->compare('t.ward_id', $ward);
 
+        $criteria = new CDbCriteria();
+
+        if($projectid) {
+            $criteria->with = array('project' =>array(
+                'select'=>false,
+                // but want to get only users with published posts
+                'joinType'=>'INNER JOIN',
+                'condition'=>'project.id='.$projectid,
+                'together' => TRUE
+            ));
+        }else if($distid) {
+            $criteria->compare('t.district_id', $distid);
+        }else if($cityid) {
+            $criteria->compare('t.province_id', $cityid);
         }
-        $criteria->compare('t.type', $type);
+
         $criteria->order = 't.created DESC';
 
-        $dataProvider = new CActiveDataProvider('Project', array(
+        $dataProvider = new CActiveDataProvider('Saler', array(
             'criteria'=>$criteria,
             'pagination' => array(
                 'pageSize' => 10,
@@ -83,20 +87,24 @@ class SalerController extends WebController {
             ),
         ));
 
-        $hot_topic = $this->_getHotTopic();
-        $hot_project = $this->_getHotProject();
-        $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $type);
-        $group_type = $this->_getGroupProject('type', '', 'type');
+//        $hot_topic = $this->_getHotTopic();
+//        $hot_project = $this->_getHotProject();
+//        $group_province = $this->_getGroupProject('province_name', 'province_id', 'province_id', $type);
+//        $group_type = $this->_getGroupProject('type', '', 'type');
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $ramdomSaler = $this->_getRamdonSaler();
+        $groupSaler = $this->_getGroupSaler();
 
         $this->render('list', array(
             'dataProvider'=>$dataProvider,
-            'label' => $label,
-            'type' => $type,
-            'hot_topic' => $hot_topic,
-            'hot_project'=>$hot_project,
-            'group_province'=>$group_province,
-            'group_type'=>$group_type
+            'saler' => $ramdomSaler,
+            'group' => $groupSaler
+//            'label' => $label,
+//            'type' => $type,
+//            'hot_topic' => $hot_topic,
+//            'hot_project'=>$hot_project,
+//            'group_province'=>$group_province,
+//            'group_type'=>$group_type
         ));
     }
 
@@ -122,7 +130,33 @@ class SalerController extends WebController {
         ));
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('list',array('dataProvider'=>$dataProvider));
+        $ramdomSaler = $this->_getRamdonSaler();
+        $groupSaler = $this->_getGroupSaler();
+
+        $this->render('list',array('dataProvider'=>$dataProvider, 'saler' => $ramdomSaler, 'group'=>$groupSaler));
+    }
+
+    public function actionCity($alias = null, $id = null){
+        $this->layout = '//layouts/main';
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.province_id', $id);
+        $criteria->order = 't.created DESC';
+
+        $dataProvider = new CActiveDataProvider('Saler', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $ramdomSaler = $this->_getRamdonSaler();
+        $groupSaler = $this->_getGroupSaler();
+
+        $this->render('list',array('dataProvider'=>$dataProvider, 'saler' => $ramdomSaler, 'group'=>$groupSaler));
     }
 
     public function actionDetail($id = 0, $alias = ''){
@@ -132,7 +166,32 @@ class SalerController extends WebController {
         $saler = Saler::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('detail', array('saler'=>$saler));
+        $ramdomSaler = $this->_getRamdonSaler();
+        $groupSaler = $this->_getGroupSaler();
+
+        $this->render('detail', array('saler'=>$saler, 'rSaler' => $ramdomSaler, 'group'=>$groupSaler));
+    }
+
+    private function _getGroupSaler(){
+        $criteria = new CDbCriteria();
+        $criteria->select = '`province_name`, `province_id`, count(*) AS `created`';
+        $criteria->group = '`province_id`';
+        $data = Saler::model()->findAll($criteria);
+
+        return $data;
+    }
+
+    private function _getRamdonSaler(){
+        $maxOffest = Saler::model()->count() < 10 ? 0 : Saler::model()->count() - 10;
+        $offset = rand ( 0, $maxOffest);
+        //        newest project
+        $criteria = new CDbCriteria();
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 10;
+        $criteria->offset = $offset;
+        $saler = Saler::model()->findAll($criteria);
+
+        return $saler;
     }
 
     /**

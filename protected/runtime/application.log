@@ -6758,3 +6758,464 @@ Stack trace:
 REQUEST_URI=/themes/web/files/images/icons/link.png
 HTTP_REFERER=http://meohay.dev/themes/web/files/css/style.css
 ---
+2015/04/25 23:53:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/greenbutton.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/greenbut...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/greenbutton.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/arrowdown.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrowdow...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/arrowdown.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/arrowright.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrowrig...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/arrowright.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/25 23:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/top1.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/top1.jpg')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/top1.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:03:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\server\bds\protected\modules\web\controllers\SalerController.php:53
+Stack trace:
+#0 [internal function]: SalerController->actionResult('ha-noi', '01', 'ba-dinh', '001', 'du-an-a', '1')
+#1 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SalerController), Array)
+#2 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SalerController), Object(ReflectionMethod), Array)
+#3 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\server\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\server\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\server\bds\yii\framework\web\CWebApplication.php(282): CController->run('result')
+#12 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/saler/resul...')
+#13 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\server\bds\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+---
+2015/04/26 00:03:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/top3.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/top3.jpg')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/top3.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:04:20 [error] [exception.CException] exception 'CException' with message '"dataProvider" không được phép rỗng.' in D:\server\bds\yii\framework\zii\widgets\CBaseListView.php:105
+Stack trace:
+#0 D:\server\bds\yii\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#1 D:\server\bds\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 D:\server\bds\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 D:\server\bds\themes\web\views\web\saler\list.php(108): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 D:\server\bds\yii\framework\web\CBaseController.php(126): require('D:\server\bds\t...')
+#5 D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): CBaseController->renderInternal('D:\server\bds\t...', Array, true)
+#6 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SalerController), 'D:\server\bds\t...', Array, true)
+#7 D:\server\bds\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\server\bds\t...', Array, true)
+#8 D:\server\bds\yii\framework\web\CController.php(782): CController->renderPartial('list', Array, true)
+#9 D:\server\bds\protected\modules\web\controllers\SalerController.php(105): CController->render('list', Array)
+#10 [internal function]: SalerController->actionResult('ha-noi', '01', 'ba-dinh', '001', 'du-an-a', '1')
+#11 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SalerController), Array)
+#12 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SalerController), Object(ReflectionMethod), Array)
+#13 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 D:\server\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\server\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\server\bds\yii\framework\web\CWebApplication.php(282): CController->run('result')
+#22 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/saler/resul...')
+#23 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 D:\server\bds\index.php(14): CApplication->run()
+#25 {main}
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+---
+2015/04/26 00:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\server\bds\protected\modules\web\controllers\SalerController.php:88
+Stack trace:
+#0 [internal function]: SalerController->actionResult('ha-noi', '01', 'ba-dinh', '001', 'du-an-a', '1')
+#1 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SalerController), Array)
+#2 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SalerController), Object(ReflectionMethod), Array)
+#3 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\server\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\server\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\server\bds\yii\framework\web\CWebApplication.php(282): CController->run('result')
+#12 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/saler/resul...')
+#13 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\server\bds\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+---
+2015/04/26 00:08:52 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "CDbCriteria.joinType" chưa được định nghĩa.' in D:\server\bds\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\server\bds\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('joinType', 'INNER JOIN')
+#1 D:\server\bds\yii\framework\web\CActiveDataProvider.php(104): CDbCriteria->__construct(Array)
+#2 D:\server\bds\yii\framework\base\CComponent.php(152): CActiveDataProvider->setCriteria(Array)
+#3 D:\server\bds\yii\framework\web\CActiveDataProvider.php(83): CComponent->__set('criteria', Array)
+#4 D:\server\bds\protected\modules\web\controllers\SalerController.php(94): CActiveDataProvider->__construct('Saler', Array)
+#5 [internal function]: SalerController->actionResult('ha-noi', '01', 'ba-dinh', '001', 'du-an-a', '1')
+#6 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SalerController), Array)
+#7 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SalerController), Object(ReflectionMethod), Array)
+#8 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\server\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\server\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\server\bds\yii\framework\web\CWebApplication.php(282): CController->run('result')
+#17 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/saler/resul...')
+#18 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 D:\server\bds\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,du-an-a-1
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://tung.bds/
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit4.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit4.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit4.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/top1.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/top1.jpg')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/top1.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:21:08 [error] [php] Undefined variable: saler (D:\server\bds\themes\web\views\web\saler\_right_content.php:261)
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 D:\server\bds\yii\framework\web\CController.php(869): SalerController->renderFile()
+#2 D:\server\bds\themes\web\views\web\saler\list.php(217): SalerController->renderPartial()
+#3 D:\server\bds\yii\framework\web\CBaseController.php(126): require()
+#4 D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SalerController->renderInternal()
+#5 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#6 D:\server\bds\yii\framework\web\CController.php(869): SalerController->renderFile()
+#7 D:\server\bds\yii\framework\web\CController.php(782): SalerController->renderPartial()
+#8 D:\server\bds\protected\modules\web\controllers\SalerController.php(106): SalerController->render()
+#9 unknown(0): SalerController->actionResult()
+#10 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#11 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): SalerController->runAction()
+#14 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 D:\server\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#16 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): SalerController->filterAccessControl()
+#17 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#18 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 D:\server\bds\yii\framework\web\CController.php(265): SalerController->runActionWithFilters()
+#20 D:\server\bds\yii\framework\web\CWebApplication.php(282): SalerController->run()
+#21 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 D:\server\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,muong-thanh-hotel-2
+in D:\server\bds\themes\web\views\web\saler\_right_content.php (261)
+in D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in D:\server\bds\themes\web\views\web\saler\list.php (217)
+2015/04/26 00:21:37 [error] [php] Undefined variable: saler (D:\server\bds\themes\web\views\web\saler\_right_content.php:261)
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 D:\server\bds\yii\framework\web\CController.php(869): SalerController->renderFile()
+#2 D:\server\bds\themes\web\views\web\saler\list.php(217): SalerController->renderPartial()
+#3 D:\server\bds\yii\framework\web\CBaseController.php(126): require()
+#4 D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SalerController->renderInternal()
+#5 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#6 D:\server\bds\yii\framework\web\CController.php(869): SalerController->renderFile()
+#7 D:\server\bds\yii\framework\web\CController.php(782): SalerController->renderPartial()
+#8 D:\server\bds\protected\modules\web\controllers\SalerController.php(106): SalerController->render()
+#9 unknown(0): SalerController->actionResult()
+#10 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#11 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): SalerController->runAction()
+#14 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 D:\server\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#16 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): SalerController->filterAccessControl()
+#17 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#18 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 D:\server\bds\yii\framework\web\CController.php(265): SalerController->runActionWithFilters()
+#20 D:\server\bds\yii\framework\web\CWebApplication.php(282): SalerController->run()
+#21 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 D:\server\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/nha-mo-gioi/ket-qua-tim-kiem.ha-noi-01,ba-dinh-001,muong-thanh-hotel-2
+in D:\server\bds\themes\web\views\web\saler\_right_content.php (261)
+in D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in D:\server\bds\themes\web\views\web\saler\list.php (217)
+2015/04/26 00:22:51 [error] [php] Undefined variable: saler (D:\server\bds\themes\web\views\web\saler\list.php:217)
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 D:\server\bds\yii\framework\web\CController.php(869): SalerController->renderFile()
+#2 D:\server\bds\yii\framework\web\CController.php(782): SalerController->renderPartial()
+#3 D:\server\bds\protected\modules\web\controllers\SalerController.php(131): SalerController->render()
+#4 unknown(0): SalerController->actionList()
+#5 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): SalerController->runAction()
+#9 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\server\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): SalerController->filterAccessControl()
+#12 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\server\bds\yii\framework\web\CController.php(265): SalerController->runActionWithFilters()
+#15 D:\server\bds\yii\framework\web\CWebApplication.php(282): SalerController->run()
+#16 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\server\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/nha-mo-gioi
+in D:\server\bds\themes\web\views\web\saler\list.php (217)
+in D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in D:\server\bds\protected\modules\web\controllers\SalerController.php (131)
+2015/04/26 00:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "nha-mo-gioi/Công ty Cổ phần Đầu tư Xây dựng Thế giới Bất động sản   Công ty môi giới_files/style(1).css".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nha-mo-gioi/C??...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nha-mo-gioi/C%C3%B4ng%20ty%20C%E1%BB%95%20ph%E1%BA%A7n%20%C4%90%E1%BA%A7u%20t%C6%B0%20X%C3%A2y%20d%E1%BB%B1ng%20Th%E1%BA%BF%20gi%E1%BB%9Bi%20B%E1%BA%A5t%20%C4%91%E1%BB%99ng%20s%E1%BA%A3n%20%20%20C%C3%B4ng%20ty%20m%C3%B4i%20gi%E1%BB%9Bi_files/style(1).css
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/le-van-a-1
+---
+2015/04/26 00:32:05 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Saler.viewed" chưa được định nghĩa.' in D:\server\bds\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\server\bds\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('viewed')
+#1 D:\server\bds\themes\web\views\web\saler\_right_content.php(444): CActiveRecord->__get('viewed')
+#2 D:\server\bds\yii\framework\web\CBaseController.php(126): require('D:\server\bds\t...')
+#3 D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): CBaseController->renderInternal('D:\server\bds\t...', Array, true)
+#4 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SalerController), 'D:\server\bds\t...', Array, true)
+#5 D:\server\bds\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\server\bds\t...', Array, true)
+#6 D:\server\bds\themes\web\views\web\saler\detail.php(276): CController->renderPartial('_right_content', Array)
+#7 D:\server\bds\yii\framework\web\CBaseController.php(126): require('D:\server\bds\t...')
+#8 D:\server\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): CBaseController->renderInternal('D:\server\bds\t...', Array, true)
+#9 D:\server\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(SalerController), 'D:\server\bds\t...', Array, true)
+#10 D:\server\bds\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\server\bds\t...', Array, true)
+#11 D:\server\bds\yii\framework\web\CController.php(782): CController->renderPartial('detail', Array, true)
+#12 D:\server\bds\protected\modules\web\controllers\SalerController.php(146): CController->render('detail', Array)
+#13 [internal function]: SalerController->actionDetail('1', 'le-van-a')
+#14 D:\server\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SalerController), Array)
+#15 D:\server\bds\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SalerController), Object(ReflectionMethod), Array)
+#16 D:\server\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\server\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 D:\server\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 D:\server\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 D:\server\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 D:\server\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 D:\server\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 D:\server\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 D:\server\bds\yii\framework\web\CWebApplication.php(282): CController->run('detail')
+#25 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('web/saler/detai...')
+#26 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 D:\server\bds\index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/nha-mo-gioi/le-van-a-1
+HTTP_REFERER=http://tung.bds/nha-mo-gioi
+---
+2015/04/26 00:32:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "nha-mo-gioi/Công ty Cổ phần Đầu tư Xây dựng Thế giới Bất động sản   Công ty môi giới_files/style(1).css".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('nha-mo-gioi/C??...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nha-mo-gioi/C%C3%B4ng%20ty%20C%E1%BB%95%20ph%E1%BA%A7n%20%C4%90%E1%BA%A7u%20t%C6%B0%20X%C3%A2y%20d%E1%BB%B1ng%20Th%E1%BA%BF%20gi%E1%BB%9Bi%20B%E1%BA%A5t%20%C4%91%E1%BB%99ng%20s%E1%BA%A3n%20%20%20C%C3%B4ng%20ty%20m%C3%B4i%20gi%E1%BB%9Bi_files/style(1).css
+HTTP_REFERER=http://tung.bds/nha-mo-gioi/le-van-a-1
+---
+2015/04/26 00:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/header-tab-active-left1.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/header-t...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/header-tab-active-left1.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/header-tab-active-right1.jpg".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/header-t...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/header-tab-active-right1.jpg
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:39:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/css/assets/icon01.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/css/assets/icon01.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css//home.css
+---
+2015/04/26 00:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://tung.bds/
+---
+2015/04/26 00:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit4.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit4.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit4.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/04/26 00:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---

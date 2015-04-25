@@ -273,7 +273,7 @@
 </div>
 <!--//Modules/Broker/OtherBrokers/OtherBrokers.ascx--></div>
 </div>
-<?php $this->renderPartial('_right_content'); ?>
+<?php $this->renderPartial('_right_content', array('saler'=>$rSaler, 'group'=>$group)); ?>
 
 <div class="banner-bottom">
     <div id="SubBottomLeftMainContent" style="float: left; width: 560px"></div>

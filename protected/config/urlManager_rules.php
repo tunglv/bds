@@ -38,6 +38,8 @@ $array_base = array(
     '/kien-truc/<alias:[\w\-]+>-<id:\d+>' => '/web/architecture/detail',
 
     '/nha-mo-gioi' => '/web/saler/list',
+    '/nha-mo-gioi-<alias:[\w\-]+>-<id:\d+>' => '/web/saler/city',
+    '/nha-mo-gioi/ket-qua-tim-kiem.<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<projectLabel:[\w\-]+>-<projectid:\d+>' => '/web/saler/result',
     '/nha-mo-gioi/<alias:[\w\-]+>-<id:\d+>'=>'/web/saler/detail',
 
     '/du-an' => '/web/project/group',

@@ -103,6 +103,7 @@ class Saler extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'project' => array(self::HAS_MANY, 'Project', 'saler_id')
 		);
 	}
 
@@ -182,6 +183,15 @@ class Saler extends CActiveRecord
         $id = $id ? $id : $this->id;
 
         return Yii::app()->createUrl('/web/saler/detail', array('alias'=>$alias,'id' => $id));
+    }
+    public function getCUrl($province_name = '', $province_id = ''){
+        $province_name = $province_name ? $province_name : $this->province_name;
+        $province_id = $province_id ? $province_id : $this->province_id;
+
+        Yii::import('ext.TextParser');
+        $province_alias = TextParser::toSEOString($province_name);
+
+        return Yii::app()->createUrl('/web/saler/city', array('alias'=>$province_alias,'id' => $province_id));
     }
 
     public function getAll($district_id = 0){
