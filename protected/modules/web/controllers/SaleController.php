@@ -17,7 +17,7 @@ class SaleController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'list', 'detail'),
+                'actions' => array('error', 'list', 'detail', 'listC', 'result'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -42,6 +42,99 @@ class SaleController extends WebController {
             }
         }
     }
+
+    public function actionResult($cityLabel = null,$cityid= null,$distLabel=null,$distid=null,$wardLabel=null,$wardid=null,$projectLabel=null,$projectid=null,$area = null,$price=null){
+        $this->layout = '//layouts/main';
+
+        $criteria = new CDbCriteria();
+        if($cityid) $criteria->compare('t.province_id', $cityid);
+        if($distid) $criteria->compare('t.district_id', $distid);
+        if($wardid) $criteria->compare('t.ward_id', $wardid);
+        if($projectid) $criteria->compare('t.project_id', $projectid);
+//        if($area) $criteria->compare('t.project_id', $projectid);
+
+        if(Yii::app()->request->cookies['choise-type'] && $type = Yii::app()->request->cookies['choise-type']->value){
+            switch ($type) {
+                case 1:
+                    $criteria->order = 't.id DESC';
+                    break;
+                case 2:
+                    $criteria->order = 't.price ASC';
+                    break;
+                case 3:
+                    $criteria->order = 't.price DESC';
+                    break;
+                case 4:
+                    $criteria->order = 't.area ASC';
+                    break;
+                case 5:
+                    $criteria->order = 't.area DESC';
+                    break;
+            }
+        }else{
+            $criteria->order = 't.id DESC';
+        }
+
+        $dataProvider = new CActiveDataProvider('BdsSale', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+
+        $group = $this->_getGroupSale('province_name', 'province_id','province_id');
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('list', array('dataProvider'=>$dataProvider, 'group'=>$group));
+    }
+
+    public function actionListC($cityAlias = '', $cityid = '') {
+        $cityid = 0;
+
+        $this->layout = '//layouts/main';
+
+        $criteria = new CDbCriteria();
+        $criteria->compare('t.province_id', $cityid);
+
+        if(Yii::app()->request->cookies['choise-type'] && $type = Yii::app()->request->cookies['choise-type']->value){
+            switch ($type) {
+                case 1:
+                    $criteria->order = 't.id DESC';
+                    break;
+                case 2:
+                    $criteria->order = 't.price ASC';
+                    break;
+                case 3:
+                    $criteria->order = 't.price DESC';
+                    break;
+                case 4:
+                    $criteria->order = 't.area ASC';
+                    break;
+                case 5:
+                    $criteria->order = 't.area DESC';
+                    break;
+            }
+        }else{
+            $criteria->order = 't.id DESC';
+        }
+
+        $dataProvider = new CActiveDataProvider('BdsSale', array(
+            'criteria'=>$criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                //'totalItemCount' => 'page',
+                'pageVar' => 'paged',
+            ),
+        ));
+
+        $group = $this->_getGroupSale('province_name', 'province_id','province_id');
+//        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->render('list', array('dataProvider'=>$dataProvider, 'group'=>$group));
+    }
+
 
     /**
      * @author tunglv Doe <tunglv.1990@gmail.com>
@@ -101,8 +194,9 @@ class SaleController extends WebController {
             ),
         ));
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $group = $this->_getGroupSale('province_name', 'province_id','province_id');
 
-        $this->render('list', array('dataProvider'=>$dataProvider));
+        $this->render('list', array('dataProvider'=>$dataProvider, 'group' => $group));
     }
 
     public function actionDetail($alias = '', $id = 0){
@@ -115,6 +209,20 @@ class SaleController extends WebController {
         $sameSale = $this->_getSameProject($sale->project_id, $sale->type);
 
         $this->render('detail', array('sale'=>$sale, 'same' => $sameSale));
+    }
+
+    private function _getGroupSale($name_field = '', $name_field_1 = '', $field_group = '', $type = ''){
+        $criteria = new CDbCriteria();
+        if($name_field_1) {
+            $criteria->select = '`' . $name_field . '`,`' . $name_field_1 . '`, `type`, count(*) AS `created`';
+        }else{
+            $criteria->select = '`' . $name_field . '`,count(*) AS `created`';
+        }
+        $criteria->group = '`'.$field_group.'`';
+        if($type) $criteria->compare('`type`',$type);
+        $data = BdsSale::model()->findAll($criteria);
+
+        return $data;
     }
 
     private function _getSameProject($project_id = 0, $type = 0){

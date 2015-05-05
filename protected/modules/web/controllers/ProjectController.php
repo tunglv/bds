@@ -45,8 +45,10 @@ class ProjectController extends WebController {
 
     public function actionGetProject(){
         $districtid = Yii::app()->request->getPost('districtid');
+        $wardid = Yii::app()->request->getPost('wardid');
 
-        $data = Project::model()->getData($districtid);
+        if($districtid) $data = Project::model()->getData($districtid);
+        if($wardid) $data = Project::model()->getData('',$wardid);
 
         echo json_encode($data);
     }

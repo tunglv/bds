@@ -7219,3 +7219,1970 @@ Stack trace:
 REQUEST_URI=/Images/tit1.gif
 HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
 ---
+2015/05/05 14:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/top1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/top1.jpg')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/top1.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit4.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit4.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit4.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/05 14:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/header-tab-active-right1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/header-t...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/header-tab-active-right1.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/header-tab-active-left1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/header-t...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/header-tab-active-left1.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/css/assets/icon01.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/css/assets/icon01.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css//home.css
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/search1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/search1.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Product/Maps/Images/new-icon-v2.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Product...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Product/Maps/Images/new-icon-v2.png
+HTTP_REFERER=http://bds.tung/themes/web/files/css/Mapv1.css
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/select-box-220.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/select-b...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/select-box-220.png
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/search1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/search1.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 14:53:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/top3.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/top3.jpg')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/top3.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/search1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/search1.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/search1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/search1.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/search2.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/search2....')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/search2.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/search1.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/search1....')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/search1.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 15:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/greenbutton.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/greenbut...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/greenbutton.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 15:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/arrowright.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrowrig...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/arrowright.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 15:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/arrowdown.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/arrowdow...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/arrowdown.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+---
+2015/05/05 16:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [php] copy(C:\xampp\htdocs\bds\assets\f4350e2e\indicator.png): failed to open stream: Invalid argument (C:\xampp\htdocs\bds\yii\framework\utils\CFileHelper.php:131)
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CAssetManager.php(251): copyDirectory()
+#1 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(97): CAssetManager->publish()
+#2 C:\xampp\htdocs\bds\yii\framework\base\CComponent.php(111): YiiDebugToolbar->getAssetsUrl()
+#3 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(165): YiiDebugToolbar->__get()
+#4 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(128): YiiDebugToolbar->registerClientScripts()
+#5 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbarRoute.php(145): YiiDebugToolbar->init()
+#6 C:\xampp\htdocs\bds\yii\framework\base\CComponent.php(558): YiiDebugToolbarRoute->onBeginRequest()
+#7 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(196): CWebApplication->raiseEvent()
+#8 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(167): CWebApplication->onBeginRequest()
+#9 C:\xampp\htdocs\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (97)
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (165)
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (128)
+2015/05/05 16:25:50 [error] [php] copy(C:\xampp\htdocs\bds\assets\f4350e2e\indicator.png): failed to open stream: Invalid argument (C:\xampp\htdocs\bds\yii\framework\utils\CFileHelper.php:131)
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CAssetManager.php(251): copyDirectory()
+#1 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(97): CAssetManager->publish()
+#2 C:\xampp\htdocs\bds\yii\framework\base\CComponent.php(111): YiiDebugToolbar->getAssetsUrl()
+#3 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(165): YiiDebugToolbar->__get()
+#4 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php(128): YiiDebugToolbar->registerClientScripts()
+#5 C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbarRoute.php(145): YiiDebugToolbar->init()
+#6 C:\xampp\htdocs\bds\yii\framework\base\CComponent.php(558): YiiDebugToolbarRoute->onBeginRequest()
+#7 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(196): CWebApplication->raiseEvent()
+#8 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(167): CWebApplication->onBeginRequest()
+#9 C:\xampp\htdocs\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (97)
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (165)
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\YiiDebugToolbar.php (128)
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+---
+2015/05/05 16:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:42:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+---
+2015/05/05 16:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+---
+2015/05/05 16:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+---
+2015/05/05 16:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+---
+2015/05/05 16:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+---
+2015/05/05 16:51:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+---
+2015/05/05 16:51:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+---
+2015/05/05 16:51:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 16:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:10:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "ket-qua-tim-kiem-du-an.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ket-qua-tim-kie...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/ket-qua-tim-kiem-du-an.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:10:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tim-kiem-nha-da...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tim-kiem-nha-da...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,-0,1,2
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,noname-0,-1,2".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tim-kiem-nha-da...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tim-kiem-nha-dat-ban.ha-noi-01,thanh-xuan-009,nhan-chinh-00343,noname-0,-1,2
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-next1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-next1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb-back1.png".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb-back1.png
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.2431.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.2431.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.296801.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.296801.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.503895.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.503895.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.325591.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.325591.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---
+2015/05/05 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/web/files/images/thumb80x80.278584.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/web/file...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/web/files/images/thumb80x80.278584.jpg
+HTTP_REFERER=http://bds.tung/nha-dat-ban/chi-tiet/ban-nha-o-trung-van-1
+---

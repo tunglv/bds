@@ -48,22 +48,13 @@ $array_base = array(
     '/ket-qua-tim-kiem-du-an.<typeLabel:[\w\-]+>-<typeid:\d+>,<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<wardLabel:[\w\-]+>-<wardid:[\w\-]+>' => '/web/project/result',
     '/du-an/<type:[\w\-]+>/<alias:[\w\-]+>-<id:\d+>' => '/web/project/detail',
 
+    '/tim-kiem-nha-dat-ban.<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<wardLabel:[\w\-]+>-<wardid:[\w\-]+>,<projectLabel:[\w\-]+>-<projectid:\d+>,<area:\d+>,<price:\d+>'=>'/web/sale/result',
     '/nha-dat-ban/<typeOf:[\w\-]+>'=>'/web/sale/list',
+    '/nha-dat-ban/<cityAlias:[\w\-]+>-<cityId:\d+>'=>'/web/sale/listC',
     '/nha-dat-ban/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/sale/detail',
 
     '/nha-cho-thue/<typeOf:[\w\-]+>'=>'/web/rent/list',
     '/nha-cho-thue/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/rent/detail',
-
-    // branch
-    '/<city_alias:[\w\-]+>/<alias:[\w\-]+>-<id:\d+>' => '/web/branch/view',
-    
-    // event
-    '/<city_alias:[\w\-]+>/<branch_alias:[\w\-]+>-<branch_id:\d+>/<event_alias:[\w\-]+>-<event_id:\d+>' => '/web/branch/viewDetailEvent',
-    
-    // branch search
-    '/<city_alias:[\w\-]+>/tim-kiem/<get:.+>/trang-<page:\d+>' => '/web/branch/search',
-    '/<city_alias:[\w\-]+>/tim-kiem/<get:.+>' => '/web/branch/search',
-    '/<city_alias:[\w\-]+>/tim-kiem' => '/web/branch/search',
 
     // crawl foody
     '/foody/<foody_city_alias>/<page_from>/<page_to>'   => '/crawlFoody/run',

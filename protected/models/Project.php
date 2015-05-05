@@ -60,7 +60,8 @@ class Project extends CActiveRecord
 			array('created, viewed, saler_id', 'numerical', 'integerOnly'=>true),
 			array('name, alias, address, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
-			array('province_id, district_id, ward_id', 'length', 'max'=>5),
+			array('province_id, district_id', 'length', 'max'=>5),
+			array('ward_id', 'length', 'max'=>10),
 			array('website, yahoo', 'length', 'max'=>50),
 			array('email', 'length', 'max'=>100),
 			array('type', 'length', 'max'=>1),
@@ -241,20 +242,26 @@ class Project extends CActiveRecord
         return Yii::app()->getBaseUrl(TRUE).'/'.$contentPath;
     }
 
-    public function getAll($district_id = null){
+    public function getAll($district_id = null, $ward_id = null){
         if($district_id){
             $criteria = new CDbCriteria();
             $criteria->compare('t.district_id', $district_id);
 
             $data = Project::model()->findAll($criteria);
-        }else {
+        }else if($ward_id) {
+            $criteria = new CDbCriteria();
+            $criteria->compare('t.ward_id', $ward_id);
+
+            $data = Project::model()->findAll($criteria);
+        }else{
             $data = Project::model()->findAll();
         }
+
         return $data;
     }
 
-    public function getData($district_id = null){
-        return CHtml::listData($this->getAll($district_id), 'id', 'name');
+    public function getData($district_id = null, $ward_id = null){
+        return CHtml::listData($this->getAll($district_id, $ward_id), 'id', 'name');
     }
 
     public function getUrlList($type = null){

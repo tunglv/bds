@@ -234,4 +234,14 @@ class BdsSale extends CActiveRecord
 
         return Yii::app()->createUrl('/web/sale/detail', array('alias'=>$alias,'id' => $id));
     }
+
+    public function getUrlC($city_alias = null, $city_id = null){
+        $city_alias = $city_alias ? $city_alias : $this->province_name;
+        $city_id = $city_id ? $city_id : $this->province_id;
+
+        Yii::import('ext.TextParser');
+        $city_alias = TextParser::toSEOString($city_alias);
+
+        return Yii::app()->createUrl('/web/sale/listC', array('cityAlias'=>$city_alias,'cityId' => $city_id));
+    }
 }
