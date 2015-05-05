@@ -503,12 +503,3 @@
     <div id="SubBottomRightMainContent" style="float: left; width: 430px;
                 margin-left: 5px"></div>
 </div>
-<div id="boxLinkFooter_boxLink" class="footer-link-other boxlink-footer">
-
-</div>
-<script type="text/javascript">
-    if ($("#boxLinkFooter_boxLink").height() >= 240) {
-        $("#boxLinkFooter_boxLink").css("height", "240px");
-        $("#boxLinkFooter_boxLink").css("overflow", "hidden")
-    }
-</script>

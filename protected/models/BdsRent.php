@@ -224,4 +224,24 @@ class BdsRent extends CActiveRecord
 
         return Yii::app()->createUrl('/web/rent/detail', array('alias'=>$alias,'id' => $id));
     }
+
+    public function getUrlC($city_alias = null, $city_id = null){
+        $city_alias = $city_alias ? $city_alias : $this->province_name;
+        $city_id = $city_id ? $city_id : $this->province_id;
+
+        Yii::import('ext.TextParser');
+        $city_alias = TextParser::toSEOString($city_alias);
+
+        return Yii::app()->createUrl('/web/rent/listC', array('cityAlias'=>$city_alias,'cityId' => $city_id));
+    }
+
+    public function getUrlP($project_alias = null, $project_id = null){
+        $project_alias = $project_alias ? $project_alias : $this->project_name;
+        $project_id = $project_id ? $project_id : $this->project_id;
+
+        Yii::import('ext.TextParser');
+        $project_alias = TextParser::toSEOString($project_alias);
+
+        return Yii::app()->createUrl('/web/rent/listP', array('projectAlias'=>$project_alias,'projectId' => $project_id));
+    }
 }

@@ -669,7 +669,7 @@
 
 <div id="ctl32_ctl01_HeaderContainer" class="box-header1">
     <div align="center" class="name_tit1 new-header">
-        Bán căn hộ chung cư theo dự án tại 7
+        Bán căn hộ chung cư theo dự án tại <?php echo $sale->district_name?>
     </div>
 </div>
 <div id="ctl32_ctl01_bodyContainer" class="bor_box">
@@ -680,217 +680,12 @@
 <div class="Project">
 
 <ul>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-can-ho-an-vien">
-        Căn hộ An Viên</a> (1)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-can-ho-phu-my-an">
-        Căn hộ Phú Mỹ An</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-canh-vien-1">
-        Cảnh Viên 1</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-canh-vien-2">
-        Cảnh Viên 2</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-chung-cu-hoang-kim">
-        Chung cư Hoàng Kim</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-chung-cu-minh-thanh">
-        Chung cư Minh Thành</a> (1)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-chung-cu-tan-my">
-        Chung cư Tân Mỹ</a> (15)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-cityland-riverside">
-        CityLand Riverside</a> (3)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-docklands-sai-gon">
-        Docklands Sài Gòn</a> (6)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-ehome-5-the-bridgeview">
-        Ehome 5 - The Bridgeview</a> (14)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-garden-court-1">
-        Garden Court 1</a> (20)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-garden-court-2">
-        Garden Court 2</a> (20)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-garden-plaza-1">
-        Garden Plaza 1</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-garden-plaza-2">
-        Garden Plaza 2</a> (12)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-grand-view">
-        Grand View</a> (2)
-</li>
-
-<li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-green-valley">
-        Green Valley</a> (5)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-green-view">
-        Green View</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-happy-valley">
-        Happy Valley</a> (6)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hoang-anh-thanh-binh">
-        Hoàng Anh Thanh Bình</a> (4)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hung-vuong-1">
-        Hưng Vượng 1</a> (4)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hung-vuong-2">
-        Hưng Vượng 2</a> (1)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hung-vuong-3">
-        Hưng Vượng 3</a> (3)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-jamona-city">
-        Jamona City</a> (31)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-biet-thu-phu-gia">
-        Khu biệt thự Phú Gia</a> (1)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-can-ho-an-hoa">
-        Khu căn hộ An Hòa</a> (3)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-dan-cu-nam-vien">
-        Khu dân cư Nam Viên</a> (1)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-dan-cu-phu-my">
-        Khu dân cư Phú Mỹ</a> (4)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-do-thi-nam-long">
-        Khu đô thị Nam Long</a> (1)
-</li>
-
-<li style="display: none;"><a
-        href="http://batdongsan.com.vn/ban-can-ho-chung-cu-khu-tai-dinh-cu-phu-my-2">
-        Khu tái định cư Phú Mỹ 2</a> (2)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-la-casa">
-        La Casa</a> (7)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-canh">
-        Mỹ Cảnh</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-hung">
-        Mỹ Hưng</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-khang">
-        Mỹ Khang</a> (4)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-khanh-1">
-        Mỹ Khánh 1</a> (2)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-khanh-2">
-        Mỹ Khánh 2</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-khanh-3">
-        Mỹ Khánh 3</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-khanh-4">
-        Mỹ Khánh 4</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-phat">
-        Mỹ Phát</a> (1)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-phu-1">
-        Mỹ Phú 1</a> (2)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-phuc">
-        Mỹ Phúc</a> (3)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-phuoc">
-        Mỹ Phước</a> (9)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-tu-1">
-        Mỹ Tú 1</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-my-vien">
-        Mỹ Viên</a> (2)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-nam-khang">
-        Nam Khang</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-nam-long-1">
-        Nam Long 1</a> (2)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-park-view">
-        Park View</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-petroland-tower">
-        PetroLand Tower</a> (11)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-riverside-residence">
-        Riverside Residence</a> (20)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-sky-garden-i">
-        Sky Garden I</a> (13)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-sky-garden-ii">
-        Sky Garden II</a> (3)
-</li>
-
-<li style="display: none;"><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-the-panorama">
-        The Panorama</a> (4)
-</li>
-
+    <?php foreach($group_p as $_key => $_val):?>
+    <li>
+        <a href="<?php echo $_val->getUrlP()?>"><?php echo $_val->project_name?></a> (<?php echo $_val->created?>)
+    </li>
+    <?php endforeach;?>
 </ul>
-<p style="text-align:right;">
-    <a href="javascript:void(0)" rel="nofollow" class="show_p"
-       style="font-style:italic;text-decoration:underline;">Xem thêm»</a>
-</p>
 
 </div>
 <div class="show3">
@@ -923,84 +718,23 @@
 
 
 <div style="clear:both;"></div>
-<!--//Modules/Views/Product/ucProductCountByContext2.ascx--><input type="hidden" name="ctl00$ctl33$ctl01$areaCount"
-                                                                   id="areaCount">
-<input type="hidden" name="ctl00$ctl33$ctl01$priceCount" id="priceCount">
-<input type="hidden" name="ctl00$ctl33$ctl01$roomCount" id="roomCount">
-
-<div id="ctl33_ctl01_HeaderContainer" class="box-header1 checkrun">
+<div id="ctl31_ctl01_HeaderContainer" class="box-header1">
     <div align="center" class="name_tit1 new-header">
-        LIÊN KẾT NỔI BẬT
+        Nhà đất bán
     </div>
 </div>
-<div id="ctl33_ctl01_bodyContainer" class="bor_box checkrun">
+<div id="ctl31_ctl01_bodyContainer" class="bor_box">
     <div id="div_count_product">
         <div id="divCountByAreas">
 
-
             <ul>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-rieng-phuong-phu-thuan-3">
-                        Bán nhà Phường Phú Thuận</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-dat-phuong-tan-phong-9">
-                        Bán đất Phường Tân Phong</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hoang-anh-thanh-binh">
-                        Bán căn hộ chung cư Hoàng Anh Thanh Bình</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-can-ho-chung-cu-garden-court-1">
-                        Cho thuê căn hộ Garden Court 1</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-rieng-duong-bui-van-ba-59">
-                        Bán nhà Bùi Văn Ba</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-rieng-duong-81-59">
-                        Bán nhà Đường 81</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-rieng-duong-kieu-dam-59">
-                        Bán nhà Kiều Đàm</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-rieng-duong-43-1-59">
-                        Bán nhà Đường 43</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-mat-pho-duong-lam-van-ben-59">
-                        Cho thuê nhà mặt tiền Lâm Văn Bền</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-mat-pho-duong-79-1-59">
-                        Cho thuê nhà mặt tiền 79</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-mat-pho-duong-pham-huu-lau-59">
-                        Cho thuê nhà mặt tiền Phạm Hữu Lầu</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-mat-pho-duong-15-59">
-                        Cho thuê nhà mặt tiền 15</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-mat-pho-duong-bui-van-ba-59">
-                        Cho thuê nhà mặt tiền Bùi Văn Ba</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-rieng-duong-nguyen-thi-thap-59">
-                        Cho thuê nhà Nguyễn Thị Thập</a></li>
-
-                <li><a href="http://batdongsan.com.vn/cho-thue-nha-rieng-duong-mai-van-vinh-59">
-                        Cho thuê nhà Mai Văn Vĩnh</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-mat-pho-duong-huynh-tan-phat-59">
-                        Bán nhà mặt tiền Huỳnh Tấn Phát</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-mat-pho-duong-ly-phuc-man-59">
-                        Bán nhà mặt tiền Lý Phục Man</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-mat-pho-duong-49-1-59">
-                        Bán nhà mặt tiền 49</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-mat-pho-duong-phu-thuan-59">
-                        Bán nhà mặt tiền Phú Thuận</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-nha-mat-pho-duong-77-59">
-                        Bán nhà mặt tiền 77</a></li>
-
+                <?php foreach($group as $_key => $_val):?>
+                    <li><a href="<?php echo $_val->getUrlC()?>"><?php echo $_val->province_name?></a> (<?php echo $_val->created?>)</li>
+                <?php endforeach;?>
             </ul>
+
+        </div>
+        <div class="Project">
 
         </div>
         <div class="show3">
@@ -1010,114 +744,7 @@
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 
-
 <div style="clear:both;"></div>
-<!--//Modules/Views/Product/BoxKeyword.ascx-->
-<div class="adPosition" positioncode="BANNER_POSITION_RIGHT_MAIN_CONTENT" stylex="margin-bottom: 10px;"></div>
-
-<div style="clear:both;"></div>
-
-
-<div class="container-default">
-    <div id="ctl36_BodyContainer">
-
-        <div class="enterprise-rightContent">
-            <div class="rc11">
-                <div class="title-style">
-                    <span id="ctl36_ctl01_lblTitle">Các nhà môi giới Bán căn hộ chung cư khu vực Quận 7, Hồ Chí Minh</span>
-                </div>
-            </div>
-            <div class="rc12">
-
-                <div class="broker-view">
-                    <div class="broker-ava">
-                        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-1/dia-oc-him-eb1218" rel="nofollow">
-                            <img class="img"
-                                 src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb80x80.325591.jpg"></a>
-                    </div>
-                    <div style="line-height: 20px; float: right; width: 140px; ">
-                        <a style="font-size: 12px; text-decoration: none;" class="colorboldblue" rel="nofollow"
-                           href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-1/dia-oc-him-eb1218">Địa Ốc Him
-                            Lam</a>
-                        <br>
-                        0907888918<br>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <div class="broker-view">
-                    <div class="broker-ava">
-                        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-7/cong-ty-tn-eb1939" rel="nofollow">
-                            <img class="img"
-                                 src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb80x80.503895.jpg"></a>
-                    </div>
-                    <div style="line-height: 20px; float: right; width: 140px; ">
-                        <a style="font-size: 12px; text-decoration: none;" class="colorboldblue" rel="nofollow"
-                           href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-7/cong-ty-tn-eb1939">Công ty TNHH
-                            Dịch vụ Bất động sản Tân Hưng</a>
-                        <br>
-                        0908555888<br>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <div class="broker-view">
-                    <div class="broker-ava">
-                        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-nha-be/san-giao-d-eb1124" rel="nofollow">
-                            <img class="img"
-                                 src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb80x80.278584.jpg"></a>
-                    </div>
-                    <div style="line-height: 20px; float: right; width: 140px; ">
-                        <a style="font-size: 12px; text-decoration: none;" class="colorboldblue" rel="nofollow"
-                           href="http://batdongsan.com.vn/ban-can-ho-chung-cu-nha-be/san-giao-d-eb1124">Sàn Giao dịch
-                            bất động sản Thành Đô</a>
-                        <br>
-                        0937668393<br>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <div class="broker-view">
-                    <div class="broker-ava">
-                        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-tan-binh/cong-ty-co-eb1152"
-                           rel="nofollow">
-                            <img class="img"
-                                 src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb80x80.296801.jpg"></a>
-                    </div>
-                    <div style="line-height: 20px; float: right; width: 140px; ">
-                        <a style="font-size: 12px; text-decoration: none;" class="colorboldblue" rel="nofollow"
-                           href="http://batdongsan.com.vn/ban-can-ho-chung-cu-tan-binh/cong-ty-co-eb1152">Công ty Cổ
-                            Phần Địa Ốc Thắng Lợi</a>
-                        <br>
-                        0944888753<br>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <div class="broker-view">
-                    <div class="broker-ava">
-                        <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-8/cong-ty-co-eb1071" rel="nofollow">
-                            <img class="img"
-                                 src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/thumb80x80.2431.jpg"></a>
-                    </div>
-                    <div style="line-height: 20px; float: right; width: 140px; ">
-                        <a style="font-size: 12px; text-decoration: none;" class="colorboldblue" rel="nofollow"
-                           href="http://batdongsan.com.vn/ban-can-ho-chung-cu-quan-8/cong-ty-co-eb1071">Công ty cổ phần
-                            thương mại địa ốc Điền Phát</a>
-                        <br>
-                        0939969969<br>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-
-                <a id="ctl36_ctl01_hplToSearch" class="viewmore normalblue"
-                   href="http://batdongsan.com.vn/moi-gioi-ban-can-ho-chung-cu-quan-7">Xem thêm nhà môi giới khác</a>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!--//Modules/Product/FrontEndProduct/ViewBrokerByProduct.ascx-->
 <div id="bannerfix">
     <div class="adPosition" positioncode="" stylex="position:fixed; bottom:0px; right:0px; z-index:100;"></div>
 </div>

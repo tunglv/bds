@@ -50,10 +50,14 @@ $array_base = array(
 
     '/tim-kiem-nha-dat-ban.<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<wardLabel:[\w\-]+>-<wardid:[\w\-]+>,<projectLabel:[\w\-]+>-<projectid:\d+>,<area:\d+>,<price:\d+>'=>'/web/sale/result',
     '/nha-dat-ban/<typeOf:[\w\-]+>'=>'/web/sale/list',
+    '/nha-dat-ban-tai-<projectAlias:[\w\-]+>-<projectId:\d+>'=>'/web/sale/listP',
     '/nha-dat-ban/<cityAlias:[\w\-]+>-<cityId:\d+>'=>'/web/sale/listC',
     '/nha-dat-ban/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/sale/detail',
 
+    '/tim-kiem-nha-dat-thue.<cityLabel:[\w\-]+>-<cityid:[\w\-]+>,<distLabel:[\w\-]+>-<distid:[\w\-]+>,<wardLabel:[\w\-]+>-<wardid:[\w\-]+>,<projectLabel:[\w\-]+>-<projectid:\d+>,<area:\d+>,<price:\d+>'=>'/web/rent/result',
     '/nha-cho-thue/<typeOf:[\w\-]+>'=>'/web/rent/list',
+    '/nha-dat-thue-tai-<projectAlias:[\w\-]+>-<projectId:\d+>'=>'/web/rent/listP',
+    '/nha-dat-thue/<cityAlias:[\w\-]+>-<cityId:\d+>'=>'/web/rent/listC',
     '/nha-cho-thue/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/rent/detail',
 
     // crawl foody

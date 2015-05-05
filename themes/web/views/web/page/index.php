@@ -356,69 +356,6 @@
     </div>
 
 </div>
-<!--//Modules/News/ViewerNews/NewsGroupCategory/GroupNews.ascx-->
-<div class="container-common">
-    <div id="ctl50_HeaderContainer" class="box-header">
-        <div class="name_tit" align="center">
-            <h3 style="color: White;">
-                Tìm kiếm tiêu biểu theo từ khóa</h3>
-        </div>
-    </div>
-    <div id="ctl50_BodyContainer" class="bor_box">
-
-        <div class="html-content">
-            <div style="width:558px">
-                <div class="tag-list ">
-                    <div class="fleft tag-list-pad width255" style="width:277px">
-                        <ul>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-masteri-thao-dien"
-                                   title="Căn hộ Masteri Thảo Điền">Căn hộ Masteri Thảo Điền</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-nha-rieng-tp-hcm" title="Bán nhà TP HCM">Bán nhà
-                                    TP HCM</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-nha-rieng-hai-phong" title="Bán nhà Hải Phòng">Bán
-                                    nhà Hải Phòng</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-dat-nen-du-an-binh-duong"
-                                   title="Đất nền Bình Dương">Đất nền Bình Dương</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-topaz-city"
-                                   title="Căn hộ topaz city">Căn hộ topaz city</a></li>
-                        </ul>
-                    </div>
-                    <div class="fleft width255" style="width:230px">
-                        <ul>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-central-park"
-                                   title="Căn hộ Vinhomes Central Park">Căn hộ Vinhomes Central Park</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-vinhomes-nguyen-chi-thanh"
-                                   title="Vinhomes Nguyễn Chí Thanh">Vinhomes Nguyễn Chí Thanh</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hh3-linh-dam"
-                                   title="Chung cư HH3 Linh Đàm">Chung cư HH3 Linh Đàm</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-vinhomes-riverside"
-                                   title="Biệt thự Vinhomes Riverside">Biệt thự Vinhomes Riverside</a></li>
-                            <li>
-                                <a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-royal-city"
-                                   title="Chung cư Royal City">Chung cư Royal City</a></li>
-                        </ul>
-                    </div>
-                    <div class="clear">
-                        &nbsp;</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="ctl50_FooterContainer">
-    </div>
-</div>
-<div style="clear: both; margin-bottom: 10px;">
-</div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>
 <div id="SubMiddleLeftMainContent" style="float: left; width: 49.5%;">
     <div class="adPosition" positioncode="BANNER_POSITION_MIDDLE_LEFT_CONTENT1" stylex="" hasshare="True"
@@ -896,24 +833,3 @@
 </div>
 
 <!--//Modules/HtmlGeneric/View.ascx--></div>
-
-<!-- Intro-->
-<div id="Intro">
-    <div>
-        <div id="Bds-Intro">
-            <div class="bds-title">
-                <h5>
-                    Mua bán và cho thuê nhà đất trên Batdongsan.com.vn</h5>
-            </div>
-            <div class="bds-content">
-                Batdongsan.com.vn có hơn <strong>1.000.000</strong> tin cho thuê và <a
-                    href="./Nhà đất   Mua bán nhà đất   Cho thuê nhà đất_files/Nhà đất   Mua bán nhà đất   Cho thuê nhà đất.html">
-                    <strong>mua bán nhà đất</strong></a> tại Việt Nam. Chúng tôi liệt kê danh sách nhiều thông
-                tin nhà đất nhất phục vụ mọi nhu cầu, từ phòng trọ tới biệt thự cao cấp. Bạn là
-                nhà đầu tư hay gia đình cần nhà để ở? Batdongsan.com.vn đều có thể giúp bạn. Tìm
-                tin bán nhà đất hoặc cho thuê nhà đất mới nhất bằng cách sử dụng công cụ tìm kiếm
-                hoặc các đường link ngay trên trang chủ.
-            </div>
-        </div>
-    </div>
-</div>

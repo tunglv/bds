@@ -73,7 +73,8 @@
 
 <div class="product-list product-list-page">
 <div class="Title">
-    <h1>Nhà đất cho thuê tại Việt Nam</h1>
+    <h1>
+        Nhà đất cho thuê tại Việt Nam</h1>
 
     <div class="Footer">
         Có <span class="greencolor"><strong><?php echo $dataProvider->totalItemCount?></strong></span> bất động sản.
@@ -152,19 +153,6 @@
 </div>
 </div>
 <div class="clear">
-</div>
-<div class="tagpanel"> Tìm kiếm theo từ khóa: &nbsp;<a title="Bán đất nền giá rẻ"
-                                                       href="http://batdongsan.com.vn/tags/ban/ban-dat-nen-gia-re">Bán
-        đất nền giá rẻ</a>,&nbsp;<a title="Bán đất gần chợ Lái Thiêu"
-                                    href="http://batdongsan.com.vn/tags/ban/ban-dat-gan-cho-lai-thieu">Bán đất gần chợ Lái
-        Thiêu</a>,&nbsp;<a title="Bán đất nền giá rẻ Quận 7"
-                           href="http://batdongsan.com.vn/tags/ban/ban-dat-nen-gia-re-quan-7">Bán đất nền giá rẻ Quận 7</a>,&nbsp;<a
-        title="Bán đất nền giá rẻ Tp.HCM" href="http://batdongsan.com.vn/tags/ban/ban-dat-nen-gia-re-tphcm">Bán đất nền
-        giá rẻ Tp.HCM</a>,&nbsp;<a title="Bán đất giá rẻ Bình Dương"
-                                   href="http://batdongsan.com.vn/tags/ban/ban-dat-gia-re-binh-duong">Bán đất giá rẻ Bình
-        Dương</a>,&nbsp;<a title="Bán đất giá rẻ Quận 8" href="http://batdongsan.com.vn/tags/ban/ban-dat-gia-re-quan-8">Bán
-        đất giá rẻ Quận 8</a></div>
-<div class="separable">
 </div>
 
 <style>
@@ -280,7 +268,339 @@
 <!--//Modules/Search/SearchResult/ucProductSearchResult.ascx--></div>
 </div>
 <div id="RightMainContent" class="body-right">
+<div class="container-common">
+<div id="ctl30_HeaderContainer" class="box-header">
+    <div class="name_tit" align="center">
+        <div>tìm kiếm nhà đất cho thuê</div>
+    </div>
+</div>
+<div id="ctl30_BodyContainer" class="bor_box">
 
+<form id="form-search-project" action="<?php echo Yii::app()->createUrl('/web/project/result')?>" method="GET">
+    <div>
+        <div class="pad" id="searchcp">
+            <div class="t_gr">
+                Tỉnh/ Thành phố
+            </div>
+            <div id="divCity" class="searchrow advance-select-box" style="margin:0px;">
+                <select name="cityid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_province">
+                    <option value=""  class="advance-options current" style="min-width: 156px;">--Tỉnh/Tp--</option>
+                    <?php foreach(Province::model()->getAll() as $_key => $_val):?>
+                        <option value="<?php echo $_val->provinceid?>" class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                    <?php endforeach;?>
+                </select>
+                <input type="hidden" name="cityLabel" id="city-label" value="">
+            </div>
+            <div class="t_gr">
+                Quận/ Huyện
+            </div>
+            <div id="divDistrict" class="searchrow advance-select-box" style="margin:0px;">
+                <?php $province_id = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-d']->value)) $distric_id = Yii::app()->request->cookies['s-pro-d']->value;if($province_id):?>
+                    <select name="distid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>
+                        <?php foreach(District::model()->getAll($province_id) as $_key => $_val):?>
+                            <option value="<?php echo $_val->districtid?>" <?php if($_val->districtid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                        <?php endforeach;?>
+                    </select>
+                <?php else:?>
+                    <select name="distid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_district">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>
+                    </select>
+                <?php endif;?>
+                <input type="hidden" name="districtLabel" id="district-label" value="">
+            </div>
+
+            <div class="t_gr">
+                Phường/Xã
+            </div>
+            <div id="divWard" class="searchrow advance-select-box" style="margin:0px;">
+                <?php $province_id_ = isset(Yii::app()->request->cookies['s-pro-p']) ? Yii::app()->request->cookies['s-pro-p']->value : '';$province_id = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-w']->value)) $distric_id = Yii::app()->request->cookies['s-pro-w']->value;if($province_id && $province_id_):?>
+                    <select name="wardid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
+                        <?php foreach(Ward::model()->getAll($province_id) as $_key => $_val):?>
+                            <option value="<?php echo $_val->wardid?>" <?php if($_val->wardid == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                        <?php endforeach;?>
+                    </select>
+                <?php else:?>
+                    <select name="wardid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_ward">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>
+                    </select>
+                <?php endif;?>
+                <input type="hidden" name="wardLabel" id="ward-label" value="">
+            </div>
+
+            <div class="t_gr">
+                Dự án
+            </div>
+            <div id="divProject" class="searchrow advance-select-box" style="margin:0px;">
+                <?php $province_id_ = isset(Yii::app()->request->cookies['s-pro-d']) ? Yii::app()->request->cookies['s-pro-d']->value : '';$province_id = isset(Yii::app()->request->cookies['s-pro-w']) ? Yii::app()->request->cookies['s-pro-w']->value : '';$distric_id = '';if(isset(Yii::app()->request->cookies['s-pro-proj']->value)) $distric_id = Yii::app()->request->cookies['s-pro-proj']->value;if($province_id && $province_id_):?>
+                    <select name="projectid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_project">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>
+                        <?php foreach(Project::model()->getAll('',$province_id) as $_key => $_val):?>
+                            <option value="<?php echo $_val->id?>" <?php if($_val->id == $distric_id) echo 'selected'?> class="advance-options current" style="min-width: 156px;"><?php echo $_val->name?></option>
+                        <?php endforeach;?>
+                    </select>
+                <?php else:?>
+                    <select name="projectid" class="advance-options" style="min-width: 188px;padding: 4px;" id="choise_project">
+                        <option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>
+                    </select>
+                <?php endif;?>
+                <input type="hidden" name="projectLabel" id="project-label" value="">
+            </div>
+
+            <div class="t_gr">
+                Diện tích
+            </div>
+            <div id="divArea" class="searchrow advance-select-box" style="margin:0px;">
+                <select name="cboArea" id="cboArea" class="advance-options" style="min-width: 188px;padding: 4px;">
+                    <option value="999" class="advance-options" style="min-width: 186px;">--Chọn Diện tích--</option>
+                    <option value="0" class="advance-options" style="min-width: 186px;">Chưa xác định</option>
+                    <option value="1" class="advance-options" style="min-width: 186px;">&lt;= 30 m2</option>
+                    <option value="2" class="advance-options" style="min-width: 186px;">30 - 50 m2</option>
+                    <option value="3" class="advance-options" style="min-width: 186px;">50 - 80 m2</option>
+                    <option value="4" class="advance-options" style="min-width: 186px;">80 - 100 m2</option>
+                    <option value="5" class="advance-options" style="min-width: 186px;">100 - 150 m2</option>
+                    <option value="6" class="advance-options" style="min-width: 186px;">150 - 200 m2</option>
+                    <option value="7" class="advance-options" style="min-width: 186px;">200 - 250 m2</option>
+                    <option value="8" class="advance-options" style="min-width: 186px;">250 - 300 m2</option>
+                    <option value="9" class="advance-options" style="min-width: 186px;">300 - 500 m2</option>
+                    <option value="10" class="advance-options" style="min-width: 186px;">&gt;= 500 m2</option>
+                </select>
+            </div>
+
+            <div class="t_gr">
+                Giá
+            </div>
+            <div id="divPrice" class="searchrow advance-select-box" style="margin:0px;">
+                <select name="cboPrice" id="cboPrice" class="advance-options" style="min-width: 188px;padding: 4px;">
+                    <option value="999" class="advance-options" style="min-width: 186px;">--Chọn mức giá--</option>
+                    <option value="0" class="advance-options" style="min-width: 186px;">Thỏa thuận</option>
+                    <option value="1" class="advance-options" style="min-width: 186px;">&lt; 1 triệu</option>
+                    <option value="2" class="advance-options" style="min-width: 186px;">1 - 3 triệu</option>
+                    <option value="3" class="advance-options" style="min-width: 186px;">3 - 5 triệu</option>
+                    <option value="4" class="advance-options current" style="min-width: 186px;">5 - 10 triệu</option>
+                    <option value="5" class="advance-options" style="min-width: 186px;">10 - 40 triệu</option>
+                    <option value="6" class="advance-options" style="min-width: 186px;">40 - 70 triệu</option>
+                    <option value="7" class="advance-options" style="min-width: 186px;">70 - 100 triệu</option>
+                    <option value="8" class="advance-options" style="min-width: 186px;">&gt; 100 triệu</option>
+                </select>
+            </div>
+
+            <div class="t_gr" style="text-align: center;">
+                <input type="submit" name="ctl00$ctl30$ctl01$btnSearch" value="Tìm kiếm" id="ctl30_ctl01_btnSearch" class="searchbutton">
+            </div>
+        </div>
+    </div>
+</form>
+<style type="text/css">
+    .searchbutton {
+        margin: 0 !important;
+        margin-top: 10px !important;
+    }
+</style>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.AdvanceHiddenDropbox(1).js"></script>
+<script type="text/javascript">
+    function slug (str) {
+        // str = str.toLowerCase();
+        str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a");
+        str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e");
+        str = str.replace(/ì|í|ị|ỉ|ĩ/g,"i");
+        str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o");
+        str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u");
+        str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y");
+        str = str.replace(/đ/g,"d");
+
+        str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g,"A");
+        str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g,"E");
+        str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g,"I");
+        str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g,"O");
+        str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g,"U");
+        str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g,"Y");
+        str = str.replace(/Đ/g,"D");
+
+        // remove domain extends
+        str = str.replace(/\.+([\w-]{2,4})?/g,"-");
+        str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.| |\:|\;|\"|\&|\#|\[|\]|~|$|_/g," ");
+        /* tìm và thay thế các kí tự đặc biệt va khoang trang trong chuỗi sang kí tự khoang trang */
+        str = str.replace(/-+-/g,"-"); //thay thế 2- thành 1-
+        str = str.replace(/^\-+|\-+$/g,"");
+        str = str.replace(/^\s+|\s+$/g,"");
+        //cắt bỏ ký tự - ở đầu và cuối chuỗi
+        return str.replace(/ /g, '-').toLowerCase();
+    }
+    //            $('#BdsSale_alias').val($(this).val().toAlias().replaceAll(' ', '-').toLowerCase());
+    $(function() {
+        $("#form-search-project").submit( function (e)
+        {
+            e.preventDefault();
+
+            var val0 = $('#choise_project').val() ? $('#choise_project').val() : 0,
+                val1 = $("#choise_province").val() ? $("#choise_province").val() : 0,
+                val2 = $("#choise_district").val() ? $("#choise_district").val() : 0,
+                val3 = $("#choise_ward").val() ? $("#choise_ward").val() : 0,
+                val4 = $('#cboArea').val() ? $('#cboArea').val() : 0,
+                val5 = $('#cboPrice').val() ? $('#cboPrice').val() : 0;
+
+            var url = "/tim-kiem-nha-dat-thue."+
+                    slug($('#city-label').val())+
+                    "-"+
+                    val1+','+
+                    slug($('#district-label').val())+
+                    "-"+
+                    val2+','+
+                    slug($('#ward-label').val())+
+                    "-"+
+                    val3+','+
+                    slug($('#project-label').val())+
+                    "-"+
+                    val0+','+val4+','+val5
+                ;
+
+            window.location = url;
+        });
+    });
+
+    function setCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = value + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+        //c/onsole.log(c_name + "=" + c_value + " ;path=/");
+        document.cookie = c_name + "=" + c_value + " ;path=/";
+    }
+    function getCookie(c_name) {
+        var c_value = document.cookie;
+        var c_start = c_value.indexOf(" " + c_name + "=");
+        if (c_start == -1) {
+            c_start = c_value.indexOf(c_name + "=");
+        }
+        if (c_start == -1) {
+            c_value = null;
+        }
+        else {
+            c_start = c_value.indexOf("=", c_start) + 1;
+            var c_end = c_value.indexOf(";", c_start);
+            if (c_end == -1) {
+                c_end = c_value.length;
+            }
+            c_value = unescape(c_value.substring(c_start, c_end));
+        }
+        return c_value;
+    }
+
+    $("#cboArea").on('change', function() {
+        setCookie('s-pro-a', $(this).val());
+    });
+    $("#cboPrice").on('change', function() {
+        setCookie('s-pro-c', $(this).val());
+    });
+
+
+    $("#choise_project").on('change', function() {
+        setCookie('s-pro-proj', $(this).val());
+        $('#project-label').val($(this).find(":selected").text());
+    });
+
+    $("#choise_ward").on('change', function() {
+        setCookie('s-pro-w', $(this).val());
+        $('#ward-label').val($(this).find(":selected").text());
+
+        if($(this).val()) {
+            $.post("/web/project/getProject", {wardid: $(this).val()})
+                .done(function (data) {
+                    data = jQuery.parseJSON(data);
+                    var html = '<option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>';
+                    $.each(data, function (index, value) {
+                        html += '<option value="' + index + '">' + value + '</option>';
+                    });
+                    $('#choise_project').html(html);
+                });
+        }else{
+            $('#choise_project').html('<option value="" class="advance-options current" style="min-width: 156px;">--Chọn dự án--</option>');
+        }
+    });
+
+    $("#choise_province").on('change', function() {
+        setCookie('s-pro-p', $(this).val());
+        $('#city-label').val($(this).find(":selected").text());
+
+        if ($(this).val()) {
+            $.post("/web/project/getDistrict", {provinceid: $(this).val()})
+                .done(function (data) {
+                    data = jQuery.parseJSON(data);
+                    var html = '<option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>';
+                    $.each(data, function (index, value) {
+                        html += '<option value="' + index + '">' + value + '</option>';
+                    });
+
+                    $('#choise_district').html(html);
+                });
+        }else{
+            $('#choise_district').html('<option value="" class="advance-options current" style="min-width: 156px;">--Quận/Huyện--</option>');
+        }
+    });
+
+    $("#choise_district").on('change', function(){
+        setCookie('s-pro-d', $(this).val());
+        $('#district-label').val($(this).find(":selected").text());
+
+        if($(this).val()) {
+            $.post("/web/project/getWard", {districtid: $(this).val()})
+                .done(function (data) {
+                    data = jQuery.parseJSON(data);
+                    var html = '<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>';
+                    $.each(data, function (index, value) {
+                        html += '<option value="' + index + '">' + value + '</option>';
+                    });
+
+                    $('#choise_ward').html(html);
+                });
+        }else{
+            $('#choise_ward').html('<option value="" class="advance-options current" style="min-width: 156px;">--Phường/Xã--</option>');
+        }
+    });
+
+    $(function () {
+        var s_pro_p = getCookie('s-pro-p');
+        var s_pro_d = getCookie('s-pro-d');
+        var s_pro_w = getCookie('s-pro-w');
+        var s_pro_pro = getCookie('s-pro-proj');
+        var s_pro_c = getCookie('s-pro-c');
+        var s_pro_a = getCookie('s-pro-a');
+
+
+        $('#city-label').val('noname');
+        $('#district-label').val('noname');
+        $('#ward-label').val('noname');
+        $('#project-label').val('noname');
+
+        if(s_pro_a){
+            $('#cboArea option[value='+s_pro_a+']').attr('selected','selected');
+        }
+        if(s_pro_c){
+            $('#cboPrice option[value='+s_pro_c+']').attr('selected','selected');
+        }
+
+        if(s_pro_p){
+            $('#choise_province option[value='+s_pro_p+']').attr('selected', 'selected');
+            $('#city-label').val($('#choise_province option[value='+s_pro_p+']').text());
+        }
+        if(s_pro_d && s_pro_p){
+            $('#district-label').val($('#choise_district option[value='+s_pro_d+']').text());
+        }
+        if(s_pro_w && s_pro_d && s_pro_p){
+            $('#ward-label').val($('#choise_ward option[value='+s_pro_w+']').text());
+        }
+        if(s_pro_pro && s_pro_d && s_pro_w && s_pro_p){
+            $('#project-label').val($('#choise_project option[value='+s_pro_pro+']').text());
+        }
+    });
+</script>
+</div>
+<div id="ctl30_FooterContainer">
+</div>
+</div>
+<div style="clear: both; margin-bottom: 10px;">
+</div>
 <!--//Modules/Search/ucSearchContext.ascx--><input type="hidden" name="ctl00$ctl31$ctl01$areaCount" id="areaCount">
 <input type="hidden" name="ctl00$ctl31$ctl01$priceCount" id="priceCount">
 <input type="hidden" name="ctl00$ctl31$ctl01$roomCount" id="roomCount">
@@ -295,87 +615,9 @@
         <div id="divCountByAreas">
 
             <ul>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-tp-hcm">
-                        Hồ Chí Minh</a> (16428)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-ha-noi">
-                        Hà Nội</a> (11818)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-binh-duong">
-                        Bình Dương</a> (1052)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-da-nang">
-                        Đà Nẵng</a> (2195)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-hai-phong">
-                        Hải Phòng</a> (1652)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-ha-tinh">
-                        Hà Tĩnh</a> (37)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-quang-tri">
-                        Quảng Trị</a> (37)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-vinh-long">
-                        Vĩnh Long</a> (52)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-dak-nong">
-                        Đắk Nông</a> (26)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-an-giang">
-                        An Giang</a> (79)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-hau-giang">
-                        Hậu Giang</a> (25)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-long-an">
-                        Long An</a> (680)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-ninh-thuan">
-                        Ninh Thuận</a> (47)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-dien-bien">
-                        Điện Biên</a> (7)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-ha-nam">
-                        Hà Nam</a> (50)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-quang-ninh">
-                        Quảng Ninh</a> (176)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-vinh-phuc">
-                        Vĩnh Phúc</a> (74)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-gia-lai">
-                        Gia Lai</a> (65)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-ha-giang">
-                        Hà Giang</a> (6)
-                </li>
-
-                <li><a href="http://batdongsan.com.vn/nha-dat-ban-can-tho">
-                        Cần Thơ</a> (170)
-                </li>
-
+                <?php foreach($group as $_key => $_val):?>
+                    <li><a href="<?php echo $_val->getUrlC()?>"><?php echo $_val->province_name?></a> (<?php echo $_val->created?>)</li>
+                <?php endforeach;?>
             </ul>
 
         </div>
@@ -409,141 +651,6 @@
     });
 
 </script>
-
-
-<div style="clear:both;"></div>
-<!--//Modules/Views/Product/ucProductCountByContext2.ascx--><input type="hidden" name="ctl00$ctl32$ctl01$areaCount"
-                                                                   id="areaCount">
-<input type="hidden" name="ctl00$ctl32$ctl01$priceCount" id="priceCount">
-<input type="hidden" name="ctl00$ctl32$ctl01$roomCount" id="roomCount">
-
-<div id="ctl32_ctl01_HeaderContainer" class="box-header1 checkrun">
-    <div align="center" class="name_tit1 new-header">
-        LIÊN KẾT NỔI BẬT
-    </div>
-</div>
-<div id="ctl32_ctl01_bodyContainer" class="bor_box checkrun">
-    <div id="div_count_product">
-        <div id="divCountByAreas">
-
-            <ul>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hh4-linh-dam">
-                        Chung cư HH4 Linh Đàm</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-green-stars">
-                        Chung cư Green Stars</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-chung-cu-89-phung-hung">
-                        Chung cư 89 Phùng Hưng</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-can-ho-8x-plus-truong-chinh">
-                        Căn hộ 8x Plus</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-vista-verde">
-                        Căn hộ Vista Verde</a></li>
-
-                <li><a href="http://batdongsan.com.vn/ban-can-ho-chung-cu-hh3-linh-dam">
-                        Chung cư HH3 Linh đàm</a></li>
-
-            </ul>
-
-
-        </div>
-        <div class="show3">
-        </div>
-    </div>
-</div>
-<div style="clear: both; margin-bottom: 10px;">
-</div>
-
-
-<div style="clear:both;"></div>
-<!--//Modules/Views/Product/BoxKeyword.ascx-->
-<div class="adPosition" positioncode="BANNER_POSITION_RIGHT_MAIN_CONTENT" stylex="margin-bottom: 10px;"></div>
-
-<div style="clear:both;"></div>
-<!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
-
-<div class="container-default">
-    <div id="ctl34_BodyContainer">
-        <div class="box-bg-right">
-            <ul>
-                <li>
-                    <a href="http://batdongsan.com.vn/phong-thuy-theo-tuoi/phong-thuy-theo-tuoi-ft0"
-                       onclick="SetType(&#39;2&#39;)" style="white-space: nowrap;font-size: 11.5px;">
-                        <img alt="Xem phong thủy theo tuổi"
-                             src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/batquai.png" width="24px">XEM PHONG THỦY
-                        THEO TUỔI
-                    </a>
-                </li>
-                <li>
-                    <a id="ctl46_ctl01_LinkButton1"
-                       href="http://batdongsan.com.vn/phong-thuy-theo-tuoi/phong-thuy-theo-tuoi-ft0#cost"
-                       onclick="SetType(&#39;3&#39;)">
-                        <img alt="Tính lãi suất" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/Info.png">TÍNH LÃI
-                        SUẤT
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <script type="text/javascript">
-            function SetType(t) {
-                if (localStorage) localStorage["FSType"] = t;
-            }
-        </script>
-
-    </div>
-
-</div>
-<!--//Modules/FengShui/FengShuiLink/View.ascx-->
-
-<div class="container-default">
-    <div id="ctl35_BodyContainer">
-        <div id="bannerfix">
-            <div class="adPosition" positioncode="BANNER_POSITION_FIX"
-                 stylex="position:fixed; bottom:0px; right:0px; z-index:100;"></div>
-        </div>
-
-    </div>
-
-</div>
-<!--//Modules/Banner/Preview/BottomFix/BannerPreviewBottomFix.ascx-->
-
-<link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css//home.css" rel="stylesheet" type="text/css">
-<div class="box1">
-    <h3 class="h1">
-        Thông tin hỗ trợ</h3>
-    <ul>
-        <li><a href="http://batdongsan.com.vn/trang-bang-gia-du-an" title="Bảng giá dự án" rel="nofollow">Bảng giá dự
-                án</a></li>
-
-        <li><a href="http://batdongsan.com.vn/bang-gia-dat" title="Bảng giá đất 2015" rel="nofollow">Bảng giá đất
-                2015</a></li>
-        <li class="last"><a href="http://batdongsan.com.vn/van-ban-nganh-xay-dung" title="Văn bản ngành xây dựng"
-                            rel="nofollow">Văn bản ngành xây dựng</a></li>
-    </ul>
-    <div class="clear">
-    </div>
-</div>
-<div class="box1">
-    <h3 class="h1">
-        Dành cho người xây nhà</h3>
-    <ul>
-        <li><a href="http://batdongsan.com.vn/trang-vat-lieu-xay-dung" title="Cập nhật giá Vật liệu xây dựng"
-               rel="nofollow">Cập nhật giá VLXD</a></li>
-        <li><a href="http://batdongsan.com.vn/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây
-                nhà</a></li>
-        <li><a href="http://batdongsan.com.vn/phong-thuy-theo-tuoi#chiphi" title="Dự tính chi phí xây dựng"
-               rel="nofollow">Dự tính chi phí xây dựng</a></li>
-        <li class="last"><a href="http://batdongsan.com.vn/phong-thuy-theo-tuoi" title="Xem tuổi làm nhà"
-                            rel="nofollow">Xem tuổi làm nhà</a></li>
-    </ul>
-    <div class="clear">
-    </div>
-</div>
-<!--/#box1-->
-
 
 <div style="clear:both;"></div>
 <!--//Modules/Support/FrontEnd/common/SupportInfo.ascx--></div>
