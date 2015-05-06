@@ -17,7 +17,7 @@ class PageController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'index', 'captcha'),
+                'actions' => array('error', 'index', 'contact'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -41,6 +41,11 @@ class PageController extends WebController {
                 $this->render($view, $error);
             }
         }
+    }
+
+    public function actionContact(){
+        $this->layout = '//layouts/main';
+        $this->render('contact');
     }
 
     /**

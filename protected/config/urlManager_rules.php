@@ -60,6 +60,8 @@ $array_base = array(
     '/nha-dat-thue/<cityAlias:[\w\-]+>-<cityId:\d+>'=>'/web/rent/listC',
     '/nha-cho-thue/chi-tiet/<alias:[\w\-]+>-<id:\d+>'=>'/web/rent/detail',
 
+    '/lien-he-toi-chung-toi' => '/web/page/contact',
+
     // crawl foody
     '/foody/<foody_city_alias>/<page_from>/<page_to>'   => '/crawlFoody/run',
     '/fa/<f>/<t>'   => '/crawlFoody/analyze',

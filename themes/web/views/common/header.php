@@ -117,7 +117,8 @@
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/project/list', array('alias'=>'du-an-khac'))?>" class="haslink ">Dự án khác</a></li>
     </ul>
 </li>
-<li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/saler/list')?>" class="haslink ">Nhà mô giới tiêu biểu</a></li>
+<!--<li class="lv0"><a href="--><?php //echo Yii::app()->createUrl('/web/saler/list')?><!--" class="haslink ">Nhà mô giới tiêu biểu</a></li>-->
+<li class="lv0"><a href="/lien-he-toi-chung-toi" class="haslink ">Liên hệ</a></li>
 </ul>
 </div>
 <div class="menupad"></div>
