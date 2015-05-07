@@ -147,6 +147,17 @@ CREATE TABLE `city` (
 
 /*Data for the table `city` */
 
+/*Table structure for table `contact` */
+
+CREATE TABLE `contact` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content` text COLLATE utf8_bin NOT NULL,
+  `created` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `contact` */
+
 /*Table structure for table `decorate` */
 
 CREATE TABLE `decorate` (
