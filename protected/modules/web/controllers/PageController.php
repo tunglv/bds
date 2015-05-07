@@ -45,7 +45,10 @@ class PageController extends WebController {
 
     public function actionContact(){
         $this->layout = '//layouts/main';
-        $this->render('contact');
+
+        $contact = Contact::model()->find();
+
+        $this->render('contact', array('contact'=>$contact));
     }
 
     /**

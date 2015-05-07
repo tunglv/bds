@@ -63,8 +63,8 @@
 <li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'tong-hop'));?>" class="haslink ">Nhà đất bán</a>
     <ul>
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-chung-cu'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
-        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-nha-rieng'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
-        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-khu-lien-ke'))?>" class="haslink ">Bán căn hộ chung cư</a></li>
+<!--        <li class="lv1"><a href="--><?php //echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-nha-rieng'))?><!--" class="haslink ">Bán căn hộ chung cư</a></li>-->
+<!--        <li class="lv1"><a href="--><?php //echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'ban-khu-lien-ke'))?><!--" class="haslink ">Bán căn hộ chung cư</a></li>-->
     </ul>
 </li>
 <li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/rent/list', array('typeOf' => 'tong-hop'));?>" class="haslink ">Nhà đất cho thuê</a>

@@ -279,83 +279,6 @@
 </div>
 
 <div style="clear:both;"></div>
-<!--//Modules/Banner/Preview/HorizontalBelow/BannerPreviewHorizontalBelow.ascx-->
-
-<div class="container-default">
-    <div id="ctl42_BodyContainer">
-        <div class="t_left-baiviet">
-            <div class="t_left-baiviet-header">
-                <div class="t_left-baiviet-header-left">
-                    <div>
-                        <div class="t_left-baiviet-header-left-1">
-                        </div>
-                        <div class="t_left-baiviet-header-left-repeat">
-                            <span id="ctl42_ctl01_Label1">Bài viết mới</span></div>
-                        <div class="t_left-baiviet-header-left-2">
-                        </div>
-                    </div>
-                </div>
-                <div class="t_left-baiviet-header-right">
-
-                    <div class="t_left-baiviet-header-right-link">
-                        <a href="http://batdongsan.com.vn/kien-truc/" title="Kiến trúc" style="font-size:11px;">Kiến trúc</a>
-                    </div>
-
-                    <div class="t_left-baiviet-header-right-link">
-                        <a href="<?php echo Yii::app()->createUrl('/noi-ngoai-that');?>" title="Nội - Ngoại thất" style="font-size:11px;">Nội - Ngoại thất</a>
-                    </div>
-
-                    <div class="t_left-baiviet-header-right-link">
-                        <a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'tu-van-phong-thuy'))?>" title="Tư vấn phong thủy" style="font-size:11px;">Tư vấn phong thủy</a>
-                    </div>
-
-                    <div class="clear">
-                    </div>
-                </div>
-            </div>
-            <div class="line-home">
-            </div>
-            <div class="t_left-baiviet-content">
-
-                <?php foreach($news as $_key => $_val):?>
-                    <?php if($_key > 5 && $_key < 10):?>
-                        <div class="group-news-border-backgroup">
-                            <a href="<?php echo $_val->url?>">
-                                <img style=" border: 1px solid #ccc; " src="<?php echo $_val->getImageUrl()?>" alt="<?php echo $_val->title?>">
-                            </a>
-
-                            <div class="group-news-title">
-                                <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>">
-                                    <?php echo $_val->title?>
-                                </a></div>
-                            <div class="group-news-summary"><?php echo $_val->desc?></div>
-                        </div>
-                        <?php if($_key%2 == 0):?>
-                            <div class="clear"></div>
-                        <?php endif;?>
-                    <?php endif;?>
-                <?php endforeach?>
-
-                <div style="clear: both">
-                </div>
-                <div class="art-latest">
-                    <div class="art-item">
-                        <ul>
-                            <?php foreach($news as $_key => $_val):?>
-                                <?php if($_key > 9):?>
-                                    <li>
-                                        <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
-                                    </li>
-                                <?php endif;?>
-                            <?php endforeach;?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>
 <div id="SubMiddleLeftMainContent" style="float: left; width: 49.5%;">
     <div class="adPosition" positioncode="BANNER_POSITION_MIDDLE_LEFT_CONTENT1" stylex="" hasshare="True"
@@ -511,46 +434,6 @@
 <?php endif;?>
 <div style="clear: both; margin-bottom: 10px;">
 </div>
-<!--//Modules/FaqViewList/FAQOptionList.ascx-->
-<div class="html-content">
-    <div id="advSpecial">
-        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-                codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
-                height="300" width="210">
-            <param name="movie" value="http://file1.batdongsan.com.vn/file.495483.swf">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#ffffff">
-            <embed align="" bgcolor="#ffffff" height="300" pluginspage="http://www.macromedia.com/go/getflashplayer"
-                   quality="high" src="http://file1.batdongsan.com.vn/file.495483.swf"
-                   type="application/x-shockwave-flash" width="210">
-        </object>
-    </div>
-    <script type="text/javascript">
-        function detectmob() {
-            if (navigator.userAgent.match(/Android/i)
-                || navigator.userAgent.match(/webOS/i)
-                || navigator.userAgent.match(/iPhone/i)
-                || navigator.userAgent.match(/iPad/i)
-                || navigator.userAgent.match(/iPod/i)
-                || navigator.userAgent.match(/BlackBerry/i)
-                || navigator.userAgent.match(/Windows Phone/i)
-            ) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-
-        if (detectmob()) {
-            $("#advSpecial").html('<a title="banxehoi.com" target="_blank" href="http://banxehoi.com"><img  style="width:210px; height:300px" src="http://file1.batdongsan.com.vn/file.495482.jpg"></a>');
-        }
-
-    </script>
-</div>
-
-
-<div style="clear:both;"></div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>
 <div class="clear">
 </div>

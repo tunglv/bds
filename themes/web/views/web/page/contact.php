@@ -1,5 +1,7 @@
 <div class="div_2col">
-
+    <div class="content" style="text-align: justify;">
+        <?php echo $contact->content?>
+    </div>
 </div>
 <div id="MainRight" class="col_right">
     <div class="container-common">

@@ -108,6 +108,11 @@
                     <li<?php if($this->menu_child_selected == 'rent'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/rent')?>">Quản lý nhà - đất cho thuê</a></li>
                 </ul>
             </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'contact'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">
+                    <span class="icon-fire"></span> Liên hệ với chúng tôi
+                </a>
+            </li>
         </ul>
     </div><!--leftmenu-->
 
