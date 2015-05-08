@@ -400,38 +400,124 @@
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/News/ViewerNews/ViewerSubjects/NewsBySubject.ascx-->
-<?php if(count($architecture) > 0):?>
-<div class="container-common">
-    <div id="ctl49_HeaderContainer" class="box-header">
-        <div class="name_tit" align="center">
-            <h4>TƯ VẤN NỘI - NGOẠI THẤT</h4>
+<?php //if(count($architecture) > 0):?>
+<!--<div class="container-common">-->
+<!--    <div id="ctl49_HeaderContainer" class="box-header">-->
+<!--        <div class="name_tit" align="center">-->
+<!--            <h4>TƯ VẤN NỘI - NGOẠI THẤT</h4>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl49_BodyContainer" class="bor_box">-->
+<!---->
+<!--        <div class="tuvan">-->
+<!--            <img src="--><?php //echo Yii::app()->baseUrl?><!--/themes/web/files/images/icon_user.png" alt="">-->
+<!---->
+<!--            <p>-->
+<!--                <strong>Tư vấn nội - ngoại thất từ chuyên gia</strong>-->
+<!--            </p>-->
+<!---->
+<!--            <div>&nbsp;</div>-->
+<!--        </div>-->
+<!--        <div class="list">-->
+<!--            <ul>-->
+<!--                --><?php //foreach($architecture as $_key => $_val):?>
+<!--                    <li>-->
+<!--                        <a href="--><?php //echo $_val->url?><!--" title="--><?php //echo $_val->title?><!--">--><?php //echo $_val->title?><!--</a>-->
+<!--                    </li>-->
+<!--                --><?php //endforeach;?>
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl49_FooterContainer">-->
+<!--    </div>-->
+<!--</div>-->
+<?php //endif;?>
+
+    <div class="container-common">
+        <div id="ctl49_HeaderContainer" class="box-header" style="height: auto;">
+            <div class="name_tit" align="center" style="margin-bottom: 0;">
+                <h4>Đăng ký nhận thông tin dự án</h4>
+            </div>
+        </div>
+        <div id="ctl49_BodyContainer" class="bor_box">
+            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+                <input id="customer-name" type="text" placeholder="HỌ VÀ TÊN" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+                <span id="error-customer-name" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Họ tên không được để trống</span>
+            </div>
+            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+                <input id="customer-phone" type="text" onkeydown="inputNumeric(event)" placeholder="SỐ ĐIỆN THOẠI" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+                <span id="error-customer-phone" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Số điện thoại không hợp lệ</span>
+            </div>
+            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+                <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+                <span id="error-customer-email" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Email không hợp lệ</span>
+            </div>
+            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
+        </div>
+        <div id="ctl49_FooterContainer">
         </div>
     </div>
-    <div id="ctl49_BodyContainer" class="bor_box">
 
-        <div class="tuvan">
-            <img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/icon_user.png" alt="">
+    <script>
+        $( "#customer-name" ).focus(function() {
+            $('#error-customer-name').hide();
+        });
 
-            <p>
-                <strong>Tư vấn nội - ngoại thất từ chuyên gia</strong>
-            </p>
+        $( "#customer-phone" ).focus(function() {
+            $('#error-customer-phone').hide();
+        });
 
-            <div>&nbsp;</div>
-        </div>
-        <div class="list">
-            <ul>
-                <?php foreach($architecture as $_key => $_val):?>
-                    <li>
-                        <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
-                    </li>
-                <?php endforeach;?>
-            </ul>
-        </div>
-    </div>
-    <div id="ctl49_FooterContainer">
-    </div>
-</div>
-<?php endif;?>
+        $( "#customer-email" ).focus(function() {
+            $('#error-customer-email').hide();
+        });
+
+        function customer_registered(){
+            var name = $('#customer-name').val(),
+                phone = $('#customer-phone').val(),
+                email = $('#customer-email').val();
+
+            if(name == "") {$('#error-customer-name').show();return false;}
+            else if(phone.length > 12 || phone.length < 10) {$('#error-customer-phone').show();return false;}
+            else if(!validateEmail(email)) {$('#error-customer-email').show();return false;}
+            else{
+                $.post( "/web/page/registered", { name: name, phone: phone, email: email})
+                    .done(function( data ) {
+                        if(!data){
+                            alert("Bạn đăng ký bị lỗi ! Vui lòng thử lại")
+                        }else{
+                            alert( "Bạn đã đăng ký thành công");
+                        }
+                    });
+            }
+
+        }
+
+        function validateEmail(email) {
+            var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
+            var illegalChars= /[\(\)\<\>\,\;\:\\\"\[\]]/;
+            if (email == "" || !emailFilter.test(email) || email.match(illegalChars)) {
+                return false;
+            }
+            return true;
+        }
+
+        function inputNumeric(evt)
+        {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            //key = String.fromCharCode( key );
+            var regex = /[0-9]/;
+            /*if( !regex.test(String.fromCharCode(key)) && (key != 37 && key != 39 &&
+             key != 8 && key != 46))*/
+            var keyExplode = [8, 43, 37, 39, 46, 9, 35, 36];
+            if( !regex.test(String.fromCharCode(key)) && keyExplode.indexOf(key) < 0)
+            {
+                theEvent.returnValue = false;
+                if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+    </script>
+
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>

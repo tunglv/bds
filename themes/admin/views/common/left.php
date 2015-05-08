@@ -112,6 +112,17 @@
                 <a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">
                     <span class="icon-fire"></span> Liên hệ với chúng tôi
                 </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'contact') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'contact_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">Nội dung</a></li>
+                </ul>
+            </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'registered'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/registered/')?>">
+                    <span class="icon-fire"></span> Người dùng đăng ký
+                </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'registered') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'registered_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/registered')?>">Danh sách</a></li>
+                </ul>
             </li>
         </ul>
     </div><!--leftmenu-->

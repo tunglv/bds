@@ -1,3 +1,14 @@
+<div id="contact-us" style="border-radius: 10px;position: fixed;bottom: 80px;right: 10px;background-color: #1ac;color: #fff;font-size: 18px;font-family: tahoma;text-align: center;">
+    <div class="box-header">
+        <div class="name_tit" align="center">
+            <h4>Liên hệ</h4>
+        </div>
+    </div>
+    <div style="padding: 0 10px 10px;">
+        <center><span style="padding: 10px 0;display: block;font-size: 16px;">MRS. LÊ ÚT</span></center>
+        <center><span>0976.078.988</span></center><center><span>0936.404.616</span></center><center><span>0986.616.445</span></center>
+    </div>
+</div>
 <style type="text/css">
     .footer-bottom-top-1 a {
         white-space: nowrap;

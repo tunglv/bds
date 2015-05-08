@@ -89,6 +89,8 @@ class ContactController extends AdminController
 
         $model= Contact::model()->findByPk($id);
 
+        if(!$model) $this->redirect('create');
+
         if(isset($_POST['Contact']))
         {
 //            Yii::import('ext.MyDateTime');

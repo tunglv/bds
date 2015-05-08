@@ -9973,3 +9973,370 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/admin/contact/created
 ---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:51:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:51:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:52:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:52:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 10:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 11:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/05/08 12:10:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Yêu cầu của bạn không hợp lệ.' in C:\xampp\htdocs\bds\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\bds\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\bds\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\bds\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/contact/u...')
+#10 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/contact/update
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/08 15:05:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:27:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:28:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:32:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:50:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:52:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 15:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 16:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 16:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 16:09:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---
+2015/05/08 16:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Modules/Views/Product/InterestedProducts.aspx".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Modules/Views/P...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
+HTTP_REFERER=http://bds.tung/
+---

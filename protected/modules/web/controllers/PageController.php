@@ -17,7 +17,7 @@ class PageController extends WebController {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('error', 'index', 'contact'),
+                'actions' => array('error', 'index', 'contact', 'registered'),
                 'users' => array('*'),
             ),
             array('deny', // deny all users
@@ -40,6 +40,28 @@ class PageController extends WebController {
                 }
                 $this->render($view, $error);
             }
+        }
+    }
+
+    public function actionRegistered(){
+        $name = Yii::app()->request->getPost('name');
+        $phone = Yii::app()->request->getPost('phone');
+        $email = Yii::app()->request->getPost('email');
+
+        if(!$name || ! $phone || !$email){
+            echo 0;die;
+        }
+
+        $model = new Registered();
+        $model->name = $name;
+        $model->phone = $phone;
+        $model->email = $email;
+        $model->created = time();
+
+        if($model->save()){
+            echo 1;die;
+        }else{
+            echo 0;die;
         }
     }
 
