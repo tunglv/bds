@@ -151,6 +151,14 @@
                 </div>
 
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'is_home', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'is_home', $model->isHomeData); ?>
+                        <?php echo $form->error($model,'is_home', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'saler_id', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->dropDownList($model,'saler_id', Saler::model()->getData()); ?>
@@ -263,9 +271,9 @@
                 </div>
 
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'ha_tang', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'bang_gia', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'ha_tang',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                        <?php echo $form->textArea($model,'bang_gia',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 
@@ -277,30 +285,37 @@
                 </div>
 
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'location', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'tien_do_thanh_toan', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'location',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                        <?php echo $form->textArea($model,'tien_do_thanh_toan',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'ban_hang', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'uu_dai', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'ban_hang',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                        <?php echo $form->textArea($model,'uu_dai',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'video', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'ho_tro_vay_von', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'video',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                        <?php echo $form->textArea($model,'ho_tro_vay_von',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 
                 <div class="par control-group">
-                    <?php echo $form->labelEx($model,'images', array('class' => 'control-label')); ?>
+                    <?php echo $form->labelEx($model,'tien_do', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?php echo $form->textArea($model,'images',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                        <?php echo $form->textArea($model,'tien_do',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
+                    </div>
+                </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'hop_dong', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textArea($model,'hop_dong',array('class'=> 'mce_editor', 'style' => 'height: 300px;')); ?>
                     </div>
                 </div>
 

@@ -16,12 +16,13 @@
  * @property string $image
  * @property string $type
  * @property string $overview
- * @property string $ha_tang
+ * @property string $bang_gia
  * @property string $thiet_ke
- * @property string $location
- * @property string $ban_hang
- * @property string $video
- * @property string $images
+ * @property string $tien_do_thanh_toan
+ * @property string $hop_dong
+ * @property string $uu_dai
+ * @property string $ho_tro_vay_von
+ * @property string $tien_do
  * @property string $chu_dau_tu
  * @property integer $created
  */
@@ -57,7 +58,7 @@ class Project extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('created, viewed, saler_id', 'numerical', 'integerOnly'=>true),
+			array('created, viewed, saler_id, is_home', 'numerical', 'integerOnly'=>true),
 			array('name, alias, address, image, province_name, district_name, ward_name', 'length', 'max'=>255),
 			array('mobile, fax', 'length', 'max'=>15),
 			array('province_id, district_id', 'length', 'max'=>5),
@@ -65,7 +66,7 @@ class Project extends CActiveRecord
 			array('website, yahoo', 'length', 'max'=>50),
 			array('email', 'length', 'max'=>100),
 			array('type', 'length', 'max'=>1),
-			array('overview, ha_tang, thiet_ke, location, ban_hang, video, images, chu_dau_tu', 'safe'),
+			array('overview, bang_gia, thiet_ke, tien_do_thanh_toan, uu_dai, ho_tro_vay_von, tien_do, chu_dau_tu, hop_dong', 'safe'),
 
             array('image_file', 'file', 'allowEmpty' => true),
             array('image_file', 'file', 'types'=>'jpg, gif, png', 'allowEmpty' => true),
@@ -74,7 +75,7 @@ class Project extends CActiveRecord
             array('upload_method', 'checkUpload', 'on' => 'create'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, alias, address, mobile, fax, website, email, yahoo, image, type, overview, ha_tang, thiet_ke, location, ban_hang, video, images, chu_dau_tu, created', 'safe', 'on'=>'search'),
+			array('id, name, alias, address, mobile, fax, is_home, website, email, yahoo, image, type, overview, bang_gia, thiet_ke, tien_do_thanh_toan, hop_dong, uu_dai, ho_tro_vay_von, tien_do, chu_dau_tu, created', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -124,16 +125,18 @@ class Project extends CActiveRecord
 			'yahoo' => 'Yahoo',
 			'image' => 'Image',
 			'type' => 'Type',
-			'overview' => 'Overview',
-			'ha_tang' => 'Ha Tang',
-			'thiet_ke' => 'Thiet Ke',
-			'location' => 'Location',
-			'ban_hang' => 'Ban Hang',
-			'video' => 'Video',
-			'images' => 'Images',
-			'chu_dau_tu' => 'Chu Dau Tu',
+			'overview' => 'Giới thiệu chung',
+			'bang_gia' => 'Bảng giá',
+			'thiet_ke' => 'Mặt bằng và thiết kế',
+			'tien_do_thanh_toan' => 'Tiến độ thanh toán',
+            'hop_dong'=>'Hợp đồng',
+			'uu_dai' => 'Ưu đãi',
+			'ho_tro_vay_von' => 'Hỗ trợ vay vốn ngân hàng',
+			'tien_do' => 'Tiến độ thi công',
+			'chu_dau_tu' => 'Chủ đầu tư',
 			'created' => 'Created',
-            'saler_id' => 'Saler'
+            'saler_id' => 'Saler',
+            'is_home' => 'Hiển thị trang chủ'
 		);
 	}
 
@@ -160,12 +163,13 @@ class Project extends CActiveRecord
 		$criteria->compare('image',$this->image,true);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('overview',$this->overview,true);
-		$criteria->compare('ha_tang',$this->ha_tang,true);
+		$criteria->compare('bang_gia',$this->bang_gia,true);
 		$criteria->compare('thiet_ke',$this->thiet_ke,true);
-		$criteria->compare('location',$this->location,true);
-		$criteria->compare('ban_hang',$this->ban_hang,true);
-		$criteria->compare('video',$this->video,true);
-		$criteria->compare('images',$this->images,true);
+		$criteria->compare('tien_do_thanh_toan',$this->tien_do_thanh_toan,true);
+		$criteria->compare('hop_dong',$this->hop_dong,true);
+		$criteria->compare('uu_dai',$this->uu_dai,true);
+		$criteria->compare('ho_tro_vay_von',$this->ho_tro_vay_von,true);
+		$criteria->compare('tien_do',$this->tien_do,true);
 		$criteria->compare('chu_dau_tu',$this->chu_dau_tu,true);
 		$criteria->compare('created',$this->created);
 
@@ -192,6 +196,16 @@ class Project extends CActiveRecord
 
     public function getTypeLabel(){
         return $this->typeData[$this->type];
+    }
+
+    public function getIsHomeData(){
+        return array(
+            '0' => 'Không hiển thị trang chủ',
+            '1' => 'Hiển thị trang chủ'
+        );
+    }
+    public function getIsHomeLabel(){
+        return $this->isHomeData[$this->is_home];
     }
 
     public function getAliasTypeData(){

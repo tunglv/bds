@@ -162,156 +162,63 @@
 
 <div>
 <div id="ctl38_HeaderContainer" class="tit_l">
-    <h2><a><span style="white-space:nowrap;">Tin rao dành cho bạn</span></a></h2>
+    <h2><a><span style="white-space:nowrap;">Giới thiệu dự án</span></a></h2>
 </div>
 <div style="clear: both;"></div>
 <div class="line_gr"></div>
 <div id="ctl38_BodyContainer">
 
-<div class="product-list tin-danh-cho-ban">
-<?php foreach($sale as $_key => $_val):?>
-<div class="vip5" rel="6464662">
-    <div class="p-main">
-        <div class="p-main-image-crop">
-            <a class="product-avatar" href="<?php echo $_val->url?>" onclick="">
-                <img class="product-avatar-img" src="<?php echo $_val->getImageUrl()?>" alt="<?php echo $_val->title?>">
-            </a>
-        </div>
-        <div class="p-content">
-            <div class="p-title">
-                <h3>
-                    <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>">
-                        <?php echo $_val->title?>
-                    </a></h3>
-            </div>
+<div class="product-list tin-danh-cho-ban" style="padding-top: 10px;">
+    <style>
+        #header-product_list li{
+            background-color: #055699;color: #fff;
+            cursor: pointer;
+        }
+        #header-product_list li.active, #header-product_list li:hover{
+            border: 1px solid #055699;color: #000;background-color: transparent;
+        }
+    </style>
+    <ul id="header-product_list" style="list-style: none;text-align: center;height: 55px;display: block;padding-left: 5px;margin-bottom: 10px;">
+        <li project="overview-project" class="detail-project active" style="width: 11%;display: inline-block;clear: both;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">Giới thiệu chung</li>
+        <li project="boss-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 50px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Chủ đầu tư</li>
+        <li project="desgin-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Mặt bằng và thiết kế căn hộ</li>
+        <li project="quote-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Bảng giá</li>
+        <li project="process-pay-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">Tiến độ thanh toán</li>
+        <li project="bonus-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Ưu đãi</li>
+        <li project="loan-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Hỗ trợ vay vốn ngân hàng</li>
+        <li project="process-submit-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 28px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Tiến độ thi công</li>
+        <li project="contract-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Hợp đồng</li>
+    </ul>
+    <hr style="width: 80%;">
+    <div style="clear:both;margin-bottom: 10px;"></div>
 
-        </div>
-        <div class="p-bottom-crop">
-            <div class="p-bottom-left">
-                <div>
-                    <div class="left">Giá</div>
-                    :&nbsp;<?php echo $_val->price?> <?php echo $_val->price_type?>
-                </div>
-                <div>
-                    <div class="left">Diện tích</div>
-                    :&nbsp;<?php echo $_val->area?> m²
-                </div>
-                <div>
-                    <div class="left">Quận/huyện</div>
-                    :&nbsp;<span><a class="link_blue" href="http://batdongsan.com.vn/ban-nha-rieng-nha-be"
-                                    title="Bán nhà riêng tại Nhà Bè">Nhà Bè</a>, <a class="link_blue"
-                                                                                    href="http://batdongsan.com.vn/ban-nha-rieng-tp-hcm"
-                                                                                    title="Bán nhà riêng tại Hồ Chí Minh">Hồ
-                            Chí Minh</a></span>
-
-                    <div class="p-bottom-right font09"><?php echo date('d/m/Y', $_val->created)?></div>
-                </div>
-            </div>
-            <div style="clear:both"></div>
-        </div>
-        <div style="clear:both"></div>
-    </div>
-
-</div>
-<?php endforeach;?>
-<div class="otherlink"><a href="http://batdongsan.com.vn/ban-nha-rieng-duong-huynh-tan-phat-xa-phu-xuan" class="link_sr"
-                          style="text-decoration: none"> &gt; Xem thêm các tin rao nhà đất tương tự</a></div>
-</div>
-<div style="margin: 5px 0;">
-    <div style="float: left">
-        <a style="color: #055699" href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'tong-hop'));?>">Tin Nhà đất bán mới nhất</a>
-    </div>
-    <div style="float: right">
-        <a style="color: #055699" href="<?php echo Yii::app()->createUrl('/web/rent/list', array('typeOf' => 'tong-hop'));?>">Tin Nhà đất cho thuê mới nhất</a>
-    </div>
-    <div class="clear">
-    </div>
+    <div class="infor-project" id="overview-project" style="display: block;clear:both;margin: 0 5px 10px;"><?php echo $project_home->overview?></div>
+    <div class="infor-project" id="boss-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->chu_dau_tu?></div>
+    <div class="infor-project" id="desgin-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->thiet_ke?></div>
+    <div class="infor-project" id="quote-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->bang_gia?></div>
+    <div class="infor-project" id="process-pay-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do_thanh_toan?></div>
+    <div class="infor-project" id="bonus-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->uu_dai?></div>
+    <div class="infor-project" id="loan-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->ho_tro_vay_von?></div>
+    <div class="infor-project" id="process-submit-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do?></div>
+    <div class="infor-project" id="contract-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->hop_dong?></div>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-
-        //if (getCookie('USER_SEARCH_PRODUCT_CONTEXT') != null) {
-
-        var data = getCookie('USER_SEARCH_PRODUCT_CONTEXT');
-        var pid = '';
-        if (data != null) {
-            pid = data.split(',')[1];
-            data = data.split(',')[0];
-        }
-
-        $.ajax({
-            url: "/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=" + data,
-            success: function (_html) {
-                if (_html.indexOf("</div>") > 0) {
-                    $(".tin-danh-cho-ban").html(_html);
-
-                    if (pid != '')
-                        $('div[rel=' + pid + ']').hide();
-
-                    LoadVideoPlayer();
-                }
-            }
-        });
+        $('#header-product_list li.detail-project').click(function(){
+            $('#header-product_list li.detail-project').removeClass('active');
+            $(this).addClass('active');
+            $('.infor-project').hide();
+            $('#'+$(this).attr('project')).show();
+//            alert($(this).attr('project'));
+        })
     });
 </script>
 </div>
 
 </div>
 <div style="clear:both;margin-bottom:5px;"></div>
-<!--//Modules/Search/SearchResult/ucProductContextResult.ascx-->
-<div class="adPosition" positioncode="BANNER_POSITION_HORIZONTAL_BELOW_MAIN_CONTENT" stylex="" hasshare="True"
-     hasnotshare="True">
-    <div class="adshared">
-        <div class="adshareditem aditem" time="10" style="" src="http://file1.batdongsan.com.vn/file.289514.jpg"
-             altsrc="http://file1.batdongsan.com.vn/file.0.jpg"
-             link="http://batdongsan.com.vn/Images/SiteStatic/profile-full.html#trang6" bid="925" tip="" tp="7" w="560"
-             h="90"><a href="http://batdongsan.com.vn/click.aspx?bannerid=925" target="_blank" title=""
-                       rel="nofollow"><img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.289514.jpg"
-                                           style="width: 100%; height:90px;" class="view-count click-count"
-                                           bannerid="925"></a></div>
-        <div class="adshareditem aditem" time="10" style="display: none;"
-             src="http://file1.batdongsan.com.vn/file.289043.jpg" altsrc="http://file1.batdongsan.com.vn/file.0.jpg"
-             link="http://batdongsan.com.vn/bao-gia-quang-cao#a2" bid="835" tip="" tp="7" w="560" h="90"><a
-                href="http://batdongsan.com.vn/click.aspx?bannerid=835" target="_blank" title="" rel="nofollow"><img
-                    src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.289043.jpg"
-                    style="width: 100%; height:90px;" class="view-count click-count" bannerid="835"></a></div>
-    </div>
-</div>
-
 <div style="clear:both;"></div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>
-<div id="SubMiddleLeftMainContent" style="float: left; width: 49.5%;">
-    <div class="adPosition" positioncode="BANNER_POSITION_MIDDLE_LEFT_CONTENT1" stylex="" hasshare="True"
-         hasnotshare="True">
-        <div class="adshared">
-            <div class="adshareditem aditem" time="10" style="display: block"
-                 src="http://file1.batdongsan.com.vn/file.349980.jpg" altsrc="http://file1.batdongsan.com.vn/file.0.jpg"
-                 link="http://batdongsan.com.vn/bao-gia-quang-cao#a2" bid="1396" tip="" tp="7" w="275" h="90"><a
-                    href="http://batdongsan.com.vn/click.aspx?bannerid=1396" target="_blank" title=""
-                    rel="nofollow"><img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.349980.jpg"
-                                        style="width: 100%; height:90px;" class="view-count click-count"
-                                        bannerid="1396"></a></div>
-        </div>
-    </div>
-
-    <div style="clear:both;"></div>
-    <!--//Modules/Banner/Preview/MiddleLeftContent/BannerPreviewMiddleMainContent.ascx--></div>
-<div id="SubMiddleRightMainContent" style="float: right; width: 49.5%;">
-    <div class="adPosition" positioncode="BANNER_POSITION_MIDDLE_LEFT_CONTENT2" stylex="" hasshare="True"
-         hasnotshare="True">
-        <div class="adshared">
-            <div class="adshareditem aditem" time="10" style="display: block"
-                 src="http://file1.batdongsan.com.vn/file.349980.jpg" altsrc="http://file1.batdongsan.com.vn/file.0.jpg"
-                 link="http://batdongsan.com.vn/bao-gia-quang-cao#a2" bid="1396" tip="" tp="7" w="275" h="90"><a
-                    href="http://batdongsan.com.vn/click.aspx?bannerid=1396" target="_blank" title=""
-                    rel="nofollow"><img src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/file.349980.jpg"
-                                        style="width: 100%; height:90px;" class="view-count click-count"
-                                        bannerid="1396"></a></div>
-        </div>
-    </div>
-
-    <div style="clear:both;"></div>
-    <!--//Modules/Banner/Preview/MiddleRightContent/BannerPreviewMiddleMainContent2.ascx--></div>
 </div>
 <div id="MiddleRightMainContent" class="t_right">
 <div class="container-common">
@@ -593,6 +500,45 @@
     </div>
 </div>
 
+<div style="clear:both;"></div>
+
+<div class="container-common" style="margin-bottom: 10px;">
+    <div id="ctl44_HeaderContainer" class="box-header">
+        <div class="name_tit" align="center">
+            <h4>Hỗ trợ trực tuyến</h4>
+        </div>
+    </div>
+    <div id="ctl44_BodyContainer" class="bor_box">
+        <div class="content">
+            <div id="suport">
+                <div class="widget-content">
+                    <center><h3 style="font-size: 14px;padding-top: 20px;">Hot line</h3></center>
+                    <center><span style="font-weight: bold;color: #055699;">0976.078.988 - 0936.404.616 - 0986.616.445</span></center>
+                    <!--                        <center><a href="Skype:utlethi_hua?chat"> <img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-t7osA3Ikqa4%2FVG9y1yaBtpI%2FAAAAAAAAAsg%2FcoB5nR17IDM%2Fs1600%2FdSTsg.png&amp;container=blogger&amp;gadget=a&amp;rewriteMime=image%2F*" title="Lê Út luôn sẵn sàng hỗ trợ bạn" width="160" height="50" alt=""> </a><br></center>-->
+                    <!--                        <center><p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;"><strong><span style="color: #0000ff;">Mrs:</span> <span style="color: #ff0000;">Lê Út</span></strong></span></p></center>-->
+
+                    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                    <center><div id="SkypeButton_Call_utlethi_hua_1">
+                            <script type="text/javascript">
+                                Skype.ui({
+                                    "name": "dropdown",
+                                    "element": "SkypeButton_Call_utlethi_hua_1",
+                                    "participants": ["utlethi_hua"],
+                                    "imageSize": 32
+                                });
+                            </script>
+                        </div></center>
+
+                    <center><a href="ymsgr:sendim?phaletrangnd90" mce_href="ymsgr:sendim?phaletrangnd90" border="0"><img src="http://opi.yahoo.com/online?u=phaletrangnd90&amp;m=g&amp;t=2" mce_src="http://opi.yahoo.com/online?u=phaletrangnd90&amp;m=g&amp;t=2"></a><center>
+                            <center><p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;"><strong><span style="color: #0000ff;">Mrs:</span> <span style="color: #ff0000;">Lê Út</span></strong></span></p></center></center></center>
+
+                    <center><a href="mailto:levy.hua@gmail.com?subject=Liên hệ mua bán chung cư" style="font-size: 14px;font-weight: bold;margin: 20px;display: block;color: #055699">levy.hua@gmail.com</a></center>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 <div style="clear:both;"></div>
 
 <?php if(count($project) > 0):?>

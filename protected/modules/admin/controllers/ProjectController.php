@@ -58,12 +58,16 @@ class ProjectController extends AdminController {
             $model->attributes = $productFilter;
             if (isset($productFilter['name']) && $productFilter['name'])
                 $criteria->compare('t.name', $productFilter['name']);
-//            if (isset($productFilter['id']) && $productFilter['id'])
-//                $criteria->compare('t.id', $productFilter['id']);
-//            if (isset($productFilter['type']) && $productFilter['type'])
-//                $criteria->compare('t.type', $productFilter['type']);
-//            if (isset($productFilter['topic_id']) && $productFilter['topic_id'])
-//                $criteria->compare('t.topic_id', $productFilter['topic_id']);
+            if (isset($productFilter['mobile']) && $productFilter['mobile'])
+                $criteria->compare('t.mobile', $productFilter['mobile']);
+            if (isset($productFilter['type']) && $productFilter['type'])
+                $criteria->compare('t.type', $productFilter['type']);
+            if (isset($productFilter['email']) && $productFilter['email'])
+                $criteria->compare('t.email', $productFilter['email']);
+            if (isset($productFilter['yahoo']) && $productFilter['yahoo'])
+                $criteria->compare('t.yahoo', $productFilter['yahoo']);
+            if (isset($productFilter['is_home']) && $productFilter['is_home'])
+                $criteria->compare('t.is_home', $productFilter['is_home']);
         }
 
 
@@ -106,6 +110,9 @@ class ProjectController extends AdminController {
 //            var_dump($model->getErrors());die;
 
             if ($model->validate()) {
+
+                if($model->is_home) $this->_isHome();
+
                 $model->setIsNewRecord(TRUE);
                 $model->insert();
 
@@ -162,6 +169,9 @@ class ProjectController extends AdminController {
             $model->attributes = $post;
 
             if ($model->validate()) {
+
+                if($model->is_home) $this->_isHome();
+
                 Yii::import('ext.TextParser');
                 $model->alias = $model->alias ? $model->alias : $model->title;
                 $model->alias = TextParser::toSEOString($model->alias);
@@ -231,5 +241,9 @@ class ProjectController extends AdminController {
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
+    }
+
+    private function _isHome(){
+        Project::model()->updateAll(array( 'is_home' => 0 ), 'is_home = 1' );
     }
 }

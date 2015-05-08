@@ -1,6 +1,6 @@
 /*
-SQLyog Community v11.31 (64 bit)
-MySQL - 5.6.20 : Database - bds
+SQLyog Ultimate v10.42 
+MySQL - 5.5.27 : Database - bds
 *********************************************************************
 */
 
@@ -12,13 +12,7 @@ MySQL - 5.6.20 : Database - bds
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`bds` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
-USE `bds`;
-
 /*Table structure for table `architecture` */
-
-DROP TABLE IF EXISTS `architecture`;
 
 CREATE TABLE `architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -39,8 +33,6 @@ CREATE TABLE `architecture` (
 insert  into `architecture`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topic_id`,`created`,`type`,`image`) values (1,'Tư vấn thiết kế nhà 4 tầng trên đất hẹp, DT 3,5 X 16m','tu-van-thiet-ke-nha-4-tang-tren-dat-hep-dt-35-x-16m','Tôi muốn nhờ các KTS tư vấn giúp tôi xây dựng nhà 4 tầng hiện đại. Diện tích mảnh đất nhà tôi như sau: ngang 3,49m, dài 15,75 m và nở hậu 3,63 m.','<h2>Y&ecirc;u cầu:</h2>\r\n<p>Thiết kế nh&agrave; phong c&aacute;ch hiện đại. C&oacute; s&acirc;n trước 3,3 m v&agrave;&nbsp;s&acirc;n sau 1 m. Vợ chồng t&ocirc;i hiện&nbsp;c&oacute; 2 con, một trai một&nbsp;con g&aacute;i lớn</p>\r\n<p><em>(Hữu)</em></p>\r\n<h2>Trả lời:</h2>\r\n<p>Dựa tr&ecirc;n k&iacute;ch thước mảnh đất v&agrave; y&ecirc;u cầu của anh chị, ch&uacute;ng t&ocirc;i gợi &yacute; anh bố tr&iacute; như sau: Mặt bằng tầng 1&nbsp;bao gồm gara&nbsp;để xe, tiếp theo l&agrave;&nbsp;ph&ograve;ng kh&aacute;ch, thang m&aacute;y, một&nbsp;toilet nhỏ v&agrave; cầu thang ở ph&iacute;a&nbsp;cuối nh&agrave;. Tầng lửng sẽ l&agrave; kh&ocirc;ng gian gồm&nbsp;nh&agrave; bếp, ph&ograve;ng v&agrave; ph&ograve;ng l&agrave;m việc kết hợp.&nbsp;Tầng 2 gồm c&oacute; một&nbsp;ph&ograve;ng ngủ master, một&nbsp;toilet ri&ecirc;ng. C&ograve;n tầng 3 l&agrave; ph&ograve;ng ngủ d&agrave;nh cho&nbsp;con g&aacute;i lớn với&nbsp;toilet ri&ecirc;ng. Tầng 4 d&agrave;nh l&agrave;m&nbsp;ph&ograve;ng ngủ cho con trai cũng c&oacute; 1&nbsp;toilet ri&ecirc;ng v&agrave; th&ecirc;m một kh&ocirc;ng gian nhỏ d&ugrave;ng để&nbsp;tập gym. Tr&ecirc;n s&acirc;n thượng sẽ l&agrave;&nbsp;ph&ograve;ng thờ v&agrave; chỗ&nbsp;giặt quần &aacute;o,&nbsp;phơi ph&oacute;ng.</p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023546195.jpg\" data-desc=\"Mặt bằng tầng trệt\"><img class=\"ccursor\" title=\"Mặt bằng tầng trệt\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023546195.jpg\" alt=\"Thiết kế nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023547553.jpg\" data-desc=\"Mặt bằng tầng lửng\"><img class=\"ccursor\" title=\"Mặt bằng tầng lửng\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023547553.jpg\" alt=\"Thiết kế nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023547927.jpg\" data-desc=\"Mặt bằng lầu 1\"><img class=\"ccursor\" title=\"Mặt bằng lầu 1\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023547927.jpg\" alt=\"Thiết kế nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548333.jpg\" data-desc=\"Mặt bằng lầu 2\"><img class=\"ccursor\" title=\"Mặt bằng lầu 2\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548333.jpg\" alt=\"Nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548629.jpg\" data-desc=\"Mặt bằng lầu 3\"><img class=\"ccursor\" title=\"Mặt bằng lầu 3\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548629.jpg\" alt=\"Thiết kế nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548988.jpg\" data-desc=\"Mặt bằng s&acirc;n thượng\"><img class=\"ccursor\" title=\"Mặt bằng s&acirc;n thượng\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023548988.jpg\" alt=\"Thiết kế nh&agrave; 4 tầng\" /><span class=\"icon-slide-show\">&nbsp;</span></span></p>\r\n<p>Dưới đ&acirc;y l&agrave; những h&igrave;nh ảnh phối cảnh 3D bố tr&iacute; nội thất để gia đ&igrave;nh tham khảo:</p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549253.jpg\" data-desc=\"Ph&ograve;ng kh&aacute;ch n&ecirc;n d&ugrave;ng tone m&agrave;u s&aacute;ng để che giấu khuyết điểm hẹp ngang của ng&ocirc;i nh&agrave;. Một quầy bar nhỏ cũng gi&uacute;p ph&ograve;ng kh&aacute;ch trang nh&atilde; hơn v&agrave; gi&uacute;p ph&acirc;n chia kh&ocirc;ng gian\"><img class=\"ccursor\" title=\"Ph&ograve;ng kh&aacute;ch n&ecirc;n d&ugrave;ng tone m&agrave;u s&aacute;ng để che giấu khuyết điểm hẹp ngang của ng&ocirc;i nh&agrave;. Một quầy bar nhỏ cũng gi&uacute;p ph&ograve;ng kh&aacute;ch trang nh&atilde; hơn v&agrave; gi&uacute;p ph&acirc;n chia kh&ocirc;ng gian\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549253.jpg\" alt=\"Thiết kế ph&ograve;ng kh&aacute;ch\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng kh&aacute;ch n&ecirc;n d&ugrave;ng tone m&agrave;u s&aacute;ng để che giấu khuyết điểm hẹp ngang của ng&ocirc;i nh&agrave;. Một quầy<br />bar nhỏ cũng gi&uacute;p ph&ograve;ng kh&aacute;ch trang nh&atilde; hơn v&agrave; gi&uacute;p ph&acirc;n chia kh&ocirc;ng gian</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549487.jpg\" data-desc=\"Hệ tủ v&agrave; kệ kết cấu đơn giản m&agrave;u n&acirc;u gỗ nhẹ v&agrave; m&agrave;u trắng nhẹ nh&agrave;ng. Trần nh&agrave; bằng thạch ​cao với thiết kế lượn mềm mại tạo cảm gi&aacute;c kh&ocirc;ng gian rộng hơn\"><img class=\"ccursor\" title=\"Hệ tủ v&agrave; kệ kết cấu đơn giản m&agrave;u n&acirc;u gỗ nhẹ v&agrave; m&agrave;u trắng nhẹ nh&agrave;ng. Trần nh&agrave; bằng thạch ​cao với thiết kế lượn mềm mại tạo cảm gi&aacute;c kh&ocirc;ng gian rộng hơn\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549487.jpg\" alt=\"Trần nh&agrave; thạch cao\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Hệ tủ v&agrave; kệ kết cấu đơn giản m&agrave;u n&acirc;u gỗ nhẹ v&agrave; m&agrave;u trắng nhẹ nh&agrave;ng. Trần nh&agrave; bằng thạch<br />cao với thiết kế lượn mềm mại tạo cảm gi&aacute;c kh&ocirc;ng gian rộng hơn</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549971.jpg\" data-desc=\"Ph&ograve;ng kh&aacute;ch nổi bật nhờ bộ sofa đỏ\"><img class=\"ccursor\" title=\"Ph&ograve;ng kh&aacute;ch nổi bật nhờ bộ sofa đỏ\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023549971.jpg\" alt=\"Sofa ph&ograve;ng kh&aacute;ch\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng kh&aacute;ch nổi bật nhờ bộ sofa đỏ tuy kh&ocirc;ng cầu kỳ nhưng kh&aacute; độc đ&aacute;o</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555321.jpg\" data-desc=\"Để l&agrave;m dịu kh&ocirc;ng gian bếp v&agrave; ph&ograve;ng ăn d&ugrave;ng m&agrave;u trắng v&agrave; xanh nhẹ\"><img class=\"ccursor\" title=\"Để l&agrave;m dịu kh&ocirc;ng gian bếp v&agrave; ph&ograve;ng ăn d&ugrave;ng m&agrave;u trắng v&agrave; xanh nhẹ\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555321.jpg\" alt=\"Bếp v&agrave; b&agrave;n ăn\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Để l&agrave;m dịu kh&ocirc;ng gian bếp v&agrave; ph&ograve;ng ăn d&ugrave;ng m&agrave;u trắng v&agrave; xanh nhẹ</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555633.jpg\" data-desc=\"Ph&ograve;ng ngủ lớn sử dụng m&agrave;u t&iacute;m nhẹ vừa c&aacute; t&iacute;nh vừa ngọt ng&agrave;o. Kết cấu trần thạch cao mềm mại v&agrave; tinh tế\"><img class=\"ccursor\" title=\"Ph&ograve;ng ngủ lớn sử dụng m&agrave;u t&iacute;m nhẹ vừa c&aacute; t&iacute;nh vừa ngọt ng&agrave;o. Kết cấu trần thạch cao mềm mại v&agrave; tinh tế\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555633.jpg\" alt=\"Ph&ograve;ng ngủ ch&iacute;nh\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng ngủ lớn sử dụng m&agrave;u t&iacute;m nhẹ vừa c&aacute; t&iacute;nh vừa ngọt ng&agrave;o. Kết<br />cấu trần thạch cao mềm mại v&agrave; tinh tế</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555930.jpg\" data-desc=\"Hệ tủ đơn giản trong ph&ograve;ng ngủ vừa để lưu trữ vừa l&agrave; vật trang tr&iacute; với gam m&agrave;u c&ugrave;ng tone tạo sự đồng điệu trong cả kh&ocirc;ng gian\"><img class=\"ccursor\" title=\"Hệ tủ đơn giản trong ph&ograve;ng ngủ vừa để lưu trữ vừa l&agrave; vật trang tr&iacute; với gam m&agrave;u c&ugrave;ng tone tạo sự đồng điệu trong cả kh&ocirc;ng gian\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023555930.jpg\" alt=\"Nội thất ph&ograve;ng ngủ\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Hệ tủ đơn giản trong ph&ograve;ng ngủ vừa để lưu trữ vừa l&agrave; vật trang tr&iacute; với gam<br />m&agrave;u c&ugrave;ng&nbsp;tone tạo sự đồng điệu trong cả kh&ocirc;ng gian</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023556928.jpg\" data-desc=\"Ph&ograve;ng ngủ d&agrave;nh cho con g&aacute;i lớn với gam m&agrave;u hồng nữ t&iacute;nh, kết cấu trần thạch cao độc đ&aacute;o\"><img class=\"ccursor\" title=\"Ph&ograve;ng ngủ d&agrave;nh cho con g&aacute;i lớn với gam m&agrave;u hồng nữ t&iacute;nh, kết cấu trần thạch cao độc đ&aacute;o\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023556928.jpg\" alt=\"Ph&ograve;ng ngủ cho b&eacute; g&aacute;i\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng ngủ d&agrave;nh cho con g&aacute;i lớn với gam m&agrave;u hồng cam nữ t&iacute;nh v&agrave; khỏe khoắn, kh&ocirc;ng gian cũng<br />được mềm h&oacute;a với&nbsp;kết cấu trần thạch cao uốn lượn&nbsp;độc đ&aacute;o</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557334.jpg\" data-desc=\"Bức tranh phong cảnh trang tr&iacute; đầu giường tạo chiều s&acirc;u cho kh&ocirc;ng gian\"><img class=\"ccursor\" title=\"Bức tranh phong cảnh trang tr&iacute; đầu giường tạo chiều s&acirc;u cho kh&ocirc;ng gian\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557334.jpg\" alt=\"Trang tr&iacute; đầu giường\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Bức tranh phong cảnh trang tr&iacute; đầu giường tạo chiều s&acirc;u cho kh&ocirc;ng gian</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557459.jpg\" data-desc=\"Ph&ograve;ng ngủ d&agrave;nh cho cậu con trai sử dụng hai tone m&agrave;u trắng - đen vừa nam t&iacute;nh vừa hiện đại\"><img class=\"ccursor\" title=\"Ph&ograve;ng ngủ d&agrave;nh cho cậu con trai sử dụng hai tone m&agrave;u trắng - đen vừa nam t&iacute;nh vừa hiện đại\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557459.jpg\" alt=\"Ph&ograve;ng ngủ b&eacute; trai\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng ngủ d&agrave;nh cho cậu con trai sử dụng hai tone m&agrave;u trắng - đen vừa nam t&iacute;nh vừa hiện đại</em></p>\r\n<p><span class=\"imageGallery relativepos\" data-src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557864.jpg\" data-desc=\"Ph&ograve;ng ngủ của cậu con trai c&ograve;n c&oacute; một khoảng d&agrave;nh cho việc tập gym v&agrave; được ngăn c&aacute;ch bằng v&aacute;ch CNC\"><img class=\"ccursor\" title=\"Ph&ograve;ng ngủ của cậu con trai c&ograve;n c&oacute; một khoảng d&agrave;nh cho việc tập gym v&agrave; được ngăn c&aacute;ch bằng v&aacute;ch CNC\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/19/20150319023557864.jpg\" alt=\"Ph&ograve;ng ngủ b&eacute; trai\" /><span class=\"icon-slide-show\">&nbsp;</span></span><br /><em>Ph&ograve;ng ngủ của cậu con trai c&ograve;n c&oacute; một khoảng d&agrave;nh cho<br />việc tập gym v&agrave; được ngăn c&aacute;ch bằng v&aacute;ch CNC</em></p>\r\n<p>Kiến tr&uacute;c sư&nbsp;<strong>Phạm Ngọc Thi&ecirc;n &Acirc;n</strong><br /><em>(Theo Vnxpress)</em></p>',NULL,1,1426906033,'1','260');
 
 /*Table structure for table `bds_rent` */
-
-DROP TABLE IF EXISTS `bds_rent`;
 
 CREATE TABLE `bds_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -85,8 +77,6 @@ insert  into `bds_rent`(`id`,`title`,`alias`,`project_id`,`project_name`,`distri
 
 /*Table structure for table `bds_sale` */
 
-DROP TABLE IF EXISTS `bds_sale`;
-
 CREATE TABLE `bds_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de',
@@ -128,9 +118,36 @@ CREATE TABLE `bds_sale` (
 
 insert  into `bds_sale`(`id`,`title`,`alias`,`project_id`,`project_name`,`district_id`,`district_name`,`province_id`,`province_name`,`ward_id`,`ward_name`,`price`,`price_type`,`area`,`content`,`created`,`address`,`code`,`type`,`date_start`,`date_end`,`floor`,`room`,`befor`,`way`,`toilet`,`furniture`,`name_contact`,`address_contact`,`phone_contact`,`email_contact`,`image`,`status`) values (1,'Bán nhà ở Trung Văn','ban-nha-o-trung-van',1,'Dự án A','019','Từ Liêm','01','Hà Nội','00637','Trung Văn',2500000000,'vnđ','80','<p>Nh&agrave; si&ecirc;u đẹp</p>',1429329269,'Số 8 Đỗ Đức Dục','4L0GX','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','Ma Xuan Phong','So 10 Phong Xuan Ma','098765432','phongmx@gmail.com','5531d56c2790f','ENABLE');
 
-/*Table structure for table `contact` */
+/*Table structure for table `catagory` */
 
-DROP TABLE IF EXISTS `contact`;
+CREATE TABLE `catagory` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id cua chuyen muc',
+  `name` varchar(255) NOT NULL COMMENT 'ten cua chuyen muc',
+  `alias` varchar(255) NOT NULL COMMENT 'alias cua chuyen muc',
+  `index` int(1) DEFAULT NULL COMMENT 'vi tri cua chuyen muc',
+  `manager_id` int(11) unsigned NOT NULL COMMENT 'id quan ly tao chuyen muc',
+  `time_create` datetime DEFAULT NULL COMMENT 'thoi gian tao chuyen muc',
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  CONSTRAINT `catagory_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `catagory` */
+
+/*Table structure for table `city` */
+
+CREATE TABLE `city` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(120) NOT NULL,
+  `alias` varchar(120) NOT NULL,
+  `code` varchar(20) NOT NULL,
+  `time_create` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `city` */
+
+/*Table structure for table `contact` */
 
 CREATE TABLE `contact` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -144,8 +161,6 @@ CREATE TABLE `contact` (
 insert  into `contact`(`id`,`content`,`created`) values (1,'<p>Xin chao</p>',1431062039);
 
 /*Table structure for table `decorate` */
-
-DROP TABLE IF EXISTS `decorate`;
 
 CREATE TABLE `decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -167,8 +182,6 @@ insert  into `decorate`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`create
 
 /*Table structure for table `district` */
 
-DROP TABLE IF EXISTS `district`;
-
 CREATE TABLE `district` (
   `districtid` varchar(5) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -185,8 +198,6 @@ insert  into `district`(`districtid`,`name`,`type`,`location`,`provinceid`) valu
 
 /*Table structure for table `images_rent` */
 
-DROP TABLE IF EXISTS `images_rent`;
-
 CREATE TABLE `images_rent` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -201,8 +212,6 @@ insert  into `images_rent`(`id`,`image`,`bds_rent_id`,`is_cover`) values (3,'553
 
 /*Table structure for table `images_sale` */
 
-DROP TABLE IF EXISTS `images_sale`;
-
 CREATE TABLE `images_sale` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
@@ -216,8 +225,6 @@ CREATE TABLE `images_sale` (
 insert  into `images_sale`(`id`,`image`,`bds_sale_id`,`is_cover`) values (1,'553131ae3db3b',2,1),(2,'553131b9c3da3',2,0),(3,'5531d56c10dc2',1,0),(4,'5531d56c2790f',1,1);
 
 /*Table structure for table `manager` */
-
-DROP TABLE IF EXISTS `manager`;
 
 CREATE TABLE `manager` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -239,8 +246,6 @@ insert  into `manager`(`id`,`email`,`password`,`status`,`name`,`phone`,`yahoo`,`
 
 /*Table structure for table `news` */
 
-DROP TABLE IF EXISTS `news`;
-
 CREATE TABLE `news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet',
@@ -261,8 +266,6 @@ insert  into `news`(`id`,`title`,`alias`,`desc`,`content`,`topic_id`,`viewed`,`c
 
 /*Table structure for table `project` */
 
-DROP TABLE IF EXISTS `project`;
-
 CREATE TABLE `project` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -282,13 +285,15 @@ CREATE TABLE `project` (
   `ward_id` varchar(5) DEFAULT NULL,
   `ward_name` varchar(255) DEFAULT NULL,
   `overview` text,
-  `ha_tang` text,
+  `bang_gia` text,
   `thiet_ke` text,
-  `location` text,
-  `ban_hang` text,
-  `video` text,
-  `images` text,
+  `tien_do_thanh_toan` text,
+  `uu_dai` text,
+  `ho_tro_vay_von` text,
+  `tien_do` text,
   `chu_dau_tu` text,
+  `hop_dong` text,
+  `is_home` tinyint(1) DEFAULT '0',
   `created` int(11) DEFAULT NULL,
   `viewed` int(11) DEFAULT NULL,
   `saler_id` int(11) DEFAULT NULL,
@@ -297,11 +302,9 @@ CREATE TABLE `project` (
 
 /*Data for the table `project` */
 
-insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`overview`,`ha_tang`,`thiet_ke`,`location`,`ban_hang`,`video`,`images`,`chu_dau_tu`,`created`,`viewed`,`saler_id`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1','01','Hà Nội','019','Từ Liêm','00637','Trung Văn','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',1429103900,NULL,NULL),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1','02','Hà Giang',NULL,NULL,NULL,NULL,'<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>',1429156709,NULL,NULL),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',1429156784,NULL,NULL),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',1429156837,NULL,NULL),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','1','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>',1429156933,NULL,NULL);
+insert  into `project`(`id`,`name`,`alias`,`address`,`mobile`,`fax`,`website`,`email`,`yahoo`,`image`,`type`,`province_id`,`province_name`,`district_id`,`district_name`,`ward_id`,`ward_name`,`overview`,`bang_gia`,`thiet_ke`,`tien_do_thanh_toan`,`uu_dai`,`ho_tro_vay_von`,`tien_do`,`chu_dau_tu`,`hop_dong`,`is_home`,`created`,`viewed`,`saler_id`) values (1,'Dự án A','du-an-a','800, Phùng Khoang, Hà Nội','098765432',NULL,'http://abc.com','abc@gmail.com','abc_a','90','1','01','Hà Nội','019','Từ Liêm','00637','Trung Văn','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','<p>a</p>','','<p>a</p>','<p>a</p>',NULL,0,1429103900,NULL,NULL),(2,'Mường Thanh hotel','muong-thanh-hotel','mường thanh - sơn la','098765432',NULL,'muongthanh.com.vn','muongthanh@gmail.com','muongthanh','90','1','02','Hà Giang','026','Đồng Văn','00766','Sủng Trái','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','<p>mường thanh</p>','Vãi cả mường thanh',1,1429156709,NULL,1),(3,'Deawo','deawo','Kim Mã - Hà Nội','098765432',NULL,'http://deawo.com.vn','deawo@gmail.com','deawo_support','90','1','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>','<p>deawo kim m&atilde;</p>',NULL,0,1429156784,NULL,NULL),(4,'kfc','kfc','Văn Giang - Hà Nội','098765432',NULL,'http://kfc.com.vn','kfc@gmail.com','kfc_support','90','8','04','Cao Bằng',NULL,NULL,NULL,NULL,'<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>','<p>kfc Văn Giang</p>',NULL,0,1429156837,NULL,NULL),(5,'VCCropt','vccropt','Vũ Trọng Phụng - Thanh Xuân','098765432',NULL,'http://vccropt.com.vn','vccropt@gmail.com','vccropt','90','1','01','Hà Nội','009','Thanh Xuân','00343','Nhân Chính','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','<p>vccropt Vũ Trọng Phụng</p>','',0,1429156933,NULL,1);
 
 /*Table structure for table `province` */
-
-DROP TABLE IF EXISTS `province`;
 
 CREATE TABLE `province` (
   `provinceid` varchar(5) NOT NULL,
@@ -315,8 +318,6 @@ CREATE TABLE `province` (
 insert  into `province`(`provinceid`,`name`,`type`) values ('01','Hà Nội','Thành Phố'),('02','Hà Giang','Tỉnh'),('04','Cao Bằng','Tỉnh'),('06','Bắc Kạn','Tỉnh'),('08','Tuyên Quang','Tỉnh'),('10','Lào Cai','Tỉnh'),('11','Điện Biên','Tỉnh'),('12','Lai Châu','Tỉnh'),('14','Sơn La','Tỉnh'),('15','Yên Bái','Tỉnh'),('17','Hòa Bình','Tỉnh'),('19','Thái Nguyên','Tỉnh'),('20','Lạng Sơn','Tỉnh'),('22','Quảng Ninh','Tỉnh'),('24','Bắc Giang','Tỉnh'),('25','Phú Thọ','Tỉnh'),('26','Vĩnh Phúc','Tỉnh'),('27','Bắc Ninh','Tỉnh'),('30','Hải Dương','Tỉnh'),('31','Hải Phòng','Thành Phố'),('33','Hưng Yên','Tỉnh'),('34','Thái Bình','Tỉnh'),('35','Hà Nam','Tỉnh'),('36','Nam Định','Tỉnh'),('37','Ninh Bình','Tỉnh'),('38','Thanh Hóa','Tỉnh'),('40','Nghệ An','Tỉnh'),('42','Hà Tĩnh','Tỉnh'),('44','Quảng Bình','Tỉnh'),('45','Quảng Trị','Tỉnh'),('46','Thừa Thiên Huế','Tỉnh'),('48','Đà Nẵng','Thành Phố'),('49','Quảng Nam','Tỉnh'),('51','Quảng Ngãi','Tỉnh'),('52','Bình Định','Tỉnh'),('54','Phú Yên','Tỉnh'),('56','Khánh Hòa','Tỉnh'),('58','Ninh Thuận','Tỉnh'),('60','Bình Thuận','Tỉnh'),('62','Kon Tum','Tỉnh'),('64','Gia Lai','Tỉnh'),('66','Đắk Lắk','Tỉnh'),('67','Đắk Nông','Tỉnh'),('68','Lâm Đồng','Tỉnh'),('70','Bình Phước','Tỉnh'),('72','Tây Ninh','Tỉnh'),('74','Bình Dương','Tỉnh'),('75','Đồng Nai','Tỉnh'),('77','Bà Rịa - Vũng Tàu','Tỉnh'),('79','Hồ Chí Minh','Thành Phố'),('80','Long An','Tỉnh'),('82','Tiền Giang','Tỉnh'),('83','Bến Tre','Tỉnh'),('84','Trà Vinh','Tỉnh'),('86','Vĩnh Long','Tỉnh'),('87','Đồng Tháp','Tỉnh'),('89','An Giang','Tỉnh'),('91','Kiên Giang','Tỉnh'),('92','Cần Thơ','Thành Phố'),('93','Hậu Giang','Tỉnh'),('94','Sóc Trăng','Tỉnh'),('95','Bạc Liêu','Tỉnh'),('96','Cà Mau','Tỉnh');
 
 /*Table structure for table `pt` */
-
-DROP TABLE IF EXISTS `pt`;
 
 CREATE TABLE `pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -336,9 +337,37 @@ CREATE TABLE `pt` (
 
 insert  into `pt`(`id`,`title`,`alias`,`desc`,`content`,`viewed`,`topic_id`,`created`,`type`,`image`) values (1,'Nhà cấp 4 và những cấm kỵ theo phong thủy','nha-cap-4-va-nhung-cam-ky-theo-phong-thuy','Xây nhà một tầng (hay còn gọi là nhà cấp 4) tưởng chừng là việc khá đơn giản và không có yêu cầu nhiều về kĩ thuật hiện đại. Tuy nhiên, loại hình nhà này lại có khá nhiều điều cấm kỵ cần lưu ý theo phong thủy.','<div id=\"divContents\" class=\"detailsView-contents-style detail-article-content\">\r\n<p style=\"text-align: justify;\">Nh&agrave; cấp 4 hiện nay kh&ocirc;ng c&ograve;n được x&acirc;y dựng nhiều, chủ yếu chỉ xuất hiệni ở một số v&ugrave;ng qu&ecirc; hoặc đồi n&uacute;i để dễ trồng trọt, chăn nu&ocirc;i hoặc thuận theo địa h&igrave;nh. X&acirc;y nh&agrave; cấp 4 tưởng chừng l&agrave; một điều kh&aacute; đơn giản v&agrave; kh&ocirc;ng y&ecirc;u cầu nhiều về kĩ thuật, nhưng lại c&oacute; kh&aacute; nhiều điều cấm kỵ về mặt phong thủy.</p>\r\n<p style=\"text-align: justify;\">Dưới đ&acirc;y l&agrave; 18 cấm kỵ phong thủy khi x&acirc;y dựng nh&agrave; cấp 4 m&agrave; c&aacute;c gia chủ phải ch&uacute; &yacute; kh&ocirc;ng phạm phải</p>\r\n<p style=\"text-align: justify;\">1. Kh&ocirc;ng x&acirc;y dựng nh&agrave; ở cấp 4 tr&ecirc;n lưng n&uacute;i hay cửa ra v&agrave;o của khe n&uacute;i. Điều n&agrave;y kh&ocirc;ng những kh&ocirc;ng c&oacute; lợi về mặt địa l&yacute; m&agrave; gia chủ v&agrave; c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh c&ograve;n dễ mắc bệnh tật.</p>\r\n<p style=\"text-align: justify;\">2. Kh&ocirc;ng được x&acirc;y nh&agrave; ở cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ dễ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa tổn t&agrave;i lộc cho gia chủ.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy \" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081311694.jpg\" alt=\"Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 \" /><br /><em>Kh&ocirc;ng được x&acirc;y nh&agrave; cấp 4 ở tận c&ugrave;ng ng&otilde; cụt v&igrave; sẽ mang đến thi&ecirc;n tai v&agrave; c&aacute;c hiểm họa<br />tổn t&agrave;i lộc cho gia chủ</em></p>\r\n<p style=\"text-align: justify;\">3. Kh&ocirc;ng n&ecirc;n trồng c&acirc;y đại thụ ở vị tr&iacute; đối diện với cửa ch&iacute;nh của căn nh&agrave;. Điều n&agrave;y kh&ocirc;ng những cản trở dương kh&iacute; v&agrave;o trong nh&agrave; m&agrave; c&ograve;n rước th&ecirc;m &acirc;m kh&iacute; v&agrave;o nh&agrave;. X&eacute;t tr&ecirc;n thực tế, trồng c&acirc;y to trước nh&agrave; cũng khiến cho mọi người ra v&agrave;o bất tiện hơn, khi mưa to gi&oacute; lớn cũng dễ h&uacute;t sấm s&eacute;t, dễ g&acirc;y nguy hiểm cho mọi người hơn. Hoặc m&ugrave;a thu l&aacute; rụng cũng dễ bay v&agrave;o c&aacute;c ph&ograve;ng khiến cho căn ph&ograve;ng kh&ocirc;ng c&ograve;n được sạch sẽ nữa.</p>\r\n<p style=\"text-align: justify;\">4. Kh&ocirc;ng được để c&acirc;y kh&ocirc; trước cửa. D&ugrave; l&agrave; c&acirc;y nhỏ, c&acirc;y đứng thẳng hay bị đổ xuống đất th&igrave; c&acirc;y kh&ocirc; cũng kh&ocirc;ng tốt theo trong phong thủy. N&oacute; dễ ảnh hưởng đến người gi&agrave; v&agrave; dẫn dụ sự ngh&egrave;o kh&oacute; đến cho gia đ&igrave;nh. Tốt nhất nếu c&oacute; th&igrave; h&atilde;y chặt bỏ hết những c&acirc;y như thế.</p>\r\n<p style=\"text-align: center;\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Nh&agrave; cấp 4 v&agrave; những cấm kỵ theo phong thủy 1\" src=\"http://file1.batdongsan.com.vn/GuestUpload/2015/03/14/20150314081314003.jpg\" alt=\"Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;\" /><br /><em>Trước nh&agrave; cấp 4 tuyệt đối kh&ocirc;ng được để c&acirc;y chết kh&ocirc;</em></p>\r\n<p style=\"text-align: justify;\">5. Hướng t&acirc;y bắc của nh&agrave; cấp 4 c&oacute; c&acirc;y cổ thụ l&agrave; điều rất may mắn. C&acirc;y lớn trồng ở hướng n&agrave;y sẽ gi&uacute;p bảo vệ v&agrave; mang lại hạnh ph&uacute;c cho c&aacute;c th&agrave;nh vi&ecirc;n trong gia đ&igrave;nh. Nếu gia chủ kh&ocirc;ng biết, chặt c&acirc;y đi th&igrave; c&oacute; thể sẽ bị họa tuyệt tự tuyệt t&ocirc;n. C&aacute;c gia chủ n&ecirc;n ch&uacute; &yacute; hơn đến điều n&agrave;y.</p>\r\n<p style=\"text-align: justify;\">6. Nh&agrave; c&acirc;́p 4 kh&ocirc;ng n&ecirc;n qu&aacute; cao so với những nh&agrave; xung quanh, nếu kh&ocirc;ng sẽ bị hao t&agrave;i tốn tiền của. N&oacute;i về mặt logic th&igrave; nh&agrave; ở như thế n&agrave;y cũng sẽ gặp nhiều nguy hiểm, đơn cử như sẽ l&agrave; th&agrave;nh phần đứng mũi chịu s&agrave;o, dễ gặp phải hỏa hoạn, tai nạn b&atilde;o gi&oacute; hay bị kh&ocirc;ng k&iacute;ch v&agrave; &aacute;nh nắng mặt trời cũng chiếu trực tiếp v&agrave;o nhiều. Dương thịnh th&igrave; &acirc;m suy, &acirc;m dương kh&ocirc;ng h&ograve;a hợp cũng sẽ g&acirc;y ảnh hưởng xấu đến sức khỏe của mọi người trong gia đ&igrave;nh.</p>\r\n<p style=\"text-align: justify;\">7. Trừ con trưởng, những người con c&ograve;n lại trong gia đ&igrave;nh kh&ocirc;ng được x&acirc;y dựng ở s&acirc;n trong nh&agrave; của bố mẹ. Nếu rơi v&agrave;o trường hợp n&agrave;y th&igrave; cả hai nh&agrave; sẽ c&ugrave;ng bị suy yếu.</p>\r\n<p style=\"text-align: justify;\">8. Tuyệt đối kh&ocirc;ng được x&acirc;y dựng hay sửa sang nh&agrave; cửa khi trong nh&agrave; c&oacute; người mang bầu. Sửa một ch&uacute;t cũng kh&ocirc;ng được, hay chỉ đơn giản l&agrave; thay gạch l&aacute;t s&agrave;n cũng kh&ocirc;ng n&ecirc;n bởi n&oacute; sẽ ảnh hưởng đến việc sinh non của người phụ nữ.</p>\r\n<p style=\"text-align: justify;\">9. Nền m&oacute;ng của ng&ocirc;i nh&agrave; cấp 4 thấp đằng trước, cao hơn ở ph&iacute;a sau th&igrave; gia đ&igrave;nh sẽ gặp may mắn, ngược lại đằng trước cao, ph&iacute;a sau thấp l&agrave; điều kh&ocirc;ng tốt l&agrave;nh.</p>\r\n<p style=\"text-align: justify;\">10. Nếu m&oacute;ng nh&agrave; cấp 4 tại hướng T&acirc;y Bắc bị thiếu hụt, mặc d&ugrave; kh&ocirc;ng l&agrave;m tổn hại đến vận kh&iacute; của gia đ&igrave;nh nhưng sẽ c&oacute; khả năng thiếu thốn về đường con c&aacute;i, v&agrave; ảnh hưởng đến sức khỏa của bố mẹ, dễ mắc bệnh về đường h&ocirc; hấp.</p>\r\n<p style=\"text-align: justify;\">11. M&oacute;ng của ng&ocirc;i nh&agrave; ở hướng T&acirc;y Nam bị sứt mẻ hay thiếu hụt th&igrave; đường ti&ecirc;u h&oacute;a của gia chủ cũng sẽ gặp vấn đề. Nhưng ngược lại th&igrave; sẽ c&oacute; lợi cho quan chức, lương bổng, địa vị của c&aacute;c th&agrave;nh vi&ecirc;n.</p>\r\n<p style=\"text-align: justify;\">12. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng Nam bị sứt mẻ, vận kh&iacute; của gia đ&igrave;nh cũng kh&ocirc;ng bị ảnh hưởng nhiều nhưng sẽ kh&ocirc;ng c&oacute; lợi cho việc sinh con đẻ c&aacute;i.</p>\r\n<p style=\"text-align: justify;\">13. Nếu m&oacute;ng nh&agrave; hướng Đ&ocirc;ng bắc bị thiếu hụt th&igrave; tuy rằng kh&ocirc;ng g&acirc;y hại lớn cho gia đ&igrave;nh th&igrave; cũng c&oacute; thể sẽ ảnh hưởng đến đường ti&ecirc;u h&oacute;a của mọi người. Kh&ocirc;ng n&ecirc;n x&acirc;y cửa lớn ở vị tr&iacute; n&agrave;y, nếu như c&oacute; &yacute; định x&acirc;y th&igrave; cũng n&ecirc;n mời thầy phong thủy đến để xem x&eacute;t gi&uacute;p đỡ.</p>\r\n<p style=\"text-align: justify;\">14. Nh&agrave; cấp 4 hẹp b&ecirc;n tr&aacute;i, rộng b&ecirc;n phải hay hẹp phải rộng tr&aacute;i đều kh&ocirc;ng phải l&agrave; điều tốt l&agrave;nh, con trai sinh ra nếu kh&ocirc;ng bị đơn độc th&igrave; cũng sẽ ngh&egrave;o h&egrave;n.</p>\r\n<p style=\"text-align: justify;\">15. Nh&agrave; cấp 4 c&oacute; m&oacute;ng hoặc h&igrave;nh dạng rộng trước, hẹp sau giống h&igrave;nh c&aacute;i thang ngược th&igrave; gia chủ sẽ kh&oacute; giữ được của cải, nh&acirc;n khẩu cũng khan hiếm.</p>\r\n<p style=\"text-align: justify;\">16. Nếu h&igrave;nh d&aacute;ng của căn nh&agrave; hẹp trước rộng sau giống h&igrave;nh c&aacute;i thang th&igrave; gia chủ sinh sống ở đ&acirc;y kh&ocirc;ng chỉ c&oacute; ph&uacute;c m&agrave; c&ograve;n cao sang, được thanh thế lẫy lừng trong x&atilde; hội.</p>\r\n<p style=\"text-align: justify;\">17. Nếu m&oacute;ng nh&agrave; hoặc căn nh&agrave; c&oacute; h&igrave;nh tam gi&aacute;c, nếu nhọn trước rộng sau th&igrave; được gọi l&agrave; Điền B&uacute;t, người nh&agrave; sẽ bị hao t&agrave;i tốn của, đặc biệt l&agrave; c&oacute; thể dẫn đến việc người phụ nữ trong gia đ&igrave;nh kh&ocirc;ng được may mắn. C&ograve;n nhọn sau rộng trước th&igrave; trong phong thủy gọi l&agrave; sao hỏa vẫy đu&ocirc;i. Nh&agrave; ở như vậy rất kh&ocirc;ng tốt, người trong nh&agrave; dễ bị bệnh nan y, chết do tai nạn.</p>\r\n<p style=\"text-align: justify;\">18. Nếu m&oacute;ng nh&agrave; hoặc h&igrave;nh dạng căn nh&agrave; b&ecirc;n tr&aacute;i d&agrave;i, b&ecirc;n phải ngắn th&igrave; sẽ ảnh hưởng kh&ocirc;ng tốt đến vợ v&agrave; c&aacute;c con của gia chủ.</p>\r\n</div>\r\n<div id=\"ctl27_ctl01_divSourceNews\" class=\"detailsView-contents-style soucenews\" style=\"text-align: right;\"><em>(Theo Kh&aacute;m ph&aacute;)</em>&nbsp;</div>',NULL,1,1426753087,'1','260');
 
-/*Table structure for table `registered` */
+/*Table structure for table `realty` */
 
-DROP TABLE IF EXISTS `registered`;
+CREATE TABLE `realty` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `id_catagory` int(11) unsigned NOT NULL,
+  `des` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `manager_id` int(11) unsigned DEFAULT NULL,
+  `phone_constact` varchar(120) DEFAULT NULL,
+  `email_constact` varchar(120) DEFAULT NULL,
+  `city_id` int(11) unsigned NOT NULL,
+  `notes` varchar(255) DEFAULT NULL,
+  `time_create` datetime NOT NULL,
+  `time_update` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  KEY `id_catagory` (`id_catagory`),
+  KEY `user_id` (`user_id`),
+  KEY `city_id` (`city_id`),
+  CONSTRAINT `realty_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`),
+  CONSTRAINT `realty_ibfk_2` FOREIGN KEY (`id_catagory`) REFERENCES `catagory` (`id`),
+  CONSTRAINT `realty_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `realty_ibfk_4` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `realty` */
+
+/*Table structure for table `registered` */
 
 CREATE TABLE `registered` (
   `id` int(11) unsigned zerofill NOT NULL AUTO_INCREMENT,
@@ -355,8 +384,6 @@ CREATE TABLE `registered` (
 insert  into `registered`(`id`,`name`,`phone`,`email`,`status`,`created`) values (00000000001,'Le Tung','0968142486','tunglv.1990@gmail.com','enable',NULL);
 
 /*Table structure for table `saler` */
-
-DROP TABLE IF EXISTS `saler`;
 
 CREATE TABLE `saler` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -390,8 +417,6 @@ insert  into `saler`(`id`,`name`,`alias`,`address`,`phone`,`mobile`,`email`,`web
 
 /*Table structure for table `topic_architecture` */
 
-DROP TABLE IF EXISTS `topic_architecture`;
-
 CREATE TABLE `topic_architecture` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de topic kien truc',
@@ -408,8 +433,6 @@ insert  into `topic_architecture`(`id`,`title`,`alias`,`image`,`desc`,`created`)
 
 /*Table structure for table `topic_decorate` */
 
-DROP TABLE IF EXISTS `topic_decorate`;
-
 CREATE TABLE `topic_decorate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de Noi-Ngoai that',
@@ -425,8 +448,6 @@ CREATE TABLE `topic_decorate` (
 insert  into `topic_decorate`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Sofa phòng khách','sofa-phong-khach','260','Các bài trí sofa phòng khách',1426760071);
 
 /*Table structure for table `topic_news` */
-
-DROP TABLE IF EXISTS `topic_news`;
 
 CREATE TABLE `topic_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -445,8 +466,6 @@ insert  into `topic_news`(`id`,`title`,`alias`,`desc`,`image`,`created`,`viewed`
 
 /*Table structure for table `topic_pt` */
 
-DROP TABLE IF EXISTS `topic_pt`;
-
 CREATE TABLE `topic_pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL COMMENT 'Tieu de bai viet phong thuy',
@@ -461,9 +480,28 @@ CREATE TABLE `topic_pt` (
 
 insert  into `topic_pt`(`id`,`title`,`alias`,`image`,`desc`,`created`) values (1,'Phong thủy và những điều kiêng kỵ','phong-thuy-va-nhung-dieu-kieng-ky','260','Phong thủy là một phần rất quan trọng trong việc xây dựng nhà cửa, vì vậy chúng ta hãy cùng tìm hiểu những điều không nên làm khi xây dựng.',1426752320);
 
-/*Table structure for table `ward` */
+/*Table structure for table `user` */
 
-DROP TABLE IF EXISTS `ward`;
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(120) NOT NULL,
+  `full_name` varchar(120) DEFAULT NULL,
+  `email` varchar(120) NOT NULL,
+  `phone` varchar(120) DEFAULT NULL,
+  `address` varchar(120) NOT NULL,
+  `cmnd` varchar(120) DEFAULT NULL,
+  `age` int(2) DEFAULT NULL,
+  `status` enum('ENABLE','DISABLE','PENDING','DELETE','LOCK') NOT NULL DEFAULT 'PENDING',
+  `time_create` datetime NOT NULL,
+  `manager_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `manager_id` (`manager_id`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `user` */
+
+/*Table structure for table `ward` */
 
 CREATE TABLE `ward` (
   `wardid` varchar(5) NOT NULL,

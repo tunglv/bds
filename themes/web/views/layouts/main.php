@@ -3,16 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi-vn" lang="vi-vn" dir="ltr">
 <head id="Head1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="http://batdongsan.com.vn/Images/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://chungcuvn.com.vn/files/img/icon.ico" rel="shortcut icon" type="image/x-icon">
     <meta http-equiv="audience" content="general">
     <meta name="resource-type" content="document">
     <meta name="abstract" content="Thông tin nhà đất Việt Nam">
     <meta name="classification" content="Bất động sản Việt Nam">
     <meta name="area" content="Nhà đất và bất động sản">
     <meta name="placename" content="Việt Nam">
-    <meta name="author" content="Batdongsan.com.vn">
-    <meta name="copyright" content="©2007 Batdongsan.com.vn">
-    <meta name="owner" content="Batdongsan.com.vn">
+    <meta name="author" content="Chungcuvn.com.vn">
+    <meta name="copyright" content="©2007 Chungcuvn.com.vn">
+    <meta name="owner" content="Chungcuvn.com.vn">
     <meta name="generator" content="Daiviet Software Jsc">
     <meta name="distribution" content="Global">
     <meta name="keywords" content="Kênh, thông, tin, số, 1, về, bất, động, sản">
@@ -48,12 +48,6 @@
 
 </head>
 <body class="bg-site">
-
-<!--Home Master-->
-<div class="aspNetHidden">
-    <input type="hidden" name="DomainStatistic" id="DomainStatistic" value="http://statistic.batdongsan.com.vn">
-    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWRk4shcF5D9qb0bDJxwIsVlms+TO5A=">
-</div>
 
 
 <script type="text/javascript">

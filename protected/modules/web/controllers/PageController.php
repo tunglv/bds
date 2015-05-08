@@ -142,9 +142,13 @@ class PageController extends WebController {
         $criteria->offset = $offset;
         $saler = Saler::model()->findAll($criteria);
 
+        $criteria = new CDbCriteria();
+        $criteria->compare('is_home',1);
+        $project_home = Project::model()->find($criteria);
+
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('index', array('news'=>$news, 'sale'=>$sale, 'news_viewest' => $news_viewest, 'news_rule' => $news_rule, 'pt' => $pt, 'architecture'=>$architecture, 'project' => $project, 'saler'=>$saler));
+        $this->render('index', array('news'=>$news, 'sale'=>$sale, 'news_viewest' => $news_viewest, 'news_rule' => $news_rule, 'pt' => $pt, 'architecture'=>$architecture, 'project' => $project, 'saler'=>$saler, 'project_home' => $project_home));
     }
 
     /**

@@ -57,11 +57,13 @@
             'name' => 'fax',
             'type'      =>  'raw',
             'value' => '$data->fax',
+            'filter' => FALSE
         ),
         array(
             'name' => 'website',
             'type'      =>  'raw',
             'value' => '$data->website',
+            'filter' => FALSE
         ),
         array(
             'name' => 'email',
@@ -84,6 +86,12 @@
             'type'      =>  'raw',
             'value' => '$data->address." - ".$data->district_name." - ".$data->province_name',
             'filter' => FALSE
+        ),
+        array(
+            'name' => 'is_home',
+            'type'      =>  'raw',
+            'value' => '$data->isHomeLabel',
+            'filter' => $model->isHomeData
         ),
         array(
             'name' => 'created',

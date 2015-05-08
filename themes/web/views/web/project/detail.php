@@ -92,7 +92,7 @@
 <div class="editor" style="display:none;clear: both">
     <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl01$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_1" value="2">
 
-    <?php echo $project->ha_tang?>
+    <?php echo $project->bang_gia?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
@@ -104,24 +104,24 @@
 <div class="editor" style="display:none;clear: both">
     <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl03$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_3" value="4">
 
-    <?php echo $project->location?>
+    <?php echo $project->tien_do_thanh_toan?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
     <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl04$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_4" value="5">
 
-    <?php echo $project->ban_hang?>
+    <?php echo $project->uu_dai?>
 </div>
 
 <div class="editor" style="display:none;clear: both">
     <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="6">
 
-    <?php echo $project->video?>
+    <?php echo $project->ho_tro_vay_von?>
 </div>
 <div class="editor" style="display:none;clear: both">
     <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="7">
 
-    <?php echo $project->images?>
+    <?php echo $project->tien_do?>
 </div>
 <div id="googleMap" style="display: none; clear: both" class="MapProjectDetail">
     <strong>Tiện ích trên bản đồ:</strong><br>
