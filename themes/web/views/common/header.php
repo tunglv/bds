@@ -100,8 +100,8 @@
 </li>
 <li class="lv0"><a href="" class="nolink">Phong thủy</a>
     <ul>
+        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'mach-ban'))?>" class="haslink ">Phong thủy</a></li>
         <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'tu-van-phong-thuy'))?>" class="haslink ">Tư vấn phong thủy</a></li>
-        <li class="lv1"><a href="<?php echo Yii::app()->createUrl('/web/pt/list', array('alias' => 'mach-ban'))?>" class="haslink ">Mách bạn</a></li>
     </ul>
 </li>
 <li class="lv0"><a class="haslink" href="<?php echo Yii::app()->createUrl('/web/project/group')?>">Danh sách dự án</a>
