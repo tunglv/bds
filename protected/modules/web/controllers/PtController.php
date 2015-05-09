@@ -136,6 +136,7 @@ class PtController extends WebController {
 
         $viewed = $this->_getViewedNews();
         $top_topic = $this->_getHotTopic();
+        $this->_setCountView($news->id);
 
         $this->render('detail', array('pt'=>$news, 'same'=>$same_news, 'topic'=>$same_topic, 'viewed'=>$viewed, 'top_topic'=>$top_topic));
     }
@@ -217,5 +218,27 @@ class PtController extends WebController {
             $product[] = Product::model()->getProductById($product_id);
         }
         return $product;
+    }
+
+    public function _setCountView($video_id = null){
+        $session = Yii::app()->session;
+
+        if (empty($session['view_pt']))
+        {
+            $video = Pt::model()->findByPk($video_id);
+            $video->viewed += 1;
+            $video->update();
+            $session['view_pt'] = $video_id;
+        }
+        else {
+            $array_id = explode(',',$session['view_pt']);
+            if(!in_array($video_id, $array_id)) {
+                $video = Pt::model()->findByPk($video_id);
+                $video->viewed += 1;
+                $video->update();
+                array_push($array_id, $video_id);
+                $session['view_pt'] = implode(',', $array_id);
+            }
+        }
     }
 }

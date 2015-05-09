@@ -94,6 +94,7 @@ class PageController extends WebController {
 //        news viewest
         $criteria = new CDbCriteria();
 //        $criteria->compare('t.type', 3);
+        $criteria->condition = "t.project_id = 0";
         $criteria->order = 't.viewed DESC';
         $criteria->limit = 6;
         $news_viewest = News::model()->findAll($criteria);

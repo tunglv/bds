@@ -321,6 +321,7 @@ class ProjectController extends WebController {
         $hot_project = $this->_getHotProject();
         $same_project = $this->_getSameProject($project->type, $project->district_id);
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->_setCountView($project->id);
 
         $this->render('detail', array(
             'project'=>$project,
@@ -462,5 +463,27 @@ class ProjectController extends WebController {
             $product[] = Product::model()->getProductById($product_id);
         }
         return $product;
+    }
+
+    public function _setCountView($video_id = null){
+        $session = Yii::app()->session;
+
+        if (empty($session['view_project']))
+        {
+            $video = Project::model()->findByPk($video_id);
+            $video->viewed += 1;
+            $video->update();
+            $session['view_project'] = $video_id;
+        }
+        else {
+            $array_id = explode(',',$session['view_project']);
+            if(!in_array($video_id, $array_id)) {
+                $video = Project::model()->findByPk($video_id);
+                $video->viewed += 1;
+                $video->update();
+                array_push($array_id, $video_id);
+                $session['view_project'] = implode(',', $array_id);
+            }
+        }
     }
 }

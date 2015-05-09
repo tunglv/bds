@@ -162,6 +162,7 @@ class ArchitectureController extends WebController {
 
         $viewed = $this->_getViewedArchitecture();
         $top_topic = $this->_getHotTopic();
+        $this->_setCountView($news->id);
 
         $this->render('detail', array('architecture'=>$news, 'same'=>$same_news, 'topic'=>$same_topic, 'viewed'=>$viewed, 'top_topic'=>$top_topic));
     }
@@ -243,5 +244,27 @@ class ArchitectureController extends WebController {
             $product[] = Product::model()->getProductById($product_id);
         }
         return $product;
+    }
+
+    private  function _setCountView($video_id = null){
+        $session = Yii::app()->session;
+
+        if (empty($session['view_architecture']))
+        {
+            $video = Architecture::model()->findByPk($video_id);
+            $video->viewed += 1;
+            $video->update();
+            $session['view_architecture'] = $video_id;
+        }
+        else {
+            $array_id = explode(',',$session['view_architecture']);
+            if(!in_array($video_id, $array_id)) {
+                $video = Architecture::model()->findByPk($video_id);
+                $video->viewed += 1;
+                $video->update();
+                array_push($array_id, $video_id);
+                $session['view_architecture'] = implode(',', $array_id);
+            }
+        }
     }
 }
