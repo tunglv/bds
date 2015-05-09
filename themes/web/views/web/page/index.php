@@ -473,6 +473,8 @@
 
 <div style="clear:both;"></div>
 
+<iframe style="width: 100%;height: auto" src="https://www.youtube.com/embed/poAQThYmzvU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
 <div class="container-common">
     <div id="ctl49_HeaderContainer" class="box-header" style="height: auto;">
         <div class="name_tit" align="center" style="margin-bottom: 0;">
