@@ -10438,3 +10438,90 @@ Stack trace:
 REQUEST_URI=/Modules/Views/Product/InterestedProducts.aspx?psize=6&data=null
 HTTP_REFERER=http://tung.bds/
 ---
+2015/05/09 09:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 09:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 09:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 09:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 09:58:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_avatar_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_a...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_avatar_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 09:58:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/broker_line_bg.jpg".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/broker_l...')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/broker_line_bg.jpg
+HTTP_REFERER=http://bds.tung/themes/web/files/css/style.css
+---
+2015/05/09 10:19:39 [error] [php] Undefined variable: project_home (C:\xampp\htdocs\bds\themes\web\views\web\project\detail.php:102)
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile()
+#1 C:\xampp\htdocs\bds\yii\framework\web\CController.php(869): ProjectController->renderFile()
+#2 C:\xampp\htdocs\bds\yii\framework\web\CController.php(782): ProjectController->renderPartial()
+#3 C:\xampp\htdocs\bds\protected\modules\web\controllers\ProjectController.php(329): ProjectController->render()
+#4 unknown(0): ProjectController->actionDetail()
+#5 C:\xampp\htdocs\bds\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\xampp\htdocs\bds\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\htdocs\bds\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#9 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\bds\yii\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#12 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\htdocs\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\bds\yii\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#15 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(282): ProjectController->run()
+#16 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/du-an/cao-oc-van-phong/deawo-3
+in C:\xampp\htdocs\bds\themes\web\views\web\project\detail.php (102)
+in C:\xampp\htdocs\bds\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\xampp\htdocs\bds\protected\modules\web\controllers\ProjectController.php (329)
+2015/05/09 10:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

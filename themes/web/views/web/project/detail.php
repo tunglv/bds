@@ -49,256 +49,85 @@
         </div>
     </div>
 </div>
-
+<style>
+    #detail .tabProject li:hover{
+        background-color: #fff !important;
+    }
+    #detail .tabProject li:hover a{
+        color: #055699 !important;
+    }
+    #detail .tabProject li{
+        margin-right: 11px;
+    }
+</style>
 <ul class="tabProject">
 
-    <li value="1" class="tabActiveProject">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Tổng quan</a>
+    <li project="overview-project" class="tabActiveProject">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Giới thiệu</a>
     </li>
 
-    <li value="2">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Hạ tầng - Quy hoạch</a>
+    <li project="boss-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Chủ đầu tư</a>
     </li>
 
-    <li value="3">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Thiết kế - Mẫu nhà</a>
+    <li project="desgin-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Mặt bằng & thiết kế</a>
     </li>
 
-    <li value="4">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Vị trí</a>
+    <li project="quote-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Bảng giá</a>
     </li>
 
-    <li value="5">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Bán hàng</a>
-    </li>
-    <li value="6">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Video</a>
-    </li>
-    <li value="7">
-        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Hình ảnh</a>
+    <li project="process-pay-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Ưu đãi</a>
     </li>
 
-    <li onclick="showFckContente(this)" style="" value="10"><a>Chủ đầu tư</a></li>
+    <li project="bonus-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Thanh toán</a>
+    </li>
+
+    <li project="loan-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Vay vốn</a>
+    </li>
+    <li project="process-submit-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Thi công</a>
+    </li>
+    <li project="contract-project">
+        <a href="javascript:void(0)" rel="nofollow" style="white-space:nowrap;">Hợp đồng</a>
+    </li>
 </ul>
 
 <div class="clear"></div>
 
-<div class="editor" style="clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl00$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_0" value="1">
-
-    <?php echo $project->overview?>
-</div>
-
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl01$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_1" value="2">
-
-    <?php echo $project->bang_gia?>
-</div>
-
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl02$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_2" value="3">
-
-    <?php echo $project->thiet_ke?>
-</div>
-
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl03$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_3" value="4">
-
-    <?php echo $project->tien_do_thanh_toan?>
-</div>
-
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl04$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_4" value="5">
-
-    <?php echo $project->uu_dai?>
-</div>
-
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="6">
-
-    <?php echo $project->ho_tro_vay_von?>
-</div>
-<div class="editor" style="display:none;clear: both">
-    <input type="hidden" name="ctl00$ctl27$ctl01$RptVale$ctl05$hdProjectId" id="ctl27_ctl01_RptVale_hdProjectId_5" value="7">
-
-    <?php echo $project->tien_do?>
-</div>
-<div id="googleMap" style="display: none; clear: both" class="MapProjectDetail">
-    <strong>Tiện ích trên bản đồ:</strong><br>
-
-    <div class="utilityform">
-
-        <span class="utility-header">Chọn bán kính</span>
-
-        <div class="utilityradius">
-
-            <label for="rad200">
-                <input type="radio" name="radius" checked="checked" id="rad200" value="200">
-                200 m</label>
-
-            <label for="rad500">
-                <input type="radio" name="radius" id="rad500" value="500">
-                500 m</label>
-
-            <label for="rad1000">
-                <input type="radio" name="radius" id="rad1000" value="1000">
-                1 km</label>
-
-            <label for="rad2000">
-                <input type="radio" name="radius" id="rad2000" value="2000">
-                2 km</label>
-
-            <label for="rad5000">
-                <input type="radio" name="radius" id="rad5000" value="5000">
-                5 km</label>
-
-            <label for="rad10000">
-                <input type="radio" name="radius" id="rad10000" value="10000">
-                10 km</label>
-
-        </div>
-
-
-        <span class="utility-header">Chọn loại tiện ích</span>
-
-        <div class="utilitylist">
-
-            <label for="util4">
-                <input type="checkbox" checked="checked" id="util4" value="4">
-                Trường học</label>
-
-            <label for="util10">
-                <input type="checkbox" id="util10" value="10">
-                Dự án</label>
-
-            <label for="util5">
-                <input type="checkbox" id="util5" value="5">
-                Cơ sở y tế</label>
-
-            <label for="util3">
-                <input type="checkbox" id="util3" value="3">
-                Cơ quan hành chính</label>
-
-            <label for="util2">
-                <input type="checkbox" id="util2" value="2">
-                TT thể thao, giải trí</label>
-
-            <label for="util1">
-                <input type="checkbox" id="util1" value="1">
-                Địa điểm mua sắm</label>
-
-            <label for="util6">
-                <input type="checkbox" id="util6" value="6">
-                Bến xe, trạm xe</label>
-
-            <label for="util7">
-                <input type="checkbox" id="util7" value="7">
-                Công trình công cộng</label>
-
-            <label for="util0">
-                <input type="checkbox" id="util0" value="0">
-                Nhà hàng</label>
-
-            <label for="util8">
-                <input type="checkbox" id="util8" value="8">
-                Khách sạn</label>
-
-            <label for="util9">
-                <input type="checkbox" id="util9" value="9">
-                Tiện ích khác</label>
-
-        </div>
-
-    </div>
-    <div id="maputility"></div>
-    <div class="utilityResult">
-        <div class="utilityResultHeader">
-        </div>
-        <div class="utilityResultList">
-        </div>
-    </div>
-</div>
-<br>
-
-<div id="enterpriseInfo" class="editor" style="display: none;">
-    <?php echo $project->chu_dau_tu?>
+<div class="infor-project" id="overview-project" style="display: block;clear:both;"><?php echo $project->overview?></div>
+<div class="infor-project" id="boss-project" style="display: none;clear:both;"><?php echo $project->chu_dau_tu?></div>
+<div class="infor-project" id="desgin-project" style="display: none;clear:both;"><?php echo $project->thiet_ke?></div>
+<div class="infor-project" id="quote-project" style="display: none;clear:both;"><?php echo $project->bang_gia?></div>
+<div class="infor-project" id="process-pay-project" style="display: none;clear:both;"><?php echo $project->tien_do_thanh_toan?></div>
+<div class="infor-project" id="bonus-project" style="display: none;clear:both;;"><?php echo $project->uu_dai?></div>
+<div class="infor-project" id="loan-project" style="display: none;clear:both;"><?php echo $project->ho_tro_vay_von?></div>
+<div class="infor-project" id="process-submit-project" style="display: none;clear:both;"><?php echo $project->tien_do?></div>
+<div class="infor-project" id="contract-project" style="display: none;clear:both;"><?php echo $project->hop_dong?></div>
 
 </div>
 </div>
-<h3 style="color: black">
-    Các dự án khác:
-</h3>
-
-<div id="otherProject">
-    <ul>
-
-        <li><a href="http://batdongsan.com.vn/eco-sun-pj1415" title="Eco Sun">
-                Eco Sun</a></li>
-
-        <li><a href="http://batdongsan.com.vn/eco-town-pj1270" title="Eco Town">
-                Eco Town</a></li>
-
-        <li><a href="http://batdongsan.com.vn/sunflower-city-pj1084" title="Sunflower City">
-                Sunflower City</a></li>
-
-        <li><a href="http://batdongsan.com.vn/lang-sinh-thai-du-lich-eco-village-pj940"
-               title="Làng sinh thái du lịch – Eco Village">
-                Làng sinh thái du lịch – Eco Village</a></li>
-
-    </ul>
-</div>
-<div class="other-info">
-
-    <div class="list">
-        <span>Các tin rao </span><a href="http://batdongsan.com.vn/ban-nha-rieng-kdt-lang-sen-viet-nam">
-            bán nhà riêng
-            tại <strong>
-                KĐT Làng Sen Việt Nam
-            </strong></a>
-    </div>
-
-    <div class="list">
-        <span>Các tin rao </span><a href="http://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-kdt-lang-sen-viet-nam">
-            bán nhà biệt thự, liền kề
-            tại <strong>
-                KĐT Làng Sen Việt Nam
-            </strong></a>
-    </div>
-
-    <div class="list">
-        <span>Các tin rao </span><a href="http://batdongsan.com.vn/ban-dat-nen-du-an-kdt-lang-sen-viet-nam">
-            bán đất nền dự án
-            tại <strong>
-                KĐT Làng Sen Việt Nam
-            </strong></a>
-    </div>
-
-</div>
-<div class="other-info">
-    <div class="list">
-
-    </div>
-</div>
-<input type="hidden" name="ctl00$ctl27$ctl01$hdLat" id="hdLat" value="10.8116865158081">
-<input type="hidden" name="ctl00$ctl27$ctl01$hdLong" id="hdLong" value="106.497550964355">
-<input type="hidden" name="ctl00$ctl27$ctl01$hdAddress" id="hdAddress"
-       value="Đường Tỉnh Lộ 10, Xã Đức Hoà Đông, Đức Hòa, Long An">
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.BlcokUI.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/main.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/geometry.js"></script>
-<script type="text/javascript"
-        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/jquery.tooltipmarker.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/InfoBox.js"></script>
-
-
-<script type="text/javascript"
-        src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/js/ProjectDetail.ascx.js"></script>
-<!--Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36-->
 </div>
 
 </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#detail .tabProject li').click(function(){
+                $('#detail .tabProject li').removeClass('tabActiveProject');
+                $(this).addClass('tabActiveProject');
+                $('.infor-project').hide();
+                $('#'+$(this).attr('project')).show();
+//            alert($(this).attr('project'));
+            })
+        });
+    </script>
+
 <!--//Modules/Project/ProjectDetail.ascx--></div>
-</div>
 <div id="RightMainContent" class="body-right">
 
 <?php if(count($same_project) > 0):?>
