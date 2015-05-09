@@ -221,6 +221,50 @@
 <!--//Modules/HtmlGeneric/View.ascx--></div>
 </div>
 <div id="MiddleRightMainContent" class="t_right">
+<?php if(count($project) > 0):?>
+    <!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
+    <div class="container-common">
+        <div id="ctl44_HeaderContainer" class="box-header">
+            <div class="name_tit" align="center">
+                <h4>Dự án nổi bật</h4>
+            </div>
+        </div>
+        <div id="ctl44_BodyContainer" class="bor_box">
+            <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;"
+                 class="customeScrollbar mCustomScrollbar _mCS_1">
+                <div class="mCustomScrollBox mCS-light" id="mCSB_1"
+                     style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+                    <div class="mCSB_container" style="position: relative; top: 0px;">
+                        <?php foreach($project as $_key => $_val):?>
+                            <div>
+                                <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
+                                    <img src="<?php echo $_val->getImageUrl()?>" width="156" height="100" alt="<?php echo $_val->name?>">
+                                </a>
+                            </div>
+                            <div class="prj_vip">
+                                <a href="<?php echo $_val->name?>" title="<?php echo $_val->name?>">
+                                    <?php echo $_val->name?>
+                                </a>
+                            </div>
+                            <div class="line_separate">
+                            </div>
+                        <?php endforeach;?>
+                    </div>
+                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                        <div class="mCSB_draggerContainer">
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="ctl44_FooterContainer">
+        </div>
+    </div>
+    <div style="clear: both; margin-bottom: 10px;"></div>
+<?php endif;?>
 <div class="container-common">
     <div id="ctl36_HeaderContainer" class="box-header">
         <div class="name_tit" align="center">
@@ -247,63 +291,63 @@
 </div>
 <!--//Modules/News/ViewerNews/NewsTopList/ViewerList.ascx-->
 
-<?php if(count($news_rule) > 0):?>
-<div class="container-common">
-    <div id="ctl41_HeaderContainer" class="box-header">
-        <div class="name_tit" align="center">
-            <h3 style="color: White;">Thông tin quy hoạch</h3>
-        </div>
-    </div>
-    <div id="ctl41_BodyContainer" class="bor_box">
-
-        <div class="list">
-            <ul>
-                <?php foreach($news_rule as $_key => $_val):?>
-                <li>
-                    <a class="controls-view-date-contents-link" title="<?php echo $_val->title?>" href="<?php echo $_val->url?>">
-                        <?php echo $_val->title?>
-                    </a>
-                </li>
-                <?php endforeach?>
-            </ul>
-        </div>
-    </div>
-    <div id="ctl41_FooterContainer">
-    </div>
-</div>
-<?php endif;?>
+<?php //if(count($news_rule) > 0):?>
+<!--<div class="container-common">-->
+<!--    <div id="ctl41_HeaderContainer" class="box-header">-->
+<!--        <div class="name_tit" align="center">-->
+<!--            <h3 style="color: White;">Thông tin quy hoạch</h3>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl41_BodyContainer" class="bor_box">-->
+<!---->
+<!--        <div class="list">-->
+<!--            <ul>-->
+<!--                --><?php //foreach($news_rule as $_key => $_val):?>
+<!--                <li>-->
+<!--                    <a class="controls-view-date-contents-link" title="--><?php //echo $_val->title?><!--" href="--><?php //echo $_val->url?><!--">-->
+<!--                        --><?php //echo $_val->title?>
+<!--                    </a>-->
+<!--                </li>-->
+<!--                --><?php //endforeach?>
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl41_FooterContainer">-->
+<!--    </div>-->
+<!--</div>-->
+<?php //endif;?>
 
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/News/ViewerNews/NewsTopList/ViewerList.ascx-->
-<?php if(count($pt) > 0):?>
-<div class="container-common">
-    <div id="ctl47_HeaderContainer" class="box-header">
-        <div class="name_tit" align="center">
-            <h3 style="color: White;">Phong thủy nhà bạn</h3>
-        </div>
-    </div>
-    <div id="ctl47_BodyContainer" class="bor_box">
-        <div style="text-align: center; padding-top: 5px;">
-        </div>
-        <div class="list">
-            <div class="aligncenter"><a href="<?php echo $pt[0]->url?>"><img style="width: 100%" src="<?php echo $pt[0]->getImageUrl()?>" alt="<?php echo $pt[0]->title?>"></a></div>
-            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="<?php echo $pt[0]->url?>" style="color: #055699 !important; font-weight: bold;"><?php echo $pt[0]->title?></a></div>
-            <ul>
-                <?php foreach($pt as $_key => $_val):?>
-                    <?php if($_key != 0):?>
-                        <li>
-                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
-                        </li>
-                    <?php endif;?>
-                <?php endforeach;?>
-            </ul>
-        </div>
-    </div>
-    <div id="ctl47_FooterContainer">
-    </div>
-</div>
-<?php endif;?>
+<?php //if(count($pt) > 0):?>
+<!--<div class="container-common">-->
+<!--    <div id="ctl47_HeaderContainer" class="box-header">-->
+<!--        <div class="name_tit" align="center">-->
+<!--            <h3 style="color: White;">Phong thủy nhà bạn</h3>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl47_BodyContainer" class="bor_box">-->
+<!--        <div style="text-align: center; padding-top: 5px;">-->
+<!--        </div>-->
+<!--        <div class="list">-->
+<!--            <div class="aligncenter"><a href="--><?php //echo $pt[0]->url?><!--"><img style="width: 100%" src="--><?php //echo $pt[0]->getImageUrl()?><!--" alt="--><?php //echo $pt[0]->title?><!--"></a></div>-->
+<!--            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="--><?php //echo $pt[0]->url?><!--" style="color: #055699 !important; font-weight: bold;">--><?php //echo $pt[0]->title?><!--</a></div>-->
+<!--            <ul>-->
+<!--                --><?php //foreach($pt as $_key => $_val):?>
+<!--                    --><?php //if($_key != 0):?>
+<!--                        <li>-->
+<!--                            <a href="--><?php //echo $_val->url?><!--" title="--><?php //echo $_val->title?><!--">--><?php //echo $_val->title?><!--</a>-->
+<!--                        </li>-->
+<!--                    --><?php //endif;?>
+<!--                --><?php //endforeach;?>
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div id="ctl47_FooterContainer">-->
+<!--    </div>-->
+<!--</div>-->
+<?php //endif;?>
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/News/ViewerNews/ViewerSubjects/NewsBySubject.ascx-->
@@ -340,93 +384,6 @@
 <!--</div>-->
 <?php //endif;?>
 
-    <div class="container-common">
-        <div id="ctl49_HeaderContainer" class="box-header" style="height: auto;">
-            <div class="name_tit" align="center" style="margin-bottom: 0;">
-                <h4>Đăng ký nhận thông tin dự án</h4>
-            </div>
-        </div>
-        <div id="ctl49_BodyContainer" class="bor_box">
-            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-                <input id="customer-name" type="text" placeholder="HỌ VÀ TÊN" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
-                <span id="error-customer-name" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Họ tên không được để trống</span>
-            </div>
-            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-                <input id="customer-phone" type="text" onkeydown="inputNumeric(event)" placeholder="SỐ ĐIỆN THOẠI" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
-                <span id="error-customer-phone" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Số điện thoại không hợp lệ</span>
-            </div>
-            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-                <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
-                <span id="error-customer-email" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Email không hợp lệ</span>
-            </div>
-            <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
-        </div>
-        <div id="ctl49_FooterContainer">
-        </div>
-    </div>
-
-    <script>
-        $( "#customer-name" ).focus(function() {
-            $('#error-customer-name').hide();
-        });
-
-        $( "#customer-phone" ).focus(function() {
-            $('#error-customer-phone').hide();
-        });
-
-        $( "#customer-email" ).focus(function() {
-            $('#error-customer-email').hide();
-        });
-
-        function customer_registered(){
-            var name = $('#customer-name').val(),
-                phone = $('#customer-phone').val(),
-                email = $('#customer-email').val();
-
-            if(name == "") {$('#error-customer-name').show();return false;}
-            else if(phone.length > 12 || phone.length < 10) {$('#error-customer-phone').show();return false;}
-            else if(!validateEmail(email)) {$('#error-customer-email').show();return false;}
-            else{
-                $.post( "/web/page/registered", { name: name, phone: phone, email: email})
-                    .done(function( data ) {
-                        if(!data){
-                            alert("Bạn đăng ký bị lỗi ! Vui lòng thử lại")
-                        }else{
-                            alert( "Bạn đã đăng ký thành công");
-                        }
-                    });
-            }
-
-        }
-
-        function validateEmail(email) {
-            var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
-            var illegalChars= /[\(\)\<\>\,\;\:\\\"\[\]]/;
-            if (email == "" || !emailFilter.test(email) || email.match(illegalChars)) {
-                return false;
-            }
-            return true;
-        }
-
-        function inputNumeric(evt)
-        {
-            var theEvent = evt || window.event;
-            var key = theEvent.keyCode || theEvent.which;
-            //key = String.fromCharCode( key );
-            var regex = /[0-9]/;
-            /*if( !regex.test(String.fromCharCode(key)) && (key != 37 && key != 39 &&
-             key != 8 && key != 46))*/
-            var keyExplode = [8, 43, 37, 39, 46, 9, 35, 36];
-            if( !regex.test(String.fromCharCode(key)) && keyExplode.indexOf(key) < 0)
-            {
-                theEvent.returnValue = false;
-                if(theEvent.preventDefault) theEvent.preventDefault();
-            }
-        }
-    </script>
-
-<div style="clear: both; margin-bottom: 10px;">
-</div>
 <!--//Modules/HtmlGeneric/View.ascx--></div>
 <div class="clear">
 </div>
@@ -502,6 +459,94 @@
 
 <div style="clear:both;"></div>
 
+<div class="container-common">
+    <div id="ctl49_HeaderContainer" class="box-header" style="height: auto;">
+        <div class="name_tit" align="center" style="margin-bottom: 0;">
+            <h4>Đăng ký nhận thông tin dự án</h4>
+        </div>
+    </div>
+    <div id="ctl49_BodyContainer" class="bor_box">
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+            <input id="customer-name" type="text" placeholder="HỌ VÀ TÊN" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <span id="error-customer-name" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Họ tên không được để trống</span>
+        </div>
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+            <input id="customer-phone" type="text" onkeydown="inputNumeric(event)" placeholder="SỐ ĐIỆN THOẠI" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <span id="error-customer-phone" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Số điện thoại không hợp lệ</span>
+        </div>
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
+            <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <span id="error-customer-email" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Email không hợp lệ</span>
+        </div>
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
+    </div>
+    <div id="ctl49_FooterContainer">
+    </div>
+</div>
+
+<script>
+    $( "#customer-name" ).focus(function() {
+        $('#error-customer-name').hide();
+    });
+
+    $( "#customer-phone" ).focus(function() {
+        $('#error-customer-phone').hide();
+    });
+
+    $( "#customer-email" ).focus(function() {
+        $('#error-customer-email').hide();
+    });
+
+    function customer_registered(){
+        var name = $('#customer-name').val(),
+            phone = $('#customer-phone').val(),
+            email = $('#customer-email').val();
+
+        if(name == "") {$('#error-customer-name').show();return false;}
+        else if(phone.length > 12 || phone.length < 10) {$('#error-customer-phone').show();return false;}
+        else if(!validateEmail(email)) {$('#error-customer-email').show();return false;}
+        else{
+            $.post( "/web/page/registered", { name: name, phone: phone, email: email})
+                .done(function( data ) {
+                    if(!data){
+                        alert("Bạn đăng ký bị lỗi ! Vui lòng thử lại")
+                    }else{
+                        alert( "Bạn đã đăng ký thành công");
+                    }
+                });
+        }
+
+    }
+
+    function validateEmail(email) {
+        var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/;
+        var illegalChars= /[\(\)\<\>\,\;\:\\\"\[\]]/;
+        if (email == "" || !emailFilter.test(email) || email.match(illegalChars)) {
+            return false;
+        }
+        return true;
+    }
+
+    function inputNumeric(evt)
+    {
+        var theEvent = evt || window.event;
+        var key = theEvent.keyCode || theEvent.which;
+        //key = String.fromCharCode( key );
+        var regex = /[0-9]/;
+        /*if( !regex.test(String.fromCharCode(key)) && (key != 37 && key != 39 &&
+         key != 8 && key != 46))*/
+        var keyExplode = [8, 43, 37, 39, 46, 9, 35, 36];
+        if( !regex.test(String.fromCharCode(key)) && keyExplode.indexOf(key) < 0)
+        {
+            theEvent.returnValue = false;
+            if(theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
+</script>
+
+<div style="clear: both; margin-bottom: 10px;">
+</div>
+
 <div class="container-common" style="margin-bottom: 10px;">
     <div id="ctl44_HeaderContainer" class="box-header">
         <div class="name_tit" align="center">
@@ -540,83 +585,38 @@
     </div>
 </div>
 <div style="clear:both;"></div>
-
-<?php if(count($project) > 0):?>
-<!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
-<div class="container-common">
-    <div id="ctl44_HeaderContainer" class="box-header">
-        <div class="name_tit" align="center">
-            <h4>Dự án nổi bật</h4>
-        </div>
-    </div>
-    <div id="ctl44_BodyContainer" class="bor_box">
-        <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;"
-             class="customeScrollbar mCustomScrollbar _mCS_1">
-            <div class="mCustomScrollBox mCS-light" id="mCSB_1"
-                 style="position:relative; height:100%; overflow:hidden; max-width:100%;">
-                <div class="mCSB_container" style="position: relative; top: 0px;">
-                    <?php foreach($project as $_key => $_val):?>
-                    <div>
-                        <a href="<?php echo $_val->url?>" title="<?php echo $_val->name?>">
-                            <img src="<?php echo $_val->getImageUrl()?>" width="156" height="100" alt="<?php echo $_val->name?>">
-                        </a>
-                    </div>
-                    <div class="prj_vip">
-                        <a href="<?php echo $_val->name?>" title="<?php echo $_val->name?>">
-                            <?php echo $_val->name?>
-                        </a>
-                    </div>
-                    <div class="line_separate">
-                    </div>
-                    <?php endforeach;?>
-                </div>
-                <div class="mCSB_scrollTools" style="position: absolute; display: block;">
-                    <div class="mCSB_draggerContainer">
-                        <div class="mCSB_draggerRail"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-    </div>
-    <div id="ctl44_FooterContainer">
-    </div>
-</div>
-<div style="clear: both; margin-bottom: 10px;"></div>
-<?php endif;?>
 <!--//Modules/Project/ProjectHighlights.ascx-->
-<?php if(count($saler) > 0):?>
-<div class="enterprise-rightContent">
-    <div class="rc11">
-        <div class="title-style">
-            <h3>
-                NHÀ MÔI GIỚI TIÊU BIỂU</h3>
-        </div>
-    </div>
-    <div class="rc12">
-        <div class="divIndividual">
-            <div class="childIndividual individualActive">
-                <div>
-                    <?php foreach($saler as $_key => $_val):?>
-                            <div class="vip-row" style="overflow: hidden">
-                                <div class="avatar">
-                                    <a href="<?php echo $_val->url?>" rel="nofollow">
-                                        <img class="img" style="float: left;" src="<?php echo $_val->getImageUrl()?>">
-                                    </a>
-                                </div>
-                                <a class="link colorboldblue" href="<?php echo $_val->url?>" rel="nofollow">
-                                    <?php echo $_val->name?>
-                                </a>
-                            </div>
-                    <?php endforeach;?>
-                </div>
-            </div>
-        </div>
-        <a href="<?php echo Yii::app()->createUrl('/web/saler/list')?>" class="linktoall" rel="nofollow">Xem tất cả</a>
-    </div>
-</div>
-<?php endif;?>
+<?php //if(count($saler) > 0):?>
+<!--<div class="enterprise-rightContent">-->
+<!--    <div class="rc11">-->
+<!--        <div class="title-style">-->
+<!--            <h3>-->
+<!--                NHÀ MÔI GIỚI TIÊU BIỂU</h3>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="rc12">-->
+<!--        <div class="divIndividual">-->
+<!--            <div class="childIndividual individualActive">-->
+<!--                <div>-->
+<!--                    --><?php //foreach($saler as $_key => $_val):?>
+<!--                            <div class="vip-row" style="overflow: hidden">-->
+<!--                                <div class="avatar">-->
+<!--                                    <a href="--><?php //echo $_val->url?><!--" rel="nofollow">-->
+<!--                                        <img class="img" style="float: left;" src="--><?php //echo $_val->getImageUrl()?><!--">-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                                <a class="link colorboldblue" href="--><?php //echo $_val->url?><!--" rel="nofollow">-->
+<!--                                    --><?php //echo $_val->name?>
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                    --><?php //endforeach;?>
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="--><?php //echo Yii::app()->createUrl('/web/saler/list')?><!--" class="linktoall" rel="nofollow">Xem tất cả</a>-->
+<!--    </div>-->
+<!--</div>-->
+<?php //endif;?>
 <style type="text/css">
     .fone {
         color: #e70404;

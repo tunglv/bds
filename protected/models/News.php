@@ -46,7 +46,7 @@ class News extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title, desc, topic_id', 'required'),
-			array('topic_id, viewed, created', 'numerical', 'integerOnly'=>true),
+			array('topic_id, viewed, created, project_id', 'numerical', 'integerOnly'=>true),
 			array('title, image, alias', 'length', 'max'=>500),
 			array('desc', 'length', 'max'=>1000),
 			array('type', 'length', 'max'=>1),
@@ -59,7 +59,7 @@ class News extends CActiveRecord
             array('upload_method', 'checkUpload', 'on' => 'create'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, desc, content, topic_id, viewed, created, type, image, alias', 'safe', 'on'=>'search'),
+			array('id, title, desc, content, topic_id, viewed, created, type, image, alias, project_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -108,6 +108,7 @@ class News extends CActiveRecord
 			'created' => 'Created',
 			'type' => 'Type',
 			'image' => 'Image',
+            'project_id' => 'Thuộc dự án'
 		);
 	}
 
@@ -132,6 +133,7 @@ class News extends CActiveRecord
 		$criteria->compare('created',$this->created);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('image',$this->images,true);
+		$criteria->compare('project_id',$this->project_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

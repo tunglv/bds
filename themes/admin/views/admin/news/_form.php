@@ -82,6 +82,15 @@
                         <?php echo $form->error($model,'topic_id', array('class' => 'help-inline error'));?>
                     </div>
                 </div>
+
+                <div class="par control-group">
+                    <?php echo $form->labelEx($model,'project_id', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->dropDownList($model,'project_id', Project::model()->getData(), array('empty'=>'--Tin bài chung--')); ?>
+                        <?php echo $form->error($model,'project_id', array('class' => 'help-inline error'));?>
+                    </div>
+                </div>
+
                 <script>
                     $(function(){
                         $("#a_url").click(function(){

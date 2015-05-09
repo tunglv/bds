@@ -86,7 +86,8 @@ class PageController extends WebController {
         $criteria = new CDbCriteria();
 //        $criteria->compare('t.type', 3);
         $criteria->order = 't.created DESC';
-        $criteria->limit = 16;
+        $criteria->condition = "t.project_id != 0";
+        $criteria->limit = 6;
         $criteria->offset = 0;
         $news = News::model()->findAll($criteria);
 
@@ -97,34 +98,34 @@ class PageController extends WebController {
         $criteria->limit = 6;
         $news_viewest = News::model()->findAll($criteria);
 
-        //        6 newest rule news
-        $criteria = new CDbCriteria();
-        $criteria->compare('t.type', 3);
-        $criteria->order = 't.created DESC';
-        $criteria->limit = 6;
-        $news_rule = News::model()->findAll($criteria);
+//        //        6 newest rule news
+//        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', 3);
+//        $criteria->order = 't.created DESC';
+//        $criteria->limit = 6;
+//        $news_rule = News::model()->findAll($criteria);
 
-//        sale
-        $criteria = new CDbCriteria();
-        $criteria->compare('t.status', 'ENABLE');
-        $criteria->order = 't.created DESC';
-        $criteria->limit = 10;
-        $criteria->offset = 0;
-        $sale = BdsSale::model()->findAll($criteria);
+////        sale
+//        $criteria = new CDbCriteria();
+//        $criteria->compare('t.status', 'ENABLE');
+//        $criteria->order = 't.created DESC';
+//        $criteria->limit = 10;
+//        $criteria->offset = 0;
+//        $sale = BdsSale::model()->findAll($criteria);
 
         //        phong thuy viewest
-        $criteria = new CDbCriteria();
-//        $criteria->compare('t.type', 3);
-        $criteria->order = 't.created DESC';
-        $criteria->limit = 6;
-        $pt = Pt::model()->findAll($criteria);
+//        $criteria = new CDbCriteria();
+////        $criteria->compare('t.type', 3);
+//        $criteria->order = 't.created DESC';
+//        $criteria->limit = 6;
+//        $pt = Pt::model()->findAll($criteria);
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        //        kien truc viewest
-        $criteria = new CDbCriteria();
-        $criteria->order = 't.created DESC';
-        $criteria->limit = 6;
-        $architecture = Architecture::model()->findAll($criteria);
+//        //        kien truc viewest
+//        $criteria = new CDbCriteria();
+//        $criteria->order = 't.created DESC';
+//        $criteria->limit = 6;
+//        $architecture = Architecture::model()->findAll($criteria);
 
         //        newest project
         $criteria = new CDbCriteria();
@@ -133,14 +134,14 @@ class PageController extends WebController {
         $project = Project::model()->findAll($criteria);
 
 
-        $maxOffest = Saler::model()->count() < 10 ? 0 : Saler::model()->count() - 10;
-        $offset = rand ( 0, $maxOffest);
-        //        newest project
-        $criteria = new CDbCriteria();
-        $criteria->order = 't.created DESC';
-        $criteria->limit = 10;
-        $criteria->offset = $offset;
-        $saler = Saler::model()->findAll($criteria);
+//        $maxOffest = Saler::model()->count() < 10 ? 0 : Saler::model()->count() - 10;
+//        $offset = rand ( 0, $maxOffest);
+//        //        newest project
+//        $criteria = new CDbCriteria();
+//        $criteria->order = 't.created DESC';
+//        $criteria->limit = 10;
+//        $criteria->offset = $offset;
+//        $saler = Saler::model()->findAll($criteria);
 
         $criteria = new CDbCriteria();
         $criteria->compare('is_home',1);
@@ -148,7 +149,7 @@ class PageController extends WebController {
 
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('index', array('news'=>$news, 'sale'=>$sale, 'news_viewest' => $news_viewest, 'news_rule' => $news_rule, 'pt' => $pt, 'architecture'=>$architecture, 'project' => $project, 'saler'=>$saler, 'project_home' => $project_home));
+        $this->render('index', array('news'=>$news, 'news_viewest' => $news_viewest, 'project' => $project, 'project_home' => $project_home));
     }
 
     /**

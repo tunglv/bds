@@ -10525,3 +10525,35 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2015/05/09 11:54:09 [error] [php] Undefined variable: sale (C:\xampp\htdocs\bds\protected\modules\web\controllers\PageController.php:152)
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(133): PageController->runAction()
+#1 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\bds\yii\framework\web\filters\CInlineFilter.php(58): PageController->filterAccessControl()
+#4 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\bds\yii\framework\web\CController.php(265): PageController->runActionWithFilters()
+#7 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(282): PageController->run()
+#8 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\bds\protected\modules\web\controllers\PageController.php (152)
+in C:\xampp\htdocs\bds\index.php (14)
+2015/05/09 11:56:34 [error] [php] Undefined variable: saler (C:\xampp\htdocs\bds\protected\modules\web\controllers\PageController.php:152)
+Stack trace:
+#0 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(133): PageController->runAction()
+#1 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\bds\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\bds\yii\framework\web\filters\CInlineFilter.php(58): PageController->filterAccessControl()
+#4 C:\xampp\htdocs\bds\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\bds\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\bds\yii\framework\web\CController.php(265): PageController->runActionWithFilters()
+#7 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(282): PageController->run()
+#8 C:\xampp\htdocs\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\bds\index.php(14): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\bds\protected\modules\web\controllers\PageController.php (152)
+in C:\xampp\htdocs\bds\index.php (14)
