@@ -43,6 +43,9 @@ class Registered extends CActiveRecord
 			array('created', 'numerical', 'integerOnly'=>true),
 			array('name, phone, email', 'length', 'max'=>255),
 			array('status', 'length', 'max'=>7),
+
+            array('phone','unique', 'message'=>'This issue already exists.'),
+
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, phone, email, status, created', 'safe', 'on'=>'search'),

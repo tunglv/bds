@@ -1,3 +1,17 @@
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/files/js/jGrowl/jquery.jgrowl.min.js"></script>
+<style>
+    .jGrowl{z-index:9999;position:absolute}body>.jGrowl{position:fixed}.jGrowl.top-left{top:0;left:0}.jGrowl.top-right{top:0;right:0}.jGrowl.bottom-left{bottom:0;left:0}.jGrowl.bottom-right{right:0;bottom:0}.jGrowl.center{top:50%;left:50%;width:0;margin-left:-170px}.center .jGrowl-closer,.center .jGrowl-notification{margin-right:auto;margin-left:auto}.jGrowl .jGrowl-closer,.jGrowl .jGrowl-notification{font-size:12px;display:none;zoom:1;width:300px;padding:10px 15px;white-space:normal;opacity:.95;filter:alpha(Opacity=95)}.jGrowl .jGrowl-notification:hover{opacity:1;filter:alpha(Opacity=100)}.jGrowl .jGrowl-notification{min-height:20px}.jGrowl .jGrowl-closer,.jGrowl .jGrowl-notification{margin:10px}.jGrowl .jGrowl-notification .jGrowl-header{font-size:.85em;font-weight:700}.jGrowl .jGrowl-notification .jGrowl-close{font-weight:700;z-index:99;float:right;cursor:pointer}.jGrowl .jGrowl-closer{font-weight:700;cursor:pointer;text-align:center}
+    /*.bg-red{*/
+        /*color:#fff;border-color:#f33;background:#ff5757}*/
+    /*}*/
+    .success.bg-blue-alt{
+        color:#fff;border-color:#65a6ff;background:#65a6ff;
+    }
+    .failt.bg-blue-alt{
+        color:#fff;border-color:#f33;background:#ff5757
+    }
+</style>
+<!--<link rel="stylesheet" type="text/css" href="http://demo.agileui.com/bratilius-theme-package/assets-minified/all-demo.css">-->
 <script>
     function setCookie(c_name, value, exdays) {
         var exdate = new Date();
@@ -478,13 +492,31 @@
             <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
             <span id="error-customer-email" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Email không hợp lệ</span>
         </div>
-        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span id="submit_customer_registered" onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
     </div>
     <div id="ctl49_FooterContainer">
     </div>
 </div>
 
 <script>
+
+    function myGrowl(msg, type, title) {
+        msg = typeof msg !== 'undefined' ? msg : 'Thống báo';
+        type = typeof type !== 'undefined' ? type : 'success';
+        title = typeof title !== 'undefined' ? title : '';
+
+        $.jGrowl(msg, {
+            header: title,
+            position: "bottom-right",
+            life: 10000,
+            closerTemplate: "Đóng tất cả",
+            group: type,
+            theme: "bg-blue-alt",
+//            themeState: "my-growl-state",
+            corners: "5px"
+        });
+    }
+
     $( "#customer-name" ).focus(function() {
         $('#error-customer-name').hide();
     });
@@ -497,7 +529,12 @@
         $('#error-customer-email').hide();
     });
 
+    var test_submit = 0;
+
     function customer_registered(){
+        if(test_submit) return false;
+        $('#submit_customer_registered').html('Đang xử lý<img src="/files/img/loader.gif" style="height: 10px;padding-left: 4px;">');
+
         var name = $('#customer-name').val(),
             phone = $('#customer-phone').val(),
             email = $('#customer-email').val();
@@ -506,12 +543,19 @@
         else if(phone.length > 12 || phone.length < 10) {$('#error-customer-phone').show();return false;}
         else if(!validateEmail(email)) {$('#error-customer-email').show();return false;}
         else{
+            test_submit = 1;
             $.post( "/web/page/registered", { name: name, phone: phone, email: email})
                 .done(function( data ) {
-                    if(!data){
-                        alert("Bạn đăng ký bị lỗi ! Vui lòng thử lại")
+                    if(data == 0){
+                        test_submit = 0;
+                        myGrowl('Bạn đăng ký bị lỗi ! Vui lòng thử lại','failt');
+                        $('#submit_customer_registered').html('Đăng ký lại');
                     }else{
-                        alert( "Bạn đã đăng ký thành công");
+                        $('#submit_customer_registered').html('Đăng ký thành công');
+                        myGrowl('Bạn đã đăng ký thành công');
+                        $('#customer-name').val('');
+                        $('#customer-phone').val('');
+                        $('#customer-email').val('');
                     }
                 });
         }
