@@ -4,7 +4,7 @@
         <div style="padding-top: 5px;">
 
 
-            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/logo-bds.jpg" alt="Nhà đất"
+            <img src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/logo-bds.png" alt="Nhà đất"
                  style="padding-top: 2px;">
 
 
