@@ -182,7 +182,7 @@
 <div class="line_gr"></div>
 <div id="ctl38_BodyContainer">
 
-<div class="product-list tin-danh-cho-ban" style="padding-top: 10px;">
+<div class="product-list tin-danh-cho-ban" style="padding-top: 10px;overflow: hidden;">
     <style>
         #header-product_list li{
             background-color:  #008b33;color: #fff;
@@ -190,6 +190,12 @@
         }
         #header-product_list li.active, #header-product_list li:hover{
             border: 1px solid  #008b33;color: #000;background-color: transparent;
+        }
+        .product-list.tin-danh-cho-ban img{
+            max-width: 100%;
+        }
+        .product-list.tin-danh-cho-ban ul{
+            list-style: none;
         }
     </style>
     <ul id="header-product_list" style="list-style: none;text-align: center;height: 55px;display: block;padding-left: 5px;margin-bottom: 10px;">
