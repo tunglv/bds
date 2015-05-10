@@ -18,6 +18,14 @@
 
 
 <div id="detail">
+    <style>
+        #detail img{
+            max-width: 100%;
+        }
+        #detail ul{
+            list-style: none;
+        }
+    </style>
 <div>
     <div id="ctl27_ctl01_ProjectInfomation1_infoDetail">
         <div class="prjava">
