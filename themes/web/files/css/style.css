@@ -10639,7 +10639,7 @@ ul.tincc-paging li {
 #divBranchDetail{ line-height: 25px;width: 78%;}
 .branch{border-top: 1px solid #ddd;padding-top: 10px;}
 
-#loan-interest .heading{background-color: #d9e9f6;color:#055699; padding: 10px;text-transform: uppercase;}
+#loan-interest .heading{background-color: #d9e9f6;color:#008b33; padding: 10px;text-transform: uppercase;}
 #loan-interest .box-content{border: 1px solid #ccc; border-top:none;padding: 15px 30px;line-height: 35px; }
 #loan-interest .box-content-left .col1{ font-weight: bold;color: #008b33;width: 80px;float: left;}
 #loan-interest .box-content-left .col2{ width: 215px;float: right;}

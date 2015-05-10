@@ -334,34 +334,34 @@
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/News/ViewerNews/NewsTopList/ViewerList.ascx-->
-<?php //if(count($pt) > 0):?>
-<!--<div class="container-common">-->
-<!--    <div id="ctl47_HeaderContainer" class="box-header">-->
-<!--        <div class="name_tit" align="center">-->
-<!--            <h3 style="color: White;">Phong thủy nhà bạn</h3>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div id="ctl47_BodyContainer" class="bor_box">-->
-<!--        <div style="text-align: center; padding-top: 5px;">-->
-<!--        </div>-->
-<!--        <div class="list">-->
-<!--            <div class="aligncenter"><a href="--><?php //echo $pt[0]->url?><!--"><img style="width: 100%" src="--><?php //echo $pt[0]->getImageUrl()?><!--" alt="--><?php //echo $pt[0]->title?><!--"></a></div>-->
-<!--            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="--><?php //echo $pt[0]->url?><!--" style="color:  #008b33 !important; font-weight: bold;">--><?php //echo $pt[0]->title?><!--</a></div>-->
-<!--            <ul>-->
-<!--                --><?php //foreach($pt as $_key => $_val):?>
-<!--                    --><?php //if($_key != 0):?>
-<!--                        <li>-->
-<!--                            <a href="--><?php //echo $_val->url?><!--" title="--><?php //echo $_val->title?><!--">--><?php //echo $_val->title?><!--</a>-->
-<!--                        </li>-->
-<!--                    --><?php //endif;?>
-<!--                --><?php //endforeach;?>
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div id="ctl47_FooterContainer">-->
-<!--    </div>-->
-<!--</div>-->
-<?php //endif;?>
+<?php if(count($pt) > 0):?>
+<div class="container-common">
+    <div id="ctl47_HeaderContainer" class="box-header">
+        <div class="name_tit" align="center">
+            <h3 style="color: White;">Phong thủy nhà bạn</h3>
+        </div>
+    </div>
+    <div id="ctl47_BodyContainer" class="bor_box">
+        <div style="text-align: center; padding-top: 5px;">
+        </div>
+        <div class="list">
+            <div class="aligncenter"><a href="<?php echo $pt[0]->url?>"><img style="width: 100%" src="<?php echo $pt[0]->getImageUrl()?>" alt="<?php echo $pt[0]->title?>"></a></div>
+            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="<?php echo $pt[0]->url?>" style="color:  #008b33 !important; font-weight: bold;"><?php echo $pt[0]->title?></a></div>
+            <ul>
+                <?php foreach($pt as $_key => $_val):?>
+                    <?php if($_key != 0):?>
+                        <li>
+                            <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
+                        </li>
+                    <?php endif;?>
+                <?php endforeach;?>
+            </ul>
+        </div>
+    </div>
+    <div id="ctl47_FooterContainer">
+    </div>
+</div>
+<?php endif;?>
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 <!--//Modules/News/ViewerNews/ViewerSubjects/NewsBySubject.ascx-->

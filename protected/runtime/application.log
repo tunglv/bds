@@ -10809,3 +10809,39 @@ Stack trace:
 REQUEST_URI=/images/tit4.gif
 HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
 ---
+2015/05/10 09:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/tit1.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/tit1.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/tit1.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/05/10 09:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/left.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/left.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/05/10 09:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "Images/MenuIcon/right.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Images/MenuIcon...')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/Images/MenuIcon/right.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---
+2015/05/10 09:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "images/tit4.gif".' in D:\server\bds\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\server\bds\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tit4.gif')
+#1 D:\server\bds\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\server\bds\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/tit4.gif
+HTTP_REFERER=http://tung.bds/themes/web/files/css/style.css
+---

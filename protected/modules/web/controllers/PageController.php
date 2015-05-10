@@ -115,12 +115,12 @@ class PageController extends WebController {
 //        $sale = BdsSale::model()->findAll($criteria);
 
         //        phong thuy viewest
-//        $criteria = new CDbCriteria();
-////        $criteria->compare('t.type', 3);
-//        $criteria->order = 't.created DESC';
-//        $criteria->limit = 6;
-//        $pt = Pt::model()->findAll($criteria);
-//        $product_viewed = $this->_getCookieViewedProduct();
+        $criteria = new CDbCriteria();
+//        $criteria->compare('t.type', 3);
+        $criteria->order = 't.created DESC';
+        $criteria->limit = 6;
+        $pt = Pt::model()->findAll($criteria);
+        $product_viewed = $this->_getCookieViewedProduct();
 
 //        //        kien truc viewest
 //        $criteria = new CDbCriteria();
@@ -150,7 +150,7 @@ class PageController extends WebController {
 
 //        $product_viewed = $this->_getCookieViewedProduct();
 
-        $this->render('index', array('news'=>$news, 'news_viewest' => $news_viewest, 'project' => $project, 'project_home' => $project_home));
+        $this->render('index', array('news'=>$news, 'news_viewest' => $news_viewest, 'project' => $project, 'project_home' => $project_home, 'pt'=>$pt));
     }
 
     /**
