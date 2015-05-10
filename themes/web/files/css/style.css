@@ -179,7 +179,7 @@ strong, b {
 #page-navigative-menu {
     width: 982px;
     color: Black;
-    background: #055699;
+    background: #008b33;
     height: 29px;
     float: left;
     padding-left: 5px;
@@ -204,7 +204,7 @@ strong, b {
     .dropdown-navigative-menu li {
         font-weight: bold;
         float: left;
-        background: #055699;
+        background: #008b33;
         padding-left: 9px;
         padding-right: 9px;
         border-right: 1px solid #20466d;
@@ -227,7 +227,7 @@ strong, b {
     }
 
     .dropdown-navigative-menu li.hover, .dropdown-navigative-menu li:hover, .dropdown-navigative-menu .li_selected, .dropdown-navigative-menu li.active, .dropdown-navigative-menu .nav_selected {
-        background-color: #2795f0;
+        background-color: #8ac149;
         position: relative;
     }
 
@@ -271,7 +271,7 @@ strong, b {
             }
 
             .dropdown-navigative-menu ul li.hover, ul.dropdown-navigative-menu ul li:hover, ul.dropdown-navigative-menu ul .li_selected, ul.dropdown-navigative-menu ul li.active {
-                background-color: #2795f0;
+                background-color: #8ac149;
                 color: White;
             }
 
@@ -313,7 +313,7 @@ strong, b {
 }
 
 .ihome {
-    background-color: #055699;
+    background-color:  #008b33;
     border-right: 1px solid #20466D;
     float: left;
     height: 29px;
@@ -322,7 +322,7 @@ strong, b {
 }
 
 .menupad {
-    background-color: #055699;
+    background-color:  #008b33;
     float: left;
     height: 29px;
     /*width: 66px;*/
@@ -439,7 +439,7 @@ strong, b {
 
 #gglbody {
     clear: both;
-    border: 3px solid #055699;
+    border: 3px solid  #008b33;
     margin: 10px 0 5px 0;
     padding: 10px;
     display: none;
@@ -451,7 +451,7 @@ strong, b {
     }
 
     #gglbody a {
-        color: #055699;
+        color: #008b33;
         text-decoration: underline;
     }
 
@@ -479,7 +479,7 @@ strong, b {
 
 /*.header-bottom-right a {
     text-decoration: none;
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
     font-size: 11px;
     display: block;
@@ -659,7 +659,7 @@ strong, b {
         .advance-select-options .header-options div {
             white-space: nowrap;
             font-weight: bold;
-            color: #055699;
+            color: #008b33;
         }
 
     .advance-select-options td {
@@ -764,7 +764,7 @@ strong, b {
 
     .home-product-search .message strong {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
     }
 
 .col_cent {
@@ -799,7 +799,7 @@ strong, b {
     }
 
     .news-list-thumb a:visited {
-        color: #055699;
+        color: #008b33;
         font-size: 15px;
         text-decoration: none;
         font-weight: bold;
@@ -808,7 +808,7 @@ strong, b {
 
     .news-list-thumb a {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
         font-size: 15px;
         text-decoration: none;
         line-height: 21px;
@@ -866,7 +866,7 @@ strong, b {
 
     .news-list a {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
         font-size: 12px;
         text-decoration: none;
         padding-bottom: 5px;
@@ -896,7 +896,7 @@ strong, b {
 }
 
 .tit_l a {
-    background: url("/Images/tit1.gif") no-repeat scroll left top #055699;
+    background: url("/Images/tit1.gif") no-repeat scroll left top  #008b33;
     float: left;
     margin: 0;
     padding: 0 0 0 4px;
@@ -905,7 +905,7 @@ strong, b {
 
     .tit_l a.notab {
         background: none;
-        color: #055699;
+        color: #008b33;
         margin-left: 10px;
     }
 
@@ -915,7 +915,7 @@ strong, b {
     }
 
 .line_gr {
-    border-bottom: 2px solid #055699;
+    border-bottom: 2px solid  #008b33;
 }
 
 .tin-danh-cho-ban, .tin-danh-cho-ban vip1, .tin-danh-cho-ban vip2, .tin-danh-cho-ban vip3, .tin-danh-cho-ban vip5 {
@@ -950,7 +950,7 @@ strong, b {
 .p-main-image {
     height: 60px !important;
     margin-bottom: 15px;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     position: relative;
 }
 
@@ -966,7 +966,7 @@ strong, b {
     }
 
     .p-main-image a {
-        color: #055699;
+        color: #008b33;
     }
 
 .p-main-image-crop {
@@ -1040,7 +1040,7 @@ strong, b {
 }
 
     .tin-danh-cho-ban .vip0, .tin-danh-cho-ban .vip1, .tin-danh-cho-ban .vip2, .tin-danh-cho-ban .vip3, .tin-danh-cho-ban .vip5 {
-        border-bottom: 1px solid #055699 !important;
+        border-bottom: 1px solid  #008b33 !important;
         border-left: none !important;
         border-right: none !important;
         min-height: 100px !important;
@@ -1075,18 +1075,18 @@ strong, b {
 }
 
     .product-list .otherlink a {
-        color: #055699;
+        color: #008b33;
     }
 
 .product-list .Title {
     width: 745px;
-    color: #055699;
+    color: #008b33;
     font-size: 16px;
     font-weight: bold;
 }
 
     .product-list .Title h1 {
-        color: #055699;
+        color: #008b33;
         font-weight: bolder;
         margin: 3px 0;
         padding: 0 0 7px;
@@ -1112,7 +1112,7 @@ strong, b {
 }
 
 .product-list .Header .Left {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-left-radius: 8px;
     width: 8px;
     height: 30px;
@@ -1120,7 +1120,7 @@ strong, b {
 }
 
 .product-list .Header .Repeat {
-    background: #055699;
+    background: #008b33;
     float: left;
     width: 100%;
     color: #FFF;
@@ -1169,7 +1169,7 @@ strong, b {
 
         .product-list .Header .header-tab li.notab a {
             font-weight: bold;
-            color: #055699;
+            color: #008b33;
             float: left;
         }
 
@@ -1204,12 +1204,12 @@ strong, b {
 
         .product-list .Header .header-tab li.active {
             background-image: url("/images/header-tab-active-left1.jpg");
-            background-color: #055699;
+            background-color:  #008b33;
         }
 
     .product-list .Header .header-tab .tincclihover:hover {
         background-image: url("/images/header-tab-active-left1.jpg");
-        background-color: #055699;
+        background-color:  #008b33;
     }
 
         .product-list .Header .header-tab .tincclihover:hover a {
@@ -1242,7 +1242,7 @@ strong, b {
             }
 
 .product-list .Header .Right {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-right-radius: 8px;
     width: 8px;
     height: 30px;
@@ -1265,15 +1265,15 @@ strong, b {
     }
 
 .product-list strong {
-    color: #055699;
+    color: #008b33;
 }
 
 .product-list a:visited {
-    color: #055699;
+    color: #008b33;
 }
 
 .p-main-text a {
-    color: #055699;
+    color: #008b33;
 }
 
 .p-main-tex{ text-rendering: optimizeLegibility;padding-right: 5px;}
@@ -1531,23 +1531,23 @@ strong, b {
 /*begin Vip5*/
 .product-list .vip5 {
     font-family: tahoma; /*width:743px;*/
-    border-left: 1px solid #055699;
-    border-right: 1px solid #055699;
-    border-bottom: 1px solid #055699;
+    border-left: 1px solid  #008b33;
+    border-right: 1px solid  #008b33;
+    border-bottom: 1px solid  #008b33;
     min-height: 123px;
 }
 
     .product-list .vip5 .p-title {
         font-family: tahoma;
         font-size: 13px;
-        color: #055699;
+        color: #008b33;
         padding-top: 7px;
         margin-left: 7px;
     }
 
         .product-list .vip5 .p-title a {
             text-decoration: none;
-            color: #055699;
+            color: #008b33;
             font-weight: bold;
         }
 
@@ -1595,7 +1595,7 @@ strong, b {
 /*end Vip5*/
 
 .product-list .product-price, .product-list .product-city-dist, .product-city-dist a, .product-list .product-area {
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
 }
 
@@ -1605,14 +1605,14 @@ strong, b {
 }
 
 a.link_blue:hover {
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     text-decoration: none;
     font-weight: bold;
 }
 
 a.link_blue:link {
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     text-decoration: none;
     font-weight: bold;
@@ -1632,7 +1632,7 @@ a.link_blue:link {
 }
 
 .t_left-baiviet-header-left-1 {
-    background: #055699;
+    background: #008b33;
     border-top-left-radius: 8px;
     float: left;
     width: 7px;
@@ -1640,7 +1640,7 @@ a.link_blue:link {
 }
 
 .t_left-baiviet-header-left-repeat {
-    background: #055699;
+    background: #008b33;
     float: left;
     line-height: 25px;
     color: #FFF;
@@ -1662,7 +1662,7 @@ a.link_blue:link {
 
 .t_left-baiviet-header-right-link {
     float: left;
-    border-left: 1px solid #055699;
+    border-left: 1px solid  #008b33;
     line-height: 18px;
     vertical-align: middle;
     font-weight: bold;
@@ -1673,7 +1673,7 @@ a.link_blue:link {
 
     .t_left-baiviet-header-right-link a {
         text-decoration: none;
-        color: #055699;
+        color: #008b33;
     }
 
         .t_left-baiviet-header-right-link a:hover {
@@ -1681,7 +1681,7 @@ a.link_blue:link {
         }
 
 .line-home {
-    border-bottom: 1px solid #055699;
+    border-bottom: 1px solid  #008b33;
 }
 
 .t_left-baiviet-content {
@@ -1764,7 +1764,7 @@ a.link_blue:link {
         }
 
             .art-latest .art-item ul {
-                color: #055699;
+                color: #008b33;
                 list-style-type: square;
                 margin: 5px;
                 padding: 0;
@@ -1793,7 +1793,7 @@ a.link_blue:link {
 }
 
 .box-header {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     width: 100%;
@@ -1801,7 +1801,7 @@ a.link_blue:link {
 }
 
 .box-header1 {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     width: 100%;
@@ -1849,7 +1849,7 @@ a.link_blue:link {
 }
 
 .list ul li a:hover, .controls-view-date-contents-link:hover {
-    color: #055699 !important;
+    color: #008b33 !important;
 }
 
 .controls-view-date-contents-link {
@@ -1860,7 +1860,7 @@ a.link_blue:link {
 }
 
 .box-header-bg {
-    background: url("/Images/hoi_dap_image03.gif") no-repeat #055699;
+    background: url("/Images/hoi_dap_image03.gif") no-repeat  #008b33;
     border-bottom: medium none;
     line-height: 25px;
 }
@@ -1878,7 +1878,7 @@ a.link_blue:link {
 }
 
     .faq_box label {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         line-height: 25px;
     }
@@ -1890,7 +1890,7 @@ a.link_blue:link {
     }
 
 .bds-tuvan, .bds-tuvan:visited {
-    color: #055699;
+    color: #008b33;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
@@ -1915,7 +1915,7 @@ a.link_blue:link {
 
 .box-bg-right {
     background-color: #CFE5F7;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     border-radius: 5px;
     text-align: center;
     padding: 5px 0;
@@ -1939,7 +1939,7 @@ a.link_blue:link {
     .box-bg-right a {
         text-decoration: none;
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
     }
 
         .box-bg-right a:hover {
@@ -1977,18 +1977,18 @@ a.link_blue:link {
 
     #typicalBroker .link {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
         font-size: 12px;
         text-decoration: none;
     }
 
 .colorbold, .colorboldblue {
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
 }
 
 .colorblue {
-    color: #055699;
+    color: #008b33;
 }
 
 #typicalBroker .avatar {
@@ -2083,7 +2083,7 @@ a.link_blue:link {
     }
 
         #Bds-Intro a:hover {
-            color: #055699;
+            color: #008b33;
         }
 
 #Intro #BDS-set {
@@ -2097,7 +2097,7 @@ a.link_blue:link {
 }
 
     #Intro .gotop a {
-        color: #055699;
+        color: #008b33;
         font-size: 11px;
         text-decoration: none;
     }
@@ -2139,7 +2139,7 @@ a.link_blue:link {
 .footer-header-right a {
     text-decoration: none;
     background-color: transparent;
-    color: #055699;
+    color: #008b33;
 }
 
 .footer-middle {
@@ -2166,13 +2166,13 @@ a.link_blue:link {
 
     .footer-middle-colum1-title a {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
         text-decoration: none;
     }
 
 .footer-middle-colum1-link a:hover {
     text-decoration: underline;
-    color: #055699;
+    color: #008b33;
 }
 
 .footer-middle-colum1-link a {
@@ -2196,12 +2196,12 @@ a.link_blue:link {
 .footer-bottom-top-1 {
     margin-left: 7px;
     float: left;
-    border-right: 1px solid #055699;
+    border-right: 1px solid  #008b33;
 }
 
     .footer-bottom-top-1 a {
         text-decoration: none;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         padding-right: 5px;
         font-size: 11px;
@@ -2248,7 +2248,7 @@ a.link_blue:link {
 }
 
 #inter ul li:hover, #inter .lihover {
-    background-color: #2795f0;
+    background-color: #8ac149;
     color: #fff;
 }
 
@@ -2404,7 +2404,7 @@ a.link_blue:link {
 
 .style-pager-row-selected {
     text-align: center !important;
-    background-color: #055699;
+    background-color:  #008b33;
     margin-left: 2px !important;
     width: auto !important;
     color: White !important;
@@ -2430,7 +2430,7 @@ a.link_blue:link {
 }
 
 .box-left .box-title {
-    background-color: #055699;
+    background-color:  #008b33;
     color: #eaeaea;
     font-weight: bold;
     padding: 6px;
@@ -2545,7 +2545,7 @@ a.link_blue:link {
 }
 
 .box-left .box-sub-title {
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
     line-height: 15px;
     text-decoration: none;
@@ -2575,7 +2575,7 @@ a.link_blue:link {
         }
 
     #div_count_product a {
-        color: #055699;
+        color: #008b33;
         text-decoration: none;
     }
 
@@ -2587,13 +2587,13 @@ a.link_blue:link {
 
     #product-detail .pm-title,
     .pcc-detail .pm-title {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         font-size: 14px;
         font-family: tahoma;
         text-align: center;
         padding-bottom: 10px;
-        border-bottom: solid 1px #055699;
+        border-bottom: solid 1px  #008b33;
         margin-bottom: 10px;
     }
 
@@ -2711,7 +2711,7 @@ a.link_blue:link {
 
 .list-img #thumbs li.current img,
 .list-img .thumbs li.current img {
-    border: 2px solid #055699;
+    border: 2px solid  #008b33;
 }
 
 .list-img #thumbs li img,
@@ -2750,7 +2750,7 @@ a.link_blue:link {
 
 #product-detail .link,
 .pcc-detail .link {
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
     margin-top: 5px;
 }
@@ -2762,7 +2762,7 @@ a.link_blue:link {
 }
 
 .left-title {
-    color: #055699;
+    color: #008b33;
     background: #bcd6eb;
     text-align: left;
     font-size: 12px;
@@ -2799,7 +2799,7 @@ a.link_blue:link {
 
     .pm-bottom a {
         text-decoration: none;
-        color: #055699;
+        color: #008b33;
     }
 
     .pm-bottom .bottom-right-link a {
@@ -2883,7 +2883,7 @@ a.link_blue:link {
 }
 
     #product-detail .pm-footer-center-center a .pcc-detail .pm-footer-center-center a {
-        color: #055699;
+        color: #008b33;
         text-decoration: none;
     }
 
@@ -2933,7 +2933,7 @@ a.link_blue:link {
     }
 
 #view_other_product a {
-    color: #055699;
+    color: #008b33;
     float: right;
     padding: 2px 5px;
     text-decoration: none;
@@ -2991,7 +2991,7 @@ a.link_blue:link {
     }
 
 .normalblue {
-    color: #055699;
+    color: #008b33;
 }
 
 .breadcumd-button {
@@ -3050,7 +3050,7 @@ a.link_blue:link {
 .tc-tin-3cot-tit1-left h3 a {
     font-size: 14px;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     text-decoration: none;
 }
 
@@ -3111,7 +3111,7 @@ a.link_blue:link {
     }
 
 .borderbold {
-    border-bottom: 2px solid #055699;
+    border-bottom: 2px solid  #008b33;
 }
 
 .news-category-root-box-title-link {
@@ -3196,7 +3196,7 @@ a.link_blue:link {
 .tc-duan-tin-thumnai-link {
     text-decoration: none;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     margin-left: 10px;
     width: 175px;
     float: left;
@@ -3210,7 +3210,7 @@ a.link_blue:link {
 }
 
     .tc-tin-3cot-tit1-right-link2 ul {
-        color: #055699;
+        color: #008b33;
         list-style-type: square;
         margin: 5px;
         padding: 0;
@@ -3228,7 +3228,7 @@ a.link_blue:link {
 }
 
     .buttom-title-by-category span, .buttom-title-by-category strong {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
     }
 
@@ -3262,7 +3262,7 @@ a.link_blue:link {
     }
 
     .breadcrumbs-bottom a:link {
-        color: #055699;
+        color: #008b33;
     }
 
     .breadcrumbs-bottom a {
@@ -3277,14 +3277,14 @@ a.link_blue:link {
     padding: 5px 5px 5px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     word-wrap: break-word;
     margin-bottom: 5px;
 }
 
 .subject-title-head-list h2 {
     padding: 5px 5px 5px 10px;
-    background-color: #055699;
+    background-color:  #008b33;
     margin-bottom: 10px;
     font-weight: bold;
     color: #FFFFFF;
@@ -3352,7 +3352,7 @@ a.link_blue:link {
 .font-title-list-news {
     font-size: 1em;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     text-align: center;
     text-transform: uppercase;
 }
@@ -3364,7 +3364,7 @@ a.link_blue:link {
     padding: 5px 0;
     text-align: center;
     text-transform: uppercase;
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -3393,7 +3393,7 @@ a.link_blue:link {
         }
 
 .menu-active {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     color: White;
     display: block;
     font-weight: bold;
@@ -3401,7 +3401,7 @@ a.link_blue:link {
 }
 
 .menu-right ul li.menu-active a {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     color: #fff;
 }
 
@@ -3446,7 +3446,7 @@ a.link_blue:link {
     }
 
 .contentDetail a {
-    color: #055699;
+    color: #008b33;
 }
 
 .article-subject-content {
@@ -3469,7 +3469,7 @@ a.link_blue:link {
 
         .detail-article-content u a, .detail-article-content a u {
             text-decoration: underline;
-            color: #055699;
+            color: #008b33;
         }
 
     .detail-article-content table {
@@ -3509,7 +3509,7 @@ a.link_blue:link {
         }
 
 .bgblue {
-    background-color: #055699 !important;
+    background-color:  #008b33 !important;
 }
 
 .ar-comment {
@@ -3640,7 +3640,7 @@ a.link_blue:link {
 }
 
 .fengshui-nhadep a {
-    color: #055699 !important;
+    color: #008b33 !important;
     font-style: italic !important;
     font-weight: bold !important;
     text-decoration: underline !important;
@@ -3715,7 +3715,7 @@ a.link_blue:link {
     #Hoidap-phongthuy .hdHeader-repeat {
         height: 28px;
         float: left;
-        color: #055699;
+        color: #008b33;
         text-transform: uppercase;
         font-weight: bold;
         line-height: 28px;
@@ -3736,7 +3736,7 @@ a.link_blue:link {
     }
 
     #Hoidap-phongthuy .hdcontent-left-title {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         padding-left: 10px;
         padding-top: 10px;
@@ -3768,7 +3768,7 @@ a.link_blue:link {
         }
 
     #Hoidap-phongthuy .hdcontent-right-title {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         padding-left: 10px;
         padding-top: 10px;
@@ -3797,7 +3797,7 @@ a.link_blue:link {
         }
 
 .fengshui-information-header-link {
-    color: #055699;
+    color: #008b33;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
@@ -3810,7 +3810,7 @@ a.link_blue:link {
 
 .fengshui-link-a {
     padding-left: 5px;
-    color: #055699 !important;
+    color: #008b33 !important;
     text-decoration: underline !important;
 }
 
@@ -3822,7 +3822,7 @@ a.link_blue:link {
 .fengshui-style-link-a {
     font-weight: bold;
     text-decoration: none;
-    color: #055699;
+    color: #008b33;
     display: table-cell;
     vertical-align: middle;
 }
@@ -3845,7 +3845,7 @@ a.link_blue:link {
 
 #product-detail .left-detail div div:first-child,
 .pcc-detail .left-detail div div:first-child {
-    color: #055699;
+    color: #008b33;
     width: 80px !important;
 }
 
@@ -3853,7 +3853,7 @@ a.link_blue:link {
 #product-detail .right-content .left,
 .pcc-detail .left-detail .left,
 .pcc-detail .right-content .left {
-    color: #055699;
+    color: #008b33;
     width: 80px;
     float: left;
 }
@@ -3874,7 +3874,7 @@ a.link_blue:link {
 
 .left-detail a {
     text-decoration: none;
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
 }
 
@@ -3890,7 +3890,7 @@ a.link_blue:link {
 }
 
 .right-title {
-    color: #055699;
+    color: #008b33;
     font-size: 12px;
     font-weight: bold;
     padding-left: 10px;
@@ -3932,7 +3932,7 @@ a.link_blue:link {
 }
 
 .borderblue {
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
 }
 
 .borderccc {
@@ -3969,7 +3969,7 @@ a.link_blue:link {
 }
 
 #searchArea input[type="reset"], input[type="button"], input[type="submit"] {
-    color: #055699;
+    color: #008b33;
     cursor: pointer;
     font-size: 11px;
     font-weight: bold;
@@ -4020,8 +4020,8 @@ a.link_blue:link {
     }
 
     .broker .search-title {
-        border-bottom: 1px solid #055699;
-        color: #055699 !important;
+        border-bottom: 1px solid  #008b33;
+        color: #008b33 !important;
         font-size: 12px !important;
         font-weight: bold !important;
         margin: 5px 0 10px;
@@ -4067,7 +4067,7 @@ a.link_blue:link {
 .broker .list-title {
     background-color: #CFE5F7;
     border-bottom: 1px solid #ccc;
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
     line-height: 15px;
     padding: 3px 0 3px 10px;
@@ -4075,7 +4075,7 @@ a.link_blue:link {
 
     .broker .list-title a {
         font-weight: bold;
-        color: #055699 !important;
+        color: #008b33 !important;
         text-decoration: none;
     }
 
@@ -4102,7 +4102,7 @@ a.link_blue:link {
 }
 
     .broker .list-row div.title {
-        color: #055699;
+        color: #008b33;
         float: left;
         margin-right: 10px;
         width: 10%;
@@ -4118,7 +4118,7 @@ a.link_blue:link {
 }
 
 .broker-detail .list-title-detail {
-    color: #055699;
+    color: #008b33;
     font-weight: bold !important;
     padding: 8px 0 8px 5px;
     background-color: #CFE5F7;
@@ -4161,13 +4161,13 @@ a.link_blue:link {
 }
 
 .broker .list-row-detail .info .addrTitle {
-    color: #055699;
+    color: #008b33;
     float: left;
     width: 50px;
 }
 
 .broker .list-row-detail .info span, .info-right span {
-    color: #055699;
+    color: #008b33;
     margin-right: 5px;
 }
 
@@ -4176,7 +4176,7 @@ a.link_blue:link {
 }
 
 .broker .list-row-detail .info a {
-    color: #055699 !important;
+    color: #008b33 !important;
     text-decoration: none;
 }
 
@@ -4188,7 +4188,7 @@ a.link_blue:link {
 }
 
 .broker .list-row-detail .chat a {
-    color: #055699;
+    color: #008b33;
     text-decoration: underline;
 }
 
@@ -4198,7 +4198,7 @@ a.link_blue:link {
 
 .broker .introtitle {
     clear: both;
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     font-weight: bold;
     margin: 10px 0;
@@ -4214,7 +4214,7 @@ a.link_blue:link {
 
 .broker .producttitle {
     clear: both;
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     font-weight: bold;
     margin: 10px 0 5px;
@@ -4234,7 +4234,7 @@ a.link_blue:link {
     }
 
     .other-info a {
-        color: #055699;
+        color: #008b33;
         line-height: 20px;
         text-decoration: none;
     }
@@ -4244,7 +4244,7 @@ a.link_blue:link {
 }
 
 .c1 {
-    border-bottom: solid 2px #055699;
+    border-bottom: solid 2px  #008b33;
     line-height: 20px;
     margin-bottom: 0px;
 }
@@ -4256,13 +4256,13 @@ a.link_blue:link {
 }
 
 .c12 {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-left-radius: 8px;
     float: left;
 }
 
 .c11 {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-right-radius: 8px;
     color: #fff;
     font-size: 1.1em;
@@ -4279,7 +4279,7 @@ a.link_blue:link {
     font-size: 1.2em;
     font-weight: bold;
     padding: 0 10px;
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
@@ -4381,7 +4381,7 @@ a.link_blue:link {
 }
 
 .enterprise-search-button {
-    color: #055699;
+    color: #008b33;
     cursor: pointer;
     font-size: 11px;
     font-weight: bold;
@@ -4390,7 +4390,7 @@ a.link_blue:link {
 }
 
 .tc-duan-title {
-    color: #055699;
+    color: #008b33;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -4398,7 +4398,7 @@ a.link_blue:link {
 }
 
 .blueline {
-    border-bottom: 2px solid #055699;
+    border-bottom: 2px solid  #008b33;
     padding-bottom: 5px;
     margin-bottom: 8px;
 }
@@ -4420,7 +4420,7 @@ a.link_blue:link {
         width: 110px;
         height: 110px;
         padding: 2px;
-        border: solid 1px #055699;
+        border: solid 1px  #008b33;
     }
 
 .c22 {
@@ -4527,7 +4527,7 @@ a.link_blue:link {
         width: 80px;
         display: block;
         padding: 2px;
-        border: solid 1px #055699;
+        border: solid 1px  #008b33;
     }
 
 .c22 {
@@ -4560,7 +4560,7 @@ a.link_blue:link {
 }
 
 .c22 a {
-    color: #055699 !important;
+    color: #008b33 !important;
     text-decoration: none;
     font-weight: normal;
     text-decoration: none;
@@ -4568,18 +4568,18 @@ a.link_blue:link {
 }
 
 .c22 ul li a, .c22 ul li a:hover {
-    color: #055699 !important;
+    color: #008b33 !important;
 }
 
 .h1, .a11 h2 {
     background: none repeat scroll 0 0 #fff;
-    color: #055699;
+    color: #008b33;
     font-size: 1.3em;
     font-weight: bold;
 }
 
 .d1 {
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     display: block;
     overflow: hidden;
     padding: 10px;
@@ -4592,7 +4592,7 @@ a.link_blue:link {
 }
 
     .d11 img {
-        border: 1px solid #055699;
+        border: 1px solid  #008b33;
         display: block;
         height: 110px;
         padding: 2px;
@@ -4617,7 +4617,7 @@ a.link_blue:link {
         }
 
             .d12 ul li label {
-                color: #055699;
+                color: #008b33;
             }
 
     .d12 span, .d12 span.yahoo, .d12 span.skype {
@@ -4628,12 +4628,12 @@ a.link_blue:link {
     }
 
     .d12 ul li a {
-        color: #055699 !important;
+        color: #008b33 !important;
         font-weight: bold;
     }
 
     .d12 a {
-        color: #055699;
+        color: #008b33;
         font-style: normal;
         font-weight: normal;
         text-decoration: none;
@@ -4647,7 +4647,7 @@ a.link_blue:link {
 
 .enterprisedetail {
     padding: 15px !important;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     margin-top: 10px;
 }
 
@@ -4667,8 +4667,8 @@ a.link_blue:link {
 }
 
     .enterprise-rightContent .rc11, .enterprise-rightContent .rc21, .enterprise-leftContent .rc11 {
-        background: none repeat scroll 0 0 #055699;
-        border: 1px solid #055699;
+        background: none repeat scroll 0 0  #008b33;
+        border: 1px solid  #008b33;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         color: white;
@@ -4696,7 +4696,7 @@ a.link_blue:link {
         border-image: none;
         border-style: none solid solid;
         border-width: medium 1px 1px;
-        color: #055699 !important;
+        color: #008b33 !important;
         padding: 5px 0 5px 5px;
         border-color: #999;
     }
@@ -4734,7 +4734,7 @@ a.link_blue:link {
 }
 
 .title-tt {
-    color: #055699;
+    color: #008b33;
     font-size: 16px;
     font-weight: bold;
     padding-left: 5px;
@@ -4744,7 +4744,7 @@ a.link_blue:link {
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
     }
 
 .tc-duan-tit1 span {
@@ -4774,7 +4774,7 @@ a.link_blue:link {
 }
 
     .tc-duan-tit2-content-text a {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         text-decoration: none;
     }
@@ -4790,7 +4790,7 @@ a.link_blue:link {
     }
 
     .project-parent-cate-list h3 a {
-        color: #055699;
+        color: #008b33;
     }
 
     .project-parent-cate-list .tintuc-row1 {
@@ -4870,7 +4870,7 @@ a.link_blue:link {
 
 .caooc-right-top-header {
     height: auto;
-    background: #055699;
+    background: #008b33;
     line-height: 26px;
     vertical-align: middle;
     color: #FFF;
@@ -4919,7 +4919,7 @@ a.link_blue:link {
 }
 
 .title-tt h1 {
-    color: #055699;
+    color: #008b33;
     font-size: 16px;
     font-weight: bold;
     padding-left: 5px;
@@ -4927,7 +4927,7 @@ a.link_blue:link {
 }
 
 #detail .tabProject {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     float: left;
@@ -4937,7 +4937,7 @@ a.link_blue:link {
 }
 
     #detail .tabProject li {
-        background-color: #055699;
+        background-color:  #008b33;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         cursor: pointer;
@@ -4952,7 +4952,7 @@ a.link_blue:link {
 }
 
     .tabActiveProject a {
-        color: #055699 !important;
+        color: #008b33 !important;
     }
 
 #detail .tabProject li a {
@@ -4980,7 +4980,7 @@ a.link_blue:link {
 }
 
 #otherProject ul {
-    color: #055699;
+    color: #008b33;
     float: left;
     list-style-position: outside;
     list-style-type: square;
@@ -4997,7 +4997,7 @@ a.link_blue:link {
     }
 
         #otherProject ul li a {
-            color: #055699;
+            color: #008b33;
             font-weight: bold;
             text-decoration: none;
         }
@@ -5009,11 +5009,11 @@ a.link_blue:link {
 }
 
 .t_gr {
-    color: #055699;
+    color: #008b33;
 }
 
 .sTitle_Header {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     color: #fff !important;
     display: block;
     font-weight: bold;
@@ -5028,7 +5028,7 @@ a.link_blue:link {
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding: 5px 10px;
-    color: #055699;
+    color: #008b33;
 }
 
 .ques-cnt {
@@ -5041,14 +5041,14 @@ a.link_org:hover {
 }
 
 a.link_org:link {
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     text-decoration: none;
     font-weight: bold;
 }
 
 a.link_bl:link, a.link_bl:visited {
-    color: #055699;
+    color: #008b33;
     font-size: 13px;
     text-decoration: none;
 }
@@ -5077,7 +5077,7 @@ a.link_bl:link, a.link_bl:visited {
     }
 
         .faq-question .faq-listing .faq-name {
-            color: #055699;
+            color: #008b33;
             display: block;
             font-size: 15px;
             font-weight: bold;
@@ -5091,7 +5091,7 @@ a.link_bl:link, a.link_bl:visited {
         }
 
         .faq-question .faq-listing .faq-avatar {
-            border: 1px solid #055699;
+            border: 1px solid  #008b33;
             float: right;
             margin: 4px;
             margin-right: 0;
@@ -5137,7 +5137,7 @@ a.link_bl:link, a.link_bl:visited {
     }
 
     .faq-question .faq-listing .faq-right .faq-content a, .faq-question .faq-listing .faq-intro .faq-answer a, .faq-question .faq-listing .faq-intro .faq-more a {
-        color: #055699;
+        color: #008b33;
         font-style: normal;
         text-decoration: none;
     }
@@ -5166,7 +5166,7 @@ a.link_bl:link, a.link_bl:visited {
 }
 
     .faq-reply-button a {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         text-decoration: none;
     }
@@ -5283,7 +5283,7 @@ a.link_bl:link, a.link_bl:visited {
 }
 
 .mingid-commentInfo .mingid-replyBtn, .mingid-commentInfo .mingid-likeBtn {
-    color: #055699;
+    color: #008b33;
     cursor: pointer;
     text-decoration: none;
 }
@@ -5358,7 +5358,7 @@ a.link_bl:link, a.link_bl:visited {
 }
 
 .faq-hq1 {
-    background-color: #055699;
+    background-color:  #008b33;
     background-image: url("/Images/hoi_dap_image03.gif");
     background-position: top left;
     background-repeat: no-repeat;
@@ -5407,7 +5407,7 @@ a.link_bl:link, a.link_bl:visited {
     text-align: center;
     padding: 10px 0 0;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     font-size: 23px;
 }
 
@@ -5547,7 +5547,7 @@ a.link_bl:link, a.link_bl:visited {
     .post-bg-Title h1 {
         font-size: 16px;
         text-transform: uppercase;
-        color: #055699;
+        color: #008b33;
         margin-bottom: 5px;
     }
 
@@ -5639,7 +5639,7 @@ a.link_bl:link, a.link_bl:visited {
     margin-top: 10px;
     font-weight: bold;
     line-height: 25px;
-    background-color: #055699;
+    background-color:  #008b33;
     background-image: url(data:image/png;base64,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);
     background-repeat: no-repeat;
     background-position: 5px center;
@@ -5876,7 +5876,7 @@ a.link_bl:link, a.link_bl:visited {
 }
 
     .white-background-new .box-header {
-        background: #055699;
+        background: #008b33;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         height: 30px;
@@ -5894,7 +5894,7 @@ a.link_bl:link, a.link_bl:visited {
     }
 
         .white-background-new .box-arround .title {
-            color: #055699;
+            color: #008b33;
             font-size: 14px;
             font-weight: bold;
             padding: 10px;
@@ -5917,7 +5917,7 @@ a.link_bl:link, a.link_bl:visited {
     padding-bottom: 5px;
     padding-left: 4px;
     border-bottom: 1px solid #ccc;
-    color: #055699;
+    color: #008b33;
     text-transform: uppercase;
 }
 
@@ -5933,7 +5933,7 @@ a.link_bl:link, a.link_bl:visited {
     }
 
         .row-content a:hover, a:active, a.selected {
-            color: #055699;
+            color: #008b33;
         }
 
         .row-content a.selected {
@@ -6028,7 +6028,7 @@ input.keycode {
 }
 
 .tit {
-    color: #055699;
+    color: #008b33;
     font-size: 22px;
     font-weight: bold;
     margin-left: 10px;
@@ -6131,7 +6131,7 @@ input.keycode {
         }
 
         .tab_header ul a {
-            background: none repeat scroll 0 0 #055699;
+            background: none repeat scroll 0 0  #008b33;
             color: white;
             display: block;
             font-weight: bold;
@@ -6150,7 +6150,7 @@ input.keycode {
             }
 
         #usercp_header ul a.unactive {
-            background: none repeat scroll 0 0 #055699;
+            background: none repeat scroll 0 0  #008b33;
             color: white;
             display: block;
             font-weight: bold;
@@ -6170,7 +6170,7 @@ table.lstMail td {
 }
 
 table.lstMail th {
-    color: #055699;
+    color: #008b33;
     font-weight: bold;
     padding: 5px 0;
     border-top: 1px solid #ccc;
@@ -6188,7 +6188,7 @@ table.lstMail a:visited {
 }
 
 .button-blue {
-    background: #055699;
+    background: #008b33;
     border: none;
     border-radius: 5px;
     color: #FFFFFF !important;
@@ -6198,7 +6198,7 @@ table.lstMail a:visited {
 }
 
 .button-blue1 {
-    background: #055699;
+    background: #008b33;
     border: none;
     border-radius: 5px;
     color: #FFFFFF !important;
@@ -6207,7 +6207,7 @@ table.lstMail a:visited {
 }
 
 .button-add {
-    background: #055699 url('http://file1.batdongsan.com.vn/images/more.jpg') no-repeat 5px center;
+    background: #008b33 url('http://file1.batdongsan.com.vn/images/more.jpg') no-repeat 5px center;
     color: #fff !important;
     border: none;
     border-radius: 5px;
@@ -6222,7 +6222,7 @@ table.lstMail a:visited {
 
 .timkiem {
     border: none;
-    background: #055699 url('http://file1.batdongsan.com.vn/Images/timkiem.gif') no-repeat;
+    background: #008b33 url('http://file1.batdongsan.com.vn/Images/timkiem.gif') no-repeat;
     width: 96px;
     height: 27px;
     color: #fff !important;
@@ -6236,10 +6236,10 @@ table.lstMail a:visited {
 }
 
 .blueborline {
-    border-bottom: 2px solid #055699;
+    border-bottom: 2px solid  #008b33;
     background-color: #D4EBFD;
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
     padding: 5px 10px;
     margin-bottom: 10px;
 }
@@ -6368,15 +6368,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
 
         table.lstProduct td a, table.lstQuestion td a, table.lstAnswer td a {
-            color: #055699;
+            color: #008b33;
         }
 
     table.lstProduct th, table.lstQuestion th, table.lstAnswer th, table.lstGeneral th {
         background: #D4EBFD;
         text-align: center;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
-        border-bottom: 2px solid #055699;
+        border-bottom: 2px solid  #008b33;
     }
 
     table.lstQuestion th, table.lstQuestion th, table.lstAnswer th, table.lstGeneral th {
@@ -6395,7 +6395,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .chitiet span {
-    color: #055699;
+    color: #008b33;
     float: right;
     width: 191px;
     word-break: break-all;
@@ -6431,7 +6431,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: #FFFFFF !important;
     padding: 5px 5px 5px 22px;
     border-radius: 5px;
-    background: #055699 url('http://file1.batdongsan.com.vn/Images/arrowicon.jpg') no-repeat;
+    background: #008b33 url('http://file1.batdongsan.com.vn/Images/arrowicon.jpg') no-repeat;
     background-position: 5px center;
 }
 
@@ -6448,7 +6448,7 @@ fieldset {
 }
 
 .fieldset-block legend {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     border-radius: 3px 3px 3px 3px;
     color: White;
     font-weight: bold;
@@ -6465,8 +6465,8 @@ fieldset {
 }
 
 .divTitleStatic h1 {
-    border-bottom: 1px solid #055699;
-    color: #055699;
+    border-bottom: 1px solid  #008b33;
+    color: #008b33;
     font-size: 17px;
     font-weight: bolder;
     line-height: 25px;
@@ -6497,7 +6497,7 @@ fieldset {
             }
 
 .html-content a {
-    color: #055699;
+    color: #008b33;
     text-decoration: none;
 }
 
@@ -6514,7 +6514,7 @@ fieldset {
 .ad-table-caption {
     background-color: #dbf3fd;
     border: 1px solid #d7d7d7;
-    color: #055699;
+    color: #008b33;
     padding: 5px 0 5px 15px;
 }
 
@@ -6544,7 +6544,7 @@ fieldset {
 }
 
 .ad-table a {
-    color: #055699;
+    color: #008b33;
     text-decoration: none;
 }
 
@@ -6552,7 +6552,7 @@ fieldset {
     margin-top: 2px;
     width: 600px;
     padding-bottom: 10px;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     -moz-border-radius-topleft: 8px;
     -webkit-border-top-left-radius: 8px;
     -moz-border-radius-topright: 8px;
@@ -6571,7 +6571,7 @@ fieldset {
 }
 
     .contact-tbl .contact-tbl-row span.label {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
     }
 
@@ -6593,7 +6593,7 @@ fieldset {
         padding-bottom: 5px;
         padding-top: 5px;
         width: 92%;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         float: left;
     }
@@ -6621,7 +6621,7 @@ fieldset {
         width: 20%;
         float: left;
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
     }
 
     .contact-tbl .contact-tbl-row .contact-tbl-content {
@@ -6649,7 +6649,7 @@ fieldset {
 }
 
 .breadcrumbs a:link, .breadcrumbs a:visited, .breadcrumbs-bottom a:visited {
-    color: #055699;
+    color: #008b33;
 }
 
 .tagpanel {
@@ -6658,7 +6658,7 @@ fieldset {
 }
 
     .tagpanel a:link, .tagpanel a:visited {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         margin-top: 5px;
         text-rendering:geometricPrecision;
@@ -6671,12 +6671,12 @@ fieldset {
     }
 
 a.link_sr:link, a.link_sr:visited {
-    color: #055699;
+    color: #008b33;
     text-decoration: underline;
 }
 
 a.link_sr:hover {
-    color: #055699;
+    color: #008b33;
     text-decoration: underline;
 }
 
@@ -6685,7 +6685,7 @@ a.link_sr:hover {
     width: 80px;
     height: 60px;
     vertical-align: middle;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
 }
 
 .product-avatar .product-avatar-img {
@@ -6736,7 +6736,7 @@ a.link_sr:hover {
 }
 
 .tab-hb .tab-hb-active .tab-hb-active-middle {
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: none;
@@ -6753,7 +6753,7 @@ a.link_sr:hover {
 }
 
 .tab-hb .tab-hb-inactive .tab-hb-inactive-middle {
-    background: #055699;
+    background: #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0 5px;
@@ -6776,7 +6776,7 @@ a.link_sr:hover {
 }
 
 .hb-data {
-    border: solid 1px #055699;
+    border: solid 1px  #008b33;
     margin-top: -1px;
     z-index: 0;
     width: 100%;
@@ -6800,9 +6800,9 @@ a.link_sr:hover {
 }
 
     #divChiphi .h2 {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
-        border-bottom: 1px #055699 solid;
+        border-bottom: 1px  #008b33 solid;
         text-transform: uppercase;
         padding: 10px 0 5px 0;
         margin: 0 0 20px 0;
@@ -6887,7 +6887,7 @@ a.link_sr:hover {
     }
 
     .result_chiphi_header .subcolumn {
-        background-color: #055699;
+        background-color:  #008b33;
         margin-right: 1px;
         padding: 0 0 0 10px;
     }
@@ -6961,7 +6961,7 @@ a.link_sr:hover {
 
 .divFsExplain {
     text-align: center;
-    color: #055699;
+    color: #008b33;
     margin: 10px 0;
 }
 /*.divFsExplain
@@ -7003,16 +7003,16 @@ a.link_sr:hover {
 
 .inputbox-blue {
     background: white none repeat scroll 0 0;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     width: 120px;
-    color: #055699;
+    color: #008b33;
 }
 
 .selectbox-blue {
     background: white none repeat scroll 0 0;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     width: 123px;
-    color: #055699;
+    color: #008b33;
 }
 
 .rent-type .selectbox-blue {
@@ -7022,7 +7022,7 @@ a.link_sr:hover {
 
 .divRntExplain {
     text-align: center;
-    color: #055699;
+    color: #008b33;
     margin: 10px 0;
 }
 
@@ -7067,7 +7067,7 @@ a.link_sr:hover {
 
     .tableInterestRate thead, .tableInterestRate tfoot {
         text-align: center;
-        color: #055699;
+        color: #008b33;
         line-height: 25px;
         background: #cfe5f7;
         font-weight: bold;
@@ -7119,7 +7119,7 @@ a.link_sr:hover {
 
     #fengshui .divHeader {
         line-height: 20px;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         padding-left: 10px;
         background-color: #cfe5f7;
@@ -7140,7 +7140,7 @@ a.link_sr:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: #055699;
+    background-color:  #008b33;
     color: white;
     border-collapse: separate;
     border-spacing: 2px;
@@ -7149,7 +7149,7 @@ a.link_sr:hover {
 
 .batquai1 {
     border: 1px solid white;
-    background-color: #055699;
+    background-color:  #008b33;
     color: white;
     font-weight: bold;
     font-size: larger;
@@ -7176,7 +7176,7 @@ a.link_sr:hover {
 
     #fengshui1 .divHeader {
         line-height: 20px;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         padding-left: 10px;
         background-color: #CFE5F7;
@@ -7299,7 +7299,7 @@ a.link_sr:hover {
     }
 
 #product-expire-6m, #product-expire {
-    color: #055699;
+    color: #008b33;
     background-color: #ededed;
     margin: 10px 0;
     padding: 5px;
@@ -7417,7 +7417,7 @@ a.link_sr:hover {
 }
 
     .faq-detail-new h1 {
-        color: #055699;
+        color: #008b33;
         display: block;
         font-size: 15px;
         font-weight: bold;
@@ -7443,7 +7443,7 @@ a.link_sr:hover {
         }
 
         .faq-detail-new .faq-detail-new-info span a {
-            color: #055699;
+            color: #008b33;
             font-style: normal;
             text-decoration: none;
         }
@@ -7472,7 +7472,7 @@ a.link_sr:hover {
 }
 
     .faq-detail-new-reply-button h2, .faq-detail-new-reply-button a, .faq-detail-new-reply-button span {
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         float: left;
     }
@@ -7554,7 +7554,7 @@ a.link_sr:hover {
 }
 
 .faq-reply-new-item .faq-reply-new-item-info .faq-reply-new-item-info-reply {
-    color: #055699;
+    color: #008b33;
     cursor: pointer;
     text-decoration: none;
     font-family: Tahoma;
@@ -7634,7 +7634,7 @@ a.link_sr:hover {
 }
 
     #messageContent h2 {
-        color: #055699;
+        color: #008b33;
         text-align: center;
         font-size: 14px;
         padding: 10px;
@@ -7733,14 +7733,14 @@ a.link_sr:hover {
 
         .sitemap li span {
             font-weight: bold;
-            color: #055699;
+            color: #008b33;
         }
 
         .sitemap li a {
             line-height: 1.7em;
             margin: 0;
             padding: 0;
-            color: #055699;
+            color: #008b33;
             text-decoration: underline;
         }
 
@@ -7774,7 +7774,7 @@ a.link_sr:hover {
     }
 
 .banggia_h3 {
-    color: #055699;
+    color: #008b33;
     font-size: 150%;
     margin: 30px 0 10px 0;
 }
@@ -7820,7 +7820,7 @@ a.link_sr:hover {
             }
 
             .box2 .item .more a:hover {
-                color: #055699;
+                color: #008b33;
                 text-decoration: underline;
             }
 
@@ -8011,13 +8011,13 @@ a.link_sr:hover {
             padding: 10px 0 10px 15px;
             color: #fff;
             border-radius: 5px;
-            background-color: #055699;
+            background-color:  #008b33;
             margin: 0 0 20px 0;
         }
 
     .phone h3 {
         font-size: 150%;
-        color: #055699;
+        color: #008b33;
         margin: 0 0 10px 0;
     }
 
@@ -8064,7 +8064,7 @@ a.link_sr:hover {
 
 
         .phone .view .link:hover {
-            background-color: #055699;
+            background-color:  #008b33;
         }
 
     .phone .ui-tabs .ui-tabs-panel {
@@ -8089,7 +8089,7 @@ a.link_sr:hover {
         .footer-link-other ul li:first-child a {
             text-transform: uppercase;
             font-weight: bold;
-            color: #055699;
+            color: #008b33;
             text-decoration: none;
             list-style: none;
         }
@@ -8104,7 +8104,7 @@ a.link_sr:hover {
 .new-header {
     text-transform: uppercase;
     color: white;
-    background-color: #055699;
+    background-color:  #008b33;
     font-weight: bold;
     padding: 5px;
     border-top-left-radius: 8px;
@@ -8188,18 +8188,18 @@ a.link_sr:hover {
 }
 
 .div_new_a_selected {
-    background: #055699;
+    background: #008b33;
     color: White;
     font-weight: bold;
 }
 
 .div_dadoc_a {
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
 }
 
 .div_new_a:hover {
-    background: #055699;
+    background: #008b33;
     color: White;
     font-weight: bold;
 }
@@ -8257,7 +8257,7 @@ a.link_sr:hover {
 }
 
     .grid .header {
-        background: #055699;
+        background: #008b33;
         width: 100%;
         float: left;
     }
@@ -8272,7 +8272,7 @@ a.link_sr:hover {
     .grid .pl {
         width: 120px;
         border-right: 1px solid #d1d0d0;
-        color: #055699;
+        color: #008b33;
         font-weight: bold;
         cursor: pointer;
     }
@@ -8451,12 +8451,12 @@ a.link_sr:hover {
 
 #commentCmd {
     width: 100%;
-    color: #055699;
+    color: #008b33;
     font-size: x-large;
     font-weight: bold;
     height: 30px;
     line-height: 30px;
-    border-bottom: 1px solid #055699;
+    border-bottom: 1px solid  #008b33;
     margin: 0 0 5px 0;
 }
 
@@ -8480,7 +8480,7 @@ ul.tincc-paging li:last-child {
 
 ul.tincc-paging li {
     float: left;
-    background: #055699;
+    background: #008b33;
     margin-right: 5px;
 }
 
@@ -8495,11 +8495,11 @@ ul.tincc-paging li {
     }
 
 .tincc-numcount {
-    color: #055699;
+    color: #008b33;
 }
 
 .tincc-durationTime {
-    color: #055699;
+    color: #008b33;
 }
 
 .font09 {
@@ -8545,7 +8545,7 @@ ul.tincc-paging li {
     .ttmg .left {
         float: left;
         width: 75px;
-        color: #055699;
+        color: #008b33;
     }
 
     .ttmg .right {
@@ -8590,7 +8590,7 @@ ul.tincc-paging li {
 
     .tenmg a {
         font-weight: bold;
-        color: #055699;
+        color: #008b33;
         font-size: 1.2em;
     }
 
@@ -8615,7 +8615,7 @@ ul.tincc-paging li {
 }
 
 .bluetextwhite {
-    background-color: #055699;
+    background-color:  #008b33;
     color: #fff;
     padding: 3px 10px;
 }
@@ -8718,12 +8718,12 @@ ul.tincc-paging li {
 /*#RightMainContent .aditem object,#RightMainContent .aditem  embed{ width: 240px !important;}*/
 
 .listcompany h2, .listcompany h1 {
-    border-bottom: 1px solid #055699;
+    border-bottom: 1px solid  #008b33;
     margin-bottom: 10px;
 }
 
     .listcompany h2 a, .listcompany h1 span {
-        background-color: #055699;
+        background-color:  #008b33;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         color: #FFFFFF;
@@ -8783,13 +8783,13 @@ ul.tincc-paging li {
 }
 
 .largefont {
-    color: #055699;
+    color: #008b33;
     font-size: 17px;
     padding: 10px 0;
 }
 
     .largefont a {
-        color: #055699;
+        color: #008b33;
         font-size: 17px;
     }
 
@@ -8803,7 +8803,7 @@ ul.tincc-paging li {
 
 .list2item h3 a {
     font-weight: bold;
-    color: #055699;
+    color: #008b33;
 }
 
 .list2item .ava img {
@@ -8910,7 +8910,7 @@ ul.tincc-paging li {
 }
 
 .prjinfo h1 {
-    color: #055699;
+    color: #008b33;
     font-size: 16px;
     font-weight: bold;
 }
@@ -8933,7 +8933,7 @@ ul.tincc-paging li {
         }
 
             .prjinfo ul li label {
-                color: #055699;
+                color: #008b33;
             }
 
     .prjinfo span, .prjinfo span.yahoo, .prjinfo span.skype {
@@ -9020,11 +9020,11 @@ ul.tincc-paging li {
 }
 
 .product-list .Footer .colorblue a {
-    color: #055699;
+    color: #008b33;
 }
 
     .product-list .Footer .colorblue a:visited, .product-list .Title .Footer a:visited {
-        color: #055699 !important;
+        color: #008b33 !important;
     }
 
 #product-detail .pm-title {
@@ -9066,7 +9066,7 @@ ul.tincc-paging li {
         }
 
     #product-detail .kqchitiet a {
-        color: #055699;
+        color: #008b33;
         font-size: 14px;
     }
 
@@ -9100,7 +9100,7 @@ ul.tincc-paging li {
 }
 
 .pm-content a {
-    color: #055699;
+    color: #008b33;
     text-decoration: none;
 }
 
@@ -9340,7 +9340,7 @@ ul.tincc-paging li {
     }
 
     .site-center-full .header-menu-full {
-        background-color: #055699;
+        background-color:  #008b33;
         clear: both;
     }
 
@@ -9362,7 +9362,7 @@ ul.tincc-paging li {
 }
 /*end css for full master*/
 .box-blue {
-    background-color: #055699;
+    background-color:  #008b33;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     color: #EAEAEA;
@@ -9381,14 +9381,14 @@ ul.tincc-paging li {
 
 .kvtimkiem {
     padding: 10px 0 5px 10px;
-    border: 1px solid #055699;
+    border: 1px solid  #008b33;
     border-top-right-radius: 8px;
 }
 
     .kvtimkiem .sideleft {
         float: left;
         width: 15px;
-        color: #055699;
+        color: #008b33;
     }
 
     .kvtimkiem .sideright {
@@ -9399,7 +9399,7 @@ ul.tincc-paging li {
     }
 
         .kvtimkiem .sideright a {
-            color: #055699;
+            color: #008b33;
             text-decoration: none;
         }
 
@@ -9444,7 +9444,7 @@ ul.tincc-paging li {
     border: 1px solid #aaa;
     background-color: #fff;
     border-radius: 4px;
-    color: #055699;
+    color: #008b33;
     position: absolute;
     z-index: 100;
     width: 200px;
@@ -9875,7 +9875,7 @@ ul.tincc-paging li {
 /* End Đăng tin rao - ThanhDT*/
 /* List Tin rao cần mua, cần thuê*/
 .product-list .AdNewsHeader .NeedRepeat {
-    background: none repeat scroll 0 0 #055699;
+    background: none repeat scroll 0 0  #008b33;
     color: #fff;
     /*float: left;*/
     font-weight: bold;
@@ -9945,7 +9945,7 @@ ul.tincc-paging li {
     margin: 0 0 20px;
     padding: 10px 0px 10px 15px;
     font-weight: bold;
-    background: #055699 url('http://file1.batdongsan.com.vn/Images/assets/arrowbluedown.jpg') no-repeat 460px center;
+    background: #008b33 url('http://file1.batdongsan.com.vn/Images/assets/arrowbluedown.jpg') no-repeat 460px center;
 }
 
     .showSingle:hover {
@@ -10006,9 +10006,9 @@ ul.tincc-paging li {
 
         #adsvideo .phone .ui-tabs .ui-tabs-nav li a:hover {
             background: none;
-            border-bottom: 1px solid #055699;
+            border-bottom: 1px solid  #008b33;
             color: #fff;
-            background-color: #055699;
+            background-color:  #008b33;
             -webkit-border-radius: 4px 4px 0 0;
             -moz-border-radius: 4px 4px 0 0;
             border-radius: 4px 4px 0 0;
@@ -10017,7 +10017,7 @@ ul.tincc-paging li {
         #adsvideo .phone .ui-tabs .ui-tabs-nav {
             margin: 0;
             padding: 0;
-            border-bottom: 1px solid #055699;
+            border-bottom: 1px solid  #008b33;
         }
 
             #adsvideo .phone .ui-tabs .ui-tabs-nav li {
@@ -10049,7 +10049,7 @@ ul.tincc-paging li {
         -moz-border-radius: 4px 4px 0 0;
         border-radius: 4px 4px 0 0;
         margin: 0 5px 0 0;
-        background-color: #055699;
+        background-color:  #008b33;
     }
 
     #adsvideo .phone .ui-state-default {
@@ -10072,7 +10072,7 @@ ul.tincc-paging li {
             outline: none;
             font-weight: bold;
             padding: 0 20px 0 20px;
-            background-color: #055699;
+            background-color:  #008b33;
             line-height: 36px;
         }
 
@@ -10098,7 +10098,7 @@ ul.tincc-paging li {
         border-width: 0;
         padding: 1em;
         background: none;
-        border: 1px #055699 solid;
+        border: 1px  #008b33 solid;
         border-top: none;
     }
 
@@ -10119,7 +10119,7 @@ ul.tincc-paging li {
         border-width: 0;
         padding: 20px 0 0 0;
         background: none;
-        border: 0px #055699 solid;
+        border: 0px  #008b33 solid;
         border-top: none;
     }
 
@@ -10454,9 +10454,9 @@ ul.tincc-paging li {
 .lpitem ul li img{ width: 90px;height:56px;border: 1px solid #9dbdd7;margin-right: 10px;margin-top: 3px;float: left;padding: 2px;}
 
 .lpitem .sub-item{ width: 245px;float: left;}
-.link-blue{ color: #055699 !important;font-weight: bold;}
-.bank-title{ border-bottom: 2px solid #055699;}
-.bank-title h2 a{ color: #fff;text-transform: uppercase;padding: 5px 10px;border-radius: 4px 4px 0 0;background-color: #055699;display: inline-block;white-space: nowrap;}
+.link-blue{ color: #008b33 !important;font-weight: bold;}
+.bank-title{ border-bottom: 2px solid  #008b33;}
+.bank-title h2 a{ color: #fff;text-transform: uppercase;padding: 5px 10px;border-radius: 4px 4px 0 0;background-color:  #008b33;display: inline-block;white-space: nowrap;}
 .bank-title .viewall{ position: absolute;top: 5px;right: 0; color: #319c00;white-space: nowrap;}
 /*.bank-title a{ color: #319c00;white-space: nowrap;}*/
 .bankitem{ padding: 20px 0;}
@@ -10468,7 +10468,7 @@ ul.tincc-paging li {
 .bankitem ul li .right-item .box-arr{ border: 1px solid #f3f3f3;border-bottom: none; color: #545454;line-height: 22px;}
 .bankitem ul li .right-item .box-arr .last{ border-bottom: 1px solid #f3f3f3}
 .bankitem ul li .right-item img{ vertical-align: middle;}
-.bankitem ul li .right-item .box-arr a{ color: #2795f0;text-decoration: none;}
+.bankitem ul li .right-item .box-arr a{ color: #8ac149;text-decoration: none;}
 .bankitem ul li .right-item .web-addr{ padding: 0px 0 5px 24px;}
 .bankitem .viewall{ text-align: right;margin-top: -15px; }
 .bankitem .viewall a{ color: #319c00;text-decoration: none;}
@@ -10480,7 +10480,7 @@ ul.tincc-paging li {
 .lpmostview .fright{ float: right;width: 110px;}
 .lpmostview .kyhan img{ vertical-align: top;}
 
-.lpsearch{ color: #055699;font-weight: bold;}
+.lpsearch{ color: #008b33;font-weight: bold;}
 .lpsearch select{ padding:5px 0;width: 100%;margin: 5px 0;}
 .lpsearch input{ background-color: #319c00;width: 80px;text-align: center;height: 25px; color: #fff !important;border: none;border-radius: 4px;font-size: 14px !important;}
 
@@ -10490,7 +10490,7 @@ ul.tincc-paging li {
 .bank-list ul li .bank-item-rgiht{ width: 210px;float: left;}
 .bank-left{ width: 99px;float: left;display: block;}
 .bank-right{ width: 200px;float: right;display: block;}
-.bank-item-name a{ color: #055699;font-size: 14px;margin-bottom: 10px;}
+.bank-item-name a{ color: #008b33;font-size: 14px;margin-bottom: 10px;}
 .bank-item-left{ line-height: 22px;}
 .bank-item-right{ width: 200px;float: right;}
 .bank-item-right .item-header{ background-color: #d9e9f6;border-radius: 4px;border: 1px solid #a0bfd9;font-weight: bold;text-align: center;padding: 3px 0;position: relative;}
@@ -10499,14 +10499,14 @@ ul.tincc-paging li {
 .bank-list ul li .bank-item-right ul li{ list-style-image: url("/images/arrowright.jpg");border: none;padding: 0;}
 
 .nav-tabs {
-    border-bottom: 3px solid #055699;
+    border-bottom: 3px solid  #008b33;
     padding-left: 10px;
     margin-bottom: 15px;
 }
 .nav-tabs ul li{display: inline-block;}
 
 .nav-tabs-2 {
-    border-bottom: 1px solid #055699;    
+    border-bottom: 1px solid  #008b33;
     margin: 0 0 15px 0;
 }
 .nav-tabs-2 ul li{display: inline-block;}
@@ -10525,10 +10525,10 @@ ul.tincc-paging li {
 .tab-content #detail { text-rendering: optimizeLegibility;}
 .tab-content #detail p{ margin: 2% 0;}
 .nav-tabs ul li a{border-radius: 4px 4px 0 0; display: block; margin-right: 2px; padding: 5px 10px; position: relative;border: 1px solid #a0bfd9;background-color: #d9e9f6;border-bottom: none;font-weight: bold;}
-.nav-tabs ul li.active a, .nav-tabs ul li a:hover{background-color: #055699;color: #fff;border: 1px solid #055699;}
+.nav-tabs ul li.active a, .nav-tabs ul li a:hover{background-color:  #008b33;color: #fff;border: 1px solid  #008b33;}
 
 .nav-tabs-2 ul li a{border-radius: 4px 4px 0 0; display: block; margin-right: 0px; padding: 5px 20px; position: relative;border: 1px solid #545454;background-color: #ffffff;border-bottom: none;font-weight: bold;color: #545454;}
-.nav-tabs-2 ul li.active a, .nav-tabs-2 ul li a:hover{background-color: #055699;color: #fff;border: 1px solid #055699;border-bottom: none;}
+.nav-tabs-2 ul li.active a, .nav-tabs-2 ul li a:hover{background-color:  #008b33;color: #fff;border: 1px solid  #008b33;border-bottom: none;}
 
 .bank-detail .logo {
     background-color: #d9e9f6;
@@ -10550,7 +10550,7 @@ ul.tincc-paging li {
 .bank-detail .bank-right{ width: 360px;margin-left: 7px;}
 .bank-detail .bank-left{ width: 80px;font-weight: bold;}
 .bank-detail .bank-item-left{ line-height: 17px;min-height: 130px;}
-.bank-detail .bank-item-name{ font-size: 16px;padding-bottom: 10px;color: #055699;}
+.bank-detail .bank-item-name{ font-size: 16px;padding-bottom: 10px;color: #008b33;}
 .bank-detail #package ul li.item-detail{
     list-style: none;
     clear: both;
@@ -10562,7 +10562,7 @@ ul.tincc-paging li {
 .bank-detail #package ul li:last-child{ border-bottom: none;}
 /*.bank-detail #package ul li.item-detail img{ float: left;width: 160px;height: 160px;padding: 5px;border: 1px solid #ccc;margin-right: 15px;}*/
 /*.bank-detail #package ul li.item-detail .item-right{ width: 530px;float: right;}*/
-.bank-detail #package .item-title a{ color: #055699;font-size: 16px;margin-bottom: 5px;font-weight: bold;}
+.bank-detail #package .item-title a{ color: #008b33;font-size: 16px;margin-bottom: 5px;font-weight: bold;}
 .bank-detail .tab-content ul li{ margin-left: 5px;}
 .pkDetail{ width: 125px;height: 26px; line-height: 26px; border-radius: 4px;font-weight: bold;color: #fff !important;display: block;text-align: center; background: url('/images/httc/bgbutton.jpg') repeat-x;}
 .utility-finance .pkDetail{ background: none; height: 31px; line-height: 31px; width: 217px;}
@@ -10578,7 +10578,7 @@ ul.tincc-paging li {
 .pck-result ul.pck-ul li.pck-li .fright{ float: right;width: 30px;padding-top: 25px;text-align: center;}
 .pck-result .lp-detail{ margin: 15px 0 0 0;}
 
-.lp-detail .title-header{ background-color: #055699;color: #fff;margin: 15px 0;padding: 10px;font-size: 14px;}
+.lp-detail .title-header{ background-color:  #008b33;color: #fff;margin: 15px 0;padding: 10px;font-size: 14px;}
 .lp-detail .description{ margin: 0 5px 30px 5px;}
 .lp-detail .description ul{ margin-left: 15px;}
 .lp-register{ border-top: 1px solid #afc9dc;padding: 20px;}
@@ -10641,11 +10641,11 @@ ul.tincc-paging li {
 
 #loan-interest .heading{background-color: #d9e9f6;color:#055699; padding: 10px;text-transform: uppercase;}
 #loan-interest .box-content{border: 1px solid #ccc; border-top:none;padding: 15px 30px;line-height: 35px; }
-#loan-interest .box-content-left .col1{ font-weight: bold;color: #055699;width: 80px;float: left;}
+#loan-interest .box-content-left .col1{ font-weight: bold;color: #008b33;width: 80px;float: left;}
 #loan-interest .box-content-left .col2{ width: 215px;float: right;}
 #loan-interest .box-content-left{ width: 300px;float: left;}
 #loan-interest .box-content-right{ width: 336px;float: right;}
-#loan-interest .box-content-right .col1{font-weight: bold;color: #055699;width: 120px;float: left;}
+#loan-interest .box-content-right .col1{font-weight: bold;color: #008b33;width: 120px;float: left;}
 #loan-interest .box-content-right .col2 {width: 215px;float: right;}
 #loan-interest .box-content input{padding: 6px 5px;border: 1px solid #ccc;}
 #loan-interest .width1{ width: 210px;text-align: right;padding: 2px 5px;}
@@ -10660,12 +10660,12 @@ ul.tincc-paging li {
 #loan-interest table{ width: 745px;}
 #loan-interest table tr:nth-child(even) { background: #ededed;}
 #loan-interest table tr:nth-child(odd) { background: #fff;}
-#loan-interest table th{ text-align: center;font-weight: bold;color: #055699;position: relative;padding: 5px;}
+#loan-interest table th{ text-align: center;font-weight: bold;color: #008b33;position: relative;padding: 5px;}
 #loan-interest table, #loan-interest table td{ border: 1px solid #ccc;padding: 5px;}
-#loan-interest table tr th span{ position: absolute;right: 0;width: 3px;color: #055699;}
+#loan-interest table tr th span{ position: absolute;right: 0;width: 3px;color: #008b33;}
 #loan-interest .boxinfo{ border: 1px solid #ccc;padding: 15px;margin-top: 20px;border-bottom: none;}
 #loan-interest .boxinfo .leftbox{ width: 150px;display: block;float: left;}
-#loan-interest .boxinfo .rightbox{ color: #055699;font-weight: bold;padding-left: 15px;}
+#loan-interest .boxinfo .rightbox{ color: #008b33;font-weight: bold;padding-left: 15px;}
 #loan-interest .caculate{ background-image: url('/images/httc/btn.jpg');width: 108px;line-height: 26px;color: #fff;font-weight: bold;display: block;text-align: center;margin: 15px auto 0;}
 #loan-interest .errorMessage{ line-height: 25px;}
 .branch{border-top: 1px solid #ddd;padding-top: 10px;}
@@ -10678,7 +10678,7 @@ ul.tincc-paging li {
 .lookup .lookup-search select {width:176px;height:26px;}
 .lookup .lookup-search .lookup-button
 {
-background-color: #055699;
+background-color:  #008b33;
 width: 80px;
 text-align: center;
 height: 26px;
@@ -10722,7 +10722,7 @@ font-size: 14px !important;
 .col-item-title a{ font-weight: bold;color: #fff;font-size: 14px;}
 .col-item-2{ width: 290px;float: right;}
 .col-item-2 ul li{margin-bottom: 22px;margin-left: 5px;list-style: none;clear: both;}
-.col-item-2 ul li a{ color: #055699;font-weight: bold; }
+.col-item-2 ul li a{ color: #008b33;font-weight: bold; }
 .col-item-2 ul li img{ float: left;margin-right: 10px;border: 1px solid #bfbfbf;width: 91px;height: 59px;}
 .f-list-news .view-more a{color: #319c00;font-style: italic;margin-top: 10px;display: block;}
 .not-found{ font-weight: bold;font-size: 15px;color: #777777;padding: 20px;text-align: center;}
@@ -10763,5 +10763,5 @@ font-size: 14px !important;
 .banner-slide ul li { display: block; float: left; width: 745px;}
 .banner-slide ul li img{ width: 745px;}	
 .banner-slide .dots { position: absolute; right: 10px; bottom: 15px;}
-.banner-slide .dots li {display: inline-block; width: 8px; height: 8px; margin: 0 4px; border: 1px solid #055699; border-radius: 6px; cursor: pointer; text-indent: -999em; background-color: #ffffff;}
-.banner-slide .dots li.active {	background: #055699;}
+.banner-slide .dots li {display: inline-block; width: 8px; height: 8px; margin: 0 4px; border: 1px solid  #008b33; border-radius: 6px; cursor: pointer; text-indent: -999em; background-color: #ffffff;}
+.banner-slide .dots li.active {	background: #008b33;}

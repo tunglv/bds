@@ -56,8 +56,7 @@
 <div class="menupad"></div>
 <div id="page-navigative-menu">
 <div class="ihome">
-    <a href="http://<?php echo $this->domain?>"><img
-            src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/homea.gif"></a>
+    <a href="http://<?php echo $this->domain?>"><img style="height: 27px;padding: 1px 10px;" src="<?php echo Yii::app()->baseUrl ?>/themes/web/files/images/homea.gif"></a>
 </div>
 <ul class="dropdown-navigative-menu">
 <li class="lv0"><a href="<?php echo Yii::app()->createUrl('/web/sale/list', array('typeOf' => 'tong-hop'));?>" class="haslink ">Nhà đất bán</a>

@@ -185,11 +185,11 @@
 <div class="product-list tin-danh-cho-ban" style="padding-top: 10px;">
     <style>
         #header-product_list li{
-            background-color: #055699;color: #fff;
+            background-color:  #008b33;color: #fff;
             cursor: pointer;
         }
         #header-product_list li.active, #header-product_list li:hover{
-            border: 1px solid #055699;color: #000;background-color: transparent;
+            border: 1px solid  #008b33;color: #000;background-color: transparent;
         }
     </style>
     <ul id="header-product_list" style="list-style: none;text-align: center;height: 55px;display: block;padding-left: 5px;margin-bottom: 10px;">
@@ -346,7 +346,7 @@
 <!--        </div>-->
 <!--        <div class="list">-->
 <!--            <div class="aligncenter"><a href="--><?php //echo $pt[0]->url?><!--"><img style="width: 100%" src="--><?php //echo $pt[0]->getImageUrl()?><!--" alt="--><?php //echo $pt[0]->title?><!--"></a></div>-->
-<!--            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="--><?php //echo $pt[0]->url?><!--" style="color: #055699 !important; font-weight: bold;">--><?php //echo $pt[0]->title?><!--</a></div>-->
+<!--            <div style="display: block; margin: 5px 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="--><?php //echo $pt[0]->url?><!--" style="color:  #008b33 !important; font-weight: bold;">--><?php //echo $pt[0]->title?><!--</a></div>-->
 <!--            <ul>-->
 <!--                --><?php //foreach($pt as $_key => $_val):?>
 <!--                    --><?php //if($_key != 0):?>
@@ -473,8 +473,6 @@
 
 <div style="clear:both;"></div>
 
-<iframe style="width: 100%;height: auto" src="https://www.youtube.com/embed/poAQThYmzvU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-
 <div class="container-common">
     <div id="ctl49_HeaderContainer" class="box-header" style="height: auto;">
         <div class="name_tit" align="center" style="margin-bottom: 0;">
@@ -483,18 +481,18 @@
     </div>
     <div id="ctl49_BodyContainer" class="bor_box">
         <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-            <input id="customer-name" type="text" placeholder="HỌ VÀ TÊN" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <input id="customer-name" type="text" placeholder="HỌ VÀ TÊN" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid  #008b33;padding: 5px;">
             <span id="error-customer-name" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Họ tên không được để trống</span>
         </div>
         <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-            <input id="customer-phone" type="text" onkeydown="inputNumeric(event)" placeholder="SỐ ĐIỆN THOẠI" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <input id="customer-phone" type="text" onkeydown="inputNumeric(event)" placeholder="SỐ ĐIỆN THOẠI" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid  #008b33;padding: 5px;">
             <span id="error-customer-phone" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Số điện thoại không hợp lệ</span>
         </div>
         <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;">
-            <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 5px;">
+            <input id="customer-email" type="text" placeholder="ĐỊA CHỈ EMAIL" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid  #008b33;padding: 5px;">
             <span id="error-customer-email" style="display: none;clear:both;color: #f00;font-size: 11px;text-align: center;">Email không hợp lệ</span>
         </div>
-        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span id="submit_customer_registered" onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid #055699;padding: 2px;background-color: #055699;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
+        <div class="customer-name" style="display: block;margin: 0 auto;padding-top: 10px;"><span id="submit_customer_registered" onclick="customer_registered()" style="border-radius: 5px;width: 90%;margin: 0 auto;display: block;border: 1px solid  #008b33;padding: 2px;background-color:  #008b33;color: #fff;font-weight: bold;text-align: center;cursor: pointer;">ĐĂNG KÝ</span></div>
     </div>
     <div id="ctl49_FooterContainer">
     </div>
@@ -593,6 +591,10 @@
 <div style="clear: both; margin-bottom: 10px;">
 </div>
 
+<iframe style="width: 100%;height: auto" src="https://www.youtube.com/embed/poAQThYmzvU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+<div style="clear: both; margin-bottom: 10px;">
+</div>
 <div class="container-common" style="margin-bottom: 10px;">
     <div id="ctl44_HeaderContainer" class="box-header">
         <div class="name_tit" align="center">
@@ -604,7 +606,7 @@
             <div id="suport">
                 <div class="widget-content">
                     <center><h3 style="font-size: 14px;padding-top: 20px;">Hot line</h3></center>
-                    <center><span style="font-weight: bold;color: #055699;">0976.078.988 - 0936.404.616 - 0986.616.445</span></center>
+                    <center><span style="font-weight: bold;color:  #008b33;">0976.078.988 - 0936.404.616 - 0986.616.445</span></center>
                     <!--                        <center><a href="Skype:utlethi_hua?chat"> <img src="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F3.bp.blogspot.com%2F-t7osA3Ikqa4%2FVG9y1yaBtpI%2FAAAAAAAAAsg%2FcoB5nR17IDM%2Fs1600%2FdSTsg.png&amp;container=blogger&amp;gadget=a&amp;rewriteMime=image%2F*" title="Lê Út luôn sẵn sàng hỗ trợ bạn" width="160" height="50" alt=""> </a><br></center>-->
                     <!--                        <center><p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;"><strong><span style="color: #0000ff;">Mrs:</span> <span style="color: #ff0000;">Lê Út</span></strong></span></p></center>-->
 
@@ -623,7 +625,7 @@
                     <center><a href="ymsgr:sendim?phaletrangnd90" mce_href="ymsgr:sendim?phaletrangnd90" border="0"><img src="http://opi.yahoo.com/online?u=phaletrangnd90&amp;m=g&amp;t=2" mce_src="http://opi.yahoo.com/online?u=phaletrangnd90&amp;m=g&amp;t=2"></a><center>
                             <center><p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;"><strong><span style="color: #0000ff;">Mrs:</span> <span style="color: #ff0000;">Lê Út</span></strong></span></p></center></center></center>
 
-                    <center><a href="mailto:levy.hua@gmail.com?subject=Liên hệ mua bán chung cư" style="font-size: 14px;font-weight: bold;margin: 20px;display: block;color: #055699">levy.hua@gmail.com</a></center>
+                    <center><a href="mailto:levy.hua@gmail.com?subject=Liên hệ mua bán chung cư" style="font-size: 14px;font-weight: bold;margin: 20px;display: block;color:  #008b33">levy.hua@gmail.com</a></center>
                 </div>
             </div>
         </div>
