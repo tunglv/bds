@@ -43,7 +43,7 @@
 <div id="MainContent"></div>
 <div class="div_2col">
 
-<div id="TopRightMainContent" class="col_cent" style="width: 768px;">
+<div id="TopRightMainContent" class="col_cent" style="width: 968px;">
 
 <div class="news-list-border-background">
     <ul class="news-list-thumb">
@@ -72,7 +72,7 @@
             <ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 407px; top: -185px;">
                 <?php foreach($news as $_ky => $_val):?>
                     <?php if($_key < 6):?>
-                        <li class="li_<?php echo $_ky?>" style="overflow: hidden; float: none; width: 768px; height: 20px;">
+                        <li class="li_<?php echo $_ky?>" style="overflow: hidden; float: none; width: 968px; height: 20px;">
                             <a href="<?php echo $_val->url?>" title="<?php echo $_val->title?>"><?php echo $_val->title?></a>
                         </li>
                     <?php endif;?>
@@ -129,7 +129,7 @@
                  src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
                  altsrc="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091727-7d88.jpg"
                  link="http://skycenter.com.vn/" bid="2610" tip="" tp="6" w="780" h="90">
-                <object id="obj2610" width="780px" border="0" height="90px" class="view-count" bannerid="2610"
+                <center><object id="obj2610" width="780px" border="0" height="90px" class="view-count" bannerid="2610"
                         codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
                         classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
                     <param value="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
@@ -143,14 +143,14 @@
                            pluginspage="http://www.macromedia.com/go/getflashplayer"
                            src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
                            flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2610">
-                </object>
+                </object></center>
             </div>
             <div class="adshareditem aditem" time="10" style="display: block;"
                  src="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
                  altsrc="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081106-739f.jpg"
                  link="http://sunviewtown.vn/tin-tuc--su-kien/chuong-trinh-vui-xuan-cung-sunview-town.html" bid="2613"
                  tip="" tp="6" w="780" h="90">
-                <object id="obj2613" width="780px" border="0" height="90px" class="view-count" bannerid="2613"
+                <center><object id="obj2613" width="780px" border="0" height="90px" class="view-count" bannerid="2613"
                         codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
                         classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
                     <param value="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
@@ -164,7 +164,7 @@
                            pluginspage="http://www.macromedia.com/go/getflashplayer"
                            src="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
                            flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2613">
-                </object>
+                </object></center>
             </div>
         </div>
     </div>
@@ -201,11 +201,11 @@
     <ul id="header-product_list" style="list-style: none;text-align: center;height: 55px;display: block;padding-left: 5px;margin-bottom: 10px;">
         <li project="overview-project" class="detail-project active" style="width: 11%;display: inline-block;clear: both;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">Giới thiệu chung</li>
         <li project="boss-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 50px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Chủ đầu tư</li>
-        <li project="desgin-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Mặt bằng và thiết kế căn hộ</li>
+        <li project="desgin-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;line-height: 28px">Mặt bằng và thiết kế căn hộ</li>
         <li project="quote-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Bảng giá</li>
         <li project="process-pay-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">Tiến độ thanh toán</li>
         <li project="bonus-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Ưu đãi</li>
-        <li project="loan-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Hỗ trợ vay vốn ngân hàng</li>
+        <li project="loan-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;box-shadow: 1px 1px 1px #000;line-height: 28px;">Hỗ trợ vay vốn ngân hàng</li>
         <li project="process-submit-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 28px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">Tiến độ thi công</li>
         <li project="contract-project" class="detail-project" style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">Hợp đồng</li>
     </ul>

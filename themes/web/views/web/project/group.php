@@ -37,7 +37,7 @@
 
 </div>
 <div class="clear"></div>
-<div class="tc-duan-2" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 540px;">
+<div class="tc-duan-2" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 740px;">
     <ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 1980px; left: -720px;">
         <?php foreach ($project as $_key => $_val): ?>
             <li id="item_<?php echo $_key ?>" style="overflow: hidden; float: left; width: 170px; height: 168px;">
@@ -83,7 +83,7 @@
         // $(function () {
         $(".tc-duan-2").jCarouselLite({
             vertical: false,
-            visible: 3,
+            visible: 4,
             auto: 4000,
             speed: 1500,
             btnNext: ".btnnext",
