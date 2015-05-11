@@ -57,9 +57,9 @@
 
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/banner.js"></script>
 <div class="site-center">
-        <?php $this->renderPartial('//common/header', array('catagory'=>$this->catagory)); ?>
+        <?php $this->renderPartial('//common/header'); ?>
         <?php echo $content ?>
-        <?php $this->renderPartial('//common/footer'); ?>
+        <?php $this->renderPartial('//common/footer', array('hotline'=>$this->hotline)); ?>
 </div>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/jquery.bt.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/common.js"></script>

@@ -1,11 +1,11 @@
 <?php
 
-class ContactController extends AdminController
+class HotlineController extends AdminController
 {
     public function init(){
         parent::init();
-        $this->layout = '//admin/contact/_layout';
-        $this->menu_parent_selected = 'contact';
+        $this->layout = '//admin/hotline/_layout';
+        $this->menu_parent_selected = 'hotline';
 
     }
 
@@ -44,15 +44,15 @@ class ContactController extends AdminController
      */
     public function actionCreate()
     {
-        $this->menu_child_selected = 'contact_create';
+        $this->menu_child_selected = 'hotline_create';
         $this->menu_sub_selected = 'create';
 
-        $model = new Contact();
+        $model = new Hotline();
 
-        if(isset($_POST['Contact']))
+        if(isset($_POST['Hotline']))
         {
 //            Yii::import('ext.MyDateTime');
-            $post = Yii::app()->request->getPost('Contact');
+            $post = Yii::app()->request->getPost('Hotline');
             $model->attributes = $post;
 //            $model->manager_id = $model->manager_id ? $model->manager_id : $this->manager->id;
 //            $model->created = MyDateTime::getCurrentTime();
@@ -66,7 +66,7 @@ class ContactController extends AdminController
                 $model->setIsNewRecord(TRUE);
                 $model->insert();
 
-                Yii::app()->user->setFlash('success', "Post contact was added successful!");
+                Yii::app()->user->setFlash('success', "Post hotline was added successful!");
                 $this->refresh();
             }
         }
@@ -84,17 +84,17 @@ class ContactController extends AdminController
      */
     public function actionUpdate($id)
     {
-        $this->menu_child_selected = 'contact_update';
+        $this->menu_child_selected = 'hotline_update';
         $this->menu_sub_selected = 'update';
 
-        $model= Contact::model()->findByPk($id);
+        $model= Hotline::model()->findByPk($id);
 
         if(!$model) $this->redirect('create');
 
-        if(isset($_POST['Contact']))
+        if(isset($_POST['Hotline']))
         {
 //            Yii::import('ext.MyDateTime');
-            $post = Yii::app()->request->getPost('Contact');
+            $post = Yii::app()->request->getPost('Hotline');
             //             echo "<pre>";print_r($post);echo "</pre>";die;
             $model->attributes=$post;
 
@@ -103,7 +103,7 @@ class ContactController extends AdminController
 
                 $model->update();
 
-                Yii::app()->user->setFlash('success', "Post contact was updated successful!");
+                Yii::app()->user->setFlash('success', "Post hotline was updated successful!");
                 $this->refresh();
             }
         }
@@ -120,7 +120,7 @@ class ContactController extends AdminController
      */
     public function loadModel($id)
     {
-        $model = Contact::model()->findByPk($id);
+        $model = Hotline::model()->findByPk($id);
         if($model===null)
             throw new CHttpException(404,'The requested page does not exist.');
         return $model;

@@ -4,10 +4,9 @@
             <h4>Liên hệ</h4>
         </div>
     </div>
-    <div style="padding: 0 10px 10px;">
-        <center><span style="padding: 10px 0;display: block;font-size: 16px;">MRS. LÊ ÚT</span></center>
-        <center><span>0976.078.988</span></center><center><span>0936.404.616</span></center><center><span>0986.616.445</span></center>
-    </div>
+    <div style="padding: 15px 10px 10px;">
+        <center><?php echo $hotline->content?></center>
+        </div>
 </div>
 <style type="text/css">
     .footer-bottom-top-1 a {

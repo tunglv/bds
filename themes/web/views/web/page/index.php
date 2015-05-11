@@ -193,6 +193,8 @@
         }
         .product-list.tin-danh-cho-ban img{
             max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
         .product-list.tin-danh-cho-ban ul{
             list-style: none;

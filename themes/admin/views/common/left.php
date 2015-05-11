@@ -113,7 +113,15 @@
                     <span class="icon-fire"></span> Liên hệ với chúng tôi
                 </a>
                 <ul class="<?php echo ($this->menu_parent_selected == 'contact') ? 'opened':'closed'?>">
-                    <li<?php if($this->menu_child_selected == 'contact_create'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">Nội dung</a></li>
+                    <li<?php if($this->menu_child_selected == 'contact_update'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">Nội dung</a></li>
+                </ul>
+            </li>
+            <li class="dropdown <?php if($this->menu_parent_selected == 'hotline'):?>active<?php endif?>">
+                <a href="<?php echo $this->createUrl('/admin/hotline/update?id=1')?>">
+                    <span class="icon-fire"></span> Hotline
+                </a>
+                <ul class="<?php echo ($this->menu_parent_selected == 'hotline') ? 'opened':'closed'?>">
+                    <li<?php if($this->menu_child_selected == 'hotline_update'):?> class="active"<?php endif?>><a href="<?php echo $this->createUrl('/admin/hotline/update?id=1')?>">Nội dung</a></li>
                 </ul>
             </li>
             <li class="dropdown <?php if($this->menu_parent_selected == 'registered'):?>active<?php endif?>">

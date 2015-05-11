@@ -1,6 +1,6 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="pagetitle">
-    <h1>Contact Us</h1>
+    <h1>Hotline Us</h1>
 </div><!--pagetitle-->
 
 <div class="maincontent">
@@ -8,7 +8,7 @@
         <div class="tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">
             <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
                 <?php if($this->manager->isManager):?>
-                    <a href="<?php echo $this->createUrl('/admin/contact/update?id=1')?>">Cập nhật contact us</a></li>
+                    <a href="<?php echo $this->createUrl('/admin/hotline/update?id=1')?>">Cập nhật hotline us</a></li>
                 <?php endif?>
             </ul>
         

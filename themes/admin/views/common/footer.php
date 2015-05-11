@@ -2,7 +2,7 @@
     
     <div class="footer">
         <div class="footerleft"><?php echo $this->siteName?> Admin Area</div>
-        <div class="footerright">&copy; Hỗ trợ kỹ thuật - Skype: Thìn Đỗ Văn - Phone: +84973540638</div>
+        <div class="footerright">&copy; Hỗ trợ kỹ thuật - Skype: Lê Tùng - Phone: +84968142486</div>
     </div><!--footer-->
 
     

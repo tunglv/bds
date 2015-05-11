@@ -13,13 +13,12 @@
         //title, desc for site
         public $title;
         public $desc;
-        public $catagory;
 
-        public $responsive1200 = FALSE;
+        public $hotline;
 
         public function init(){
             parent::init();
-            
+            $this->hotline = Hotline::model()->find();
 //            $this->user = Yii::app()->user->user;
 //            $this->manager = Yii::app()->userAdmin->manager;
 //            $this->catagory = Catagory::model()->findAll('status=:status', array(':status'=>'ENABLE'));
