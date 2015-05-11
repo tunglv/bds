@@ -70,11 +70,11 @@ class Registered extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'phone' => 'Phone',
+			'name' => 'Họ tên',
+			'phone' => 'Số điện thoại',
 			'email' => 'Email',
-			'status' => 'Status',
-			'created' => 'Created',
+			'status' => 'Trạng thái',
+			'created' => 'Thời gian đăng ký',
 		);
 	}
 

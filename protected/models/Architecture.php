@@ -100,15 +100,15 @@ class Architecture extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
+			'title' => 'Tiêu đề',
 			'alias' => 'Alias',
-			'desc' => 'Desc',
-			'content' => 'Content',
+			'desc' => 'Mô tả ngắn',
+			'content' => 'Nội dung',
 			'viewed' => 'Viewed',
-			'topic_id' => 'Topic',
+			'topic_id' => 'Thuộc chủ đề',
 			'created' => 'Created',
-			'type' => 'Type',
-			'image' => 'Image',
+			'type' => 'Thuộc chuyên mục',
+			'image' => 'Ảnh đại diện',
 		);
 	}
 

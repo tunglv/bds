@@ -98,15 +98,15 @@ class Pt extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
+			'title' => 'Tiêu đề',
 			'alias' => 'Alias',
-			'desc' => 'Desc',
-			'content' => 'Content',
+			'desc' => 'Mô tả ngăn',
+			'content' => 'Nội dung',
 			'viewed' => 'Viewed',
-			'topic_id' => 'Topic',
+			'topic_id' => 'Thuộc chủ đề',
 			'created' => 'Created',
-			'image' => 'Image',
-			'type' => 'Type',
+			'image' => 'Ảnh đại diện',
+			'type' => 'Thuộc chuyên mục',
 		);
 	}
 

@@ -62,7 +62,7 @@ class Contact extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'content' => 'Content',
+			'content' => 'Nội dung',
 			'created' => 'Created',
 		);
 	}

@@ -99,14 +99,14 @@ class Decorate extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
+			'title' => 'Tiêu đề',
 			'alias' => 'Alias',
-			'desc' => 'Desc',
-			'content' => 'Content',
-			'topic_id' => 'Topic',
+			'desc' => 'Mô tả ngắn',
+			'content' => 'Nội dung',
+			'topic_id' => 'Thuộc chủ đề',
 			'created' => 'Created',
-			'type' => 'Type',
-			'image' => 'Image',
+			'type' => 'Thuộc chuyên mục',
+			'image' => 'Ảnh đại diện',
 		);
 	}
 

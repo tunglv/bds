@@ -115,16 +115,16 @@ class Project extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Tên dự án',
 			'alias' => 'Alias',
-			'address' => 'Address',
-			'mobile' => 'Mobile',
+			'address' => 'Địa chỉ',
+			'mobile' => 'Số điện thoại',
 			'fax' => 'Fax',
 			'website' => 'Website',
 			'email' => 'Email',
 			'yahoo' => 'Yahoo',
-			'image' => 'Image',
-			'type' => 'Type',
+			'image' => 'Ảnh đại diện',
+			'type' => 'Thuộc loại hình',
 			'overview' => 'Giới thiệu chung',
 			'bang_gia' => 'Bảng giá',
 			'thiet_ke' => 'Mặt bằng và thiết kế',
@@ -136,7 +136,10 @@ class Project extends CActiveRecord
 			'chu_dau_tu' => 'Chủ đầu tư',
 			'created' => 'Created',
             'saler_id' => 'Saler',
-            'is_home' => 'Hiển thị trang chủ'
+            'is_home' => 'Hiển thị trang chủ',
+            'district_id' => 'Quận/huyện',
+            'province_id' => 'Tỉnh/Tp',
+            'ward_id' => 'Phường/Xã',
 		);
 	}
 

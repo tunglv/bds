@@ -91,7 +91,7 @@ class TopicDecorate extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
+			'title' => 'Tiêu đề',
 			'created' => 'Created',
 		);
 	}
