@@ -214,19 +214,23 @@
     <hr style="width: 80%;">
     <div style="clear:both;margin-bottom: 10px;"></div>
 
-    <div class="infor-project" id="overview-project" style="display: block;clear:both;margin: 0 5px 10px;"><?php echo $project_home->overview?></div>
-    <div class="infor-project" id="boss-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->chu_dau_tu?></div>
-    <div class="infor-project" id="desgin-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->thiet_ke?></div>
-    <div class="infor-project" id="quote-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->bang_gia?></div>
-    <div class="infor-project" id="process-pay-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do_thanh_toan?></div>
-    <div class="infor-project" id="bonus-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->uu_dai?></div>
-    <div class="infor-project" id="loan-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->ho_tro_vay_von?></div>
-    <div class="infor-project" id="process-submit-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do?></div>
-    <div class="infor-project" id="contract-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->hop_dong?></div>
+    <div id="infor-project" style="margin-top:5px;height:720px;overflow:auto;" class="customeScrollbar mCustomScrollbar _mCS_1">
+        <div class="infor-project" id="overview-project" style="display: block;clear:both;margin: 0 5px 10px;"><?php echo $project_home->overview?></div>
+        <div class="infor-project" id="boss-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->chu_dau_tu?></div>
+        <div class="infor-project" id="desgin-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->thiet_ke?></div>
+        <div class="infor-project" id="quote-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->bang_gia?></div>
+        <div class="infor-project" id="process-pay-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do_thanh_toan?></div>
+        <div class="infor-project" id="bonus-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->uu_dai?></div>
+        <div class="infor-project" id="loan-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->ho_tro_vay_von?></div>
+        <div class="infor-project" id="process-submit-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->tien_do?></div>
+        <div class="infor-project" id="contract-project" style="display: none;clear:both;margin: 0 5px 10px;"><?php echo $project_home->hop_dong?></div>
+    </div>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#header-product_list li.detail-project').click(function(){
+            $( "#infor-project .mCSB_container" ).css('top','0');
+            $( "#infor-project .mCSB_dragger" ).css('top','0');
             $('#header-product_list li.detail-project').removeClass('active');
             $(this).addClass('active');
             $('.infor-project').hide();
@@ -252,10 +256,8 @@
             </div>
         </div>
         <div id="ctl44_BodyContainer" class="bor_box">
-            <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;"
-                 class="customeScrollbar mCustomScrollbar _mCS_1">
-                <div class="mCustomScrollBox mCS-light" id="mCSB_1"
-                     style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+            <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;" class="customeScrollbar mCustomScrollbar _mCS_1">
+                <div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;">
                     <div class="mCSB_container" style="position: relative; top: 0px;">
                         <?php foreach($project as $_key => $_val):?>
                             <div>

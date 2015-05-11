@@ -118,6 +118,25 @@
 </li>
 <!--<li class="lv0"><a href="--><?php //echo Yii::app()->createUrl('/web/saler/list')?><!--" class="haslink ">Nhà mô giới tiêu biểu</a></li>-->
 <li class="lv0"><a href="/lien-he-toi-chung-toi" class="haslink ">Liên hệ</a></li>
+<li class="lv0" style="border: none; padding-top: 5px;padding-right: 5px;">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=614276168689514";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-share-button" data-href="http://chungcuvn.com.vn/" data-layout="button"></div>
+</li>
+<li class="lv0" style="border: none;padding-top: 5px;padding-left: 5px;">
+    <!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+        {lang: 'vi'}
+    </script>
+    <!-- Đặt thẻ này vào nơi bạn muốn nút chia sẻ kết xuất. -->
+    <div class="g-plus" data-action="share" data-annotation="none" data-href="http://chungcuvn.com.vn/"></div>
+</li>
 </ul>
 </div>
 <div class="menupad"></div>
