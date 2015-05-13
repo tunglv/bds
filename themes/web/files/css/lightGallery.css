@@ -43,7 +43,7 @@
 #lightGallery-Gallery .thumb_cont .thumb_inner{margin-left:-12px;padding:12px;max-height:290px;overflow-y:auto;}
 #lightGallery-Gallery .thumb_cont .thumb_info{background-color:#333;padding:7px 20px;}
 #lightGallery-Gallery .thumb_cont .thumb_info .count{color:#ffffff;font-weight:bold;font-size:12px;}
-#lightGallery-Gallery .thumb_cont .thumb_info .close{color:#FFFFFF;display:block;float:right !important;width:21px;position:relative;height:21px;border-radius:2px;margin-top:-2px;background:url("http://file1.batdongsan.com.vn/Images/Icons/icon_close.gif") no-repeat;-webkit-transition:background-color 0.3s ease 0s;-moz-transition:background-color 0.3s ease 0s;-o-transition:background-color 0.3s ease 0s;-ms-transition:background-color 0.3s ease 0s;transition:background-color 0.3s ease 0s;z-index:1090;cursor:pointer;}
+#lightGallery-Gallery .thumb_cont .thumb_info .close{color:#FFFFFF;display:block;float:right !important;width:21px;position:relative;height:21px;border-radius:2px;margin-top:-2px;background:url("/themes/web/files/images/Icons/icon_close.gif") no-repeat;-webkit-transition:background-color 0.3s ease 0s;-moz-transition:background-color 0.3s ease 0s;-o-transition:background-color 0.3s ease 0s;-ms-transition:background-color 0.3s ease 0s;transition:background-color 0.3s ease 0s;z-index:1090;cursor:pointer;}
 #lightGallery-Gallery .thumb_cont .thumb_info .close i:after{left:6px;position:absolute;top:4px;}
 #lightGallery-Gallery .thumb_cont .thumb_info .close i:after, #lightGallery-close:after{font-family:'Slide-icons';font-style:normal;font-size:16px;}
 #lightGallery-Gallery .thumb_cont .thumb_info .close:hover{text-decoration:none;}
@@ -61,12 +61,12 @@
 #lightGallery-slider .info span:last-child{margin-top:6px;}
 #lightGallery-slider .info .title{font-size:16px;font-weight:bold;}
 #lightGallery-slider .info .desc{color:#DDDDDD;font-size:12px;}
-#lightGallery-close{color:#FFFFFF;height:21px;position:absolute;right:-11px;top:-11px;width:21px;z-index:1090;cursor:pointer;border-radius:2px;-webkit-transition:background-color 0.3s ease;-moz-transition:background-color 0.3s ease;-o-transition:background-color 0.3s ease;-ms-transition:background-color 0.3s ease;transition:background-color 0.3s ease;-webkit-backface-visibility:hidden;background:url("http://file1.batdongsan.com.vn/Images/Icons/icon_close.gif") no-repeat;}
+#lightGallery-close{color:#FFFFFF;height:21px;position:absolute;right:-11px;top:-11px;width:21px;z-index:1090;cursor:pointer;border-radius:2px;-webkit-transition:background-color 0.3s ease;-moz-transition:background-color 0.3s ease;-o-transition:background-color 0.3s ease;-ms-transition:background-color 0.3s ease;transition:background-color 0.3s ease;-webkit-backface-visibility:hidden;background:url("/themes/web/files/images/Icons/icon_close.gif") no-repeat;}
 #lightGallery-close:after{position:absolute;right:6px;top:3px;}
 #lightGallery-close:hover{text-decoration:none;background-color:#000;}
 #popupslide{background:none repeat scroll 0 0 #0A0A0A;border:1px solid #181818;bottom:30px;left:40px;padding:0;position:fixed;right:40px;top:30px;z-index:9;}
-#lightGallery-prev{height:52px !important;left:10px !important;position:absolute !important;top:50% !important;z-index:999;background:#0A0A0A url("http://file1.batdongsan.com.vn/Images/Icons/bg_slide_big.png") no-repeat left 0;height:52px;right:10px;width:29px;}
-#lightGallery-next{height:52px !important;right:10px !important;position:absolute !important;top:50% !important;background:#0A0A0A url("http://file1.batdongsan.com.vn/Images/Icons/bg_slide_big.png") no-repeat left -52px;width:29px;z-index:999;}
-#lightGallery-next:hover{background:#0A0A0A url("http://file1.batdongsan.com.vn/Images/Icons/bg_slide_big.png") no-repeat left -104px;cursor:pointer;}
-#lightGallery-prev:hover{background:#0A0A0A url("http://file1.batdongsan.com.vn/Images/Icons/bg_slide_big.png") no-repeat left -156px;cursor:pointer;}
-.cLthumb{background:#0A0A0A url("http://file1.batdongsan.com.vn/Images/Icons/showthumb.gif") no-repeat;height:30px !important;right:15px !important;position:absolute !important;top:46px !important;z-index:10000;}
+#lightGallery-prev{height:52px !important;left:10px !important;position:absolute !important;top:50% !important;z-index:999;background:#0A0A0A url("/themes/web/files/images/Icons/bg_slide_big.png") no-repeat left 0;height:52px;right:10px;width:29px;}
+#lightGallery-next{height:52px !important;right:10px !important;position:absolute !important;top:50% !important;background:#0A0A0A url("/themes/web/files/images/Icons/bg_slide_big.png") no-repeat left -52px;width:29px;z-index:999;}
+#lightGallery-next:hover{background:#0A0A0A url("/themes/web/files/images/Icons/bg_slide_big.png") no-repeat left -104px;cursor:pointer;}
+#lightGallery-prev:hover{background:#0A0A0A url("/themes/web/files/images/Icons/bg_slide_big.png") no-repeat left -156px;cursor:pointer;}
+.cLthumb{background:#0A0A0A url("/themes/web/files/images/Icons/showthumb.gif") no-repeat;height:30px !important;right:15px !important;position:absolute !important;top:46px !important;z-index:10000;}

@@ -107,6 +107,13 @@
 
 <div class="clear"></div>
 
+    <style>
+        .infor-project img{
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+
 <div class="infor-project" id="overview-project" style="display: block;clear:both;"><?php echo $project->overview?></div>
 <div class="infor-project" id="boss-project" style="display: none;clear:both;"><?php echo $project->chu_dau_tu?></div>
 <div class="infor-project" id="desgin-project" style="display: none;clear:both;"><?php echo $project->thiet_ke?></div>

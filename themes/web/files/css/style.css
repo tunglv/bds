@@ -403,7 +403,7 @@ strong, b {
         width: 122px;
         height: 26px;
         line-height: 26px;
-        background: url(http://file1.batdongsan.com.vn/Images/combobox.jpg) no-repeat 0 0;
+        background: url(/themes/web/files/images/combobox.jpg) no-repeat 0 0;
         z-index: 0;
         overflow: hidden;
         cursor: pointer;
@@ -1662,7 +1662,7 @@ a.link_blue:link {
 }
 
 .t_left-baiviet-header-right {
-    background: url(http://file1.batdongsan.com.vn/Images/tit-repeat-bottom.jpg);
+    background: url(/themes/web/files/images/tit-repeat-bottom.jpg);
     height: 25px;
 }
 
@@ -1977,7 +1977,7 @@ a.link_blue:link {
 #typicalBroker {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    background: url('http://file1.batdongsan.com.vn/Images/broker_line_bg.jpg') no-repeat bottom center;
+    background: url('/themes/web/files/images/broker_line_bg.jpg') no-repeat bottom center;
     margin-right: 10px;
 }
 
@@ -1998,7 +1998,7 @@ a.link_blue:link {
 }
 
 #typicalBroker .avatar {
-    background: url(http://file1.batdongsan.com.vn/Images/broker_avatar_bg.jpg);
+    background: url(/themes/web/files/images/broker_avatar_bg.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     padding-bottom: 3px;
@@ -2056,7 +2056,7 @@ a.link_blue:link {
         }
 
 .linktoall {
-    background-image: url(http://file1.batdongsan.com.vn/Images/broker_view_all.jpg);
+    background-image: url(/themes/web/files/images/broker_view_all.jpg);
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 30px;
@@ -2692,7 +2692,7 @@ a.link_blue:link {
     font-weight: bold;
     color: #f00;
     padding: 5px;
-    width: 735px;
+    width: 935px;
     background-color: #ccc;
     opacity: .7;
 }
@@ -2931,7 +2931,7 @@ a.link_blue:link {
 }
 
 .other-product .Header .Repeat {
-    width: 729px !important;
+    width: 929px !important;
 }
 
     .other-product .Header .Repeat h2 {
@@ -2950,7 +2950,7 @@ a.link_blue:link {
 }
 
 .enterprise-rightContent .viewmore {
-    background-image: url(http://file1.batdongsan.com.vn/Images/broker_view_all.jpg);
+    background-image: url(/themes/web/files/images/broker_view_all.jpg);
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 30px;
@@ -2964,7 +2964,7 @@ a.link_blue:link {
     display: inline-block;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    background-image: url(http://file1.batdongsan.com.vn/Images/broker_line_bg.jpg);
+    background-image: url(/themes/web/files/images/broker_line_bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     color: #333 !important;
@@ -2973,7 +2973,7 @@ a.link_blue:link {
 .enterprise-rightContent .broker-ava {
     float: left;
     width: 80px;
-    background: url(http://file1.batdongsan.com.vn/Images/broker_avatar_bg.jpg);
+    background: url(/themes/web/files/images/broker_avatar_bg.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     margin-right: 5px;
@@ -3872,7 +3872,7 @@ a.link_blue:link {
 
 .btn-xoa {
     border: none;
-    background: #fff url('http://file1.batdongsan.com.vn/Images/xoatin.gif') no-repeat;
+    background: #fff url('/themes/web/files/images/xoatin.gif') no-repeat;
     color: #666 !important;
     font-weight: normal !important;
     padding-left: 15px;
@@ -3904,7 +3904,7 @@ a.link_blue:link {
 }
 
     .right-title h2 {
-        background: url('http://file1.batdongsan.com.vn/Images/2arrow.jpg') no-repeat 0 5px;
+        background: url('/themes/web/files/images/2arrow.jpg') no-repeat 0 5px;
         padding-left: 12px;
     }
 
@@ -4939,7 +4939,7 @@ a.link_blue:link {
     float: left;
     list-style: none outside none;
     margin-bottom: 10px;
-    padding: 5px 5px 0;
+    padding: 5px 105px 0;
 }
 
     #detail .tabProject li {
@@ -6228,7 +6228,7 @@ table.lstMail a:visited {
 
 .timkiem {
     border: none;
-    background: #008b33 url('http://file1.batdongsan.com.vn/Images/timkiem.gif') no-repeat;
+    background: #008b33 url('/themes/web/files/images/timkiem.gif') no-repeat;
     width: 96px;
     height: 27px;
     color: #fff !important;
@@ -6437,7 +6437,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: #FFFFFF !important;
     padding: 5px 5px 5px 22px;
     border-radius: 5px;
-    background: #008b33 url('http://file1.batdongsan.com.vn/Images/arrowicon.jpg') no-repeat;
+    background: #008b33 url('/themes/web/files/images/arrowicon.jpg') no-repeat;
     background-position: 5px center;
 }
 
@@ -7858,7 +7858,7 @@ a.link_sr:hover {
 .smartphone {
     float: left;
     /*background: url('/Images/assets/smartphone.png') no-repeat;*/
-    background: url('http://file1.batdongsan.com.vn/Images/assets/dt_wap.png') no-repeat;
+    background: url('/themes/web/files/images/assets/dt_wap.png') no-repeat;
     width: 388px;
     height: 100%;
     margin: 0 0 0 60px;
@@ -7934,7 +7934,7 @@ a.link_sr:hover {
 /*  App */
 .app {
     float: left;
-    background: url('http://file1.batdongsan.com.vn/Images/assets/dt_app.png') no-repeat;
+    background: url('/themes/web/files/images/assets/dt_app.png') no-repeat;
     width: 395px;
     height: 100%;
     margin: 0 0 0 60px;
@@ -8924,7 +8924,7 @@ ul.tincc-paging li {
 .prjinfo {
     display: block;
     float: left;
-    width: 520px;
+    width: 720px;
     padding-left: 10px;
 }
 
@@ -9466,7 +9466,7 @@ ul.tincc-paging li {
 
         .suggestTT ul li {
             font-size: 11px;
-            list-style-image: url('http://file1.batdongsan.com.vn/Images/greenarrow.jpg');
+            list-style-image: url('/themes/web/files/images/greenarrow.jpg');
         }
 
     .suggestTT .arr {
@@ -9500,7 +9500,7 @@ ul.tincc-paging li {
 }
 
 .newicon {
-    background: url('http://file1.batdongsan.com.vn/Images/new-icon.jpg') no-repeat;
+    background: url('/themes/web/files/images/new-icon.jpg') no-repeat;
     background-position: center right;
 }
 
@@ -9515,7 +9515,7 @@ ul.tincc-paging li {
     }
 
 .icon-slide-show {
-    background: url("http://file1.batdongsan.com.vn/Images/Icons/icon_zoom.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    background: url("/themes/web/files/images/Icons/icon_zoom.png") no-repeat scroll left top rgba(0, 0, 0, 0);
     display: block;
     height: 28px;
     position: absolute;
@@ -9951,7 +9951,7 @@ ul.tincc-paging li {
     margin: 0 0 20px;
     padding: 10px 0px 10px 15px;
     font-weight: bold;
-    background: #008b33 url('http://file1.batdongsan.com.vn/Images/assets/arrowbluedown.jpg') no-repeat 460px center;
+    background: #008b33 url('/themes/web/files/images/assets/arrowbluedown.jpg') no-repeat 460px center;
 }
 
     .showSingle:hover {

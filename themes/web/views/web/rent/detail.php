@@ -56,7 +56,7 @@
     <div class="img-map">
         <div id="photoSlide" class="photo" style="position: relative;">
             <div id="divPhotoActive" class="show-img" style="display: table-row; cursor: pointer; height: 510px;">
-                <div style="display: table-cell; vertical-align: middle; min-height: 326px; width:745px; border: 0px; text-align: center">
+                <div style="display: table-cell; vertical-align: middle; min-height: 326px; width:945px; border: 0px; text-align: center">
                     <img src="<?php echo $productImage[0]->getUrl('856')?>" alt="<?php echo $sale->title?>" style="width:auto; height:auto;" id="imgSlide1">
                     <img style="width:auto; height:auto;display: none" id="imgSlide2" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/images/no-photo.jpg">
                 </div>

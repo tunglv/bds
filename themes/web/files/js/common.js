@@ -40,7 +40,7 @@ $(document).ready(function () {
             $('img').each(function () {
                 if ($(this).attr('bannerid') == undefined && $(this).attr('noloaderror') == undefined) {
                     if ((typeof this.naturalWidth != "undefined" && this.naturalWidth == 0) || this.readyState == 'uninitialized') {
-                        $(this).attr('src', 'http://file1.batdongsan.com.vn/Images/no-photo.jpg');
+                        $(this).attr('src', '/themes/web/files/images/no-photo.jpg');
                     }
                 }
             });
