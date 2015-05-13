@@ -87,13 +87,13 @@ table td, table th, .hb-data {border: none !important;}
 
 #broker_intro{page-break-inside:auto !important; }
 
-.div-listcompany .c2, table.batquai, table.batquai td,  table.batquai tr{ border: 1px solid #008b33 !important;}
+.div-listcompany .c2, table.batquai, table.batquai td,  table.batquai tr{ border: 1px solid #006478 !important;}
 
 h1, h2
-{ font-size: 1.2em;margin: 5px;color: #008b33  !important;font-weight: bold;}
-.tit_l a span, .c11 a, h2.c11, .c1, .div-company .c11 a, .batquai1{ color: #008b33  !important;padding: 0;}
+{ font-size: 1.2em;margin: 5px;color: #006478  !important;font-weight: bold;}
+.tit_l a span, .c11 a, h2.c11, .c1, .div-company .c11 a, .batquai1{ color: #006478  !important;padding: 0;}
 .div-company .d1, .enterprisedetail, .news-slide-show-item .news-list{ border: none !important; }
-.div-company h1, .a11 h2, .borderbold{border-bottom:  1px solid #008b33 !important; }
+.div-company h1, .a11 h2, .borderbold{border-bottom:  1px solid #006478 !important; }
 .div-company .d11{width: 18% !important;}
 .div-company .d12{width: 75% !important;}
 .tintuc-row1 .tc-img{width: 20% !important;}

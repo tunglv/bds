@@ -39,7 +39,7 @@
     }
     .yiiPager li.active{
         text-align: center !important;
-        background-color: #008b33;
+        background-color: #006478;
         margin-left: 2px !important;
         width: auto !important;
         color: White !important;
@@ -243,17 +243,17 @@
     }
 
     .divProjectInfo-right .infoName {
-        color: #008b33;
+        color: #006478;
     }
 
     .divProjectInfo-right #ProjName {
-        color: #008b33;
+        color: #006478;
         font-size: 18px;
         font-weight: bold;
     }
 
     .project-container a.lnkProjectDetail {
-        color: #008b33;
+        color: #006478;
         background: url("/Images/project-details-icon.png") no-repeat 0 0 #ffffff;
         width: 96px;
         height: 25px;

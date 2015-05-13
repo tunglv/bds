@@ -17,7 +17,7 @@
     border-top-right-radius: 8px;
     text-align:center;
     text-transform:uppercase;
-	background-color: #008b33;
+	background-color: #006478;
 	color: #fff;
 	padding: 5px 0 4px 0px;
 	font-weight: bold;font-size: 12px;
@@ -72,7 +72,7 @@
     border-top-right-radius: 8px;
     text-align:center;
     text-transform:uppercase;
-	background-color: #008b33;
+	background-color: #006478;
 	color: #fff;
 	padding: 5px 0 4px 0px;
 	font-weight: bold;
@@ -100,13 +100,13 @@ background: none;
 	padding: 10px 0 0 15px;
 }
 
-.box2 .item .more a:visited { color: #008b33; text-decoration: none;}
-.box2 .item .more a:link { color: #008b33; text-decoration: none;}
-.box2 .item .more a:hover { color: #008b33; text-decoration: underline;}
+.box2 .item .more a:visited { color: #006478; text-decoration: none;}
+.box2 .item .more a:link { color: #006478; text-decoration: none;}
+.box2 .item .more a:hover { color: #006478; text-decoration: underline;}
 
 .box2 .item .text {
 	font-weight: bold;
-	color: #008b33;
+	color: #006478;
 	padding: 10px 0 5px 15px;
 }
 
@@ -121,7 +121,7 @@ background: none;
 }
 
 .box2 .item input {
-	background-color: #008b33;
+	background-color: #006478;
 	color: #fff;
 	float: right;
 	border: none;
@@ -130,7 +130,7 @@ background: none;
 
 .box2 .item .text1 {
 	padding: 0 0 5px 0;
-	color: #008b33;
+	color: #006478;
 }
 
 .box2 .item select {
@@ -147,7 +147,7 @@ background: none;
 }
 
 .vlxd .h1 {
-	color: #008b33;
+	color: #006478;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120%;
@@ -203,14 +203,14 @@ background: none;
 }
 
 .vlxd .paging li.current {
-	background-color: #008b33;
+	background-color: #006478;
 	font-weight: bold;
 	color: #fff;
 }
 
 .vlxd .paging li a:visited { color: #666; text-decoration: none;}
 .vlxd .paging li a:link { color: #666; text-decoration: none;}
-.vlxd .paging li a:hover { color: #008b33; text-decoration: underline;}
+.vlxd .paging li a:hover { color: #006478; text-decoration: underline;}
 
 /* quytrinh */
 .quytrinh {
@@ -219,7 +219,7 @@ background: none;
 }
 
 .quytrinh .h1 {
-	color: #008b33;
+	color: #006478;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120%;
@@ -284,7 +284,7 @@ background: none;
 }
 
 .banggia .h1 {
-	color: #008b33;
+	color: #006478;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120%;
@@ -295,13 +295,13 @@ background: none;
 }
 
 .banggia .h2 {
-	color: #008b33;
+	color: #006478;
 	font-size: 150%;
 	margin: 0 0 10px 0;
 }
 
 .banggia .h3 {
-	color: #008b33;
+	color: #006478;
 	font-size: 150%;
 	margin: 30px 0 10px 0;
 }
@@ -373,14 +373,14 @@ background: none;
 }
 
 .banggia .paging li.current {
-	background-color: #008b33;
+	background-color: #006478;
 	font-weight: bold;
 	color: #fff;
 }
 
 .banggia .paging li a:visited { color: #666; text-decoration: none;}
 .banggia .paging li a:link { color: #666; text-decoration: none;}
-.banggia .paging li a:hover { color: #008b33; text-decoration: underline;}
+.banggia .paging li a:hover { color: #006478; text-decoration: underline;}
 
 .banggia .imgHead {
 	float: left;
@@ -414,7 +414,7 @@ background: none;
 }
 
 .banggia .other .h4 {
-	color: #008b33;
+	color: #006478;
 	margin: 20px 0 10px 0;
 	font-weight: bold;
 }
@@ -431,7 +431,7 @@ background: none;
 }
 
 .vanban .h1 {
-	color: #008b33;
+	color: #006478;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120%;
@@ -468,9 +468,9 @@ background: none;
 	padding: 0 0 0 5px;
 }
 
-.vanban .item li a:visited { color: #008b33; text-decoration: none;}
-.vanban .item li a:link { color: #008b33; text-decoration: none;}
-.vanban .item li a:hover { color: #008b33; text-decoration: underline;}
+.vanban .item li a:visited { color: #006478; text-decoration: none;}
+.vanban .item li a:link { color: #006478; text-decoration: none;}
+.vanban .item li a:hover { color: #006478; text-decoration: underline;}
 
 .vanban .search {
 	width: auto;
@@ -591,9 +591,9 @@ background: none;
 .vanban .info_k a:link { color: #F30; text-decoration: none;background-color: #ffffff;padding: 0;}
 .vanban .info_k a:hover { color: #F30; text-decoration: underline;background-color: #ffffff;padding: 0;}
 
-.project a:visited { color: #008b33; text-decoration: none;background-color: #ffffff;padding: 0;}
-.project a:link { color: #008b33; text-decoration: none;background-color: #ffffff;padding: 0;}
-.project a:hover { color: #008b33; text-decoration: underline;background-color: #ffffff;padding: 0;}
+.project a:visited { color: #006478; text-decoration: none;background-color: #ffffff;padding: 0;}
+.project a:link { color: #006478; text-decoration: none;background-color: #ffffff;padding: 0;}
+.project a:hover { color: #006478; text-decoration: underline;background-color: #ffffff;padding: 0;}
 .vanban .download {
 	background: url(../assets/download-alt-1.png) 0 0 no-repeat;
 }
@@ -613,14 +613,14 @@ background: none;
 }
 
 .vanban .paging li.current {
-	background-color: #008b33;
+	background-color: #006478;
 	font-weight: bold;
 	color: #fff;
 }
 
 .vanban .paging li a:visited { color: #666; text-decoration: none;}
 .vanban .paging li a:link { color: #666; text-decoration: none;}
-.vanban .paging li a:hover { color: #008b33; text-decoration: underline;}
+.vanban .paging li a:hover { color: #006478; text-decoration: underline;}
 
 /* xemtuoi */
 .xemtuoi {
@@ -628,7 +628,7 @@ background: none;
 }
 
 .xemtuoi .h1 {
-	color: #008b33;
+	color: #006478;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120%;
@@ -696,7 +696,7 @@ background: none;
 }
 
 .xemtuoi #tabs-1 .result .h2 {
-	background-color: #008b33;
+	background-color: #006478;
 	color: #fff;
 	padding: 10px;
 	font-weight: bold;
@@ -787,7 +787,7 @@ background: none;
 
 .xemtuoi #tabs-2 .payment .text4 {
 	padding: 0 0 20px 0;
-	color: #008b33;
+	color: #006478;
 }
 
 .xemtuoi #tabs-2 .payment .box .text5 {
@@ -830,9 +830,9 @@ background: none;
 }
 
 .xemtuoi #tabs-3 .item .h2 {
-	color: #008b33;
+	color: #006478;
 	font-weight: bold;
-	border-bottom: 1px #008b33 solid;
+	border-bottom: 1px #006478 solid;
 	text-transform: uppercase;
 	padding: 10px 0 5px 0;
 	margin: 0 0 20px 0;

@@ -62,7 +62,7 @@
         background-color: #fff !important;
     }
     #detail .tabProject li:hover a{
-        color: #008b33 !important;
+        color: #006478 !important;
     }
     #detail .tabProject li{
         margin-right: 11px;

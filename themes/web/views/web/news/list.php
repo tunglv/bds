@@ -39,7 +39,7 @@
     }
     .yiiPager li.active{
         text-align: center !important;
-        background-color: #008b33;
+        background-color: #006478;
         margin-left: 2px !important;
         width: auto !important;
         color: White !important;

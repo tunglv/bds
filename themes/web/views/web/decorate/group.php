@@ -22,7 +22,7 @@
                                         </a>
                                         <h3>
                                             <a class="font-link-news-parent" href="<?php echo $_val_news_1->url?>" title="<?php echo $_val_news_1->title?>">
-                                                <span style="font-weight: bold; color: #008b33"><?php echo $_val_news_1->title?></span>
+                                                <span style="font-weight: bold; color: #006478"><?php echo $_val_news_1->title?></span>
                                             </a>
                                         </h3><br>
                                         <p><?php echo $_val_news_1->desc?></p>
@@ -65,7 +65,7 @@
                                     </a>
                                     <h3>
                                         <a class="font-link-news-parent" href="<?php echo $_val_news_1->url?>" title="<?php echo $_val_news_1->title?>">
-                                            <span style="font-weight: bold; color: #008b33"><?php echo $_val_news_1->title?></span>
+                                            <span style="font-weight: bold; color: #006478"><?php echo $_val_news_1->title?></span>
                                         </a>
                                     </h3><br>
                                     <p><?php echo $_val_news_1->desc?></p>
@@ -108,7 +108,7 @@
                                     </a>
                                     <h3>
                                         <a class="font-link-news-parent" href="<?php echo $_val_news_1->url?>" title="<?php echo $_val_news_1->title?>">
-                                            <span style="font-weight: bold; color: #008b33"><?php echo $_val_news_1->title?></span>
+                                            <span style="font-weight: bold; color: #006478"><?php echo $_val_news_1->title?></span>
                                         </a>
                                     </h3><br>
                                     <p><?php echo $_val_news_1->desc?></p>
@@ -151,7 +151,7 @@
                                     </a>
                                     <h3>
                                         <a class="font-link-news-parent" href="<?php echo $_val_news_1->url?>" title="<?php echo $_val_news_1->title?>">
-                                            <span style="font-weight: bold; color: #008b33"><?php echo $_val_news_1->title?></span>
+                                            <span style="font-weight: bold; color: #006478"><?php echo $_val_news_1->title?></span>
                                         </a>
                                     </h3><br>
                                     <p><?php echo $_val_news_1->desc?></p>
