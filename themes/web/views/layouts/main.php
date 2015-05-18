@@ -7,21 +7,21 @@
     <meta http-equiv="audience" content="general">
     <meta name="resource-type" content="document">
     <meta name="abstract" content="Thông tin nhà đất Việt Nam">
-    <meta name="classification" content="Bất động sản Việt Nam">
-    <meta name="area" content="Nhà đất và bất động sản">
+    <meta name="classification" content="Chung cư Việt Nam">
+    <meta name="area" content="Chung cư, căn hộ chung cư và bất động sản">
     <meta name="placename" content="Việt Nam">
     <meta name="author" content="Chungcuvn.com.vn">
     <meta name="copyright" content="©2007 Chungcuvn.com.vn">
     <meta name="owner" content="Chungcuvn.com.vn">
     <meta name="generator" content="Daiviet Software Jsc">
     <meta name="distribution" content="Global">
-    <meta name="keywords" content="Kênh, thông, tin, số, 1, về, bất, động, sản">
+    <meta name="keywords" content="Kênh, thông, tin, số, 1, về, căn, hộ, chung, cư">
     <meta name="description"
-          content="Kênh thông tin số 1 về bất động sản tại Việt Nam: mua bán nhà đất, cho thuê nhà đất, văn phòng, căn hộ, biệt thự, chung cư. Các lĩnh vực liên quan đến bất động sản: xây dựng, nội thất, kiến trúc, ngoại thất, phong thuỷ, luật pháp, tư vấn.">
+          content="Kênh thông tin số 1 về chung cư, căn hộ chung cư, các dự án khu chung cư tại Việt Nam: mua bán căn hộ chung cư, cho thuê căn hộ chung cư, văn phòng, biệt thự, nhà đất. Các lĩnh vực liên quan đến bất động sản: xây dựng, nội thất, kiến trúc, ngoại thất, phong thuỷ.">
     <meta name="revisit-after" content="1 days">
     <meta name="robots" content="follow">
     <title>
-        Nhà đất | Mua bán nhà đất | Cho thuê nhà đất
+        Chung cư | Căn hộ chung cư | Nhà ở
     </title>
 
     <link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css/style.css" media="all" rel="stylesheet" type="text/css">
