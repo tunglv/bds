@@ -129,7 +129,7 @@ strong, b {
 .header-top-right {
     float: right;
     padding-top: 10px;
-    width: 760px;
+    width: 958px;
     overflow: hidden;
 }
 
@@ -4002,8 +4002,8 @@ a.link_blue:link {
 }
 
 #TopBanner {
-    width: 746px;
-    height: 96px;
+    width: 100%;
+    height: 100%;
     float: right;
 }
 
