@@ -127,7 +127,7 @@
             js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=614276168689514";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-share-button" data-href="http://chungcuvn.com.vn/" data-layout="button"></div>
+    <div class="fb-share-button" data-href="<?php echo $page?>" data-layout="button"></div>
 </li>
 <li class="lv0" style="border: none;padding-top: 5px;padding-left: 5px;">
     <!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->

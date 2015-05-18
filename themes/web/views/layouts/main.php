@@ -57,7 +57,7 @@
 
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/banner.js"></script>
 <div class="site-center">
-        <?php $this->renderPartial('//common/header'); ?>
+        <?php $this->renderPartial('//common/header', array('page'=>$this->page)); ?>
         <?php echo $content ?>
         <?php $this->renderPartial('//common/footer', array('hotline'=>$this->hotline)); ?>
 </div>

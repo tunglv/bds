@@ -13,6 +13,7 @@
         //title, desc for site
         public $title;
         public $desc;
+        public $page = 'http://chungcuvn.com.vn/';
 
         public $hotline;
 
