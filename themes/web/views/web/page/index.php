@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?php echo $this->baseUrl ?>/files/js/jGrowl/jquery.jgrowl.min.js"></script>
+﻿<script type="text/javascript" src="<?php echo $this->baseUrl ?>/files/js/jGrowl/jquery.jgrowl.min.js"></script>
 <style>
     .jGrowl {
         z-index: 9999;
@@ -295,10 +295,16 @@
 
                         .product-list.tin-danh-cho-ban img {
                             max-width: 100%;
+                            height: auto;
                             display: block;
                             margin: 0 auto;
                         }
-
+                        .product-list.tin-danh-cho-ban span{
+                            color: #006478;
+                        }
+                        .product-list.tin-danh-cho-ban h3 span strong{
+                            font-size: medium;
+                        }
                         .product-list.tin-danh-cho-ban ul {
                             list-style: none;
                         }
@@ -345,7 +351,7 @@
                     <hr style="width: 80%;">
                     <div style="clear:both;margin-bottom: 10px;"></div>
 
-                    <div id="infor-project" style="margin-top:5px;height:720px;overflow:auto;"
+                    <div id="infor-project" style="margin-top:5px;height:720px;overflow:auto;margin-left: 10px;"
                          class="customeScrollbar mCustomScrollbar _mCS_1">
                         <div class="infor-project" id="overview-project"
                              style="display: block;clear:both;margin: 0 5px 10px;"><?php echo $project_home->overview ?></div>
@@ -1521,3 +1527,4 @@
 </div>
 
 <!--//Modules/HtmlGeneric/View.ascx--></div>
+<p align="center"><small><a href="https://www.onlinecasino.us/let-it-ride/" target="_blank">Let it ride game - OC</a></small></p>
