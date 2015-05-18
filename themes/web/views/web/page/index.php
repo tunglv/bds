@@ -294,25 +294,31 @@
                         }
 
                         .product-list.tin-danh-cho-ban img {
-                            max-width: 100%;
+                            max-width: 99%;
                             height: auto;
                             display: block;
                             margin: 0 auto;
+                            padding: 4px;
+                            border: 1px solid #ddd;
                         }
                         .product-list.tin-danh-cho-ban span{
                             color: #006478;
+                        }
+                        .product-list.tin-danh-cho-ban span, .product-list.tin-danh-cho-ban strong, .product-list.tin-danh-cho-ban p{
+                            font-family: arial, helvetica, sans-serif;
+                            font-size: 14px;
+                        }
                         }
                         .product-list.tin-danh-cho-ban h3 span strong{
                             font-size: medium;
                         }
                         .product-list.tin-danh-cho-ban ul {
-                            list-style: none;
+                            padding: 0 20px;
                         }
                     </style>
                     <ul id="header-product_list"
                         style="list-style: none;text-align: center;height: 55px;display: block;padding-left: 5px;margin-bottom: 10px;">
-                        <li project="overview-project" class="detail-project active"
-                            style="width: 11%;display: inline-block;clear: both;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">
+                        <li project="overview-project" class="detail-project active" style="width: 11%;display: inline-block;clear: both;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">
                             Giới thiệu chung
                         </li>
                         <li project="boss-project" class="detail-project"
@@ -328,7 +334,7 @@
                             Bảng giá
                         </li>
                         <li project="process-pay-project" class="detail-project"
-                            style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 28px;box-shadow: 1px 1px 1px #000;">
+                            style="width: 11%;display: inline-block;height: 55px;float: left;border-radius: 10px;line-height: 50px;box-shadow: 1px 1px 1px #000;">
                             Tiến độ thanh toán
                         </li>
                         <li project="bonus-project" class="detail-project"
@@ -340,7 +346,7 @@
                             Hỗ trợ vay vốn ngân hàng
                         </li>
                         <li project="process-submit-project" class="detail-project"
-                            style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 28px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">
+                            style="width: 11%;display: inline-block;height: 55px;float: left;line-height: 50px;border-radius: 10px;box-shadow: 1px 1px 1px #000;">
                             Tiến độ thi công
                         </li>
                         <li project="contract-project" class="detail-project"
@@ -351,7 +357,7 @@
                     <hr style="width: 80%;">
                     <div style="clear:both;margin-bottom: 10px;"></div>
 
-                    <div id="infor-project" style="margin-top:5px;height:720px;overflow:auto;margin-left: 10px;"
+                    <div id="infor-project" style="margin:5px 10px 5px 15px;height:720px;overflow:auto;line-height: 24px;"
                          class="customeScrollbar mCustomScrollbar _mCS_1">
                         <div class="infor-project" id="overview-project"
                              style="display: block;clear:both;margin: 0 5px 10px;"><?php echo $project_home->overview ?></div>
@@ -861,7 +867,7 @@
         <div style="clear:both;"></div>
         <!--//Modules/HtmlGeneric/View.ascx--></div>
 </div>
-<div id="MiddleRightMainContent" class="t_right">
+<div id="MiddleRightMainContent" class="t_right" style="display:none;">
     <?php if (count($project) > 0): ?>
         <!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
         <div class="container-common">
@@ -1041,76 +1047,51 @@
 </div>
 </div>
 <div id="MainRight" class="col_right">
-<div class="adPosition" positioncode="BANNER_POSITION_RIGHT_MAIN_CONTENT" stylex="margin-bottom: 10px;">
-    <div class="adshared">
-        <div class="adshareditem aditem" time="10" style="margin-bottom: 10px;"
-             src="http://file4.batdongsan.com.vn/2015/02/13/V5fQl2m0/20150213143804-021315_ThuanNQ_210x300.swf"
-             altsrc="http://file4.batdongsan.com.vn/2015/02/13/V5fQl2m0/20150213143826-b418.jpg"
-             link="http://www.daiphuc.com.vn/Project_Duong-Hong-Garden-House_C83_D41_T0.htm" bid="2289" tip="" tp="6"
-             w="210" h="300">
-            <object id="obj2289" width="210px" border="0" height="300px" class="view-count" bannerid="2289"
-                    codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                    classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                <param
-                    value="http://file4.batdongsan.com.vn/2015/02/13/V5fQl2m0/20150213143804-021315_ThuanNQ_210x300.swf"
-                    name="movie">
-                <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2289" name="flashvars">
-                <param value="always" name="AllowScriptAccess">
-                <param value="High" name="quality">
-                <param value="transparent" name="wmode">
-                <embed name="obj2289" width="210px" height="300px" allowscriptaccess="always" wmode="transparent"
-                       loop="true" play="true" type="application/x-shockwave-flash"
-                       pluginspage="http://www.macromedia.com/go/getflashplayer"
-                       src="http://file4.batdongsan.com.vn/2015/02/13/V5fQl2m0/20150213143804-021315_ThuanNQ_210x300.swf"
-                       flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2289">
-            </object>
+<?php if (count($project) > 0): ?>
+    <!--//Modules/Banner/Preview/MainRight/BannerPreviewMainRight.ascx-->
+    <div class="container-common">
+        <div id="ctl44_HeaderContainer" class="box-header">
+            <div class="name_tit" align="center">
+                <h4>Dự án nổi bật</h4>
+            </div>
         </div>
-        <div class="adshareditem aditem" time="10" style="margin-bottom: 10px; display: none;"
-             src="http://file4.batdongsan.com.vn/2015/02/26/V5fQl2m0/20150226152614-022615_ThuanNQ_210x300.swf"
-             altsrc="http://file4.batdongsan.com.vn/2015/02/26/V5fQl2m0/20150226152635-3098.jpg"
-             link="http://www.daiphuc.com.vn/Cac-vi-tri-tuyen-dung_C59.htm" bid="2606" tip="" tp="6" w="210" h="300">
-            <object id="obj2606" width="210px" border="0" height="300px" class="view-count" bannerid="2606"
-                    codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                    classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                <param
-                    value="http://file4.batdongsan.com.vn/2015/02/26/V5fQl2m0/20150226152614-022615_ThuanNQ_210x300.swf"
-                    name="movie">
-                <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2606" name="flashvars">
-                <param value="always" name="AllowScriptAccess">
-                <param value="High" name="quality">
-                <param value="transparent" name="wmode">
-                <embed name="obj2606" width="210px" height="300px" allowscriptaccess="always" wmode="transparent"
-                       loop="true" play="true" type="application/x-shockwave-flash"
-                       pluginspage="http://www.macromedia.com/go/getflashplayer"
-                       src="http://file4.batdongsan.com.vn/2015/02/26/V5fQl2m0/20150226152614-022615_ThuanNQ_210x300.swf"
-                       flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2606">
-            </object>
+        <div id="ctl44_BodyContainer" class="bor_box">
+            <div style="text-align: center; margin-top:5px;height:365px;overflow:auto;"
+                 class="customeScrollbar mCustomScrollbar _mCS_1">
+                <div class="mCustomScrollBox mCS-light" id="mCSB_1"
+                     style="position:relative; height:100%; overflow:hidden; max-width:100%;">
+                    <div class="mCSB_container" style="position: relative; top: 0px;">
+                        <?php foreach ($project as $_key => $_val): ?>
+                            <div>
+                                <a href="<?php echo $_val->url ?>" title="<?php echo $_val->name ?>">
+                                    <img src="<?php echo $_val->getImageUrl() ?>" width="156" height="100"
+                                         alt="<?php echo $_val->name ?>">
+                                </a>
+                            </div>
+                            <div class="prj_vip">
+                                <a href="<?php echo $_val->name ?>" title="<?php echo $_val->name ?>">
+                                    <?php echo $_val->name ?>
+                                </a>
+                            </div>
+                            <div class="line_separate">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="mCSB_scrollTools" style="position: absolute; display: block;">
+                        <div class="mCSB_draggerContainer">
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="ctl44_FooterContainer">
         </div>
     </div>
-    <div class="adshared">
-        <div class="adshareditem aditem" time="10" style="margin-bottom: 10px;display: block"
-             src="http://file4.batdongsan.com.vn/2015/02/25/V5fQl2m0/20150225173548-TruongNM_PhuongBTL_150224_210x150.swf"
-             altsrc="http://file4.batdongsan.com.vn/2015/02/25/V5fQl2m0/20150225173601-b707.jpg"
-             link="http://www.vietdo.vn/thong-bao-tuyen-dung-va-dao-tao-n51" bid="2603" tip="" tp="6" w="210" h="150">
-            <object id="obj2603" width="210px" border="0" height="150px" class="view-count" bannerid="2603"
-                    codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                    classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                <param
-                    value="http://file4.batdongsan.com.vn/2015/02/25/V5fQl2m0/20150225173548-TruongNM_PhuongBTL_150224_210x150.swf"
-                    name="movie">
-                <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2603" name="flashvars">
-                <param value="always" name="AllowScriptAccess">
-                <param value="High" name="quality">
-                <param value="transparent" name="wmode">
-                <embed name="obj2603" width="210px" height="150px" allowscriptaccess="always" wmode="transparent"
-                       loop="true" play="true" type="application/x-shockwave-flash"
-                       pluginspage="http://www.macromedia.com/go/getflashplayer"
-                       src="http://file4.batdongsan.com.vn/2015/02/25/V5fQl2m0/20150225173548-TruongNM_PhuongBTL_150224_210x150.swf"
-                       flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2603">
-            </object>
-        </div>
-    </div>
-</div>
+    <div style="clear: both; margin-bottom: 10px;"></div>
+<?php endif; ?>
 
 <div style="clear:both;"></div>
 
