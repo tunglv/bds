@@ -173,7 +173,7 @@ strong, b {
 }
 
 #left-page-nav {
-    background-image: url('/Images/MenuIcon/left.gif');
+    background-image: url('/themes/web/files/images/left.gif');
     clear: both;
     background-repeat: no-repeat;
     float: left;
@@ -313,7 +313,7 @@ strong, b {
         }
 
 #right-page-nav {
-    background-image: url('/Images/MenuIcon/right.gif');
+    background-image: url('/themes/web/files/images/right.gif');
     background-repeat: no-repeat;
     float: left;
     height: 29px;
@@ -904,7 +904,7 @@ strong, b {
 }
 
 .tit_l a {
-    background: url("/Images/tit1.gif") no-repeat scroll left top  #006478;
+    background: url("/themes/web/files/images/tit1.gif") no-repeat scroll left top  #006478;
     float: left;
     margin: 0;
     padding: 0 0 0 4px;
@@ -1657,7 +1657,7 @@ a.link_blue:link {
 }
 
 .t_left-baiviet-header-left-2 {
-    background: url('/Images/tit4.gif');
+    background: url('/themes/web/files/images/tit4.gif');
     float: left;
     width: 7px;
     height: 25px;
@@ -3129,7 +3129,7 @@ a.link_blue:link {
 }
 
 .tit_l a span {
-    background: url('/images/tit4.gif') no-repeat right top;
+    background: url('/themes/web/files/images/tit4.gif') no-repeat right top;
     display: block;
     float: left;
     padding: 4px 15px 0 6px;
