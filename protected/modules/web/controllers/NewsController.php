@@ -45,7 +45,7 @@ class NewsController extends WebController {
 
     public function actionGroup(){
         $this->layout = '//layouts/main';
-
+        $this->page = "/tin-tuc";
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', 1);
         $criteria->order = 't.created DESC';
@@ -77,6 +77,7 @@ class NewsController extends WebController {
      * @return page home of site
      */
     public function actionListTopic(){
+        $this->page = "/cac-chu-de-tin-tuc";
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -97,7 +98,7 @@ class NewsController extends WebController {
 
     public function actionTopic($alias = null, $id = 0){
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
-
+        $this->page = "/chu-de-tin-tuc/{$alias}-{$id}";
         $topic = TopicNews::model()->findByPk($id);
 
         $criteria = new CDbCriteria();
@@ -135,6 +136,8 @@ class NewsController extends WebController {
         if(!$type) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
+        $this->page = "/chuyen-muc-tin-tuc/{$alias}";
+
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
         $criteria->order = 't.created DESC';
@@ -154,9 +157,11 @@ class NewsController extends WebController {
         $this->render('list',array('dataProvider'=>$dataProvider, 'viewed'=>$viewed, 'top_topic'=>$top_topic));
     }
 
-    public function actionDetail($id = 0){
+    public function actionDetail($alias = '', $id = 0){
         $this->layout = '//layouts/main';
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/tin-tuc/{$alias}-{$id}";
 
         $news = News::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();

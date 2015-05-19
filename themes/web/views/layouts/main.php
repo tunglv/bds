@@ -49,13 +49,6 @@
 </head>
 <body class="bg-site">
 
-
-<script type="text/javascript">
-    //<![CDATA[
-    __bannerContext = {"cateId": null, "pageId": 189, "currentPage": 0, "cityCode": null, "districtId": null};//]]>
-</script>
-
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/themes/web/files/js/banner.js"></script>
 <div class="site-center">
         <?php $this->renderPartial('//common/header', array('page'=>$this->page)); ?>
         <?php echo $content ?>

@@ -45,7 +45,7 @@ class DecorateController extends WebController {
 
     public function actionGroup(){
         $this->layout = '//layouts/main';
-
+        $this->page = "/noi-ngoai-that";
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', 1);
         $criteria->order = 't.created DESC';
@@ -83,6 +83,7 @@ class DecorateController extends WebController {
      * @return page home of site
      */
     public function actionListTopic(){
+        $this->page = "/cac-chu-de-noi-ngoai-that";
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -103,7 +104,7 @@ class DecorateController extends WebController {
 
     public function actionTopic($alias = null, $id = 0){
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
-
+        $this->page = "/chu-de-noi-ngoai-that/{$alias}-{$id}";
         $topic = TopicDecorate::model()->findByPk($id);
 
         $criteria = new CDbCriteria();
@@ -143,6 +144,7 @@ class DecorateController extends WebController {
         $this->layout = '//layouts/main';
         if(!$type) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->page = "/chuyen-muc-noi-ngoai-that/{$alias}";
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
@@ -163,9 +165,11 @@ class DecorateController extends WebController {
         $this->render('list',array('dataProvider'=>$dataProvider, 'viewed'=>$viewed, 'top_topic'=>$top_topic));
     }
 
-    public function actionDetail($id = 0){
+    public function actionDetail($alias ='',$id = 0){
         $this->layout = '//layouts/main';
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/noi-ngoai-that/{$alias}-{$id}";
 
         $news = Decorate::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();

@@ -12,41 +12,7 @@
     </div>
     <div class="header-top-right">
         <div id="TopBanner">
-
-            <div class="container-default">
-                <div id="ctl25_BodyContainer">
-                    <div class="adPosition" positioncode="BANNER_POSITION_TOP" stylex="" hasshare="True"
-                         hasnotshare="False">
-                        <div class="adshared">
-                            <div class="adshareditem aditem" time="10" style="display: block"
-                                 src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228100005-TruongNM_CuongDM_150228_746x96.swf"
-                                 altsrc="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228100012-7b97.jpg"
-                                 link="http://namtien.vn/" bid="2611" tip="" tp="6" w="746" h="96">
-                                <object id="obj2611" width="746px" border="0" height="96px" class="view-count"
-                                        bannerid="2611"
-                                        codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                                        classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                                    <param
-                                        value="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228100005-TruongNM_CuongDM_150228_746x96.swf"
-                                        name="movie">
-                                    <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2611"
-                                           name="flashvars">
-                                    <param value="always" name="AllowScriptAccess">
-                                    <param value="High" name="quality">
-                                    <param value="transparent" name="wmode">
-                                    <embed name="obj2611" width="746px" height="96px" allowscriptaccess="always"
-                                           wmode="transparent" loop="true" play="true"
-                                           type="application/x-shockwave-flash"
-                                           pluginspage="http://www.macromedia.com/go/getflashplayer"
-                                           src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228100005-TruongNM_CuongDM_150228_746x96.swf"
-                                           flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2611">
-                                </object>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <img src="/themes/web/files/images/park-hill.jpg" alt="park hill, chung cu cao cap" style="width: 100%">
             <!--//Modules/Banner/Preview/Top/BannerPreviewTop.ascx--></div>
     </div>
 </div>

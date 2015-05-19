@@ -55,6 +55,7 @@ class SalerController extends WebController {
 
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->page = "/nha-mo-gioi";
 
         if(!$cityid){
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -116,7 +117,7 @@ class SalerController extends WebController {
      */
     public function actionList($type = 0) {
         $this->layout = '//layouts/main';
-
+        $this->page = "/nha-mo-gioi";
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -138,7 +139,7 @@ class SalerController extends WebController {
 
     public function actionCity($alias = null, $id = null){
         $this->layout = '//layouts/main';
-
+        $this->page = "/nha-mo-gioi-{$alias}-{$id}";
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $id);
         $criteria->order = 't.created DESC';
@@ -160,8 +161,10 @@ class SalerController extends WebController {
     }
 
     public function actionDetail($id = 0, $alias = ''){
-        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
         $this->layout = '//layouts/main';
+        if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-mo-gioi/{$alias}-{$id}";
 
         $saler = Saler::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();

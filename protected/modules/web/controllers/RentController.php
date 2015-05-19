@@ -45,7 +45,7 @@ class RentController extends WebController {
 
     public function actionResult($cityLabel = null,$cityid= null,$distLabel=null,$distid=null,$wardLabel=null,$wardid=null,$projectLabel=null,$projectid=null,$area = null,$price=null){
         $this->layout = '//layouts/main';
-
+        $this->page = "/nha-cho-thue/tong-hop";
         $criteria = new CDbCriteria();
         if($cityid) $criteria->compare('t.province_id', $cityid);
         if($distid) $criteria->compare('t.district_id', $distid);
@@ -170,8 +170,9 @@ class RentController extends WebController {
 
     public function actionListP($projectAlias = '', $projectId = ''){
         $this->layout = '//layouts/main';
-
         if(!$projectId) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-dat-thue-tai-{$projectAlias}-{$projectId}";
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.project_id', $projectId);
@@ -217,8 +218,9 @@ class RentController extends WebController {
 //        $cityid = 0;
 
         $this->layout = '//layouts/main';
-
         if(!$cityId) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-dat-thue/{$cityAlias}-{$cityId}";
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $cityId);
@@ -281,6 +283,7 @@ class RentController extends WebController {
         }
 
         $this->layout = '//layouts/main';
+        $this->page = "/nha-cho-thue/{$typeOf}";
 
         $criteria = new CDbCriteria();
         if($type1) $criteria->compare('t.type', $type1);
@@ -323,8 +326,9 @@ class RentController extends WebController {
 
     public function actionDetail($alias = '', $id = 0){
         $this->layout = '//layouts/main';
-
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-cho-thue/chi-tiet/{$alias}-{$id}";
 
         $sale = BdsRent::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();

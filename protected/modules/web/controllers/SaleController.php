@@ -46,6 +46,8 @@ class SaleController extends WebController {
     public function actionResult($cityLabel = null,$cityid= null,$distLabel=null,$distid=null,$wardLabel=null,$wardid=null,$projectLabel=null,$projectid=null,$area = null,$price=null){
         $this->layout = '//layouts/main';
 
+        $this->page = "/nha-dat-ban/tong-hop";
+
         $criteria = new CDbCriteria();
         if($cityid) $criteria->compare('t.province_id', $cityid);
         if($distid) $criteria->compare('t.district_id', $distid);
@@ -182,8 +184,9 @@ class SaleController extends WebController {
 
     public function actionListP($projectAlias = '', $projectId = ''){
         $this->layout = '//layouts/main';
-
         if(!$projectId) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-dat-ban-tai-{$projectAlias}-{$projectId}";
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.project_id', $projectId);
@@ -227,10 +230,10 @@ class SaleController extends WebController {
 
     public function actionListC($cityAlias = '', $cityId = '') {
 //        $cityid = 0;
-
         $this->layout = '//layouts/main';
-
         if(!$cityId) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-dat-ban/{$cityAlias}-{$cityId}";
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $cityId);
@@ -296,7 +299,7 @@ class SaleController extends WebController {
         }
 
         $this->layout = '//layouts/main';
-
+        $this->page = "/nha-dat-ban/{$typeOf}";
         $criteria = new CDbCriteria();
         if($type1) $criteria->compare('t.type', $type1);
 
@@ -338,8 +341,9 @@ class SaleController extends WebController {
 
     public function actionDetail($alias = '', $id = 0){
         $this->layout = '//layouts/main';
-
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
+
+        $this->page = "/nha-dat-ban/chi-tiet/{$alias}-{$id}";
 
         $sale = BdsSale::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();

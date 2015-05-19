@@ -213,59 +213,7 @@
     <div style="clear:both;"></div>
     <!--//Modules/News/ViewerNews/NewsSlideShow/SlideshowNews.ascx--></div>
 <div id="MiddleBanner">
-    <div class="adPosition" positioncode="BANNER_POSITION_HORIZONTAL_MAIN_CONTENT" stylex="" hasshare="True"
-         hasnotshare="True">
-        <div class="adshared">
-            <div class="adshareditem aditem" time="10" style="display: none;"
-                 src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
-                 altsrc="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091727-7d88.jpg"
-                 link="http://skycenter.com.vn/" bid="2610" tip="" tp="6" w="780" h="90">
-                <center>
-                    <object id="obj2610" width="780px" border="0" height="90px" class="view-count" bannerid="2610"
-                            codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                            classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                        <param
-                            value="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
-                            name="movie">
-                        <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2610" name="flashvars">
-                        <param value="always" name="AllowScriptAccess">
-                        <param value="High" name="quality">
-                        <param value="transparent" name="wmode">
-                        <embed name="obj2610" width="780px" height="90px" allowscriptaccess="always" wmode="transparent"
-                               loop="true" play="true" type="application/x-shockwave-flash"
-                               pluginspage="http://www.macromedia.com/go/getflashplayer"
-                               src="http://file4.batdongsan.com.vn/2015/02/28/V5fQl2m0/20150228091714-TruongNM_TrangTT2_150226_780x90.swf"
-                               flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2610">
-                    </object>
-                </center>
-            </div>
-            <div class="adshareditem aditem" time="10" style="display: block;"
-                 src="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
-                 altsrc="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081106-739f.jpg"
-                 link="http://sunviewtown.vn/tin-tuc--su-kien/chuong-trinh-vui-xuan-cung-sunview-town.html" bid="2613"
-                 tip="" tp="6" w="780" h="90">
-                <center>
-                    <object id="obj2613" width="780px" border="0" height="90px" class="view-count" bannerid="2613"
-                            codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
-                            classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-                        <param
-                            value="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
-                            name="movie">
-                        <param value="link=http://batdongsan.com.vn/click.aspx?bannerid=2613" name="flashvars">
-                        <param value="always" name="AllowScriptAccess">
-                        <param value="High" name="quality">
-                        <param value="transparent" name="wmode">
-                        <embed name="obj2613" width="780px" height="90px" allowscriptaccess="always" wmode="transparent"
-                               loop="true" play="true" type="application/x-shockwave-flash"
-                               pluginspage="http://www.macromedia.com/go/getflashplayer"
-                               src="http://file4.batdongsan.com.vn/2015/03/02/V5fQl2m0/20150302081057-TruongNM_NienPTN_150227_780x90.swf"
-                               flashvars="link=http://batdongsan.com.vn/click.aspx?bannerid=2613">
-                    </object>
-                </center>
-            </div>
-        </div>
-    </div>
-
+    <img alt="park hill, chung cu cao cap" src="/themes/web/files/images/be-boi-du-an-time-city.jpg" style="width: 100%;">
     <div style="clear:both;"></div>
     <!--//Modules/Banner/Preview/Horizontal/BannerPreviewHorizontal.ascx--></div>
 <div class="t_left">

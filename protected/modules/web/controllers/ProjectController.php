@@ -84,6 +84,7 @@ class ProjectController extends WebController {
 
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->page = '/du-an';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $typeid);
@@ -128,6 +129,8 @@ class ProjectController extends WebController {
 
     public function actionGroup(){
         $this->layout = '//layouts/main';
+
+        $this->page = '/du-an';
 
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
@@ -229,6 +232,8 @@ class ProjectController extends WebController {
          */
         $infor = $this->_getType($alias);
 
+        $this->page = "/du-an/{$alias},{$city}-{$cid}";
+
         $this->layout = '//layouts/main';
         if(!$infor['type']) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
@@ -279,6 +284,9 @@ class ProjectController extends WebController {
         $infor = $this->_getType($alias);
 
         $this->layout = '//layouts/main';
+
+        $this->page = "/du-an/{$alias}";
+
         if(!$infor['type']) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
 
@@ -315,6 +323,9 @@ class ProjectController extends WebController {
 
     public function actionDetail($type='', $alias ='', $id = 0){
         $this->layout = '//layouts/main';
+
+        $this->page = "/du-an/{$type}/{$alias}-{$id}";
+
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
         $project = Project::model()->findByPk($id);
