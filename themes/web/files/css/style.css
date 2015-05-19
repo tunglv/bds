@@ -180,7 +180,9 @@ strong, b {
     height: 29px;
     width: 6px;
 }
-
+#ctl27_BodyContainer{
+    padding-left: 10px;
+}
 #page-navigative-menu {
     width: 1182px;
     color: Black;
@@ -4939,7 +4941,7 @@ a.link_blue:link {
     float: left;
     list-style: none outside none;
     margin-bottom: 10px;
-    padding: 5px 105px 0;
+    padding: 5px 100px 0;
 }
 
     #detail .tabProject li {

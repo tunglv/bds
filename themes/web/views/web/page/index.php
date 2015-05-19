@@ -143,8 +143,7 @@
                         </a>
 
                         <div class="thumb-title">
-                            <a href="<?php echo $_vale->url ?>"
-                               title="<?php echo $_vale->title ?>"><?php echo $_vale->title ?></a>
+                            <h2><a href="<?php echo $_vale->url ?>" title="<?php echo $_vale->title ?>"><?php echo $_vale->title ?></a></h2>
                         </div>
                         <div class="thumb-summary"><?php echo $_vale->desc ?></div>
                     </li>
