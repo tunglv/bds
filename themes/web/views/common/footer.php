@@ -1,4 +1,4 @@
-<div id="contact-us" style="border-radius: 10px;position: fixed;bottom: 80px;right: 10px;background-color: #1ac;color: #fff;font-size: 18px;font-family: tahoma;text-align: center;">
+<div id="contact-us" style="border-radius: 10px;position: fixed;bottom: 80px;right: 10px;background-color: #1ac;color: #fff;font-size: 18px;font-family: tahoma;text-align: center;;z-index: 9999;">
     <div class="box-header">
         <div class="name_tit" align="center">
             <h4>Liên hệ</h4>

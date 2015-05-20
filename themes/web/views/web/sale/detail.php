@@ -27,7 +27,7 @@
         <span style="display: inline-block;"><span class="gia-title mar-right-15">
             <b>Giá:</b>
             <strong>
-                <?php echo $sale->price .' '.$sale->price_type?>&nbsp;
+                <?php echo number_format($sale->price, 0, '', '.') .' '.$sale->price_type?>&nbsp;
             </strong>
         </span>
 

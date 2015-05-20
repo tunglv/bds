@@ -20,10 +20,19 @@
 <div id="detail">
     <style>
         #detail img{
-            max-width: 100%;
+            max-width: 99%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 4px;
+            border: 1px solid #ddd;
         }
         #detail ul{
-            list-style: none;
+            padding: 0 20px;
+        }
+        #detail span, #detail strong, #detail p{
+            font-family: arial, helvetica, sans-serif;
+            font-size: 14px;
         }
     </style>
 <div>
