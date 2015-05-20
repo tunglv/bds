@@ -46,6 +46,9 @@ class DecorateController extends WebController {
     public function actionGroup(){
         $this->layout = '//layouts/main';
         $this->page = "/noi-ngoai-that";
+        $this->title = 'Nội, ngoại thất, chung cư, căn hộ chung cư';
+        $this->desc = 'Tư vấn, thiết kế nội ngoại thất chưng cư, căn hộ chung cư, nhà ở';
+
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', 1);
         $criteria->order = 't.created DESC';
@@ -84,6 +87,9 @@ class DecorateController extends WebController {
      */
     public function actionListTopic(){
         $this->page = "/cac-chu-de-noi-ngoai-that";
+        $this->title = 'Các chủ đề nội, ngoại thất, chung cư, căn hộ chung cư';
+        $this->desc = 'Các chủ đề tư vấn, thiết kế nội ngoại thất chưng cư, căn hộ chung cư, nhà ở';
+
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -105,7 +111,11 @@ class DecorateController extends WebController {
     public function actionTopic($alias = null, $id = 0){
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
         $this->page = "/chu-de-noi-ngoai-that/{$alias}-{$id}";
+
         $topic = TopicDecorate::model()->findByPk($id);
+
+        $this->title = $topic->title;
+        $this->desc = 'Tư vấn, thiết kế nội ngoại thất chưng cư, căn hộ chung cư, nhà ở, '.$topic->title;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.topic_id', $id);
@@ -145,6 +155,8 @@ class DecorateController extends WebController {
         if(!$type) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
         $this->page = "/chuyen-muc-noi-ngoai-that/{$alias}";
+        $this->title = 'Chuyên mục nội ngoại thất, chung cư, căn hộ chung cư';
+        $this->desc = ' Chuyên mục tư vấn, thiết kế nội ngoại thất chưng cư, căn hộ chung cư, nhà ở';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
@@ -173,6 +185,10 @@ class DecorateController extends WebController {
 
         $news = Decorate::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
+
+        $this->title = $news->title;
+        $this->desc = $news->desc;
+
         $same_news = $this->_getNewDecorate($id);
         $same_topic = $this->_getSameTopic($news->topic_id, $news->id);
 

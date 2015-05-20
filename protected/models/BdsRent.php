@@ -66,11 +66,12 @@ class BdsRent extends CActiveRecord
 			array('price, price_type, code, name_contact, phone_contact, email_contact', 'length', 'max'=>100),
 			array('area, image, province_name, district_name, ward_name', 'length', 'max'=>250),
 			array('type', 'length', 'max'=>1),
+			array('desc', 'length', 'max'=>1000),
 			array('content', 'safe'),
             array('status', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, district_id, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact', 'safe', 'on'=>'search'),
+			array('id, title, district_id, desc, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -112,6 +113,7 @@ class BdsRent extends CActiveRecord
 			'room' => 'Số phòng',
 			'befor' => 'Diện tích mặt tiền',
 			'way' => 'Lối đi',
+            'desc' => 'Mô tả ngắn',
 			'toilet' => 'Số toilet',
 			'furniture' => 'Nội thất',
 			'name_contact' => 'Tên người liên hệ',

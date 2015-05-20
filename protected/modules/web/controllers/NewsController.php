@@ -46,6 +46,9 @@ class NewsController extends WebController {
     public function actionGroup(){
         $this->layout = '//layouts/main';
         $this->page = "/tin-tuc";
+        $this->title = 'Tin tức bất động sản, mua bán căn hộ chung cư, nhà ở';
+        $this->desc = 'Tin tức thị trường bất động sản trong nước, mua bán căn hộ chung cư, nhà ở. Tin tức các dự án đang được khởi động, thi công...';
+
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', 1);
         $criteria->order = 't.created DESC';
@@ -78,6 +81,9 @@ class NewsController extends WebController {
      */
     public function actionListTopic(){
         $this->page = "/cac-chu-de-tin-tuc";
+        $this->title = 'Các chủ đề tin tức bất động sản, mua bán căn hộ chung cư, nhà ở';
+        $this->desc = 'Các chủ đề tin tức thị trường bất động sản trong nước, mua bán căn hộ chung cư, nhà ở. Tin tức các dự án đang được khởi động, thi công...';
+
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -99,7 +105,11 @@ class NewsController extends WebController {
     public function actionTopic($alias = null, $id = 0){
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
         $this->page = "/chu-de-tin-tuc/{$alias}-{$id}";
+
         $topic = TopicNews::model()->findByPk($id);
+
+        $this->title = $topic->title;
+        $this->desc = 'Tin tức thị trường bất động sản trong nước, mua bán căn hộ chung cư, nhà ở. Tin tức các dự án đang được khởi động, thi công...';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.topic_id', $id);
@@ -137,6 +147,8 @@ class NewsController extends WebController {
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->page = "/chuyen-muc-tin-tuc/{$alias}";
+        $this->title = 'Chuyên mục tin tức bất động sản, mua bán căn hộ chung cư, nhà ở';
+        $this->desc = 'Chuyên mục tin tức thị trường bất động sản trong nước, mua bán căn hộ chung cư, nhà ở. Tin tức các dự án đang được khởi động, thi công...';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
@@ -165,6 +177,9 @@ class NewsController extends WebController {
 
         $news = News::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->title = $news->title;
+        $this->desc = $news->desc;
+
         $same_news = $this->_getNewNews($id);
         $same_topic = $this->_getSameTopic($news->topic_id, $news->id);
 

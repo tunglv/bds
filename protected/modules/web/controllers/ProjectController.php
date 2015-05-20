@@ -85,6 +85,8 @@ class ProjectController extends WebController {
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
         $this->page = '/du-an';
+        $this->title = 'Dự án bất động sản, chung cư, nhà đất';
+        $this->desc = 'Dự án bất động sản, chung cư, nhà đất';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $typeid);
@@ -131,6 +133,8 @@ class ProjectController extends WebController {
         $this->layout = '//layouts/main';
 
         $this->page = '/du-an';
+        $this->title = 'Dự án bất động sản, chung cư, nhà đất';
+        $this->desc = 'Dự án bất động sản, chung cư, nhà đất';
 
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
@@ -233,6 +237,8 @@ class ProjectController extends WebController {
         $infor = $this->_getType($alias);
 
         $this->page = "/du-an/{$alias},{$city}-{$cid}";
+        $this->title = 'Dự án bất động sản, chung cư, nhà đất ở '.$city;
+        $this->desc = 'Dự án bất động sản, chung cư, nhà đất thuộc hạng mục '.$alias.' tại '.$city;
 
         $this->layout = '//layouts/main';
         if(!$infor['type']) throw new CHttpException(404, 'The requested page does not exist.');
@@ -286,6 +292,8 @@ class ProjectController extends WebController {
         $this->layout = '//layouts/main';
 
         $this->page = "/du-an/{$alias}";
+        $this->title = 'Dự án bất động sản, chung cư, nhà đất thuộc mục '.$alias;
+        $this->desc = 'Dự án bất động sản, chung cư, nhà đất thuộc mục '.$alias;
 
         if(!$infor['type']) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
@@ -324,11 +332,15 @@ class ProjectController extends WebController {
     public function actionDetail($type='', $alias ='', $id = 0){
         $this->layout = '//layouts/main';
 
-        $this->page = "/du-an/{$type}/{$alias}-{$id}";
-
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
+        $this->page = "/du-an/{$type}/{$alias}-{$id}";
+
         $project = Project::model()->findByPk($id);
+
+        $this->title = $project->name;
+        $this->desc = $project->name.' ở '.$project->district_name.' - '.$project->province_name;
+
         $hot_project = $this->_getHotProject();
         $same_project = $this->_getSameProject($project->type, $project->district_id);
 //        $product_viewed = $this->_getCookieViewedProduct();

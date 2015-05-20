@@ -69,6 +69,15 @@
                 </div>
 
                 <div class="par control-group">
+                    <?php echo $form->labelEx($model,'desc', array('class' => 'control-label')); ?>
+                    <div class="controls">
+                        <?php echo $form->textArea($model,'desc',array('maxlength'=> 1000, 'style' => 'height: 80px;width: 625px;', 'class' => 'input-large')); ?>
+                        <?php echo $form->error($model,'desc', array('class' => 'help-inline error'));?>
+                    </div>
+                    <small class="desc">Description should be 1000 chars <span id="desc_char_count"></span></small>
+                </div>
+
+                <div class="par control-group">
                     <?php echo $form->labelEx($model,'project_id', array('class' => 'control-label')); ?>
                     <div class="controls">
                         <?php echo $form->dropDownList($model,'project_id', Project::model()->getData(), array('empty'=>'--Dự án--')); ?>

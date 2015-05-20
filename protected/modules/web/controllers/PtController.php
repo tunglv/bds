@@ -51,6 +51,9 @@ class PtController extends WebController {
      */
     public function actionListTopic(){
         $this->page = "/cac-chu-de-phong-thuy";
+        $this->title = 'Các chủ đề phong thủy nhà ở, căn hộ chung cư';
+        $this->desc = 'Các chủ đề về phong thủy nhà ở, căn hộ chung cư';
+
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -72,7 +75,11 @@ class PtController extends WebController {
     public function actionTopic($alias = null, $id = 0){
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
         $this->page = "/chu-de-phong-thuy/{$alias}-{$id}";
+
         $topic = TopicPt::model()->findByPk($id);
+
+        $this->title = $topic->title;
+        $this->desc = 'Chủ đề '.$alias.', phong thủy nhà ở, căn hộ chung cư';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.topic_id', $id);
@@ -108,6 +115,8 @@ class PtController extends WebController {
 //        $product_viewed = $this->_getCookieViewedProduct();
 
         $this->page = "/chuyen-muc-phong-thuy/{$alias}";
+        $this->title = 'Chuyên mục '.$alias.' , phong thủy nhà ở, căn hộ chung cư';
+        $this->desc = 'Chuyên mục '.$alias.' , phong thủy nhà ở, căn hộ chung cư';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
@@ -135,6 +144,9 @@ class PtController extends WebController {
         $this->page = "/phong-thuy/{$alias}-{$id}";
 
         $news = Pt::model()->findByPk($id);
+
+        $this->title = $news->title;
+        $this->desc = $news->desc;
 //        $product_viewed = $this->_getCookieViewedProduct();
         $same_news = $this->_getNewNews($id);
         $same_topic = $this->_getSameTopic($news->topic_id, $news->id);

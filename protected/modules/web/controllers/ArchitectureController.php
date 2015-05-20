@@ -47,6 +47,8 @@ class ArchitectureController extends WebController {
         $this->layout = '//layouts/main';
 
         $this->page = "/";
+        $this->title = 'Kiến trúc, tư vấn nhà đẹp, chung cư';
+        $this->desc = 'Tư vấn thiết kế nhà đẹp, căn hộ chung cư';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', 1);
@@ -80,6 +82,9 @@ class ArchitectureController extends WebController {
      */
     public function actionListTopic(){
         $this->page="/cac-chu-de-kien-truc";
+        $this->title = 'Các chủ đề kiến trúc, tư vấn nhà đẹp, chung cư';
+        $this->desc = 'Các chủ đề tư vấn thiết kế nhà đẹp, căn hộ chung cư';
+
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -100,9 +105,13 @@ class ArchitectureController extends WebController {
 
     public function actionTopic($alias = null, $id = 0){
         $this->page="/chu-de-kien-truc/{$alias}-{$id}";
+
         if(!$id) throw new CHttpException(404, 'The requested page does not exist.');
 
         $topic = TopicArchitecture::model()->findByPk($id);
+
+        $this->title = $topic->title;
+        $this->desc = 'Tư vấn thiết kế nhà đẹp, căn hộ chung cư, '.$topic->title;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.topic_id', $id);
@@ -136,6 +145,8 @@ class ArchitectureController extends WebController {
         if(!$type) throw new CHttpException(404, 'The requested page does not exist.');
 //        $product_viewed = $this->_getCookieViewedProduct();
         $this->page = "/chuyen-muc-kien-truc/{$alias}";
+        $this->title = 'Chuyên mục kiến trúc, tư vấn nhà đẹp, chung cư';
+        $this->desc = 'Chuyên mục tư vấn thiết kế nhà đẹp, căn hộ chung cư';
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.type', $type);
@@ -163,6 +174,10 @@ class ArchitectureController extends WebController {
         $this->page = "/kien-truc/{$alias}-{$id}";
 
         $news = Architecture::model()->findByPk($id);
+
+        $this->title = $news->title;
+        $this->desc = $news->desc;
+
 //        $product_viewed = $this->_getCookieViewedProduct();
         $same_news = $this->_getNewArchitecture($id);
         $same_topic = $this->_getSameTopic($news->topic_id, $news->id);

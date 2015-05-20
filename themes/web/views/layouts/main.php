@@ -16,12 +16,11 @@
     <meta name="generator" content="Daiviet Software Jsc">
     <meta name="distribution" content="Global">
     <meta name="keywords" content="Kênh, thông, tin, số, 1, về, căn, hộ, chung, cư">
-    <meta name="description"
-          content="Kênh thông tin số 1 về chung cư, căn hộ chung cư, các dự án khu chung cư tại Việt Nam: mua bán căn hộ chung cư, cho thuê căn hộ chung cư, văn phòng, biệt thự, nhà đất. Các lĩnh vực liên quan đến bất động sản: xây dựng, nội thất, kiến trúc, ngoại thất, phong thuỷ.">
+    <meta name="description" content="<?php echo $this->desc ? $this->desc : 'Kênh thông tin số 1 về chung cư, căn hộ chung cư, các dự án khu chung cư tại Việt Nam: mua bán căn hộ chung cư, cho thuê căn hộ chung cư, văn phòng, biệt thự, nhà đất. Các lĩnh vực liên quan đến bất động sản: xây dựng, nội thất, kiến trúc, ngoại thất, phong thuỷ.'?>">
     <meta name="revisit-after" content="1 days">
     <meta name="robots" content="follow">
     <title>
-        Chung cư | Căn hộ chung cư | Nhà ở
+        <?php echo $this->title ? $this->title : 'Chung cư | Căn hộ chung cư | Nhà ở'?>
     </title>
 
     <link href="<?php echo Yii::app()->baseUrl?>/themes/web/files/css/style.css" media="all" rel="stylesheet" type="text/css">

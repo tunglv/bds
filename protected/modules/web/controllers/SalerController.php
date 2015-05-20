@@ -56,6 +56,8 @@ class SalerController extends WebController {
         $this->layout = '//layouts/main';
 //        $product_viewed = $this->_getCookieViewedProduct();
         $this->page = "/nha-mo-gioi";
+        $this->title = 'Danh sách các nhà mô giới bất động sản';
+        $this->desc = 'Danh sách các nhà mô giới bất động sản';
 
         if(!$cityid){
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -118,6 +120,9 @@ class SalerController extends WebController {
     public function actionList($type = 0) {
         $this->layout = '//layouts/main';
         $this->page = "/nha-mo-gioi";
+        $this->title = 'Danh sách các nhà mô giới bất động sản';
+        $this->desc = 'Danh sách các nhà mô giới bất động sản';
+
         $criteria = new CDbCriteria();
         $criteria->order = 't.created DESC';
 
@@ -140,6 +145,9 @@ class SalerController extends WebController {
     public function actionCity($alias = null, $id = null){
         $this->layout = '//layouts/main';
         $this->page = "/nha-mo-gioi-{$alias}-{$id}";
+        $this->title = 'Danh sách các nhà mô giới bất động sản ở '.$alias;
+        $this->desc = 'Danh sách các nhà mô giới bất động sản ở '.$alias;
+
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $id);
         $criteria->order = 't.created DESC';
@@ -168,6 +176,8 @@ class SalerController extends WebController {
 
         $saler = Saler::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->title = 'Nhà mô giới '.$saler->name;
+        $this->desc =  'Tìm hiểu nhà mô giới '.$saler->name;
 
         $ramdomSaler = $this->_getRamdonSaler();
         $groupSaler = $this->_getGroupSaler();

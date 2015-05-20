@@ -46,6 +46,9 @@ class RentController extends WebController {
     public function actionResult($cityLabel = null,$cityid= null,$distLabel=null,$distid=null,$wardLabel=null,$wardid=null,$projectLabel=null,$projectid=null,$area = null,$price=null){
         $this->layout = '//layouts/main';
         $this->page = "/nha-cho-thue/tong-hop";
+        $this->title = 'Nhà đất, căn hộ chung cư cho thuê';
+        $this->desc = 'Các tin về nhà đất, căn hộ chung cư cho thuê';
+
         $criteria = new CDbCriteria();
         if($cityid) $criteria->compare('t.province_id', $cityid);
         if($distid) $criteria->compare('t.district_id', $distid);
@@ -173,6 +176,8 @@ class RentController extends WebController {
         if(!$projectId) throw new CHttpException(404, 'The requested page does not exist.');
 
         $this->page = "/nha-dat-thue-tai-{$projectAlias}-{$projectId}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư cho thuê thuộc dự án '.$projectAlias;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư cho thuê thuộc dự án '.$projectAlias;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.project_id', $projectId);
@@ -221,6 +226,8 @@ class RentController extends WebController {
         if(!$cityId) throw new CHttpException(404, 'The requested page does not exist.');
 
         $this->page = "/nha-dat-thue/{$cityAlias}-{$cityId}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư cho thuê ở '.$cityAlias;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư cho thuê ở '.$cityAlias;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $cityId);
@@ -284,6 +291,8 @@ class RentController extends WebController {
 
         $this->layout = '//layouts/main';
         $this->page = "/nha-cho-thue/{$typeOf}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư cho thuê thuộc mục '.$typeOf;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư cho thuê thuộc mục '.$typeOf;
 
         $criteria = new CDbCriteria();
         if($type1) $criteria->compare('t.type', $type1);
@@ -331,6 +340,9 @@ class RentController extends WebController {
         $this->page = "/nha-cho-thue/chi-tiet/{$alias}-{$id}";
 
         $sale = BdsRent::model()->findByPk($id);
+
+        $this->title = $sale->title;
+        $this->desc = $sale->desc;
 //        $product_viewed = $this->_getCookieViewedProduct();
         $sameSale = $this->_getSameProject($sale->project_id, $sale->type);
         $groupP = $this->_getGroupSale('project_name', 'project_id','district_id',$sale->district_id);

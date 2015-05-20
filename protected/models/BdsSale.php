@@ -68,11 +68,12 @@ class BdsSale extends CActiveRecord
 			array('price, price_type, code, name_contact, phone_contact, email_contact', 'length', 'max'=>100),
 			array('area, image, province_name, district_name, ward_name', 'length', 'max'=>250),
 			array('type', 'length', 'max'=>1),
+			array('desc', 'length', 'max'=>1000),
 			array('status', 'length', 'max'=>7),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, alias, district_id, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact, status', 'safe', 'on'=>'search'),
+			array('id, title, alias, district_id, desc, province_id, ward_id, price, price_type, area, content, created, address, code, type, date_start, date_end, floor, room, befor, way, toilet, furniture, name_contact, address_contact, phone_contact, email_contact, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -106,6 +107,7 @@ class BdsSale extends CActiveRecord
 			'area' => 'Diện tích',
 			'content' => 'Nội dung',
 			'created' => 'Created',
+            'desc' => 'Mô tả ngắn',
 			'address' => 'Địa chỉ',
 			'code' => 'Code',
 			'type' => 'Loại hình',

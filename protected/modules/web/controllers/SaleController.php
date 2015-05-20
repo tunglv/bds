@@ -47,6 +47,8 @@ class SaleController extends WebController {
         $this->layout = '//layouts/main';
 
         $this->page = "/nha-dat-ban/tong-hop";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư bán';
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư bán';
 
         $criteria = new CDbCriteria();
         if($cityid) $criteria->compare('t.province_id', $cityid);
@@ -187,6 +189,8 @@ class SaleController extends WebController {
         if(!$projectId) throw new CHttpException(404, 'The requested page does not exist.');
 
         $this->page = "/nha-dat-ban-tai-{$projectAlias}-{$projectId}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư bán thuộc dự án '.$projectAlias;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư bán thuộc dự án '.$projectAlias;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.project_id', $projectId);
@@ -234,6 +238,8 @@ class SaleController extends WebController {
         if(!$cityId) throw new CHttpException(404, 'The requested page does not exist.');
 
         $this->page = "/nha-dat-ban/{$cityAlias}-{$cityId}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư bán ở '.$cityAlias;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư bán ở '.$cityAlias;
 
         $criteria = new CDbCriteria();
         $criteria->compare('t.province_id', $cityId);
@@ -300,6 +306,9 @@ class SaleController extends WebController {
 
         $this->layout = '//layouts/main';
         $this->page = "/nha-dat-ban/{$typeOf}";
+        $this->title = 'Các tin rao nhà đất, căn hộ chung cư bán thuộc mục '.$typeOf;
+        $this->desc = 'Các tin rao nhà đất, căn hộ chung cư bán thuộc mục '.$typeOf;
+
         $criteria = new CDbCriteria();
         if($type1) $criteria->compare('t.type', $type1);
 
@@ -347,6 +356,9 @@ class SaleController extends WebController {
 
         $sale = BdsSale::model()->findByPk($id);
 //        $product_viewed = $this->_getCookieViewedProduct();
+        $this->title = $sale->title;
+        $this->desc = $sale->desc;
+
         $sameSale = $this->_getSameProject($sale->project_id, $sale->type);
         $groupP = $this->_getGroupSale('project_name', 'project_id','district_id',$sale->district_id);
         $group = $this->_getGroupSale('province_name', 'province_id','province_id');
